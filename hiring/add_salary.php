@@ -170,7 +170,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			
 			if($affected_rows != ''){
 				// query to fetch admin details. 
-				$query = "CALL get_bh_director_employee_details('A','".$_SESSION['user_id']."')";
+				$query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
 				try{
 					// calling mysql exe_query function
 					if(!$result = $mysql->execute_query($query)){
@@ -189,14 +189,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				}
 					
 				// query to fetch BH/Director details 
-				$query = "CALL get_bh_director_employee_details('D','')";
+				$query = "CALL get_admin_director_details('D','')";
 				try{
 					// calling mysql exe_query function
 					if(!$result = $mysql->execute_query($query)){
 						throw new Exception('Problem in getting approval user details');
 					}
 					while($account = $mysql->display_result($result)){
-						$row_account[] = $account;
+						// $row_account[] = $account;
+						$row_account = $account;
 					}
 					// free the memory
 					$mysql->clear_result($result);
@@ -214,14 +215,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				
 				$modified_date = $fun->convert_date_time_display($created_date);
 				// send mail to BH/Director
-				foreach($row_account as  $approval_user){ 					
+				// foreach($row_account as  $approval_user){ 
+				if(!empty($row_account)){
+					// send mail to Director				
 					$sub = "Manage Hiring - Salary details updated by " .$user_name;
-					$msg = $content->get_edit_salary_details($_POST,$user_name,$approval_user['approval_name'],$emplyee_list,$modified_date);
-					$mailer->send_mail($sub,$msg,$user_name,$user_email,$approval_user['approval_name'],$approval_user['email_id']);	
+					$msg = $content->get_edit_salary_details($_POST,$user_name,$row_account['approval_name'],$emplyee_list,$modified_date);
+					$mailer->send_mail($sub,$msg,$user_name,$user_email,$row_account['approval_name'],$row_account['email_id']);	
+					$success = '1';
 				}
+				// }
 			}
-			
-			if($last_id != '' || $affected_rows != ''){
+
+			if(!empty($last_id) || (!empty($affected_rows) && $success == '1' )){
 				$smarty->assign('form_sent' , 1);
 			}
 		}

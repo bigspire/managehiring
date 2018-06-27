@@ -89,12 +89,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			
 			
 			// if($_GET['action'] == 'holidays'){
-				
-				// iterate the holidays data
+				// echo '<Pre>';print_r($holiday_data);die; try now
 				foreach($holiday_data as  $key => $holiday){ 
 					if($key > 1 && $holiday['A'] != ''){ 
 						$event = $mysql->real_escape_str($holiday['A']);
-						$event_date = $fun->convert_date($mysql->real_escape_str($holiday['B']));
+						$event_date = $fun->convert_date($holiday['B']);
 						$branch = $mysql->real_escape_str($holiday['C']);
 					
 						$query = "CALL get_branch_byname('".$branch."')";
@@ -110,7 +109,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 						}catch(Exception $e){
 							echo 'Caught exception: ',  $e->getMessage(), "\n";die;
 						}
-						
 						if($branch_id != ''){
 						
 							// query to check whether it is exist or not. 
@@ -140,7 +138,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 									}
 									$row = $mysql->display_result($result);
 									$last_id = $row['inserted_id'];
-					
+									
+									// free the memory
+									$mysql->clear_result($result);
 									// call the next result
 									$mysql->next_query();
 								}catch(Exception $e){
@@ -155,8 +155,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 										throw new Exception('Problem in editing holidays');
 									}
 									$row = $mysql->display_result($result);
-									$affected_rows = $row['affected_rows'];
-					
+									$affected_row = $row['affected_rows'];
+									
+									// free the memory
+									$mysql->clear_result($result);
 									// call the next result
 									$mysql->next_query();
 								}catch(Exception $e){
@@ -169,10 +171,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					}
 				}
 			//}
-			
-			if($affected_rows != ''){
+
+			if(!empty($affected_row)){
 				// query to fetch admin details. 
-				$query = "CALL get_BH_Director_employee_details('A','".$_SESSION['user_id']."')";
+				$query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
 				try{
 					// calling mysql exe_query function
 					if(!$result = $mysql->execute_query($query)){
@@ -191,14 +193,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				}
 					
 				// query to fetch BH/Director details 
-				$query = "CALL get_BH_Director_employee_details('D','')";
+			    $query = "CALL get_admin_director_details('D','')";
 				try{
 					// calling mysql exe_query function
 					if(!$result = $mysql->execute_query($query)){
 						throw new Exception('Problem in getting approval user details');
 					}
 					while($account = $mysql->display_result($result)){
-						$row_account[] = $account;
+						// $row_account[] = $account;
+						$row_account = $account;
 					}
 					// free the memory
 					$mysql->clear_result($result);
@@ -207,22 +210,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				}catch(Exception $e){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}
-				
-				
-				foreach($salary_data as  $key => $salary){
-				$arrayString = print_r($salary[A], true);
-				$employee_name = str_replace("", ",", $arrayString);
-				}
+
 				$modified_date = $fun->convert_date_time_display($created_date);
-				// send mail to BH/Director
-				foreach($row_account as  $approval_user){ 					
+				// send mail to Director
+				// foreach($row_account as  $approval_user){ 	
+				if(!empty($row_account)){
 					$sub = "Manage Hiring - Holiday details updated by " .$user_name;
-					$msg = $content->get_edit_holiday_details($_POST,$user_name,$approval_user['approval_name'],$employee_name,$modified_date);
-					$mailer->send_mail($sub,$msg,$user_name,$user_email,$approval_user['approval_name'],$approval_user['email_id']);	
+					$msg = $content->get_edit_holiday_details($_POST,$user_name,$row_account['approval_name'],$employee_name,$modified_date);
+					$mailer->send_mail($sub,$msg,$user_name,$user_email,$row_account['approval_name'],$row_account['email_id']);
+					$success = '1';
 				}
+				// }
 			}
-			
-			$smarty->assign('form_sent' , 1);
+
+			if(!empty($last_id) || (!empty($affected_row) && $success == '1' )){
+				$smarty->assign('form_sent' , 1);
+			}
 		}
 	}
 }

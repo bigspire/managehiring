@@ -212,7 +212,7 @@ if(!empty($_POST)){
 				}
 				
 				// query to fetch admin details. 
-				$query = "CALL get_BH_Director_employee_details('A','".$_SESSION['user_id']."')";
+				$query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
 				try{
 					// calling mysql exe_query function
 					if(!$result = $mysql->execute_query($query)){
@@ -231,14 +231,15 @@ if(!empty($_POST)){
 				}
 			
 				// query to fetch BH/Director details 
-				$query = "CALL get_BH_Director_employee_details('D','')";
+				$query = "CALL get_admin_director_details('D','')";
 				try{
 					// calling mysql exe_query function
 					if(!$result = $mysql->execute_query($query)){
 						throw new Exception('Problem in getting approval user details');
 					}
 					while($account = $mysql->display_result($result)){
-						$row_account[] = $account;
+						// $row_account[] = $account;
+						$row_account = $account;
 					}
 					// free the memory
 					$mysql->clear_result($result);
@@ -250,11 +251,12 @@ if(!empty($_POST)){
 				$modified_date = $fun->convert_date_to_display($date);
 
 				// send mail to BH/Director
-				foreach($row_account as  $approval_user){ 					
+				// foreach($row_account as  $approval_user){ 
+				// send mail to Director								
 					$sub = "Manage Hiring -  " .$user_name." edited Role!";
-					$msg = $content->get_edit_role_details($_POST,$user_name,$approval_user['approval_name'],$_POST['role_name'],$modified_date);
-					$mailer->send_mail($sub,$msg,$user_name,$user_email,$approval_user['approval_name'],$approval_user['email_id']);	
-				}
+					$msg = $content->get_edit_role_details($_POST,$user_name,$row_account['approval_name'],$_POST['role_name'],$modified_date);
+					$mailer->send_mail($sub,$msg,$user_name,$user_email,$row_account['approval_name'],$row_account['email_id']);	
+				// }
 
 				if(!empty($last_id)){
 					// redirecting to list roles page
