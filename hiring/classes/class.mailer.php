@@ -5,7 +5,6 @@ class phpMail{
 
 	function send_mail($sub,$msg,$from,$from_email,$recipient, $recipient_email){
 		$mail = new PHPMailer;
-
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 	
 		
