@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-27 14:46:49
+/* Smarty version 3.1.29, created on 2018-06-27 16:19:34
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\holidays.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b335601d7e0e7_51184934',
+  'unifunc' => 'content_5b336bbe770c82_26071519',
   'file_dependency' => 
   array (
     '817544e437e1f1221a78a801f9e018cb4cfafc25' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\holidays.tpl',
-      1 => 1530091008,
+      1 => 1530096572,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b335601d7e0e7_51184934 ($_smarty_tpl) {
+function content_5b336bbe770c82_26071519 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -63,10 +63,12 @@ home"><i class="icon-home"></i></a>
 								<a href="holidays.php?action=export&keyword=<?php echo $_POST['keyword'];?>
 &event_from_date=<?php echo $_smarty_tpl->tpl_vars['event_from_date']->value;?>
 &event_to_date=<?php echo $_smarty_tpl->tpl_vars['event_to_date']->value;?>
+&branch=<?php echo $_smarty_tpl->tpl_vars['branch']->value;?>
 " class="jsRedirect">
 								<button type="button" val="holidays.php?action=export&keyword=<?php echo $_POST['keyword'];?>
 &event_from_date=<?php echo $_smarty_tpl->tpl_vars['event_from_date']->value;?>
 &event_to_date=<?php echo $_smarty_tpl->tpl_vars['event_to_date']->value;?>
+&branch=<?php echo $_smarty_tpl->tpl_vars['branch']->value;?>
 " name="export" class="btn btn-warning" >Export Excel</button></a>
 							<?php }?>	
 <a href="add_holiday.php" class="iframeBox unreadLink" val="40_45"><input type="button" value="Import Holidays" class="btn btn-info"/></a>							
@@ -88,7 +90,7 @@ home"><i class="icon-home"></i></a>
 							</div>
 						<?php }?>
 						
-						<?php if ($_smarty_tpl->tpl_vars['keyword']->value || $_smarty_tpl->tpl_vars['event_from_date']->value || $_smarty_tpl->tpl_vars['event_to_date']->value) {?>
+						<?php if ($_smarty_tpl->tpl_vars['keyword']->value || $_smarty_tpl->tpl_vars['event_from_date']->value || $_smarty_tpl->tpl_vars['event_to_date']->value || $_smarty_tpl->tpl_vars['branch']->value) {?>
 						  <?php $_smarty_tpl->tpl_vars['hide'] = new Smarty_Variable('', null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'hide', 0);?>
 						<?php } else { ?>

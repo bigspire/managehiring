@@ -33,8 +33,8 @@
 								<a class="jsRedirect toggleSearch"  href="javascript:void(0)">
 							<input type="button" value="Search" class="btn btn-success"/></a>
 							{if !$ALERT_MSG}
-								<a href="holidays.php?action=export&keyword={$smarty.post.keyword}&event_from_date={$event_from_date}&event_to_date={$event_to_date}" class="jsRedirect">
-								<button type="button" val="holidays.php?action=export&keyword={$smarty.post.keyword}&event_from_date={$event_from_date}&event_to_date={$event_to_date}" name="export" class="btn btn-warning" >Export Excel</button></a>
+								<a href="holidays.php?action=export&keyword={$smarty.post.keyword}&event_from_date={$event_from_date}&event_to_date={$event_to_date}&branch={$branch}" class="jsRedirect">
+								<button type="button" val="holidays.php?action=export&keyword={$smarty.post.keyword}&event_from_date={$event_from_date}&event_to_date={$event_to_date}&branch={$branch}" name="export" class="btn btn-warning" >Export Excel</button></a>
 							{/if}	
 <a href="add_holiday.php" class="iframeBox unreadLink" val="40_45"><input type="button" value="Import Holidays" class="btn btn-info"/></a>							
 						</div>
@@ -53,7 +53,7 @@
 							</div>
 						{/if}
 						
-						{if $keyword || $event_from_date || $event_to_date}
+						{if $keyword || $event_from_date || $event_to_date || $branch}
 						  {assign var=hide value=''}
 						{else}
 							{assign var=hide value=dn}

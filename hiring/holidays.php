@@ -176,6 +176,7 @@ $smarty->assign('data', $data);
 $smarty->assign('page' , $page); 
 $smarty->assign('total_pages' , $total_pages); 	
 $smarty->assign('keyword' , $keyword); 
+$smarty->assign('branch' , $branch); 
 $smarty->assign('event_from_date' , $event_from_date); 
 $smarty->assign('event_to_date' , $event_to_date); 
 $smarty->assign('ALERT_MSG', $alert_msg);
