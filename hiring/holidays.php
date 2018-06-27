@@ -146,7 +146,7 @@ try{
 		// function to print the excel header
       $excelObj->printHeader($header = array('Event Title','Event Date','Branch','Created') ,$col = array('A','B','C','D'));  
 		// function to print the excel data
-		$excelObj->printCell($data, $count,$col = array('A','B','C','D'), $field = array('event','event_date','created_date','location'),'Holidays_'.$current_date);
+		$excelObj->printCell($data, $count,$col = array('A','B','C','D'), $field = array('event','event_date','location','created_date'),'Holidays_'.$current_date);
 	}	
 	
 	// create,update,delete message validation
