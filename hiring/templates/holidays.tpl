@@ -98,7 +98,7 @@
 									<tr>
 										<td>{$item.event}</td>
 										<td>{$item.event_date}</td>
-										<td>{$item.branch}</td>
+										<td>{$item.location}</td>
 										<td>{$item.created_date}</td>
 										<!-- td class="actionItem" style="text-align:center">
 										<a href="edit_holidays.php?id={$item.id}" class="btn  btn-mini"  rel="tooltip" class="sepV_a" title="Edit"><i class="icon-pencil"></i></a>
