@@ -243,13 +243,22 @@
 										
 										<td class="tbl_column"><?php echo $res_type;?></td>
 										<td>
-										<?php  $date = $resume_data['Resume']['modified_date'] ? $resume_data['Resume']['modified_date'] : $resume_data['Resume']['created_date']; ?>
+				<?php if($resume_data['ReqResume']['status_title'] != 'Draft'):?>		
+<?php  $date = $resume_data['Resume']['modified_date'] ? $resume_data['Resume']['modified_date'] : $resume_data['Resume']['created_date']; ?>
 
 <?php  if($resume_data['Position']['resume_type'] == 'F'):?>										
 <a class="notify" data-notify-time = '2000' data-notify-title="In Progress!" data-notify-message="Downloading Fully Formatted Resume... Please wait..."   href="<?php echo $this->webroot;?>resume/autoresume/<?php echo $resume_data['ResDoc']['resume'];?>/<?php echo $resume_data['Resume']['modified_date'] ? strtotime($resume_data['Resume']['modified_date']) : strtotime($resume_data['Resume']['created_date']);?>">Download Fully Formatted Resume</a>
 <?php  elseif($resume_data['Position']['resume_type'] == 'S'):?>				
-<a class="notify" data-notify-time = '2000' data-notify-title="In Progress!" data-notify-message="Downloading Snapshot... Please wait..."  href="<?php echo $this->webroot;?>resume/profile_snapshot/<?php echo $resume_data['ResDoc']['resume']; ?>/<?php echo strtotime($date);?>/">Download Snapshot</a></td>
+<a class="notify" data-notify-time = '2000' data-notify-title="In Progress!" data-notify-message="Downloading Snapshot... Please wait..."  href="<?php echo $this->webroot;?>resume/profile_snapshot/<?php echo $resume_data['ResDoc']['resume']; ?>/<?php echo strtotime($date);?>/">Download Snapshot</a>
 <?php endif; ?>
+
+<?php else: ?>
+--
+<?php endif; ?>
+
+</td>
+
+
 										</td>
 											
 									</tr>
