@@ -767,6 +767,7 @@ class fun{
 		return $td;		
    }
    
+  
    // check if field only contains zero
 	public function is_zero($number){
 		if(($number == 0)){           

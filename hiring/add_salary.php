@@ -86,17 +86,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			$salary_data = $excelObj->read_data($uploaddir.$new_file);
 			// assigning the date
 			$created_date =  $fun->current_date();
-		
+
 			// iterate the holidays data
 			foreach($salary_data as  $key => $salary){ 
 				if($key > 1 && $salary['A'] != ''){
 					$employee = $mysql->real_escape_str($salary['A']);
 					$emplyee_list .= $employee."<br>";
-					$salary_date = $fun->convert_date($mysql->real_escape_str($salary['B']));
-					// $from_salary_date = $fun->convert_date($mysql->real_escape_str($salary['B']));
-					// $to_salary_date = $fun->convert_date($mysql->real_escape_str($salary['C']));
-					$ctc = $mysql->real_escape_str($salary['D']);
 
+					$salary_from_date = date("Y-m-d", strtotime('01-'.$salary['B']));
+					$salary_to_date = date("Y-m-d", strtotime('01-'.$salary['C']));
+					$ctc = $mysql->real_escape_str($salary['D']);
+					
+					// get salary date diff
+					// $sal_diff = date_diff($salary_to_date, $salary_from_date);
+					$sal_diff_co = $mysql->diff_date_salary($salary_from_date,$salary_to_date);
+					// echo $sal_diff_co;
+					
 					$query = "CALL get_emp_id_byname('".$employee."')";
 					try{
 						if(!$result = $mysql->execute_query($query)){
@@ -167,7 +172,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 							
 				}
 			}
-			
+			die;
 			if($affected_rows != ''){
 				// query to fetch admin details. 
 				$query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";

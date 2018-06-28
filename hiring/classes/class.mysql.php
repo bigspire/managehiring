@@ -80,6 +80,14 @@ class mysql{
 		}else{
 			return 'fail';
 		}
+	} 
+	public function diff_date_salary($date1,$date2){ 
+		// get the incentive approval status		
+		$query = "SELECT TIMESTAMPDIFF(MONTH, '".$date1."', '".$date2."')+1";
+		// $query = "SELECT DATEDIFF($date2, $date1)";
+		$result = $this->execute_query($query);
+		$record = $this->display_result($result);	
+		return count($result);
 	}
 } 
 $mysql = new mysql();
