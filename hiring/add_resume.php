@@ -1182,7 +1182,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			$template_path = dirname(__FILE__).'/uploads/template/introduction.docx'; 
 			include('vendor/PHPWord-develop/samples/template_process3.php');
 		
-		echo 'save data';die;
+		// echo 'save data';die;
 		
 			// for hiding the contacts
 			if($hide_contact == '1'){
