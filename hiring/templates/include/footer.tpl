@@ -3,7 +3,7 @@
 <p><span>Copyright © 2016 Career Tree. Powered by <a  class="theme_link" href="http://bigspire.com" target="_blank" title="BigSpire Software">BigSpire</a></span>
 		
 <span style="float:right;margin-right:20px;"><a href="{$smarty.const.webroot}home/add_feedback" val="50_50" class="iframeBox theme_link cboxElement">Feedback / Suggestions</a> 
-<span class="font-grey-4">|</span> <a  class="iframeBox theme_link cboxElement"  val="50_50"  href="{$smarty.const.webroot}home/add_feedback">Report a Bug</a> </span>
+<span class="font-grey-4">|</span> <a  class="iframeBox theme_link cboxElement"  val="50_70"  href="{$smarty.const.webroot}home/report_bug">Report a Bug</a> </span>
 		
 </p>		
 </div>

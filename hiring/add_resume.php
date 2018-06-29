@@ -1147,7 +1147,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 					// send mail to account holder
 					$sub = "Manage Hiring -  Resume uploaded by " .$recruiter;
 					$msg = $content->get_create_resume_mail($_POST,$client_autoresume,$position_autoresume,$recruiter,$recruiter_email,$username['ah_name'],$username['ah_email']);
-					// $mailer->send_mail($sub,$msg,$recruiter,$recruiter_email,$username['ah_name'],$username['ah_email']);
+					$mailer->send_mail($sub,$msg,$recruiter,$recruiter_email,$username['ah_name'],$username['ah_email']);
 				}catch(Exception $e){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}

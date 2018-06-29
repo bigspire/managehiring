@@ -1350,8 +1350,16 @@ class PositionController extends AppController {
 
 	}
 	
+	/* function to validate the email */
+	public function validate_email_form($email){ 
+		if(!$this->Functions->email_validation($email)){
+			return $email;
+		}
+	}
+	
+
 	/* function to send CV to client */
-	public function send_cv($res_id, $pos_id, $req_res_id){ 
+	public function send_cv($res_id, $pos_id, $req_res_id){		
 		$this->layout = 'framebox';
 		// when the values are not empty
 		if(!empty($res_id) && !empty($pos_id)){
@@ -1482,8 +1490,10 @@ class PositionController extends AppController {
 				$this->save_mail_box($subject, $message, $req_res_id, 'C',1);
 				// send cc mails
 				if($this->request->data['Position']['client_cc'] != ''){
-					$cc = explode(',', $this->request->data['Position']['client_cc']);	
-					$cc_new = array_map('trim',$cc);					
+					$replace_str = str_replace(';', ',', $this->request->data['Position']['client_cc']);
+					$cc = explode(',', $replace_str);	
+					$cc_new = array_map('trim',$cc);
+					$cc_new2 = array_map(array($this, 'validate_email_form'), $cc_new);					
 				}
 				
 				if($this->request->data['Position']['client_attach']['tmp_name'] != ''){
@@ -1491,7 +1501,7 @@ class PositionController extends AppController {
 					$resume_path[] = $this->upload_attachment($this->request->data['Position']['client_attach'], $attach_file);
 				}
 					
-				if(!$this->send_email($subject, 'send_cv', $this->Session->read('USER.Login.email_id'), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new)){	
+				if(!$this->send_email($subject, 'send_cv', $this->Session->read('USER.Login.email_id'), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new2)){	
 					// show the msg.								
 					$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to client...', 'default', array('class' => 'alert alert-error'));				
 				}else{						
@@ -1550,7 +1560,8 @@ class PositionController extends AppController {
 					'table' => 'designation',
 					'alias' => 'Designation',					
 					'type' => 'LEFT',
-					'conditions' => array('`Designation`.`id` = `Resume`.`designation_id`')
+					'conditions' => array('`Designation`.`id` = `Resume`.`designation_id`',
+					'Designation.desig_type' => 'CA')
 					)	
 					,
 				array(
@@ -1563,12 +1574,12 @@ class PositionController extends AppController {
 						
 				array('table' => 'client_account_holder',
 						'alias' => 'AH',					
-						'type' => 'LEFT',
+						'type' => 'INNER',
 						'conditions' => array('`AH`.`clients_id` = `Client`.`id`')
 				),
 				array('table' => 'users',
 						'alias' => 'Recruiter',					
-						'type' => 'LEFT',
+						'type' => 'INNER',
 						'conditions' => array('`AH`.`users_id` = `Recruiter`.`id`', 'Recruiter.id' => $this->Session->read('USER.Login.id'))
 				)
 				
@@ -1675,7 +1686,8 @@ class PositionController extends AppController {
 					array('table' => 'designation',
 							'alias' => 'Designation',					
 							'type' => 'LEFT',
-							'conditions' => array('`Designation`.`id` = `ResExp`.`designation_id`')
+							'conditions' => array('`Designation`.`id` = `ResExp`.`designation_id`',
+							'Designation.desig_type' => 'CA')
 					)
 				);
 				$this->loadModel('ReqResumeStatus');
@@ -1783,12 +1795,12 @@ class PositionController extends AppController {
 					
 				array('table' => 'client_account_holder',
 						'alias' => 'AH',					
-						'type' => 'LEFT',
+						'type' => 'INNER',
 						'conditions' => array('`AH`.`clients_id` = `Client`.`id`')
 				),
 				array('table' => 'users',
 						'alias' => 'Recruiter',					
-						'type' => 'LEFT',
+						'type' => 'INNER',
 						'conditions' => array('`AH`.`users_id` = `Recruiter`.`id`', 'Recruiter.id' => $this->Session->read('USER.Login.id'))
 				)
 				
@@ -2783,8 +2795,10 @@ class PositionController extends AppController {
 					$this->save_mail_box($subject, $message, $req_res_id, 'C',2);
 					// send cc to client
 					if($this->request->data['Position']['client_cc'] != ''){
-						$cc = explode(',', $this->request->data['Position']['client_cc']);
-						$cc_new = array_map('trim',$cc);							
+						$replace_str = str_replace(';', ',', $this->request->data['Position']['client_cc']);
+						$cc = explode(',', $replace_str);
+						$cc_new = array_map('trim',$cc);
+						$cc_new2 = array_map(array($this, 'validate_email_form'), $cc_new);						
 					}
 					
 					/*
@@ -2794,7 +2808,7 @@ class PositionController extends AppController {
 					}
 					*/					
 					// send mail
-					if(!$this->send_email($subject, 'confirm_interview', $this->Session->read('USER.Login.email_id'), $contact_data['Contact']['email'], $vars, '', $cc_new)){
+					if(!$this->send_email($subject, 'confirm_interview', $this->Session->read('USER.Login.email_id'), $contact_data['Contact']['email'], $vars, '', $cc_new2)){
 						// show the msg.								
 						$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to candidate...', 'default', array('class' => 'alert alert-error'));				
 					}						
