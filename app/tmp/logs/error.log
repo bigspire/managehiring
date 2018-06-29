@@ -4743,3 +4743,70 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+2018-06-29 20:54:43 Warning: Warning (2): Missing argument 4 for PositionController::schedule_interview() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2287]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2287
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Warning: Warning (2): Missing argument 5 for PositionController::schedule_interview() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2287]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2287
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Warning: Warning (2): Missing argument 6 for PositionController::schedule_interview() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2287]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2287
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Warning: Warning (2): Missing argument 4 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Warning: Warning (2): Missing argument 5 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2602 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+

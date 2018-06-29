@@ -42458,3 +42458,910 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: interview_level in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2295]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2295
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: interview_level in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2297]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2297
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: interview_level in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2299]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2299
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: interview_level in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2301]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2301
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: interview_level in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2303]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2303
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: interview_level in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2303]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2303
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: schedule_type in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2343]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2343
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined index: int_type in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2343]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2343
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: int_table in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2402]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2402
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: can_name in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2434]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2434
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: int_table_form in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2480]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2480
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined index: int_type in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2482]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2482
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: level_cls in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2504]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2504
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2508]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2508
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2508]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2508
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2508]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2508
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2508]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2508
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2508]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2508
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2524]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2524
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2524]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2524
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2524]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2524
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2558]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2558
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2559]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2559
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2560]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2560
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2561]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2561
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:43 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2583]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2583
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: inter_data in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2583]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2583
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: can_name_form in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2583]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2583
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: multi_chk in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2588]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2588
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: chk_pos_id in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2593]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2593
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: multi_candidates in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1623]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1623
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: multi_candidates in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1624]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1624
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: candidate_arr in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1645]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1645
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: exp_table in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1648]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1648
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: prev_exp_table in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1702]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1702
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: ResLoc in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1731]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1731
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1734]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1734
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1735]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1735
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1737]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1737
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1738]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1738
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1739]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1739
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1740]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1740
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1741]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1741
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1742]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1742
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1743]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1743
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: InterviewStage in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1780]
+Trace:
+PositionController::get_interview_mode() - APP\Controller\PositionController.php, line 1780
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1743
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: address1 in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1759]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1759
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: address2 in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1759]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1759
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: total_exp in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1760]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1760
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: suffix in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\Component\FunctionsComponent.php, line 219]
+Trace:
+FunctionsComponent::check_exp() - APP\Controller\Component\FunctionsComponent.php, line 219
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1760
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: str in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\Component\FunctionsComponent.php, line 219]
+Trace:
+FunctionsComponent::check_exp() - APP\Controller\Component\FunctionsComponent.php, line 219
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1760
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: FunctionArea in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1762]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1762
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: int_candidates in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1764]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1764
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: candidate_arr in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1645]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1645
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: exp_table in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1648]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1648
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: prev_exp_table in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1702]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1702
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: ResLoc in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1731]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1731
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1734]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1734
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1735]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1735
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1737]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1737
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1738]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1738
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1739]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1739
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1740]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1740
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1741]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1741
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1742]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1742
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: Position in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1743]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1743
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: InterviewStage in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1780]
+Trace:
+PositionController::get_interview_mode() - APP\Controller\PositionController.php, line 1780
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1743
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: address1 in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1759]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1759
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: address2 in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1759]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1759
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: total_exp in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1760]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1760
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: suffix in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\Component\FunctionsComponent.php, line 219]
+Trace:
+FunctionsComponent::check_exp() - APP\Controller\Component\FunctionsComponent.php, line 219
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1760
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: str in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\Component\FunctionsComponent.php, line 219]
+Trace:
+FunctionsComponent::check_exp() - APP\Controller\Component\FunctionsComponent.php, line 219
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1760
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined index: FunctionArea in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1762]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1762
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: options in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 162]
+Trace:
+AppController::get_approve_leave_count() - APP\Controller\AppController.php, line 162
+AppController::beforeRender() - APP\Controller\AppController.php, line 49
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::render() - CORE\Cake\Controller\Controller.php, line 936
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: validation_error in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 12]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 12
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: cv_update_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 19]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 19
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: cv_update_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 28]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 28
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: reschedule in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 33]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 33
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: reschedule in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 90]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 90
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: interview_record in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 106]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 106
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined offset: 3 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 106]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 106
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: interview_record in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 119]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 119
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: interview_record in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 131]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 131
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: interview_record in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 141]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 141
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: interview_record in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 155]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: interview_record in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 157]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 157
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: interview_record in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 178]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 178
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: tiny_readonly in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\schedule_interview.ctp, line 345]
+Trace:
+include - APP\View\Position\schedule_interview.ctp, line 345
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: form_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Layouts\framebox.ctp, line 56]
+Trace:
+include - APP\View\Layouts\framebox.ctp, line 56
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: cv_update_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Layouts\framebox.ctp, line 67]
+Trace:
+include - APP\View\Layouts\framebox.ctp, line 67
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 20:54:44 Debug: Notice (8): Undefined variable: redirect_popup in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Layouts\framebox.ctp, line 80]
+Trace:
+include - APP\View\Layouts\framebox.ctp, line 80
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
