@@ -83,6 +83,7 @@
 										<th width="200"><a href="salary.php?field=sal_date&order={$order}&page={$smarty.get.page}&keyword={$keyword}&salary_from_date={$salary_from_date}&salary_to_date={$salary_to_date}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_sal_date}">Salary Month</a></th>
 										<th width="200"><a href="salary.php?field=ctc&order={$order}&page={$smarty.get.page}&keyword={$keyword}&salary_from_date={$salary_from_date}&salary_to_date={$salary_to_date}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_ctc}">CTC</a></th>									 	
 										<th width="75"><a href="salary.php?field=created&order={$order}&page={$smarty.get.page}&keyword={$keyword}&salary_from_date={$salary_from_date}&salary_to_date={$salary_to_date}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_created}">Created</a></th>
+										<th width="75"><a href="salary.php?field=modified&order={$order}&page={$smarty.get.page}&keyword={$keyword}&salary_from_date={$salary_from_date}&salary_to_date={$salary_to_date}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_modified}">Modified</a></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -93,6 +94,7 @@
 										<td>{$item.sal_date}</td>
 										<td>{$item.ctc}</td>
 										<td>{$item.created_date}</td>
+										<td>{$item.modified_date}</td>
 									</tr>
 								   {* /if *}
 								{/foreach}

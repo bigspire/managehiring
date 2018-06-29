@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-28 12:17:43
+/* Smarty version 3.1.29, created on 2018-06-29 12:48:42
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\salary.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b34848ff3e282_24349657',
+  'unifunc' => 'content_5b35dd52545677_15789278',
   'file_dependency' => 
   array (
     '6baa3c4796cba11820823c917eeba4ade01da1a5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\salary.tpl',
-      1 => 1530078138,
+      1 => 1530256662,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b34848ff3e282_24349657 ($_smarty_tpl) {
+function content_5b35dd52545677_15789278 ($_smarty_tpl) {
 ?>
 
    
@@ -147,6 +147,13 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'hide', 0);?>
 &salary_to_date=<?php echo $_smarty_tpl->tpl_vars['salary_to_date']->value;?>
 " rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_created']->value;?>
 ">Created</a></th>
+										<th width="75"><a href="salary.php?field=modified&order=<?php echo $_smarty_tpl->tpl_vars['order']->value;?>
+&page=<?php echo $_GET['page'];?>
+&keyword=<?php echo $_smarty_tpl->tpl_vars['keyword']->value;?>
+&salary_from_date=<?php echo $_smarty_tpl->tpl_vars['salary_from_date']->value;?>
+&salary_to_date=<?php echo $_smarty_tpl->tpl_vars['salary_to_date']->value;?>
+" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_modified']->value;?>
+">Modified</a></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -173,6 +180,8 @@ $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['ctc'];?>
 </td>
 										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['created_date'];?>
+</td>
+										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['modified_date'];?>
 </td>
 									</tr>
 								   

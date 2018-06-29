@@ -73,8 +73,8 @@ try{
 
 // set the condition to check ascending or descending order		
 $order = ($_GET['order'] == 'desc') ? 'asc' :  'desc';	
-$sort_fields = array('1' => 'emp','sal_date','ctc','created');
-$org_fields = array('1' => 'employee','sal_date','ctc','created_date');
+$sort_fields = array('1' => 'emp','sal_date','ctc','created','modified');
+$org_fields = array('1' => 'employee','sal_date','ctc','created_date','modified_date');
 
 // to set the sorting image
 foreach($sort_fields as $key => $b_field){
@@ -112,6 +112,7 @@ try{
  		$data[$i]['sal_from'] = $fun->convert_date_to_display($obj['sal_from']);
 		$data[$i]['sal_to'] = $fun->convert_date_to_display($obj['sal_to']);
 		$data[$i]['sal_date'] = $fun->convert_month_year_display($obj['sal_date']);
+		$data[$i]['modified_date'] = $fun->convert_date_to_display($obj['modified_date']);
  		$i++;
  		$pno[]=$paging->print_no();
  		$smarty->assign('pno',$pno);
@@ -124,9 +125,9 @@ try{
 		include('classes/class.excel.php');
 		$excelObj = new libExcel();
 		// function to print the excel header
-      $excelObj->printHeader($header = array('Employee','Salary Month','CTC','Created') ,$col = array('A','B','C','D'));  
+      $excelObj->printHeader($header = array('Employee','Salary Month','CTC','Created','Modified') ,$col = array('A','B','C','D','E'));  
 		// function to print the excel data
-		$excelObj->printCell($data, $count,$col = array('A','B','C','D'), $field = array('employee','sal_date','ctc','created_date'),'Salary_'.$current_date);
+		$excelObj->printCell($data, $count,$col = array('A','B','C','D','E'), $field = array('employee','sal_date','ctc','created_date','modified_date'),'Salary_'.$current_date);
 	}	
 	
 	// create,update,delete message validation
