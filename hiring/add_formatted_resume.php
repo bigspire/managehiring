@@ -888,7 +888,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 	}
 	
 	// array for printing correct field name in error message
-	$fieldtype = array('0', '0','0','0','0', '0','1','1','0', '0','0','1','1', '1','1','0','0','0','0','0');
+	$fieldtype = array('0', '0','0','0','1', '1','1','1','0', '0', '1','1','1', '1','0','0','1','0','0');
 	$actualfield = array('first name', 'last name','email', 'mobile','dob',
 						'current designation', 'total years of experience','total months of experience',
 						'present CTC','expected CTC','present CTC type','expected CTC type',
@@ -1318,9 +1318,26 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 				if(!$result = $mysql->execute_query($query)){
 					throw new Exception('Problem in getting the AH Details');
 				}
-				while($row[] = $mysql->display_result($result)){
-					
+				while($account = $mysql->display_result($result)){
+					$row_account[] = $account;
 				}
+				// free the memory
+				$mysql->clear_result($result);
+				// call the next result
+				$mysql->next_query();
+			}catch(Exception $e){
+				echo 'Caught exception: ',  $e->getMessage(), "\n";
+			}
+			
+			// query to get recruiter details
+			$query = "CALL get_user_byid('".$_SESSION['user_id']."')";
+			try{
+				if(!$result = $mysql->execute_query($query)){
+					throw new Exception('Problem in getting recruiter Details');
+				}
+				$recruiter_details = $mysql->display_result($result);
+				$recruiter = $recruiter_details['first_name'].' '.$recruiter_details['last_name'];
+				$recruiter_email = $recruiter_details['email_id'];
 				// free the memory
 				$mysql->clear_result($result);
 				// call the next result
@@ -1349,8 +1366,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 					$mailer->send_mail($sub,$msg,$recruiter_details,$recruiter_email,$username['ah_name'],$username['ah_email']);
 				}catch(Exception $e){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
-				}
-					
+				}	
 			}
 			
 			// for languages known

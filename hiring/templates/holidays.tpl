@@ -89,6 +89,7 @@
 										<th width="200"><a href="holidays.php?field=event_date&order={$order}&page={$smarty.get.page}&keyword={$keyword}&event_from_date={$event_from_date}&event_to_date={$event_to_date}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_event_date}">Event Date</a></th>
 										<th width="200"><a href="holidays.php?field=branch&order={$order}&page={$smarty.get.page}&keyword={$keyword}&event_from_date={$event_from_date}&event_to_date={$event_to_date}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_branch}">Branch</a></th>
 										<th width="75"><a href="holidays.php?field=created&order={$order}&page={$smarty.get.page}&keyword={$keyword}&event_from_date={$event_from_date}&event_to_date={$event_to_date}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_created}">Created</a></th>
+										<th width="75"><a href="holidays.php?field=modified&order={$order}&page={$smarty.get.page}&keyword={$keyword}&event_from_date={$event_from_date}&event_to_date={$event_to_date}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_modified}">Modified</a></th>
 										<!-- th width="50" style="text-align:center">Actions</th-->
 									</tr>
 								</thead>
@@ -100,6 +101,7 @@
 										<td>{$item.event_date}</td>
 										<td>{$item.location}</td>
 										<td>{$item.created_date}</td>
+										<td>{$item.modified_date}</td>
 										<!-- td class="actionItem" style="text-align:center">
 										<a href="edit_holidays.php?id={$item.id}" class="btn  btn-mini"  rel="tooltip" class="sepV_a" title="Edit"><i class="icon-pencil"></i></a>
 										<!-- a id="{$item.id}" href="javascript:void(0)" rel="tooltip" class="btn Confirm btn-mini" value="#"  title="Delete"><i class="icon-trash"></i></a-->

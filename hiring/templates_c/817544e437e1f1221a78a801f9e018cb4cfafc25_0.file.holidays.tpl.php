@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-27 16:19:34
+/* Smarty version 3.1.29, created on 2018-06-29 12:48:27
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\holidays.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b336bbe770c82_26071519',
+  'unifunc' => 'content_5b35dd43baee75_90449239',
   'file_dependency' => 
   array (
     '817544e437e1f1221a78a801f9e018cb4cfafc25' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\holidays.tpl',
-      1 => 1530096572,
+      1 => 1530256687,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b336bbe770c82_26071519 ($_smarty_tpl) {
+function content_5b35dd43baee75_90449239 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -157,6 +157,13 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'hide', 0);?>
 &event_to_date=<?php echo $_smarty_tpl->tpl_vars['event_to_date']->value;?>
 " rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_created']->value;?>
 ">Created</a></th>
+										<th width="75"><a href="holidays.php?field=modified&order=<?php echo $_smarty_tpl->tpl_vars['order']->value;?>
+&page=<?php echo $_GET['page'];?>
+&keyword=<?php echo $_smarty_tpl->tpl_vars['keyword']->value;?>
+&event_from_date=<?php echo $_smarty_tpl->tpl_vars['event_from_date']->value;?>
+&event_to_date=<?php echo $_smarty_tpl->tpl_vars['event_to_date']->value;?>
+" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_modified']->value;?>
+">Modified</a></th>
 										<!-- th width="50" style="text-align:center">Actions</th-->
 									</tr>
 								</thead>
@@ -184,6 +191,8 @@ $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['location'];?>
 </td>
 										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['created_date'];?>
+</td>
+										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['modified_date'];?>
 </td>
 										<!-- td class="actionItem" style="text-align:center">
 										<a href="edit_holidays.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>

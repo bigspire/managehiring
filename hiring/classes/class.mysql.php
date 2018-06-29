@@ -80,6 +80,13 @@ class mysql{
 		}else{
 			return 'fail';
 		}
+	} 
+	public function diff_date_salary($date1,$date2){ 
+		// get the month difference between two dates
+		$query = "SELECT PERIOD_DIFF('".$date2."', '".$date1."') as diff_month";
+		$result = $this->execute_query($query);
+		$record = $this->display_result($result);
+		return $record['diff_month'];		
 	}
 } 
 $mysql = new mysql();

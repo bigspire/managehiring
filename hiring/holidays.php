@@ -95,8 +95,8 @@ try{
 
 // set the condition to check ascending or descending order		
 $order = ($_GET['order'] == 'desc') ? 'asc' :  'desc';	
-$sort_fields = array('1' => 'event','event_date','created','branch');
-$org_fields = array('1' => 'event','event_date','created_date','location');
+$sort_fields = array('1' => 'event','event_date','created','branch','modified');
+$org_fields = array('1' => 'event','event_date','created_date','location','modified_date');
 
 // to set the sorting image
 foreach($sort_fields as $key => $b_field){
@@ -131,6 +131,7 @@ try{
 	{
  		$data[] = $obj;
  		$data[$i]['created_date'] = $fun->convert_date_to_display($obj['created_date']);
+		$data[$i]['modified_date'] = $fun->convert_date_to_display($obj['modified_date']);
 		$data[$i]['event_date'] = $fun->convert_date_to_display($obj['event_date']);
  		$i++;
  		$pno[]=$paging->print_no();
@@ -144,9 +145,9 @@ try{
 		include('classes/class.excel.php');
 		$excelObj = new libExcel();
 		// function to print the excel header
-      $excelObj->printHeader($header = array('Event Title','Event Date','Branch','Created') ,$col = array('A','B','C','D'));  
+      $excelObj->printHeader($header = array('Event Title','Event Date','Branch','Created','Modified') ,$col = array('A','B','C','D','E'));  
 		// function to print the excel data
-		$excelObj->printCell($data, $count,$col = array('A','B','C','D'), $field = array('event','event_date','location','created_date'),'Holidays_'.$current_date);
+		$excelObj->printCell($data, $count,$col = array('A','B','C','D','E'), $field = array('event','event_date','location','created_date','modified_date'),'Holidays_'.$current_date);
 	}	
 	
 	// create,update,delete message validation

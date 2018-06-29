@@ -493,7 +493,7 @@ if($_GET['action'] == 'regenerate'){
 				// get the employee salary
 				// calculate incentive if eligible
 				$incentive_target = $employee_sal * 3;
-				$total_billing ; echo '<br>';
+				// $total_billing ; echo '<br>';
 				if($total_billing >= $incentive_target && !empty($employee_salary)){
 					// iterate all the values in the bill
 					foreach($req_ctc as $key => $pos_ctc){
@@ -1340,7 +1340,7 @@ if(!empty($_POST)){
 				if(!$result = $mysql->execute_query($query)){
 					throw new Exception('Problem in getting employee details');
 				}
-				while($row[] = $mysql->display_result($result)){
+				while($row_employee[] = $mysql->display_result($result)){
 				}				
 				// free the memory
 				$mysql->clear_result($result);
@@ -1378,7 +1378,7 @@ if(!empty($_POST)){
 	
 			
 			// iterate the employees
-			foreach($row as $record){ 
+			foreach($row_employee as $record){ 
 				$emp_id = $record['id'];
 				$emp_name = $record['emp_name'];
 				$inc_month = 1;
@@ -1406,7 +1406,7 @@ if(!empty($_POST)){
 				}
 				if($total == 0){
 					// get the incentive amount for the position CTC from eligibility table
-					$query = "CALL get_employee_salary('".$emp_id."','".$year_month."','".$year_month2."')";
+					echo $query = "CALL get_employee_salary('".$emp_id."','".$year_month."','".$year_month2."')";
 				
 					try{
 						// calling mysql exe_query function
@@ -1423,6 +1423,7 @@ if(!empty($_POST)){
 					}catch(Exception $e){
 						echo 'Caught exception: ',  $e->getMessage(), "\n";
 					}
+					
 					// get monthly billing until 6 months
 					while($inc_month <= 6){
 						// get employee billing details
@@ -1476,11 +1477,15 @@ if(!empty($_POST)){
 								// free the memory
 								$mysql->clear_result($result);
 								// next query execution
-								$mysql->next_query();							
+								$mysql->next_query();	
+echo $employee_sal[$emp_id][$year_month];								
 								// get the employee salary
-								// $employee_salary = $employee_sal[$emp_id][$year_month];
+								$employee_salary = $employee_sal[$emp_id][$year_month];
 								// calculate incentive if eligible
 								$incentive_target = $employee_sal * 3;
+								//echo $incentive_target.'inc_target';
+								//echo $employee_salary.'emp_sal';
+								//echo $total_billing.'tot_bill';echo '<br>';
 								//$total_billing ; 
 								$employee_salary = 100;
 								if($total_billing >= $incentive_target && !empty($employee_salary)){
@@ -1742,7 +1747,7 @@ if(!empty($_POST)){
 			$position_month = $fun->display_pc_Months($_POST['position_month']);
 			$month = $ps_month ? $ps_month : $position_month;
 			$year = $_POST['year'] ? $_POST['year'] : $_POST['ps_year'];
-
+			die;
 			if(!empty($last_id)){
 				// send mail to L1 
 				$sub = "Manage Hiring -  Incentive -  ".$fun->check_incentive_tp($_POST['type']).",  ".$month.' '.$year." Created By ".$admin_name;

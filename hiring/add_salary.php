@@ -86,17 +86,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			$salary_data = $excelObj->read_data($uploaddir.$new_file);
 			// assigning the date
 			$created_date =  $fun->current_date();
-		
+
 			// iterate the holidays data
 			foreach($salary_data as  $key => $salary){ 
 				if($key > 1 && $salary['A'] != ''){
 					$employee = $mysql->real_escape_str($salary['A']);
-					$emplyee_list .= $employee."<br>";
-					$salary_date = $fun->convert_date($mysql->real_escape_str($salary['B']));
-					// $from_salary_date = $fun->convert_date($mysql->real_escape_str($salary['B']));
-					// $to_salary_date = $fun->convert_date($mysql->real_escape_str($salary['C']));
 					$ctc = $mysql->real_escape_str($salary['D']);
-
+					$emplyee_list .= $employee."<br>";
+					
+				
+					// echo $sal_diff_co;
 					$query = "CALL get_emp_id_byname('".$employee."')";
 					try{
 						if(!$result = $mysql->execute_query($query)){
@@ -113,54 +112,82 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					}
 						
 					if($emp_id != ''){
-						// query to check whether it is exist or not. 
-						$query = "CALL check_salary_exist('$emp_id','$salary_date')";
-						// Calling the function that makes the insert
-						try{
-							// calling mysql exe_query function
-							if(!$result = $mysql->execute_query($query)){
-								throw new Exception('Problem in executing to check emp salary exist');
-							}
-							$check = $mysql->display_result($result);
-							// free the memory
-							$mysql->clear_result($result);
-							// call the next result
-							$mysql->next_query();
-						}catch(Exception $e){
-							echo 'Caught exception: ',  $e->getMessage(), "\n";
-						}
+						
+						// split the date with explode
+						$from_orderdate = explode('-', $salary['B']);
+						$from_month = $from_orderdate[0];
+						$from_year   = $from_orderdate[1];
+						
+						$to_orderdate = explode('-', $salary['C']);
+						$to_month = $to_orderdate[0];
+						$to_year   = $to_orderdate[1];					
+					
+						// using function get the numeric value
+						$salary_from_date = date("Ym", strtotime($from_year.'-'.$from_month.'-01'));
+						$salary_to_date = date("Ym", strtotime($to_year.'-'.$to_month.'-01'));
 
-						if($check['id'] == ''){
-							// query to import the file
-							$query = "CALL add_salary('".$emp_id."','".$salary_date."','".$ctc."','".$created_date."','".$_SESSION['user_id']."')";
-							try{
-								if(!$result = $mysql->execute_query($query)){
-									throw new Exception('Problem in adding salary');
-								}
-								$row = $mysql->display_result($result);
-								$last_id = $row['inserted_id'];
-					
-								// call the next result
-								$mysql->next_query();
-							}catch(Exception $e){
-								echo 'Caught exception: ',  $e->getMessage(), "\n";die;
-							}
-						}else{
-							// query to import the file
-							$query = "CALL edit_salary('".$emp_id."','".$salary_date."','".$ctc."','".$created_date."','".$_SESSION['user_id']."')";
-							try{
-								if(!$result = $mysql->execute_query($query)){
-									throw new Exception('Problem in editing salary');
-								}
-								$row = $mysql->display_result($result);
-								$affected_rows = $row['affected_rows'];
-					
-								// call the next result
-								$mysql->next_query();
-							}catch(Exception $e){
-								echo 'Caught exception: ',  $e->getMessage(), "\n";die;
-							}
+						
+						// get salary date diff
+						$sal_diff_co = $mysql->diff_date_salary($salary_from_date,$salary_to_date);
+						$sal_diff_co += 1; 
+						
+						// get excel salary from date
+						$salary_format_date = date("Y-m-d", strtotime($from_year.'-'.$from_month.'-01'));
+						
+						for($i = 0; $i < $sal_diff_co; $i++){
 							
+							$salary_date = date('Y-m-01',strtotime($salary_format_date. ", +$i month"));
+
+							// query to check whether it is exist or not. 
+							$query = "CALL check_salary_exist('$emp_id','$salary_date')";
+							// Calling the function that makes the insert
+							try{
+								// calling mysql exe_query function
+								if(!$result = $mysql->execute_query($query)){
+									throw new Exception('Problem in executing to check emp salary exist');
+								}
+								$check = $mysql->display_result($result);
+								// free the memory
+								$mysql->clear_result($result);
+								// call the next result
+								$mysql->next_query();
+							}catch(Exception $e){
+								echo 'Caught exception: ',  $e->getMessage(), "\n";
+							}
+								
+						
+							if($check['id'] == ''){	
+								// query to import the file
+								$query = "CALL add_salary('".$emp_id."','".$salary_date."','".$ctc."','".$created_date."','".$_SESSION['user_id']."')";
+								try{
+									if(!$result = $mysql->execute_query($query)){
+										throw new Exception('Problem in adding salary');
+									}
+									$row = $mysql->display_result($result);
+									$last_id = $row['inserted_id'];
+						
+									// call the next result
+									$mysql->next_query();
+								}catch(Exception $e){
+									echo 'Caught exception: ',  $e->getMessage(), "\n";die;
+								}
+							}else{
+								// query to import the file
+								$query = "CALL edit_salary('".$emp_id."','".$salary_date."','".$ctc."','".$created_date."','".$_SESSION['user_id']."')";
+								try{
+									if(!$result = $mysql->execute_query($query)){
+										throw new Exception('Problem in editing salary');
+									}
+									$row = $mysql->display_result($result);
+									$affected_rows = $row['affected_rows'];
+						
+									// call the next result
+									$mysql->next_query();
+								}catch(Exception $e){
+									echo 'Caught exception: ',  $e->getMessage(), "\n";die;
+								}
+								
+							}
 						}
 						
 					}
@@ -207,15 +234,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}
 				
-				/*
-				foreach($salary_data as  $key => $salary){
-				$arrayString = print_r($salary[A], true);
-				$employee_name = str_replace("", ",", $arrayString);
-				}*/
-				
 				$modified_date = $fun->convert_date_time_display($created_date);
-				// send mail to BH/Director
-				// foreach($row_account as  $approval_user){ 
+				// send mail to Director
 				if(!empty($row_account)){
 					// send mail to Director				
 					$sub = "Manage Hiring - Salary details updated by " .$user_name;
@@ -223,7 +243,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					$mailer->send_mail($sub,$msg,$user_name,$user_email,$row_account['approval_name'],$row_account['email_id']);	
 					$success = '1';
 				}
-				// }
+				
 			}
 
 			if(!empty($last_id) || (!empty($affected_rows) && $success == '1' )){
