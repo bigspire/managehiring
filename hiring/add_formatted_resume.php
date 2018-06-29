@@ -888,7 +888,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 	}
 	
 	// array for printing correct field name in error message
-	$fieldtype = array('0', '0','0','0','0', '0','1','1','0', '0','0','1','1', '1','1','0','0','0','0','0');
+	$fieldtype = array('0', '0','0','0','1', '1','1','1','0', '0', '1','1','1', '1','0','0','1','0','0');
 	$actualfield = array('first name', 'last name','email', 'mobile','dob',
 						'current designation', 'total years of experience','total months of experience',
 						'present CTC','expected CTC','present CTC type','expected CTC type',
