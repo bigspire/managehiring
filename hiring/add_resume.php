@@ -1073,7 +1073,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 				echo 'Caught exception: ',  $e->getMessage(), "\n";
 			}
 		}
-
+		
 		if(!empty($edu_id) && !empty($res_id) && !empty($exp_id) && !empty($resume_id) && !empty($position_id) && !empty($req_res_id)){
 			
 			$query =  "CALL get_personal_skills('$resume_id')";
@@ -1130,6 +1130,24 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			}
 			
 			
+			// query to get recruiter details
+			$query = "CALL get_user_byid('".$_SESSION['user_id']."')";
+			try{
+				if(!$result = $mysql->execute_query($query)){
+					throw new Exception('Problem in getting recruiter Details');
+				}
+				$recruiter_details = $mysql->display_result($result);
+				$recruiter = $recruiter_details['first_name'].' '.$recruiter_details['last_name'];
+				$recruiter_email = $recruiter_details['email_id'];
+				// free the memory
+				$mysql->clear_result($result);
+				// call the next result
+				$mysql->next_query();
+			}catch(Exception $e){
+				echo 'Caught exception: ',  $e->getMessage(), "\n";
+			}
+			
+			
 			// update the account holders read status
 			foreach($row_account as  $username) { 					
 				// query to add req read details
@@ -1147,21 +1165,24 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 					// send mail to account holder
 					$sub = "Manage Hiring -  Resume uploaded by " .$recruiter;
 					$msg = $content->get_create_resume_mail($_POST,$client_autoresume,$position_autoresume,$recruiter,$recruiter_email,$username['ah_name'],$username['ah_email']);
-					// $mailer->send_mail($sub,$msg,$recruiter,$recruiter_email,$username['ah_name'],$username['ah_email']);
+					$mailer->send_mail($sub,$msg,$recruiter,$recruiter_email,$username['ah_name'],$username['ah_email']);
 				}catch(Exception $e){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}
 					
 			}
-
-			//echo 'save data';
+			
+			
 			$_SESSION['extraction'] = '';			
 			// create snapshot pdf
-			include_once('snapshot.php');			
+			include_once('snapshot.php');
+			
 			//  introduction page processing
 			$resume_path = dirname(__FILE__).'/uploads/introduction/'.$_SESSION['resume_doc'];
 			$template_path = dirname(__FILE__).'/uploads/template/introduction.docx'; 
 			include('vendor/PHPWord-develop/samples/template_process3.php');
+		
+		echo 'save data';die;
 		
 			// for hiding the contacts
 			if($hide_contact == '1'){
