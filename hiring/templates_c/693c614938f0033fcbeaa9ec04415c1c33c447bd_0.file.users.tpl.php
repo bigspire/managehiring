@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-28 12:22:52
+/* Smarty version 3.1.29, created on 2018-06-30 10:36:58
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\users.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3485c4f295a3_32187627',
+  'unifunc' => 'content_5b370ff2cc95c5_23917718',
   'file_dependency' => 
   array (
     '693c614938f0033fcbeaa9ec04415c1c33c447bd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\users.tpl',
-      1 => 1530078138,
+      1 => 1530335213,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3485c4f295a3_32187627 ($_smarty_tpl) {
+function content_5b370ff2cc95c5_23917718 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -196,8 +196,8 @@ $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 										<td class="actionItem" style="text-align:center">
 										<a href="edit_user.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 "  rel="tooltip" rel="tooltip" class="btn  btn-mini"  class="sepV_a" title="Edit"><i class="icon-pencil"></i></a>
-										<a href="javascript:void(0)" rel="tooltip" id="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-"  class="btn Confirm btn-mini"   title="Delete"><i class="icon-trash"></i></a>
+										<!-- a href="javascript:void(0)" rel="tooltip" id="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
+"  class="btn Confirm btn-mini"   title="Delete"><i class="icon-trash"></i></a-->
 										
 										</td>	
 									</tr>					

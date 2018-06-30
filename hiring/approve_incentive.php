@@ -62,7 +62,7 @@ while($row = $mysql->display_result($result)){
 	$id_str .=  $row['id'].', ';
 }
 
-/*	
+/*
 // if not director or BH 
 if(!empty($emp_name)){
 	$smarty->assign('approveUser', '1');	

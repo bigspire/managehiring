@@ -110,7 +110,7 @@ if(!empty($_POST)){
 						$mysql->clear_result($result);						
 						}
 					// redirecting to list users page
-					header('Location: users.php?status=created');		
+					header('Location: users.php?stat=created');		
 					}
 					// free the memory
 				$mysql->clear_result($result);
