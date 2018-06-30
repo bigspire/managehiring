@@ -10,7 +10,6 @@ if(!empty($results)):
 	
 		$result[] = $this->Functions->match_results($keyword,$data['User']['first_name']);
 		$result[] = $this->Functions->match_results($keyword,$data['Location']['location']);
-		$result[] = $this->Functions->match_results($keyword,$data['User']['email_id']);
 
 		
 	endforeach;

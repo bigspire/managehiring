@@ -1501,7 +1501,7 @@ class PositionController extends AppController {
 					$resume_path[] = $this->upload_attachment($this->request->data['Position']['client_attach'], $attach_file);
 				}
 					
-				if(!$this->send_email($subject, 'send_cv', $this->Session->read('USER.Login.email_id'), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new2)){	
+				if(!$this->send_email($subject, 'send_cv', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new2)){	
 					// show the msg.								
 					$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to client...', 'default', array('class' => 'alert alert-error'));				
 				}else{						
@@ -2642,6 +2642,8 @@ class PositionController extends AppController {
 							'modified_by' => $this->Session->read('USER.Login.id'),	 'stage_title' => $this->request->data['Position']['interview_level'],	'status_title' => $interview_status,  'int_date' => $this->Functions->format_date_save(trim($int_date_time[0])).' '.trim($int_date_time[1]));
 						 }
 						 
+						 
+						 
 						// save  req resume
 						if($this->ReqResume->save($data, array('validate' => false))){
 							// save req resume status
@@ -2717,7 +2719,7 @@ class PositionController extends AppController {
 								// save the mail box
 								$this->save_mail_box($subject, $message, $req_res_id, 'R',3);
 								// send mail
-								if(!$this->send_email($subject, 'send_interview', $this->Session->read('USER.Login.email_id'), $resume_data['Resume']['email_id'], $vars)){	
+								if(!$this->send_email($subject, 'send_interview', array($this->Session->read('USER.Login.email_id') => $from), $resume_data['Resume']['email_id'], $vars)){	
 									// show the msg.								
 									$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to candidate...', 'default', array('class' => 'alert alert-error'));				
 									}
@@ -2808,7 +2810,8 @@ class PositionController extends AppController {
 					}
 					*/					
 					// send mail
-					if(!$this->send_email($subject, 'confirm_interview', $this->Session->read('USER.Login.email_id'), $contact_data['Contact']['email'], $vars, '', $cc_new2)){
+					
+					if(!$this->send_email($subject, 'confirm_interview', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'], $vars, '', $cc_new2)){
 						// show the msg.								
 						$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to candidate...', 'default', array('class' => 'alert alert-error'));				
 					}						

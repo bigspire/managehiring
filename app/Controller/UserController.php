@@ -72,10 +72,10 @@ class UserController extends AppController {
 		if(!empty($q)){
 			// execute only when the search keywork has value		
 			$this->set('keyword', $q);			
-			$data = $this->User->find('all', array('fields' => array('first_name','email_id','Location.location'),
-			'group' => array('first_name','email_id','Location.location'), 'conditions' => 	array("OR" => array ('first_name like' => '%'.$q.'%',
-			'email_id like' => '%'.$q.'%', 'Location.location like' => '%'.$q.'%'), 'AND' => array('User.is_deleted' => 'N'))));		
+			$data = $this->User->find('all', array('fields' => array('first_name','Location.location'),
+			'group' => array('first_name','Location.location'), 'conditions' => 	array("OR" => array ('first_name like' => '%'.$q.'%', 'Location.location like' => '%'.$q.'%'), 'AND' => array('User.is_deleted' => 'N'))));		
 			$this->set('results', $data);
+			print_r($data);
 		}
     }
 	

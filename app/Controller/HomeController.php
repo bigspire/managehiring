@@ -492,9 +492,9 @@ class HomeController  extends AppController {
 		// get recent resumes sent
 		$this->loadModel('Resume');		
 		$fields = array('id',"concat(Resume.first_name,' ',Resume.last_name) full_name",'email_id','mobile', 'Creator.first_name',
-		'ReqResume.stage_title','ReqResume.status_title','ReqResume.modified_date','ReqResume.cv_sent_date');			
+		'ReqResume.stage_title','ReqResume.status_title','ReqResume.modified_date','ReqResume.cv_sent_date');	
 		$conditions = array('fields' => $fields,'limit' => '50','conditions' => array($date_cond, $int_emp_cond,
-		'ReqResume.stage_title' =>   array( 'Shortlist'), 'ReqResume.status_title' => 'CV-Sent', 'Resume.is_deleted' => 'N'),
+		'ReqResume.stage_title' =>   array( 'Shortlist', 'Validation - Account Holder'),  'Resume.is_deleted' => 'N'),
 		'order' => array('ReqResume.modified_date' => 'desc'),'group' => array('Resume.id'), 'joins' => $resume_options);
 		$data = $this->Resume->find('all', $conditions);
 		$this->set('resume_data', $data);

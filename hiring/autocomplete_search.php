@@ -286,8 +286,7 @@ elseif($_GET['page'] == 'list_eligibility'){
 		}
 		// iterate until get the matched results
 		while($obj = $mysql->display_result($result)){
-			$data[] = strtolower($fun->match_results($keyword,$obj['full_name']));
-			$data[] = strtolower($fun->match_results($keyword,$obj['email_id']));	
+			$data[] = strtolower($fun->match_results($keyword,$obj['first_name']));
 			$data[] = strtolower($fun->match_results($keyword,$obj['mobile']));	
 			$data[] = strtolower($fun->match_results($keyword,$obj['role_name']));		
 		}
