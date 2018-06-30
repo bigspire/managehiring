@@ -203,7 +203,7 @@ if(!empty($_POST)){
 						}
 					}
 					// redirecting to list users page
-					header('Location: users.php?status=updated');		
+					header('Location: users.php?stat=updated');		
 				}
 			}catch(Exception $e){
 				echo 'Caught exception: ',  $e->getMessage(), "\n";

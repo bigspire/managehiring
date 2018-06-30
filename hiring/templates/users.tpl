@@ -101,7 +101,7 @@
 										<td>{$item.modified_date}</td>
 										<td class="actionItem" style="text-align:center">
 										<a href="edit_user.php?id={$item.id}"  rel="tooltip" rel="tooltip" class="btn  btn-mini"  class="sepV_a" title="Edit"><i class="icon-pencil"></i></a>
-										<a href="javascript:void(0)" rel="tooltip" id="{$item.id}"  class="btn Confirm btn-mini"   title="Delete"><i class="icon-trash"></i></a>
+										<!-- a href="javascript:void(0)" rel="tooltip" id="{$item.id}"  class="btn Confirm btn-mini"   title="Delete"><i class="icon-trash"></i></a-->
 										
 										</td>	
 									</tr>					

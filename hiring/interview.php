@@ -77,15 +77,16 @@ if($_POST){
 		// if branch admmin
 		if($_SESSION['roles_id'] == '38'){
 			$loc = $_SESSION['location_id'];
-			$sql = "select u.id from users where u.is_deleted = 'N' and u.status = '0' and u.location_id = '$loc'  group by u.id order by u.first_name asc";		
+			$sql = "select u.id,u.first_name,u.last_name from users u where u.is_deleted = 'N' and u.status = '0' and u.location_id = '$loc'  group by u.id order by u.first_name asc";
 			$result = $mysql->execute_query($sql);		
 			while($row = $mysql->display_result($result)){
 				$emp_name[$row['id']] = ucwords($row['first_name'].' '.$row['last_name']);
 				// concatenate the list of team members
 				$id_str .=  $row['id'].', ';
 			}
+			
 			$smarty->assign('approveUser', '1');	
-			if($row != ''){
+			if(empty(count($row))){
 				$cond .= 'and ( rri.created_by in('.substr($id_str, 0, strlen($id_str)-2).') )';
 		    }
 			$smarty->assign('emp_name',$emp_name);
@@ -148,7 +149,6 @@ if($search_key = array_search($_GET['field'], $sort_fields)){
 
 // fetch all records
 $query =  "CALL list_interview('".$_SESSION['user_id']."','".$_SESSION['roles_id']."','".$keyword."','".$employee."','".$branch."','".$fun->get_status_cond($current_status)."','".$from_date."','".$to_date."','$start','$limit','".$field."','".$order."','".$_GET['action']."', '".$cond."')";
- 
 
 try{
 	if(!$result = $mysql->execute_query($query)){

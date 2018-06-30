@@ -52,14 +52,17 @@ $id = $_SESSION['user_id'];
 // get the team members
 if($show != 'all'){
 	$qryCond = "(a.level1 = '$id' or a.level2 = '$id') and ";
-}		
-$sql = "select u.id, u.first_name, u.last_name from users u left join	approval a  on (a.users_id = u.id) where
-		$qryCond u.is_deleted = 'N' and u.status = '0' group by u.id order by u.first_name asc";		
-$result = $mysql->execute_query($sql);		
-while($row = $mysql->display_result($result)){
-	$emp_name[$row['id']] = ucwords($row['first_name'].' '.$row['last_name']);
-	// concatenate the list of team members
-	$id_str .=  $row['id'].', ';
+}
+
+if($_SESSION['roles_id'] != '38'){		
+	$sql = "select u.id, u.first_name, u.last_name from users u left join	approval a  on (a.users_id = u.id) where
+			$qryCond u.is_deleted = 'N' and u.status = '0' group by u.id order by u.first_name asc";		
+	$result = $mysql->execute_query($sql);		
+	while($row = $mysql->display_result($result)){
+		$emp_name[$row['id']] = ucwords($row['first_name'].' '.$row['last_name']);
+		// concatenate the list of team members
+		$id_str .=  $row['id'].', ';
+	}
 }
 	
 // if not director or BH 
@@ -72,9 +75,10 @@ if(!empty($emp_name)){
 }
 		
 // if branch admin
-if($_SESSION['roles_id'] == '35' || $_SESSION['roles_id'] == '39' || $_SESSION['roles_id'] == '33'){
+// if($_SESSION['roles_id'] == '35' || $_SESSION['roles_id'] == '39' || $_SESSION['roles_id'] == '33'){
+if($_SESSION['roles_id'] == '38'){
 	$loc = $_SESSION['location_id'];
-	$sql = "select u.id from users where u.is_deleted = 'N' and u.status = '0' and u.location_id = '$loc'  group by u.id order by u.first_name asc";		
+	$sql = "select u.id,u.first_name, u.last_name from users u where u.is_deleted = 'N' and u.status = '0' and u.location_id = '$loc'  group by u.id order by u.first_name asc";		
 	$result = $mysql->execute_query($sql);		
 	while($row = $mysql->display_result($result)){
 		$emp_name[$row['id']] = ucwords($row['first_name'].' '.$row['last_name']);
@@ -82,7 +86,7 @@ if($_SESSION['roles_id'] == '35' || $_SESSION['roles_id'] == '39' || $_SESSION['
 		$id_str .=  $row['id'].', ';
 	}
 	$smarty->assign('approveUser', '1');	
-	$cond .= 'and ( inc.users_id in('.substr($id_str, 0, strlen($id_str)-2).') )';
+	$cond .= ' ( inc.users_id in('.substr($id_str, 0, strlen($id_str)-2).') )';
 	$smarty->assign('emp_name',$emp_name);
 }
 		
