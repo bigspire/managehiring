@@ -366,6 +366,8 @@ class AppController extends Controller {
 		
 	}
 	
+	
+	
 	/* function to send email */
 	function send_email($subject,$template,$from,$to,$vars,$src, $cc){
 		App::uses('CakeEmail', 'Network/Email');
