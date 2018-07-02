@@ -55,7 +55,7 @@ class LoginController extends AppController {
 								$res = true;
 							}	
 							
-							$res = true;	
+							// $res = true;	
 							// validte company user
 							if($res){						
 								$this->Session->write('USER', $data);

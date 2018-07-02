@@ -60,6 +60,7 @@ while($row = $mysql->display_result($result)){
 	$emp_name[$row['id']] = ucwords($row['first_name'].' '.$row['last_name']);
 	// concatenate the list of team members
 	$id_str .=  $row['id'].', ';
+	$smarty->assign('emp_name',$emp_name);
 }
 
 /*
@@ -71,7 +72,7 @@ if(!empty($emp_name)){
 	}
 	$smarty->assign('emp_name',$emp_name);
 }
-		
+	*/	
 
 // if branch admmin
 if($_SESSION['roles_id'] == '26'){
@@ -86,7 +87,7 @@ if($_SESSION['roles_id'] == '26'){
 	$smarty->assign('approveUser', '1');	
 	$cond .= 'and ( inc.users_id in('.substr($id_str, 0, strlen($id_str)-2).') )';
 	$smarty->assign('emp_name',$emp_name);
-} */
+} 
 
 // get the director details
 $query = "CALL get_inc_director('33')";

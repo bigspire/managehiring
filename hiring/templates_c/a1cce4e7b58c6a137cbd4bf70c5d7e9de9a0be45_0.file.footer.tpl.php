@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-27 13:16:38
+/* Smarty version 3.1.29, created on 2018-06-30 13:32:20
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\include\footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3340de42bc31_25925521',
+  'unifunc' => 'content_5b37390cc7a708_59403281',
   'file_dependency' => 
   array (
     'a1cce4e7b58c6a137cbd4bf70c5d7e9de9a0be45' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\include\\footer.tpl',
-      1 => 1530078138,
+      1 => 1530340942,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5b3340de42bc31_25925521 ($_smarty_tpl) {
+function content_5b37390cc7a708_59403281 ($_smarty_tpl) {
 ?>
 <div id="footer">
 
@@ -27,8 +27,8 @@ function content_5b3340de42bc31_25925521 ($_smarty_tpl) {
 		
 <span style="float:right;margin-right:20px;"><a href="<?php echo @constant('webroot');?>
 home/add_feedback" val="50_50" class="iframeBox theme_link cboxElement">Feedback / Suggestions</a> 
-<span class="font-grey-4">|</span> <a  class="iframeBox theme_link cboxElement"  val="50_50"  href="<?php echo @constant('webroot');?>
-home/add_feedback">Report a Bug</a> </span>
+<span class="font-grey-4">|</span> <a  class="iframeBox theme_link cboxElement"  val="50_70"  href="<?php echo @constant('webroot');?>
+home/report_bug">Report a Bug</a> </span>
 		
 </p>		
 </div>
