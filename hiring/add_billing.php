@@ -116,11 +116,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$attachmenttype = pathinfo($_FILES['offer']['name']);
 		$extension = $attachmenttype['extension'];	
 		// file extensions
-		$extensions = array('docx'); 
+		$extensions = array('docx','jpg','png','doc','pdf'); 
 		
 		// checking the file extension is doc,docx
 		if($fun->extension_validation($extension,$extensions) == true){		
-			$attachmentuploadErr = 'Attachment must be .docx';
+			$attachmentuploadErr = 'Attachment must be docx,png,jpg,doc,pdf';
 			$test = 'error';
 		}
 		// checking the file size is less than 1 MB		

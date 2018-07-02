@@ -492,9 +492,9 @@ class HomeController  extends AppController {
 		// get recent resumes sent
 		$this->loadModel('Resume');		
 		$fields = array('id',"concat(Resume.first_name,' ',Resume.last_name) full_name",'email_id','mobile', 'Creator.first_name',
-		'ReqResume.stage_title','ReqResume.status_title','ReqResume.modified_date','ReqResume.cv_sent_date');			
+		'ReqResume.stage_title','ReqResume.status_title','ReqResume.modified_date','ReqResume.cv_sent_date');	
 		$conditions = array('fields' => $fields,'limit' => '50','conditions' => array($date_cond, $int_emp_cond,
-		'ReqResume.stage_title' =>   array( 'Shortlist'), 'ReqResume.status_title' => 'CV-Sent', 'Resume.is_deleted' => 'N'),
+		'ReqResume.stage_title' =>   array( 'Shortlist', 'Validation - Account Holder'),  'Resume.is_deleted' => 'N'),
 		'order' => array('ReqResume.modified_date' => 'desc'),'group' => array('Resume.id'), 'joins' => $resume_options);
 		$data = $this->Resume->find('all', $conditions);
 		$this->set('resume_data', $data);
@@ -573,7 +573,8 @@ class HomeController  extends AppController {
 		$cv_emp_cond,$date_cond), 'joins' => $count_options));
 		$this->set('CV_REJECT_TAB_COUNT', $cv_reject_count_tab);
 		// get the total counts of cv waiting or hold
-		$validate_cond_waiting = array("OR" => array ('ReqResume.status_title' => 'YRF',	'ReqResume.status_title' => 'OnHold'));
+		$validate_cond_waiting = array("OR" => array ('ReqResume.status_title' => 'YRF',
+		'ReqResume.status_title' => 'CV-Sent',	'ReqResume.status_title' => 'OnHold'));
 		$cv_waiting_count_tab = $this->ReqResume->find('count', array('conditions' => array($validate_cond_waiting,
 		$cv_emp_cond,$date_cond), 'joins' => $count_options));
 		$this->set('CV_WAITING_TAB_COUNT', $cv_waiting_count_tab);

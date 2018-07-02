@@ -8904,7 +8904,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:09:08 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 1361 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+=======
 2018-06-29 15:19:42 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 1361 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 AppController::check_role_access() - APP\Controller\AppController.php, line 195
 HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1361
@@ -8915,7 +8919,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:09:08 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+=======
 2018-06-29 15:19:42 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::index() - APP\Controller\HomeController.php, line 43
 ReflectionMethod::invokeArgs() - [internal], line ??
@@ -8924,7 +8932,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:09:08 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-29 15:19:42 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -8934,7 +8946,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:09:08 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-29 15:19:42 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -8944,7 +8960,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:09:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-29 15:19:42 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -8954,7 +8974,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:09:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-29 15:19:42 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -8964,7 +8988,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:09:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-29 15:19:42 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -8974,7 +9002,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:09:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-29 15:19:42 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -8984,7 +9016,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:09:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-29 15:19:42 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -8994,6 +9030,12 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:11:50 Warning: Warning (2): Missing argument 1 for ReportController::get_client_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ReportController.php on line 284 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ReportController.php, line 559]
+Trace:
+ReportController::get_client_details() - APP\Controller\ReportController.php, line 559
+ReportController::client_wise_cv_status() - APP\Controller\ReportController.php, line 284
+=======
 2018-06-29 15:20:00 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 1361 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
 Trace:
 AppController::check_role_access() - APP\Controller\AppController.php, line 195
@@ -9008,12 +9050,73 @@ Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 2018-06-29 15:20:00 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
 Trace:
 HomeController::index() - APP\Controller\HomeController.php, line 43
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
 Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:11:51 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 334]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 334
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:11:51 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 329]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 329
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:11:51 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 330]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 330
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:11:51 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 331]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 331
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:11:51 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 332]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 332
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:11:51 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 333]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 333
+=======
 2018-06-29 15:20:00 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
@@ -9116,6 +9219,7 @@ Trace:
 in_array - [internal], line ??
 FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
 include - APP\View\Position\index.ctp, line 193
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -9124,11 +9228,17 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:11:51 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 334]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 334
+=======
 2018-06-29 15:20:44 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
 Trace:
 in_array - [internal], line ??
 FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
 include - APP\View\Position\index.ctp, line 193
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -9137,11 +9247,17 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:11:52 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 334]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 334
+=======
 2018-06-29 15:20:44 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
 Trace:
 in_array - [internal], line ??
 FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
 include - APP\View\Position\index.ctp, line 193
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -9150,7 +9266,53 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:11:56 Warning: Warning (2): Missing argument 1 for ReportController::get_client_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ReportController.php on line 284 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ReportController.php, line 559]
+Trace:
+ReportController::get_client_details() - APP\Controller\ReportController.php, line 559
+ReportController::client_wise_cv_status() - APP\Controller\ReportController.php, line 284
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:11:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ReqTeam.users_id' in 'where clause'
+Request URL: /ctsvn2/managehiring/report/client_wise_cv_status/
+Stack Trace:
+#0 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT sum(`Rep...', Array)
+#2 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Datasource\DboSource.php(664): DboSource->execute('SELECT sum(`Rep...', Array, Array)
+#3 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->fetchAll('SELECT sum(`Rep...', false)
+#4 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Report), Array)
+#5 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ReportController.php(364): Model->find('all', Array)
+#7 [internal function]: ReportController->client_wise_cv_status()
+#8 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ReportController), Array)
+#9 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ReportController), Object(CakeRequest))
+#11 C:\xampp\htdocs\ctsvn2\managehiring\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-06-29 21:12:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ReqTeam.users_id' in 'where clause'
+Request URL: /ctsvn2/managehiring/report/client_wise_cv_status/
+Stack Trace:
+#0 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Datasource\DboSource.php(461): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Datasource\DboSource.php(427): DboSource->_execute('SELECT sum(`Rep...', Array)
+#2 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Datasource\DboSource.php(664): DboSource->execute('SELECT sum(`Rep...', Array, Array)
+#3 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Datasource\DboSource.php(1113): DboSource->fetchAll('SELECT sum(`Rep...', false)
+#4 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Model.php(3031): DboSource->read(Object(Report), Array)
+#5 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Model\Model.php(3003): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ReportController.php(364): Model->find('all', Array)
+#7 [internal function]: ReportController->client_wise_cv_status()
+#8 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(ReportController), Array)
+#9 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ReportController), Object(CakeRequest))
+#11 C:\xampp\htdocs\ctsvn2\managehiring\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-06-29 21:13:56 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 31]
+=======
 2018-06-29 16:02:03 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp, line 31]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 in_array - [internal], line ??
 include - APP\View\Position\view.ctp, line 31
@@ -9162,7 +9324,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:13:56 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 181]
+=======
 2018-06-29 16:02:03 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp, line 181]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 in_array - [internal], line ??
 include - APP\View\Position\view.ctp, line 181
@@ -9174,7 +9340,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:13:56 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 250]
+=======
 2018-06-29 16:02:03 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp, line 250]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 in_array - [internal], line ??
 include - APP\View\Position\view.ctp, line 250
@@ -9186,7 +9356,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:13:56 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1256 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+=======
 2018-06-29 16:02:04 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp on line 1256 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
 include - APP\View\Position\view.ctp, line 1256
@@ -9198,7 +9372,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:13:56 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1257 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+=======
 2018-06-29 16:02:04 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp on line 1257 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
 include - APP\View\Position\view.ctp, line 1257
@@ -9210,7 +9388,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:13:56 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1259 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+=======
 2018-06-29 16:02:04 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp on line 1259 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
 include - APP\View\Position\view.ctp, line 1259
@@ -9222,7 +9404,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:13:56 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1262 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+=======
 2018-06-29 16:02:04 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp on line 1262 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
 include - APP\View\Position\view.ctp, line 1262
@@ -9234,7 +9420,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:13:56 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1264 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+=======
 2018-06-29 16:02:05 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp on line 1264 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
 include - APP\View\Position\view.ctp, line 1264
@@ -9246,6 +9436,12 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:14:03 Warning: Warning (2): Missing argument 1 for ReportController::get_client_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ReportController.php on line 284 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ReportController.php, line 564]
+Trace:
+ReportController::get_client_details() - APP\Controller\ReportController.php, line 564
+ReportController::client_wise_cv_status() - APP\Controller\ReportController.php, line 284
+=======
 2018-06-29 16:02:05 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 186]
 Trace:
 in_array - [internal], line ??
@@ -9361,12 +9557,18 @@ Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 2018-06-29 16:02:52 Warning: Warning (2): Missing argument 2 for PositionController::index() in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
 Trace:
 PositionController::index() - APP\Controller\PositionController.php, line 33
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
 Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 329]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 329
+=======
 2018-06-29 16:02:52 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
 Trace:
 in_array - [internal], line ??
@@ -9398,6 +9600,7 @@ Trace:
 in_array - [internal], line ??
 FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
 include - APP\View\Position\index.ctp, line 193
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -9406,10 +9609,16 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 330]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 330
+=======
 2018-06-29 16:02:57 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp, line 181]
 Trace:
 in_array - [internal], line ??
 include - APP\View\Position\view.ctp, line 181
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -9418,10 +9627,16 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 331]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 331
+=======
 2018-06-29 16:02:57 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp, line 250]
 Trace:
 in_array - [internal], line ??
 include - APP\View\Position\view.ctp, line 250
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -9430,10 +9645,16 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 332]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 332
+=======
 2018-06-29 16:02:57 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp on line 1256 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
 include - APP\View\Position\view.ctp, line 1256
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -9442,10 +9663,16 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 333]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 333
+=======
 2018-06-29 16:02:57 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp on line 1257 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
 include - APP\View\Position\view.ctp, line 1257
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -9454,10 +9681,16 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 334]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 334
+=======
 2018-06-29 16:02:57 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp on line 1259 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
 include - APP\View\Position\view.ctp, line 1259
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -9466,6 +9699,209 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 329]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 329
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 330]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 330
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 331]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 331
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 332]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 332
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 333]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 333
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 334]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 334
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 329]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 329
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 330]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 330
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 331]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 331
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 332]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 332
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 333]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 333
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 334]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 334
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 329]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 329
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 330]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 330
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 331]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 331
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 332]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 332
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 333]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 333
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-29 21:14:04 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Report\client_wise_cv_status.ctp, line 334]
+Trace:
+include - APP\View\Report\client_wise_cv_status.ctp, line 334
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 10:02:11 Warning: Warning (2): Missing argument 1 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+=======
 2018-06-29 16:02:58 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp on line 1262 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
@@ -12607,22 +13043,58 @@ Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
 Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 10:02:11 Warning: Warning (2): Missing argument 2 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+=======
 2018-06-30 11:20:36 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
 Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 10:02:13 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
+include - APP\View\Position\index.ctp, line 193
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 10:02:13 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
+include - APP\View\Position\index.ctp, line 193
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:23:39 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 1361 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+=======
 2018-06-30 11:20:36 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
@@ -12644,6 +13116,7 @@ Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
 2018-06-30 11:37:38 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 1361 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 AppController::check_role_access() - APP\Controller\AppController.php, line 195
 HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1361
@@ -12654,7 +13127,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:39 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+=======
 2018-06-30 11:37:38 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::index() - APP\Controller\HomeController.php, line 43
 ReflectionMethod::invokeArgs() - [internal], line ??
@@ -12663,7 +13140,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:39 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:38 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12673,7 +13154,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:40 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:38 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12683,7 +13168,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:40 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:38 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12693,7 +13182,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:40 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:38 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12703,7 +13196,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:41 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:38 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12713,7 +13210,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:41 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:38 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12723,7 +13224,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:41 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:39 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12733,7 +13238,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:55 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 1361 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+=======
 2018-06-30 11:37:56 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 1361 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 AppController::check_role_access() - APP\Controller\AppController.php, line 195
 HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1361
@@ -12744,7 +13253,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:55 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+=======
 2018-06-30 11:37:56 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::index() - APP\Controller\HomeController.php, line 43
 ReflectionMethod::invokeArgs() - [internal], line ??
@@ -12753,7 +13266,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:55 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:56 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12763,7 +13280,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:55 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:56 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12773,7 +13294,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:56 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:56 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12783,7 +13308,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:56 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:56 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12793,7 +13322,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:56 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:56 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12803,7 +13336,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:57 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:57 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12813,7 +13350,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:57 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+=======
 2018-06-30 11:37:57 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
 HomeController::index() - APP\Controller\HomeController.php, line 344
@@ -12823,10 +13364,37 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:23:58 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 727]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 727
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:23:58 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Home\index.ctp, line 298]
+Trace:
+include - APP\View\Home\index.ctp, line 298
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:31:10 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 1362 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+Trace:
+AppController::check_role_access() - APP\Controller\AppController.php, line 195
+HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1362
+=======
 2018-06-30 11:38:09 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 1361 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
 Trace:
 AppController::check_role_access() - APP\Controller\AppController.php, line 195
 HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1361
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 call_user_func - [internal], line ??
 CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
 Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 677
@@ -12834,7 +13402,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:31:10 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+=======
 2018-06-30 11:38:09 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 Trace:
 HomeController::index() - APP\Controller\HomeController.php, line 43
 ReflectionMethod::invokeArgs() - [internal], line ??
@@ -12843,9 +13415,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:31:10 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+=======
 2018-06-30 11:38:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 HomeController::index() - APP\Controller\HomeController.php, line 344
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
@@ -12853,9 +13431,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:31:10 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+=======
 2018-06-30 11:38:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 HomeController::index() - APP\Controller\HomeController.php, line 344
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
@@ -12863,9 +13447,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:31:11 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+=======
 2018-06-30 11:38:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 HomeController::index() - APP\Controller\HomeController.php, line 344
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
@@ -12873,9 +13463,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:31:11 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+=======
 2018-06-30 11:38:10 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 HomeController::index() - APP\Controller\HomeController.php, line 344
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
@@ -12883,9 +13479,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:31:11 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+=======
 2018-06-30 11:38:10 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 HomeController::index() - APP\Controller\HomeController.php, line 344
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
@@ -12893,9 +13495,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:31:12 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+=======
 2018-06-30 11:38:10 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
 HomeController::index() - APP\Controller\HomeController.php, line 344
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
@@ -12903,9 +13511,1351 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
+2018-06-30 12:31:12 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+=======
 2018-06-30 11:38:10 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 747]
 Trace:
 HomeController::get_position_count() - APP\Controller\HomeController.php, line 747
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+<<<<<<< HEAD
+2018-06-30 12:31:13 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 728]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 728
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:31:14 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Home\index.ctp, line 298]
+Trace:
+include - APP\View\Home\index.ctp, line 298
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+=======
+>>>>>>> 008526bf88118766666eae26f0d2ca380da6e9a3
+2018-06-30 12:57:46 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 1362 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+Trace:
+AppController::check_role_access() - APP\Controller\AppController.php, line 195
+HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1362
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 677
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:46 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 43
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:46 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:47 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:47 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:47 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:47 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:47 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:48 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:48 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 728]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 728
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 12:57:48 Warning: Warning (2): Division by zero in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Home\index.ctp, line 298]
+Trace:
+include - APP\View\Home\index.ctp, line 298
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:34:56 Warning: Warning (2): Missing argument 1 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:34:56 Warning: Warning (2): Missing argument 2 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:34:57 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
+include - APP\View\Position\index.ctp, line 193
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:34:57 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
+include - APP\View\Position\index.ctp, line 193
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:35:06 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 1362 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+Trace:
+AppController::check_role_access() - APP\Controller\AppController.php, line 195
+HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1362
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 677
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:35:06 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 43
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:35:06 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:35:07 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:35:07 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:35:08 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:35:08 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:35:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 13:35:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:53:53 Warning: Warning (2): Missing argument 1 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:53:53 Warning: Warning (2): Missing argument 2 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:07 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 1362 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+Trace:
+AppController::check_role_access() - APP\Controller\AppController.php, line 195
+HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1362
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 677
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:07 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 43
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:07 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:08 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:08 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:08 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:09 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:10 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:16 Warning: Warning (2): Missing argument 1 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:16 Warning: Warning (2): Missing argument 2 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:17 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
+include - APP\View\Position\index.ctp, line 193
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:17 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
+include - APP\View\Position\index.ctp, line 193
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:23 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 31]
+Trace:
+in_array - [internal], line ??
+include - APP\View\Position\view.ctp, line 31
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:23 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 181]
+Trace:
+in_array - [internal], line ??
+include - APP\View\Position\view.ctp, line 181
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:23 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 250]
+Trace:
+in_array - [internal], line ??
+include - APP\View\Position\view.ctp, line 250
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:24 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1256 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1256
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:25 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1257 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1257
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:27 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1259 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1259
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:27 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1262 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1262
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:27 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 209]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 209
+include - APP\View\Position\view.ctp, line 1262
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:29 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1264 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1264
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:52 Warning: Warning (2): Missing argument 1 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:52 Warning: Warning (2): Missing argument 2 for PositionController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 33]
+Trace:
+PositionController::index() - APP\Controller\PositionController.php, line 33
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:53 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
+include - APP\View\Position\index.ctp, line 193
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:53 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 72]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_total_joined() - APP\View\Helper\FunctionsHelper.php, line 72
+include - APP\View\Position\index.ctp, line 193
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:57 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 181]
+Trace:
+in_array - [internal], line ??
+include - APP\View\Position\view.ctp, line 181
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:57 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 250]
+Trace:
+in_array - [internal], line ??
+include - APP\View\Position\view.ctp, line 250
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:57 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1256 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1256
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:58 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1257 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1257
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:58 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1259 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1259
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:58 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 209]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 209
+include - APP\View\Position\view.ctp, line 1259
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:59 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1262 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1262
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:55:59 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 209]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 209
+include - APP\View\Position\view.ctp, line 1262
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:56:00 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1264 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1264
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:56:01 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 186]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 186
+include - APP\View\Position\view.ctp, line 1265
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:03 Warning: Warning (2): Missing argument 6 for PositionController::schedule_interview() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2287]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2287
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:03 Warning: Warning (2): Missing argument 2 for PositionController::get_reject_drop(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2345 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2008]
+Trace:
+PositionController::get_reject_drop() - APP\Controller\PositionController.php, line 2008
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2345
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:03 Warning: Warning (2): Missing argument 4 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:03 Warning: Warning (2): Missing argument 5 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:03 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:04 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2602 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:27 Warning: Warning (2): Missing argument 6 for PositionController::schedule_interview() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2287]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2287
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:27 Warning: Warning (2): Missing argument 2 for PositionController::get_reject_drop(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2345 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2008]
+Trace:
+PositionController::get_reject_drop() - APP\Controller\PositionController.php, line 2008
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2345
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:27 Warning: Warning (2): Missing argument 4 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:27 Warning: Warning (2): Missing argument 5 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:27 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:27 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2602 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:33 Warning: Warning (2): Missing argument 6 for PositionController::schedule_interview() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2287]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2287
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:33 Warning: Warning (2): Missing argument 2 for PositionController::get_reject_drop(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2345 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2008]
+Trace:
+PositionController::get_reject_drop() - APP\Controller\PositionController.php, line 2008
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2345
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:33 Warning: Warning (2): Missing argument 4 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:33 Warning: Warning (2): Missing argument 5 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:33 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 18:59:33 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2602 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:11 Warning: Warning (2): Missing argument 6 for PositionController::schedule_interview() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2287]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2287
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:11 Warning: Warning (2): Missing argument 2 for PositionController::get_reject_drop(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2345 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2008]
+Trace:
+PositionController::get_reject_drop() - APP\Controller\PositionController.php, line 2008
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2345
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:11 Warning: Warning (2): Missing argument 4 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:11 Warning: Warning (2): Missing argument 5 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:11 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:11 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2602 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:24 Warning: Warning (2): Missing argument 6 for PositionController::schedule_interview() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2287]
+Trace:
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2287
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:24 Warning: Warning (2): Missing argument 2 for PositionController::get_reject_drop(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2345 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 2008]
+Trace:
+PositionController::get_reject_drop() - APP\Controller\PositionController.php, line 2008
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2345
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:25 Warning: Warning (2): Missing argument 4 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:25 Warning: Warning (2): Missing argument 5 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:25 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2601 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2601
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:25 Warning: Warning (2): Missing argument 6 for PositionController::get_template_details(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2602 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 1537]
+Trace:
+PositionController::get_template_details() - APP\Controller\PositionController.php, line 1537
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2602
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:25 Warning: Warning (2): Missing argument 6 for AppController::send_email(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2722 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 372]
+Trace:
+AppController::send_email() - APP\Controller\AppController.php, line 372
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2722
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:25 Warning: Warning (2): Missing argument 7 for AppController::send_email(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php on line 2722 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 372]
+Trace:
+AppController::send_email() - APP\Controller\AppController.php, line 372
+PositionController::schedule_interview() - APP\Controller\PositionController.php, line 2722
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:40 Warning: Warning (2): Missing argument 2 for PositionController::view() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\PositionController.php, line 926]
+Trace:
+PositionController::view() - APP\Controller\PositionController.php, line 926
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:40 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 181]
+Trace:
+in_array - [internal], line ??
+include - APP\View\Position\view.ctp, line 181
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:40 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp, line 250]
+Trace:
+in_array - [internal], line ??
+include - APP\View\Position\view.ctp, line 250
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:41 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1256 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1256
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:42 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1257 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1257
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:42 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1259 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1259
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:42 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 209]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 209
+include - APP\View\Position\view.ctp, line 1259
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:43 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1262 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1262
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:43 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 209]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 209
+include - APP\View\Position\view.ctp, line 1262
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:43 Warning: Warning (2): Missing argument 4 for FunctionsHelper::get_req_tab_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\View\Position\view.ctp on line 1264 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 165]
+Trace:
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 165
+include - APP\View\Position\view.ctp, line 1264
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:43 Warning: Warning (2): in_array() expects parameter 2 to be array, null given in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 186]
+Trace:
+in_array - [internal], line ??
+FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 186
+include - APP\View\Position\view.ctp, line 1265
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:00:50 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\ctsvn2\managehiring\lib\Cake\View\Helper\FormHelper.php, line 1584]
+Trace:
+FormHelper::radio() - CORE\Cake\View\Helper\FormHelper.php, line 1584
+FormHelper::_getInput() - CORE\Cake\View\Helper\FormHelper.php, line 1101
+FormHelper::input() - CORE\Cake\View\Helper\FormHelper.php, line 1072
+include - APP\View\Position\view_interview_schedule.ctp, line 57
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:02:46 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 1362 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+Trace:
+AppController::check_role_access() - APP\Controller\AppController.php, line 195
+HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1362
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 677
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:02:46 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 43
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:02:46 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:02:46 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:02:46 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:02:46 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:02:47 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:02:47 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:02:47 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:03:43 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 1362 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+Trace:
+AppController::check_role_access() - APP\Controller\AppController.php, line 195
+HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1362
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 677
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:03:43 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 43
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:03:43 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:03:43 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:03:43 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:03:44 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:03:44 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:03:44 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-06-30 19:03:45 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
 HomeController::index() - APP\Controller\HomeController.php, line 344
 ReflectionMethod::invokeArgs() - [internal], line ??
 Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
@@ -13031,6 +14981,187 @@ View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
 Controller::render() - CORE\Cake\Controller\Controller.php, line 963
 Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 11:40:29 Warning: Warning (2): Missing argument 5 for FunctionsComponent::format_dropdown(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\TaskplanController.php on line 131 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\Component\FunctionsComponent.php, line 128]
+Trace:
+FunctionsComponent::format_dropdown() - APP\Controller\Component\FunctionsComponent.php, line 128
+TaskplanController::get_client_list() - APP\Controller\TaskplanController.php, line 131
+TaskplanController::add() - APP\Controller\TaskplanController.php, line 144
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:25:13 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 1362 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+Trace:
+AppController::check_role_access() - APP\Controller\AppController.php, line 195
+HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1362
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 677
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:25:14 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 43
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:25:14 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:25:14 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:25:14 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:25:14 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:25:14 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:25:14 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:26:15 Warning: Warning (2): Missing argument 1 for AppController::check_role_access(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 1362 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\AppController.php, line 195]
+Trace:
+AppController::check_role_access() - APP\Controller\AppController.php, line 195
+HomeController::beforeFilter() - APP\Controller\HomeController.php, line 1362
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::startupProcess() - CORE\Cake\Controller\Controller.php, line 677
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 189
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:26:15 Warning: Warning (2): Missing argument 1 for HomeController::index() in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 43]
+Trace:
+HomeController::index() - APP\Controller\HomeController.php, line 43
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:26:15 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:26:15 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:26:16 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:26:16 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:26:16 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:26:16 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-02 15:26:16 Warning: Warning (2): Missing argument 6 for HomeController::get_position_count(), called in C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php on line 344 and defined in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\HomeController.php, line 748]
+Trace:
+HomeController::get_position_count() - APP\Controller\HomeController.php, line 748
+HomeController::index() - APP\Controller\HomeController.php, line 344
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 

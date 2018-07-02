@@ -356,8 +356,13 @@ class ReportController extends AppController {
 				array('table' => 'clients',
 					'alias' => 'Client',				
 					'type' => 'LEFT',
-					'conditions' => array('`Client`.`id` = `Report`.`clients_id`')
-				)			
+					'conditions' => array('`Client`.`id` = `Report`.`clients_id`')					
+					),	
+				array('table' => 'req_team',
+					'alias' => 'ReqTeam',					
+					'type' => 'LEFT',
+					'conditions' => array('`ReqTeam`.`requirements_id` = `Report`.`id`')
+				),					
 			);	
 			
 			$opening_worked[] = $this->Report->find('all', array('fields' => array("sum(Report.no_job) no_job"), 'conditions' => array('Report.status' => 'A', 'Report.is_approve' => 'A', 'Client.id' => $id,	 $date_cond_ow,$emp_cond),
