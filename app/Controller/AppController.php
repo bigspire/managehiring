@@ -187,6 +187,7 @@ class AppController extends Controller {
 		}else{
 			$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Session got expired', 'default', array('class' => 'alert alert-login'));			
 			$this->delete_cookie('ESUSER');	
+			$this->delete_cookie('ESUSERP');			
 			$this->redirect('/');
 		}
 	}
@@ -377,12 +378,22 @@ class AppController extends Controller {
 		$Email->emailFormat('html');
 		$Email->subject($subject);
 		$Email->to($to);
+		// $Email->config(array('log' => true)); 
 		// only if cc emails are there
 		if($cc[0] != '' || $cc != ''){
 			$Email->cc($cc);
 		}
+		if($from == 'noreply@managehiring.com'){
+			$Email->config('gmail');
+			
+		}else{
+			$Email->config('yahoo');
+			$Email->config(array('username' => $this->Session->read('USER.Login.email_id'), 'password' => $this->Session->read('password')));
+			
+		}
+		
+		
 		$Email->from($from);
-		$Email->config('gmail');
 		
 		$Email->delivery = 'smtp';
 		// print_r($src);
@@ -458,6 +469,7 @@ class AppController extends Controller {
 		$this->Session->destroy();
 		$this->disable_cache();
 		$this->delete_cookie('ESUSER');	
+		$this->delete_cookie('ESUSERP');
 		$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert-error">&times;</button>Oops! Something went wrong!', 'default', array('class' => 'alert alert-error'));
 		$this->redirect('/');
 

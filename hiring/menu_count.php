@@ -10,7 +10,7 @@ session_start();
 
 //assign user id
 $_SESSION['user_id'] = $fun->decrypt($_COOKIE['CakeCookie']['ESUSER']);
-
+$_SESSION['user_pass'] = $fun->decrypt($_COOKIE['CakeCookie']['ESUSERP']);
 $theme = $_GET['color'] ? $_GET['color'] : $_COOKIE['CakeCookie']['THEME'];
 $smarty->assign('THEME', $theme);
 
@@ -28,7 +28,7 @@ try{
 	$row = $mysql->display_result($result);
 	$smarty->assign('user_name', $row['first_name']);
 	$_SESSION['location_id'] = $row['location_id'];
-
+	$_SESSION['email_id'] = $row['email_id'];	
 	$mysql->clear_result($result);
 	// call the next result
 	$mysql->next_query();

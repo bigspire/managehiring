@@ -41,6 +41,8 @@ class HomeController  extends AppController {
 	public $components = array('Session', 'Functions');
 	
 	public function index($dash_type){ 
+	
+	
 		// set the page title
 		$this->set('title_for_layout', 'Home - Manage Hiring');
 		// set the validation
@@ -1376,7 +1378,7 @@ class HomeController  extends AppController {
 				// get system admin email address
 				$admin_data = $this->Home->Creator->find('all', array('conditions' => array('roles_id' => '26'), 'fields' => array('email_id')));
 				// notify superiors						
-				if(!$this->send_email($sub, 'feedback', 'noreply@managehiring.in', $admin_data[0]['Creator']['email_id'],$vars)){	
+				if(!$this->send_email($sub, 'feedback', 'noreply@managehiring.com', $admin_data[0]['Creator']['email_id'],$vars)){	
 					// show the msg.								
 					$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to admin...', 'default', array('class' => 'alert alert-error'));				
 				}else{
@@ -1407,7 +1409,7 @@ class HomeController  extends AppController {
 				// get system admin email address
 				$admin_data = $this->Home->Creator->find('all', array('conditions' => array('roles_id' => '26'), 'fields' => array('email_id')));
 				// notify superiors						
-				if(!$this->send_email($sub, 'report_bug', 'noreply@managehiring.in', $admin_data[0]['Creator']['email_id'],$vars, $dest)){	
+				if(!$this->send_email($sub, 'report_bug', 'noreply@managehiring.com', $admin_data[0]['Creator']['email_id'],$vars, $dest)){	
 					// show the msg.								
 					$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to admin...', 'default', array('class' => 'alert alert-error'));				
 				}else{
