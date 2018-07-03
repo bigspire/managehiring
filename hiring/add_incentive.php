@@ -952,7 +952,7 @@ if(!empty($_POST)){
 					$avg_user = $avg_rec[0];
 					if($avg_user >= '100'){
 						// get the interview sent candidates Position CTC for the month
-						$query = "CALL get_candidate_interview('".$id."','".$year_month."')";
+						echo $query = "CALL get_candidate_interview('".$id."','".$year_month."')";
 						try{
 							// calling mysql exe_query function
 							if(!$result_candi = $mysql->execute_query($query)){
