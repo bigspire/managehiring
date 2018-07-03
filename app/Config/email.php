@@ -37,20 +37,35 @@
  * The origin email. See CakeEmail::from() about the valid values
  *
  */
-class EmailConfig {
 
+class EmailConfig {
+	
+
+	
+	//public $email = $_SESSION['USER']['Login']['email_id'];
 	public $default = array(
 		'transport' => 'Mail',
 		// 'from' => 'noreply@managehiring.com'
 		//'headerCharset' => 'utf-8',
 	);
 	
+	
+			
 	public $gmail = array(
        'host' => 'ssl://smtp.gmail.com',	 
         'port' => 465,
-		'username' => 'testing@bigspire.com',
-        'password' => 'bigspire1230',
+		'username' => 'mailer.managehiring@gmail.com',
+        'password' => 'ur$939!3',
         'transport' => 'Smtp'
     );
+	
+	public $yahoo = array(
+       'host' => 'ssl://smtp.bizmail.yahoo.com',	 
+        'port' => 465,		
+        'transport' => 'Smtp',
+    );
+	
+	
+	
 
 }

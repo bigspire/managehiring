@@ -55,7 +55,7 @@ class LoginController extends AppController {
 								$res = true;
 							}	
 							
-							$res = true;	
+							// $res = true;	
 							// validte company user
 							if($res){						
 								$this->Session->write('USER', $data);
@@ -71,7 +71,10 @@ class LoginController extends AppController {
 								// set cookie			
 					
 								$this->set_cookie('ESUSER', $this->Functions->encrypt($data['Login']['id']), '30 Days');
-								$this->set_cookie('ESUSERROLE', $this->Functions->encrypt($data['Login']['roles_id']), '30 Days');
+								$this->set_cookie('ESUSERROLE', $this->Functions->encrypt($data['Login']['roles_id']), '30 Days');								
+								$this->set_cookie('ESUSERP', $this->Functions->encrypt($this->request->data['Login']['mypassword']), '30 Days');
+								$this->Session->write('password', $this->request->data['Login']['mypassword']);
+								
 								// $this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Hi '.$data['Login']['first_name'].', Welcome to Manage Hiring', 'default', array('class' => 'alert alert-success'));
 
 								$this->redirect('/home/');								
