@@ -777,7 +777,6 @@
 															
 																									
 														</td>
-
 														
 														<td style="text-align:center" class="actionItem upload_row">
 <?php if($resume['ReqResume']['stage_title'] == 'Validation - Account Holder' &&

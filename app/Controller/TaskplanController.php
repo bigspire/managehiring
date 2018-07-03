@@ -290,6 +290,7 @@ class TaskplanController extends AppController {
 			}			
 		}
 		
+		/*
 		$teamCond = array('OR' => array(
 					'ReqResume.created_by' =>  $data,
 					'ReqTeam.users_id' => $data,
@@ -297,12 +298,15 @@ class TaskplanController extends AppController {
 					'Position.created_by' => $data						
 				)
 		);
+		
+		*/
 				
 		$options = array(		
 			array('table' => 'req_team',
 					'alias' => 'ReqTeam',					
 					'type' => 'LEFT',
-					'conditions' => array('`ReqTeam`.`requirements_id` = `Position`.`id`', 'ReqTeam.is_approve' => 'A')
+					'conditions' => array('`ReqTeam`.`requirements_id` = `Position`.`id`', 'ReqTeam.is_approve' => 'A',
+					'ReqTeam.users_id' => $this->Session->read('USER.Login.id'))
 			),			
 			array('table' => 'client_account_holder',
 					'alias' => 'AH',					
