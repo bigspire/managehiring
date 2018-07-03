@@ -62,9 +62,9 @@
 							 <span id="sandbox-container">
 						<span  class="input-daterange" id="datepicker">	
 						
-							<input type="text" class="input-small datepick" name="data[Home][from]" value="<?php echo $this->request->query['from'];?>" aria-controls="dt_gal">
+		<input type="text" class="input-small datepick" autocomplete="off" name="data[Home][from]" value="<?php echo $this->request->query['from'];?>"  aria-controls="dt_gal">
 						
-		<?php echo $this->Form->input('to', array('div'=> false,'type' => 'text', 'value' => $this->request->query['to'], 'label' => false,  'style'=> "margin-left:3px;", 'class' => 'input-small datepick',  'required' => false, 'placeholder' => '',
+		<?php echo $this->Form->input('to', array('div'=> false,'type' => 'text', 'value' => $this->request->query['to'], 'label' => false,  'style'=> "margin-left:3px;", 'autocomplete' => 'off', 'class' => 'input-small datepick',  'required' => false, 'placeholder' => '',
 				'error' =>  array('attributes' => array('wrap' => 'div', 'class' => 'error')))); ?> 	
 									
 												

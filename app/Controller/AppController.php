@@ -386,13 +386,13 @@ class AppController extends Controller {
 		if($from == 'noreply@managehiring.com'){
 			$Email->config('gmail');
 			
-		}else{
+		}else{ 
 			$Email->config('yahoo');
-			$Email->config(array('username' => $this->Session->read('USER.Login.email_id'), 'password' => $this->Session->read('password')));
+			$Email->config(array('username' => $this->Session->read('USER.Login.email_id'), 
+			'password' => $this->Session->read('password')));
 			
 		}
-		
-		
+		 
 		$Email->from($from);
 		
 		$Email->delivery = 'smtp';

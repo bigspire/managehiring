@@ -301,7 +301,7 @@ class TaskplanController extends AppController {
 		
 		*/
 				
-		$options = array(		
+		$options = array(
 			array('table' => 'req_team',
 					'alias' => 'ReqTeam',					
 					'type' => 'LEFT',

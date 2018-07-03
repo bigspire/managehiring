@@ -124,7 +124,7 @@
 					<td width="120" class="tbl_column">Interview Date <span class="f_req">*</span>
 					</td>
 						<td>
-						<?php echo $this->Form->input('int_date', array('div'=> false,'type' => 'text', 'label' => false,  'class' => 'span6 datetimepick',   'required' => false,'placeholder' => '','error' =>  array('attributes' => array('wrap' => 'div', 'class' => 'error')))); ?> 					
+						<?php echo $this->Form->input('int_date', array('div'=> false,'type' => 'text', 'label' => false,  'class' => 'span6 datetimepick', 'autocomplete' => 'off',   'required' => false,'placeholder' => '','error' =>  array('attributes' => array('wrap' => 'div', 'class' => 'error')))); ?> 					
 
 						<?php //echo $this->Form->input('int_time', array('div'=> false,'type' => 'text',   'label' => false, 'class' => 'span3 datetimepick', 'required' => false, 'style' => 'float:left;margin-right:5px;', 'placeholder' => '', 'error' =>  array('attributes' => array('wrap' => 'div', 'class' => 'error')))); ?> 	
 
