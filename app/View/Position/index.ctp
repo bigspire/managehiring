@@ -137,7 +137,7 @@
 										<th width="150"><?php echo $this->Paginator->sort('team_member', 'Recruiters', array('escape' => false, 'direction' => 'desc', 'rel' => 'tooltip', 'title' => 'Sort by Ascending or Descending'));?></th>
 
 										<?php if($this->request->params['pass'][0] != 'pending' && $this->request->query['iframe'] != '1'):?>	
-										<th width="65"  style="text-align:center">CVs</th>
+										<th width="65"  style="text-align:center">CV Sent</th>
 										<th width="65"  style="text-align:center">Joined</th>
 										<?php endif; ?>
 										<th width="120"  style="text-align:center"><?php echo $this->Paginator->sort('status', 'Status', array('escape' => false, 'direction' => 'desc', 'rel' => 'tooltip', 'title' => 'Sort by Ascending or Descending'));?></th>
@@ -186,7 +186,7 @@
 						<td width=""><?php echo $req[0]['team_member'];?></td>
 						
 						<?php if($this->request->params['pass'][0] != 'pending'  && $this->request->query['iframe'] != '1'):?>	
-						<td width=""  style="text-align:center"><a  title="View CV Submitted"  href="<?php echo $this->webroot;?>resume/?spec=<?php echo $req['Position']['id'];?>" rel="tooltip"><?php echo $req[0]['cv_sent'];?>
+						<td width=""  style="text-align:center"><a  title="View CVs"  href="<?php echo $this->webroot;?>resume/?spec=<?php echo $req['Position']['id'];?>" rel="tooltip"><?php echo $this->Functions->cv_sent_count($req[0]['cv_stage'],$req[0]['req_resume_id']);?>
 						
 							</a>
 							
