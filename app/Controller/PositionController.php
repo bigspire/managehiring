@@ -121,9 +121,12 @@ class PositionController extends AppController {
 		}
 		
 		// for director and BH		
-		if($this->Session->read('USER.Login.roles_id') == '33'  || $this->Session->read('USER.Login.roles_id') == '35'){
+		if($this->Session->read('USER.Login.roles_id') == '33'  || $this->Session->read('USER.Login.roles_id') == '35'
+		|| $this->Session->read('USER.Login.roles_id') == '39'){
 			$show = 'all';
 			$team_cond = false;
+			$empCond = '';
+			$team_cond = '';
 		}else{
 			$show = '1';
 			$team_cond = true;
@@ -197,13 +200,12 @@ class PositionController extends AppController {
 			$empCond = '';
 			$team_cond = '';
 		}
-		*/
+		
 		
 		if($this->Session->read('USER.Login.roles_id') == '33' || $this->Session->read('USER.Login.roles_id') == '35'  || $this->Session->read('USER.Login.roles_id') == '39'){ // director & BDH
-			$empCond = '';
-			$team_cond = '';
+			
 		}
-	
+	*/
 		// set keyword condition
 		if($this->params->query['keyword'] != ''){
 			$keyCond = array("MATCH (Client.client_name,job_title,Creator.first_name) AGAINST ('".$this->Functions->format_search_keyword($this->params->query['keyword'])."' IN BOOLEAN MODE)"); 
@@ -711,6 +713,14 @@ class PositionController extends AppController {
 			$data3 = $this->ClientAccountHolder->find('count', array('conditions' => array('ClientAccountHolder.clients_id' => $data[0]['Position']['clients_id'],
 			'ClientAccountHolder.users_id' => $this->Session->read('USER.Login.id'))));
 			
+			// get the team members
+			$result_data = $this->Position->get_team($this->Session->read('USER.Login.id'), 1);
+			foreach($result_data as $res){ 
+				$team_data[] = $res['u']['id'];
+			}
+			if(in_array($data[0]['Position']['created_by'], $team_data)){
+				$team_member = 1;
+			}
 			// check the req belongs to the user
 			if($data[0]['Position']['is_deleted'] == 'Y'){
 				return $data['Position']['modified_date'];
@@ -720,9 +730,11 @@ class PositionController extends AppController {
 				return 'pass';
 			}else if($data2[0]['PositionStatus']['users_id'] == $this->Session->read('USER.Login.id')){	
 				return 'pass';
-			}else if($this->Session->read('USER.Login.roles_id') == '33' || $this->Session->read('USER.Login.roles_id') == '35'){	
+			}else if($this->Session->read('USER.Login.roles_id') == '33' || $this->Session->read('USER.Login.roles_id') == '35' || $this->Session->read('USER.Login.roles_id') == '39'){	
 				return 'pass';
 			}else if($data3){	
+				return 'pass';
+			}else if($team_member){
 				return 'pass';
 			}else{
 				return 'fail';
