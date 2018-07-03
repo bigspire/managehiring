@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-27 15:44:19
+/* Smarty version 3.1.29, created on 2018-07-03 17:54:14
   from "C:\xampp\htdocs\ctsvn2\managehiring\hiring\templates\holidays.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b33637b0dcd12_14938856',
+  'unifunc' => 'content_5b3b6aee2ab0b1_39298834',
   'file_dependency' => 
   array (
     '9be18c4d1e986cf3934adf683184f1b4bd44399f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\ctsvn2\\managehiring\\hiring\\templates\\holidays.tpl',
-      1 => 1530091710,
+      1 => 1530620652,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b33637b0dcd12_14938856 ($_smarty_tpl) {
+function content_5b3b6aee2ab0b1_39298834 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -63,10 +63,12 @@ home"><i class="icon-home"></i></a>
 								<a href="holidays.php?action=export&keyword=<?php echo $_POST['keyword'];?>
 &event_from_date=<?php echo $_smarty_tpl->tpl_vars['event_from_date']->value;?>
 &event_to_date=<?php echo $_smarty_tpl->tpl_vars['event_to_date']->value;?>
+&branch=<?php echo $_smarty_tpl->tpl_vars['branch']->value;?>
 " class="jsRedirect">
 								<button type="button" val="holidays.php?action=export&keyword=<?php echo $_POST['keyword'];?>
 &event_from_date=<?php echo $_smarty_tpl->tpl_vars['event_from_date']->value;?>
 &event_to_date=<?php echo $_smarty_tpl->tpl_vars['event_to_date']->value;?>
+&branch=<?php echo $_smarty_tpl->tpl_vars['branch']->value;?>
 " name="export" class="btn btn-warning" >Export Excel</button></a>
 							<?php }?>	
 <a href="add_holiday.php" class="iframeBox unreadLink" val="40_45"><input type="button" value="Import Holidays" class="btn btn-info"/></a>							
@@ -88,7 +90,7 @@ home"><i class="icon-home"></i></a>
 							</div>
 						<?php }?>
 						
-						<?php if ($_smarty_tpl->tpl_vars['keyword']->value || $_smarty_tpl->tpl_vars['event_from_date']->value || $_smarty_tpl->tpl_vars['event_to_date']->value) {?>
+						<?php if ($_smarty_tpl->tpl_vars['keyword']->value || $_smarty_tpl->tpl_vars['event_from_date']->value || $_smarty_tpl->tpl_vars['event_to_date']->value || $_smarty_tpl->tpl_vars['branch']->value) {?>
 						  <?php $_smarty_tpl->tpl_vars['hide'] = new Smarty_Variable('', null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'hide', 0);?>
 						<?php } else { ?>
@@ -155,6 +157,13 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'hide', 0);?>
 &event_to_date=<?php echo $_smarty_tpl->tpl_vars['event_to_date']->value;?>
 " rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_created']->value;?>
 ">Created</a></th>
+										<th width="75"><a href="holidays.php?field=modified&order=<?php echo $_smarty_tpl->tpl_vars['order']->value;?>
+&page=<?php echo $_GET['page'];?>
+&keyword=<?php echo $_smarty_tpl->tpl_vars['keyword']->value;?>
+&event_from_date=<?php echo $_smarty_tpl->tpl_vars['event_from_date']->value;?>
+&event_to_date=<?php echo $_smarty_tpl->tpl_vars['event_to_date']->value;?>
+" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_modified']->value;?>
+">Modified</a></th>
 										<!-- th width="50" style="text-align:center">Actions</th-->
 									</tr>
 								</thead>
@@ -175,13 +184,15 @@ $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>	
 									
 									<tr>
-										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['event'];?>
+										<td><?php echo ucwords(strtolower($_smarty_tpl->tpl_vars['item']->value['event']));?>
 </td>
 										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['event_date'];?>
 </td>
 										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['location'];?>
 </td>
 										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['created_date'];?>
+</td>
+										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['modified_date'];?>
 </td>
 										<!-- td class="actionItem" style="text-align:center">
 										<a href="edit_holidays.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>

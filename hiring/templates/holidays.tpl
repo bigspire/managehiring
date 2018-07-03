@@ -97,7 +97,7 @@
 								{foreach from=$data item=item key=key}	
 									{* if $item.event *}
 									<tr>
-										<td>{$item.event}</td>
+										<td>{$item.event|strtolower|ucwords}</td>
 										<td>{$item.event_date}</td>
 										<td>{$item.location}</td>
 										<td>{$item.created_date}</td>
