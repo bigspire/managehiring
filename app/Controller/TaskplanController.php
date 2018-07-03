@@ -290,6 +290,7 @@ class TaskplanController extends AppController {
 			}			
 		}
 		
+		/*
 		$teamCond = array('OR' => array(
 					'ReqResume.created_by' =>  $data,
 					'ReqTeam.users_id' => $data,
@@ -297,12 +298,15 @@ class TaskplanController extends AppController {
 					'Position.created_by' => $data						
 				)
 		);
+		
+		*/
 				
-		$options = array(		
+		$options = array(
 			array('table' => 'req_team',
 					'alias' => 'ReqTeam',					
 					'type' => 'LEFT',
-					'conditions' => array('`ReqTeam`.`requirements_id` = `Position`.`id`', 'ReqTeam.is_approve' => 'A')
+					'conditions' => array('`ReqTeam`.`requirements_id` = `Position`.`id`', 'ReqTeam.is_approve' => 'A',
+					'ReqTeam.users_id' => $this->Session->read('USER.Login.id'))
 			),			
 			array('table' => 'client_account_holder',
 					'alias' => 'AH',					
@@ -311,7 +315,7 @@ class TaskplanController extends AppController {
 			)
 		);
 		$pos_list = $this->TaskPlan->Position->find('all', array('fields' => array('id','job_title'),
-		'order' => array('job_title ASC'),'conditions' => array($teamCond, 'Position.status' => 'A', 'Position.is_deleted' => 'N','Position.clients_id' => $id, 'Position.req_status_id' => array('1','2')), 'group' => array('Position.id'), 'joins' => $options));
+		'order' => array('job_title ASC'),'conditions' => array($teamCond, 'Position.status' => 'A', 'Position.is_deleted' => 'N','Position.clients_id' => $id,'ReqTeam.users_id' => $this->Session->read('USER.Login.id'), 'Position.req_status_id' => array('1','2')), 'group' => array('Position.id'), 'joins' => $options));
 		// for retaining
 		$format_list = $this->Functions->format_dropdown($pos_list, 'Position','id','job_title');
 		$this->set('posList', $format_list);

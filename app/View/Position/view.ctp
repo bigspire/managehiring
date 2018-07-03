@@ -777,10 +777,10 @@
 															
 																									
 														</td>
-
 														
-														<td style="text-align:center" class="actionItem upload_row">
-<?php if($resume['ReqResume']['stage_title'] == 'Validation - Account Holder' &&
+	<td style="text-align:center" class="actionItem upload_row">
+<?php
+if($resume['ReqResume']['stage_title'] == 'Validation - Account Holder' &&
 										$resume['ReqResume']['status_title'] == 'Validated' && $this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):
 										$multi_send_cv = '1';?>
 					

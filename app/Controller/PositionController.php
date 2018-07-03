@@ -1479,7 +1479,7 @@ class PositionController extends AppController {
 				}
 				$this->loadModel('Contact');
 				$contact_data = $this->Contact->findById($client_data['Position']['client_contact_id'], array('fields' => 'Contact.first_name','Contact.last_name','Contact.email'));
-			
+		
 				// $sub = 'Manage Hiring - Resume sent by '.ucfirst($this->Session->read('USER.Login.first_name')).' '.ucfirst($this->Session->read('USER.Login.last_name'));
 				$from = ucfirst($this->Session->read('USER.Login.first_name')).' '.ucfirst($this->Session->read('USER.Login.last_name'));
 				$to_name = $contact_data['Contact']['first_name'].' '.$contact_data['Contact']['last_name'];
@@ -1487,7 +1487,7 @@ class PositionController extends AppController {
 				// $contact_data['Contact']['email'] = 'testing7@bigspire.com'; // for testing
 				$vars = array('from_name' => $from, 'to_name' => ucwords($to_name), 'position' => $this->request->data['Position']['job_title'],'msg'=> $message, 'location' => $this->request->data['Position']['location']);
 				// save the mail box
-				$this->save_mail_box($subject, $message, $req_res_id, 'C',1);
+				$this->save_mail_box($subject, $message, $req_res_id, 'C',1,$this->request->data['Position']['client_cc']);
 				// send cc mails
 				if($this->request->data['Position']['client_cc'] != ''){
 					$replace_str = str_replace(';', ',', $this->request->data['Position']['client_cc']);
@@ -1500,7 +1500,8 @@ class PositionController extends AppController {
 					$attach_file = date('ymdhis').'_'.$this->request->data['Position']['client_attach']['name'];
 					$resume_path[] = $this->upload_attachment($this->request->data['Position']['client_attach'], $attach_file);
 				}
-					
+
+				
 				if(!$this->send_email($subject, 'send_cv', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new2)){	
 					// show the msg.								
 					$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to client...', 'default', array('class' => 'alert alert-error'));				
@@ -1518,12 +1519,14 @@ class PositionController extends AppController {
 
 
 	/* function to save the mail box */
-	public function save_mail_box($sub, $msg, $req_res_id,$type,$mailtype){
+	public function save_mail_box($sub, $msg, $req_res_id,$type,$mailtype,$cc){
+	
 		$this->loadModel('MailBox');
 		$this->MailBox->id = '';
 		$data = array('created_date' => $this->Functions->get_current_date(),
 		'created_by' => $this->Session->read('USER.Login.id'), 'req_resume_id' => $req_res_id, 'subject' => $sub, 
-		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype);
+		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc);
+		
 		// save  mail box resume
 		if($this->MailBox->save($data, array('validate' => false))){
 			
@@ -2717,7 +2720,7 @@ class PositionController extends AppController {
 								// $resume_data['Resume']['email_id'] = 'testing7@bigspire.com'; // for testing
 								$vars = array('from_name' => $from, 'to_name' => ucwords($to_name), 'msg'=> $message);
 								// save the mail box
-								$this->save_mail_box($subject, $message, $req_res_id, 'R',3);
+								$this->save_mail_box($subject, $message, $req_res_id, 'R',3, '');
 								// send mail
 								if(!$this->send_email($subject, 'send_interview', array($this->Session->read('USER.Login.email_id') => $from), $resume_data['Resume']['email_id'], $vars)){	
 									// show the msg.								
@@ -2794,7 +2797,7 @@ class PositionController extends AppController {
 					// $contact_data['Contact']['email'] = 'testing7@bigspire.com'; // for testing
 					$vars = array('from_name' => $from, 'to_name' => ucwords($to_name),'msg'=> $message);
 					// save the mail box
-					$this->save_mail_box($subject, $message, $req_res_id, 'C',2);
+					$this->save_mail_box($subject, $message, $req_res_id, 'C',2,$this->request->data['Position']['client_cc']);
 					// send cc to client
 					if($this->request->data['Position']['client_cc'] != ''){
 						$replace_str = str_replace(';', ',', $this->request->data['Position']['client_cc']);
