@@ -469,10 +469,16 @@ class HomeController  extends AppController {
 				'conditions' => array('`Client`.`id` = `ClientAH`.`clients_id`')
 			)
 		);
+		
+	
+
+
 		$date_cond = array('or' => array("DATE_FORMAT(Position.created_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
 		$fields = array('id','job_title','location','Client.client_name', 'Creator.first_name','created_date',
-		'count(Distinct ReqResume.id) cv_sent','ReqStatus.title', 'ReqTeam.no_req', 'ctc_from','ctc_to','ctc_from_type','ctc_to_type');			
-		$conditions = array('fields' => $fields,'conditions' => array($date_cond,$pos_emp_cond2,
+		 'group_concat((case when ReqResume.stage_title != \'Validation - Account Holder\' and ReqResume.stage_title != \'Draft\' then 1 else \'\' end)) AS cv_stage','group_concat(ReqResume.id) req_resume_id', 
+		'ReqStatus.title', 'ReqTeam.no_req', 'ctc_from','ctc_to','ctc_from_type','ctc_to_type');	
+		// $pos_emp_cond2,
+		$conditions = array('fields' => $fields,'conditions' => array($date_cond,
 		'Position.status' => 'A'),	'order' => array('Position.created_date' => 'desc'),	'group' => array('Position.id'), 'joins' => $pos_options);
 		$this->Position->unBindModel(array('belongsTo' => array('FunctionArea')));
 		$data = $this->Position->find('all', $conditions);

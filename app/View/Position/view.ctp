@@ -28,7 +28,7 @@
                     </nav>
 					
 					<div class="srch_buttons no-print">
-				<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by'] && in_array($this->Session->read('USER.Login.id'), $ac_member) && $position_data['Position']['status'] == 'A'):?>	
+				<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by'] && $this->Session->read('USER.Login.id') == $position_data['Position']['created_by'] && $position_data['Position']['status'] == 'A'):?>	
 				<a rel="tooltip jsRedirect" href="<?php echo $this->webroot;?>position/edit/<?php echo $this->request->params['pass'][0];?>" title="Edit Position">
 				<input rel="tooltip" title="Edit Position" value="Edit" type="button" class="btn btn-info"></a>
 				<?php endif; ?>	
@@ -50,10 +50,7 @@
 						</div>
 							
 							
-							
-							
-							
-								<div class="row-fluid">
+							<div class="row-fluid">
 							<div class="span12">
 							<div class="mbox">
 							<div class="tabbable">
@@ -178,7 +175,7 @@
 										
 <span rel="tooltip" title="Requirement Status: <?php echo $position_data['ReqStatus']['title'];?> " class="label label-<?php echo $this->Functions->get_req_status_color($position_data['ReqStatus']['title']);?>"><?php echo $position_data['ReqStatus']['title'];?></span>	
 
-<?php if(in_array($this->Session->read('USER.Login.id'), $ac_member)):?>
+<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
 	<a rel="tooltip" val="40_60"  class="iframeBox" title="<?php echo $status_txt = $position_data['ReqStatus']['id'] == '10' ? 'Reactivate' : 'Change Status';?>" href="<?php echo $this->webroot;?>position/update_position_status/<?php echo $this->request->params['pass'][0];?>/<?php echo $position_data['ReqStatus']['id'];?>/"><i class="splashy-pencil"></i></a>
 <?php endif;?>
 
@@ -783,8 +780,8 @@
 
 														
 														<td style="text-align:center" class="actionItem upload_row">
-			<?php if($resume['ReqResume']['stage_title'] == 'Validation - Account Holder' &&
-										$resume['ReqResume']['status_title'] == 'Validated'   && in_array($this->Session->read('USER.Login.id'), $ac_member)):
+<?php if($resume['ReqResume']['stage_title'] == 'Validation - Account Holder' &&
+										$resume['ReqResume']['status_title'] == 'Validated' && $this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):
 										$multi_send_cv = '1';?>
 					
 					<?php if($position_data['Position']['req_status_id'] == '9'):?>
@@ -796,7 +793,7 @@
 				
 																
 										<?php elseif($resume['ReqResume']['stage_title'] == 'Validation - Account Holder' &&
-										$resume['ReqResume']['status_title'] == 'Pending'   && in_array($this->Session->read('USER.Login.id'), $ac_member)):?>
+										$resume['ReqResume']['status_title'] == 'Pending'  && $this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
 													<div class="btn-group">		
 												<span rel="tooltip" data-toggle="dropdown"  style="cursor:pointer" data-original-title="Update CV"><i class="splashy-sprocket_light"></i>
 																</span>
@@ -898,7 +895,7 @@
 										FA  
 										</span>
 									
-						<?php if(in_array($this->Session->read('USER.Login.id'), $ac_member)):?>
+						<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
 									
 										<span data-toggle="dropdown" style="padding-top:1px;margin-left:1px;border:1px solid #fbfcbd" class=" dropdown-toggle  alert-action"><span class="caret" style="margin-top:7px;"></span></span>
 									
@@ -974,7 +971,7 @@
 										<?php endif; ?>
 										
 										
-									<?php if(in_array($this->Session->read('USER.Login.id'), $ac_member)):?>
+					<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
 
 
 										<span data-toggle="dropdown" style="padding-top:1px;margin-left:1px;border:1px solid #fbfcbd" class=" dropdown-toggle  alert-action"><span class="caret" style="margin-top:7px;"></span></span>
@@ -993,7 +990,7 @@
 										<li><a  href="<?php echo $this->webroot;?>position/view_interview_schedule/<?php echo  $resume['ReqResume']['id'];?>/<?php echo $int_lev_same;?>/" val="65_90"  class="iframeBox sepV_a cboxElement">View Interview Details</a></li>
 										<?php endif; ?>
 										
-										<?php if($resume['ReqResume']['status_title'] == 'Scheduled'
+<?php if($resume['ReqResume']['status_title'] == 'Scheduled'
 										|| $resume['ReqResume']['status_title'] == 'Re-Scheduled'): $reschedule = '1';?>										
 										<li><a  href="<?php echo $this->webroot;?>position/schedule_interview/<?php echo  $resume['Resume']['id'];?>/<?php echo $this->request->params['pass'][0];?>/<?php echo $resume['ReqResume']['id'];?>/<?php echo $int_lev_same == 'Final' ? '5' : $int_lev_same;?>/reschedule/?client_name=<?php echo $position_data['Client']['client_name'];?> <<?php echo ucwords($position_data['Contact']['first_name'].' '.$position_data['Contact']['last_name']);?>> <<?php echo $position_data['Contact']['email'];?>>" val="65_94"  class="iframeBox sepV_a cboxElement">Re-Schedule Interview</a></li>
 										
@@ -1001,6 +998,7 @@
 										
 											<li><a  href="<?php echo $this->webroot;?>position/update_interview/<?php echo  $resume['Resume']['id'];?>/<?php echo $this->request->params['pass'][0];?>/<?php echo  $resume['ReqResume']['id'];?>/shortlist/<?php echo $int_lev_same == 'Final' ? '5' : $int_lev_same;?>/" val="40_60"  class="iframeBox sepV_a cboxElement"><?php  if($int_level[0] > 0): echo $int_level[0]; endif;?> <i class="splashy-check"></i> Interview Selected </a></li>
 											<li><a  href="<?php echo $this->webroot;?>position/update_interview/<?php echo  $resume['Resume']['id'];?>/<?php echo $this->request->params['pass'][0];?>/<?php echo  $resume['ReqResume']['id'];?>/reject/<?php echo $int_lev_same == 'Final' ? '5' : $int_lev_same;;?>/" val="40_60"  class="iframeBox sepV_a cboxElement"><?php  if($int_level[0] > 0): echo $int_level[0]; endif;?> <i class="splashy-error_small"></i> Interview Rejected</a></li>
+											
 										<?php endif; ?>
 										
 										
@@ -1052,7 +1050,8 @@
 										OP  
 										</span>
 										
-															<?php if(in_array($this->Session->read('USER.Login.id'), $ac_member)):?>
+	<?php
+	if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
 	
 										<span data-toggle="dropdown" style="padding-top:1px;margin-left:1px;border:1px solid #fbfcbd" class=" dropdown-toggle  alert-action"><span class="caret" style="margin-top:7px;"></span></span>
 										
@@ -1112,7 +1111,7 @@ $action = 1;?>
 										<?php echo  $st_code;?>  
 										</span>
 									
-														<?php if(in_array($this->Session->read('USER.Login.id'), $ac_member)):?>
+	<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
 										
 										<span data-toggle="dropdown" style="padding-top:1px;margin-left:1px;border:1px solid #fbfcbd" class=" dropdown-toggle  alert-action"><span class="caret" style="margin-top:7px;"></span></span>
 										
@@ -1157,7 +1156,7 @@ $action = 1;?>
 										<span class="btn-mini alert alert-success alert-action legendView" rel="tooltip" title="Billing Pending"   style="">
 										BP  
 										</span>
-															<?php if(in_array($this->Session->read('USER.Login.id'), $ac_member)):?>
+		<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
 		
 										<span data-toggle="dropdown" style="padding-top:1px;margin-left:1px;border:1px solid #fbfcbd" class=" dropdown-toggle  alert-action"><span class="caret" style="margin-top:7px;"></span></span>
 										
@@ -1201,7 +1200,7 @@ $action = 1;?>
 						<input type="hidden" id="cv_url" value="<?php echo $this->webroot;?>position/send_cv/">
 
 												
-					<?php if($multi_send_cv == '1' && in_array($this->Session->read('USER.Login.id'), $ac_member)):?>	
+					<?php if($multi_send_cv == '1' && $this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>	
 						<div class="btn-group upload_row sepH_b  no-print">
 								<button data-toggle="dropdown" class="btn btn-info dropdown-toggle">Action <span class="caret"></span></button>
 								<ul class="dropdown-menu">
@@ -1212,7 +1211,7 @@ $action = 1;?>
 						
 						
 				
-					<?php if($multi_show_interview == '1' && in_array($this->Session->read('USER.Login.id'), $ac_member)):?>		
+					<?php if($multi_show_interview == '1' && $this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>	
 					<div class="btn-group status_row sepH_b dn">
 								<button data-toggle="dropdown" class="btn btn-info  dropdown-toggle  no-print">Action <span class="caret"></span></button>
 								<ul class="dropdown-menu  no-print">
