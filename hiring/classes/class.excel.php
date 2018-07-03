@@ -105,7 +105,7 @@ class libExcel{
 	
 	
 	// Add some data, we will use printing features
-	function printCell($data,$total,$col,$field,$file_name, $module, $data2, $incentive_type,$period,$created_date,$modified_date){
+	function printCell($data,$total,$col,$field,$file_name, $module, $data2,$incentive_ytd, $incentive_type,$period,$created_date,$modified_date){
 		$j = 1;
 		$total =  $total;
 		$field_count = count($field);
@@ -148,7 +148,7 @@ class libExcel{
 			$this->objPHPExcel->getActiveSheet()->setCellValue('C2', 'Individual Contribution - YTD (In Rs.)');
 			$this->objPHPExcel->getActiveSheet()->getStyle('C2')->getFont()->setBold(true);	
 			$this->objPHPExcel->getActiveSheet()->getColumnDimension('C2')->setAutoSize(true);	
-			$this->objPHPExcel->getActiveSheet()->setCellValue('D2', '-');
+			$this->objPHPExcel->getActiveSheet()->setCellValue('D2', $incentive_ytd);
 			
 			$this->objPHPExcel->getActiveSheet()->setCellValue('C3', 'Created Date');
 			$this->objPHPExcel->getActiveSheet()->getStyle('C3')->getFont()->setBold(true);	

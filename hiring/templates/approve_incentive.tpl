@@ -111,7 +111,7 @@
 										<th width="100"><a href="approve_incentive.php?field=achieve_amt&order={$order}&page={$smarty.get.page}&f_date={$f_date}&t_date={$t_date}&employee={$employee}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_achieve_amt}">Actual Individual Contribution (In Rs.)</a></th>
 										<th width="100"><a href="approve_incentive.php?field=candidate_billed&order={$order}&page={$smarty.get.page}&f_date={$f_date}&t_date={$t_date}&employee={$employee}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_candidate_billed}">No. of Candidates Billed</a></th>
 										<th width="180"><a href="approve_incentive.php?field=eligible_incentive_amt&order={$order}&page={$smarty.get.page}&f_date={$f_date}&t_date={$t_date}&employee={$employee}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_eligible_incentive_amt}">Incentive Amount (In Rs.) </a></th>
-										<th width="100"><a href="approve_incentive.php?field=ytd&order={$order}&page={$smarty.get.page}&f_date={$f_date}&t_date={$t_date}&employee={$employee}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_contribution}">Individual Contribution - YTD (In Rs.)</a></th>
+										<!-- th width="100"><a href="approve_incentive.php?field=ytd&order={$order}&page={$smarty.get.page}&f_date={$f_date}&t_date={$t_date}&employee={$employee}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_contribution}">Individual Contribution - YTD (In Rs.)</a></th-->
 										<th width="120"><a href="approve_incentive.php?field=created_date&order={$order}&page={$smarty.get.page}&f_date={$f_date}&t_date={$t_date}&employee={$employee}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_created_date}">Created</a></th>
 										<th width="50">Status</th>
 										<th width="70">Pending</th>
@@ -133,7 +133,7 @@
 										<td width="">{$item.candidate_billed|intval}</td>		
 										<td width="">₹{$item.eligible_incentive_amt}</td>
 										
-										<td width="">-</td>									
+										<!-- td width="">-</td-->									
 										<td width="">{$item.created_date}</td>
 										{if $roles_id eq '26'}
 										<td><span class='label label-{$item.approval_status_clr}'>{$item.approval_status}</span></td>

@@ -72,7 +72,7 @@
 									</tr>
 							<tr>
 										<td width="" class="tbl_column">Individual Contribution - YTD <br>(In Rs.) </td>
-										<td>-</td>
+										<td>{$incentive_ytd}</td>
 									</tr>
 								<tr>
 									<td width=""  class="tbl_column">Created Date</td>
@@ -143,7 +143,7 @@
 
 									<tr>
 										<td width="180" class="tbl_column">Individual Contribution - YTD <br>(In Rs.) </td>
-										<td>-</td>
+										<td>{$incentive_ytd}</td>
 									</tr>	
 								
 						<tr>

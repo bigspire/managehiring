@@ -250,12 +250,12 @@ try{
 		$excelObj = new libExcel();
 		
 		$excelObj->printHeader($header = array('Employee','Type','Period','Productivity %','No. of Candidates Interviewed','Min. Performance Target (In Rs.)',
-		'Actual Individual Contribution (In Rs.)','No. of Candidates Billed','Incentive Amt. (In Rs.)','Individual Contribution - YTD (In Rs.)',
-		'Created','Status','Pending') ,$col = array('A','B','C','D','E','F','G','H','I','J','K','L','M'));  
+		'Actual Individual Contribution (In Rs.)','No. of Candidates Billed','Incentive Amt. (In Rs.)',
+		'Created','Status','Pending') ,$col = array('A','B','C','D','E','F','G','H','I','J','K','L'));  
 		// function to print the excel data
-		$excelObj->printCell($data, $count,$col = array('A','B','C','D','E','F','G','H','I','J','K','L','M'), $field = array('employee','incentive_type',
+		$excelObj->printCell($data, $count,$col = array('A','B','C','D','E','F','G','H','I','J','K','L'), $field = array('employee','incentive_type',
 		'incent_period_display','productivity','interview_candidate','incentive_target_amt','achievement_amt',
-		'candidate_billed','eligible_incentive_amt','','created_date','status_valid','pending'),'Approve Incentive_'.$current_date);
+		'candidate_billed','eligible_incentive_amt','created_date','status_valid','pending'),'Approve Incentive_'.$current_date);
 	
 	}
 	

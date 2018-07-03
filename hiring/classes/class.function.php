@@ -660,7 +660,7 @@ class fun{
 			$cond = "OnHold";
 			break;
 			case '4':
-			$cond = "Qualified";
+			$cond = "Shortlisted";
 			break;
 			case '5':
 			$cond = "Cancelled";

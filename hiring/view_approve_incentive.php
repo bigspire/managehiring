@@ -141,6 +141,47 @@ try{
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
 
+// split the period 
+$period_splt = explode("-", $row['period']);
+$period_yr = $period_splt[0]; 
+$period_month = $period_splt[1];
+// echo $row['period'];die;
+// current month and year
+if($row['incentive_type'] == 'I'){
+	$cur_date = $period_yr.'-'.$period_month;
+	$start_date = $period_yr.'-01';
+}elseif($row['incentive_type'] == 'J'){
+	$period_pc_splt = explode(",", $period);
+	$period_splt_year = explode(" ", $period_pc_splt[1]);
+	if($period_pc_splt[0] == 'Apr - Sep'){
+		$start_date = $period_splt_year[1].'-04';
+		$cur_date = $period_yr.'-'.$period_month;
+	}elseif($period_pc_splt[0] == 'Oct - Mar'){
+		$start_date = $period_splt_year[1].'-10';
+		$cur_date = $period_yr.'-'.$period_month;
+	}
+}
+
+// select and execute query and fetch the result
+$query = "CALL view_incentive_ytd_details('".$_GET['emp_id']."','".$row['incentive_type']."','".$start_date."','".$cur_date."')";
+try{
+	if(!$result = $mysql->execute_query($query)){
+		throw new Exception('Problem in executing view approve incentive page');
+	}
+	while($incentive_ytd_data = $mysql->display_result($result)){
+		$incentive_ytd += $incentive_ytd_data['eligible_incentive_amt'];
+	}
+	
+	$smarty->assign('incentive_ytd',$incentive_ytd);
+
+	// free the memory
+	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
 if($row['incentive_type'] == 'I'){
 	$period1 = date('Y-m',strtotime($row['period']));
 }else if($row['incentive_type'] == 'J'){
@@ -150,8 +191,7 @@ if($row['incentive_type'] == 'I'){
 	}else{
 		$period2 = $period[0].'-09';
 	}
-	$period1 = $period[0].'-'.$period[1];
-	
+	$period1 = $period[0].'-'.$period[1];	
 }
 
 
@@ -191,12 +231,12 @@ if($_GET['action'] == 'export'){
 		// function to print the excel header
 		$excelObj->printHeader($header = array('Position','Client','Candidate Name','Interview Level','Interview Date','Interview Status') ,$col = array('A','B','C','D','E','F'), 'view_incentive1');  
 		// function to print the excel data
-		$excelObj->printCell($data, $i,$col = array('A','B','C','D','E','F'), $field = array('position','client_name','candidate_name','stage_title','int_date','status_title'),'Incentive_'.$current_date, 'view_incentive1',$row,$incentive_type,$period,$created_date,$modified_date);
+		$excelObj->printCell($data, $i,$col = array('A','B','C','D','E','F'), $field = array('position','client_name','candidate_name','stage_title','int_date','status_title'),'Incentive_'.$current_date, 'view_incentive1',$row,$incentive_ytd,$incentive_type,$period,$created_date,$modified_date);
 	}else if($row['incentive_type'] == 'J'){
 		// function to print the excel header
 		$excelObj->printHeader($header = array('Position','Client','Candidate Name','Position CTC','Billing Amount','Offer CTC','Billing Date','Account Type','Individual Contribution (In Rs.)') ,$col = array('A','B','C','D','E','F','G','H','I'), 'view_incentive2');  
 		// function to print the excel data
-		$excelObj->printCell($data, $i,$col = array('A','B','C','D','E','F','G','H','I'), $field = array('position','client_name','candidate_name','ctc','billing_amount','ctc_offer','billing_date','user_type','amount'),'Incentive_'.$current_date, 'view_incentive2',$row,$incentive_type,$period,$created_date,$modified_date);
+		$excelObj->printCell($data, $i,$col = array('A','B','C','D','E','F','G','H','I'), $field = array('position','client_name','candidate_name','ctc','billing_amount','ctc_offer','billing_date','user_type','amount'),'Incentive_'.$current_date, 'view_incentive2',$row,$incentive_ytd,$incentive_type,$period,$created_date,$modified_date);
 	}
 }
 

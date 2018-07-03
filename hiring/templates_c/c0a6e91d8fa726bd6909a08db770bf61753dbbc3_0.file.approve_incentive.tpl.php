@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-28 10:06:51
+/* Smarty version 3.1.29, created on 2018-07-03 16:34:49
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\approve_incentive.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3465e3297d66_73041593',
+  'unifunc' => 'content_5b3b5851600522_95516221',
   'file_dependency' => 
   array (
     'c0a6e91d8fa726bd6909a08db770bf61753dbbc3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\approve_incentive.tpl',
-      1 => 1530078138,
+      1 => 1530615887,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3465e3297d66_73041593 ($_smarty_tpl) {
+function content_5b3b5851600522_95516221 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -209,13 +209,13 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'hide', 0);?>
 &employee=<?php echo $_smarty_tpl->tpl_vars['employee']->value;?>
 " rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_eligible_incentive_amt']->value;?>
 ">Incentive Amount (In Rs.) </a></th>
-										<th width="100"><a href="approve_incentive.php?field=ytd&order=<?php echo $_smarty_tpl->tpl_vars['order']->value;?>
+										<!-- th width="100"><a href="approve_incentive.php?field=ytd&order=<?php echo $_smarty_tpl->tpl_vars['order']->value;?>
 &page=<?php echo $_GET['page'];?>
 &f_date=<?php echo $_smarty_tpl->tpl_vars['f_date']->value;?>
 &t_date=<?php echo $_smarty_tpl->tpl_vars['t_date']->value;?>
 &employee=<?php echo $_smarty_tpl->tpl_vars['employee']->value;?>
 " rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_contribution']->value;?>
-">Individual Contribution - YTD (In Rs.)</a></th>
+">Individual Contribution - YTD (In Rs.)</a></th-->
 										<th width="120"><a href="approve_incentive.php?field=created_date&order=<?php echo $_smarty_tpl->tpl_vars['order']->value;?>
 &page=<?php echo $_GET['page'];?>
 &f_date=<?php echo $_smarty_tpl->tpl_vars['f_date']->value;?>
@@ -266,7 +266,7 @@ $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 										<td width="">₹<?php echo $_smarty_tpl->tpl_vars['item']->value['eligible_incentive_amt'];?>
 </td>
 										
-										<td width="">-</td>									
+										<!-- td width="">-</td-->									
 										<td width=""><?php echo $_smarty_tpl->tpl_vars['item']->value['created_date'];?>
 </td>
 										<?php if ($_smarty_tpl->tpl_vars['roles_id']->value == '26') {?>
