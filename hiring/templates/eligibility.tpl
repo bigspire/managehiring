@@ -52,7 +52,7 @@
 							</div>
 						{/if}
 						
-						{if $smarty.post.type}
+						{if $type}
 						  {assign var=hide value=''}
 						{else}
 							{assign var=hide value=dn}
@@ -63,7 +63,7 @@
 							<!--label style="margin-left:0">Keyword: <input type="text" placeholder="Search Here..." name="keyword" id="keyword" value="{$keyword}" class="input-large" aria-controls="dt_gal"></label-->
 							<label style="margin-left:0">Type: 
 							<select name="type" class="input-medium" style="clear:left" id="ClientStatus">
-								{html_options options=$eligibility_type selected=$smarty.post.type}
+								{html_options options=$eligibility_type selected=$type}
 							</select> 
 							</label>
 							<label>Status: 
@@ -85,8 +85,8 @@
 								<thead>
 									<tr>
 										<th width="100"><a href="eligibility.php?field=ctc_from&order={$order}&page={$smarty.get.page}&type={$type}&status={$status}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_ctc_from}">CTC</a></th>
-										<th width="100"><a href="eligibility.php?field=user_type&order={$order}&page={$smarty.get.page}&type={$user_type}&status={$status}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_user_type}">User Type</a></th>
-										<th width="100"><a href="eligibility.php?field=period&order={$order}&page={$smarty.get.page}&type={$period}&status={$status}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_period}">Period</a></th>
+										<th width="100"><a href="eligibility.php?field=user_type&order={$order}&page={$smarty.get.page}&type={$type}&status={$status}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_user_type}">User Type</a></th>
+										<th width="100"><a href="eligibility.php?field=period&order={$order}&page={$smarty.get.page}&type={$type}&status={$status}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_period}">Period</a></th>
 										<th width="150"><a href="eligibility.php?field=type&order={$order}&page={$smarty.get.page}&type={$type}&status={$status}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_type}">Type</a></th>
 										<th width="100"><a href="eligibility.php?field=no_resumes&order={$order}&page={$smarty.get.page}&type={$type}&status={$status}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_no_resumes}">No of Resume</a></th>
 										<th width="100"><a href="eligibility.php?field=amount&order={$order}&page={$smarty.get.page}&type={$type}&status={$status}" rel="tooltip" data-original-title="Sort by Ascending or Descending" class="{$sort_field_amount}">Amount (INR)</a></th>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-28 10:27:32
+/* Smarty version 3.1.29, created on 2018-07-03 15:13:59
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\eligibility.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b346abcdbb7d8_93971181',
+  'unifunc' => 'content_5b3b455fbf23e0_48279963',
   'file_dependency' => 
   array (
     '3ddc5514b72e6e417e7d0262b77fd87eb0b4e3ad' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\eligibility.tpl',
-      1 => 1530078138,
+      1 => 1530611037,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b346abcdbb7d8_93971181 ($_smarty_tpl) {
+function content_5b3b455fbf23e0_48279963 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -85,7 +85,7 @@ home"><i class="icon-home"></i></a>
 							</div>
 						<?php }?>
 						
-						<?php if ($_POST['type']) {?>
+						<?php if ($_smarty_tpl->tpl_vars['type']->value) {?>
 						  <?php $_smarty_tpl->tpl_vars['hide'] = new Smarty_Variable('', null);
 $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'hide', 0);?>
 						<?php } else { ?>
@@ -100,7 +100,7 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'hide', 0);?>
 " class="input-large" aria-controls="dt_gal"></label-->
 							<label style="margin-left:0">Type: 
 							<select name="type" class="input-medium" style="clear:left" id="ClientStatus">
-								<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['eligibility_type']->value,'selected'=>$_POST['type']),$_smarty_tpl);?>
+								<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['eligibility_type']->value,'selected'=>$_smarty_tpl->tpl_vars['type']->value),$_smarty_tpl);?>
 
 							</select> 
 							</label>
@@ -131,13 +131,13 @@ $_smarty_tpl->ext->_updateScope->updateScope($_smarty_tpl, 'hide', 0);?>
 ">CTC</a></th>
 										<th width="100"><a href="eligibility.php?field=user_type&order=<?php echo $_smarty_tpl->tpl_vars['order']->value;?>
 &page=<?php echo $_GET['page'];?>
-&type=<?php echo $_smarty_tpl->tpl_vars['user_type']->value;?>
+&type=<?php echo $_smarty_tpl->tpl_vars['type']->value;?>
 &status=<?php echo $_smarty_tpl->tpl_vars['status']->value;?>
 " rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_user_type']->value;?>
 ">User Type</a></th>
 										<th width="100"><a href="eligibility.php?field=period&order=<?php echo $_smarty_tpl->tpl_vars['order']->value;?>
 &page=<?php echo $_GET['page'];?>
-&type=<?php echo $_smarty_tpl->tpl_vars['period']->value;?>
+&type=<?php echo $_smarty_tpl->tpl_vars['type']->value;?>
 &status=<?php echo $_smarty_tpl->tpl_vars['status']->value;?>
 " rel="tooltip" data-original-title="Sort by Ascending or Descending" class="<?php echo $_smarty_tpl->tpl_vars['sort_field_period']->value;?>
 ">Period</a></th>
