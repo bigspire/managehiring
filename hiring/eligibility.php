@@ -172,6 +172,7 @@ $smarty->assign('data', $data);
 $smarty->assign('page' , $page); 
 $smarty->assign('total_pages' , $total_pages); 	
 $smarty->assign('keyword' , $keyword); 	
+$smarty->assign('type' , $type);
 $smarty->assign('status', $status);
 $smarty->assign('ALERT_MSG', $alert_msg);
 $smarty->assign('SUCCESS_MSG', $success_msg);
