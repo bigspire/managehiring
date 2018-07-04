@@ -114,14 +114,16 @@ class phpMail{
 		// checking in live
 		
 		
-		$mail->Port = 587; 
+		
 		if($from_email == 'noreply@managehiring.com'){
+			$mail->Port = 587; 
 			$mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers
 			$mail->Username = 'mailer.managehiring@gmail.com';                 // SMTP username
 			$mail->Password = 'ur$939!3';                           // SMTP password
 			//$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 			
 		}else{
+			$mail->Port = 465; 
 			$mail->Host = 'ssl://smtp.bizmail.yahoo.com';  // Specify main and backup SMTP servers
 			$mail->Username = $_SESSION['email_id'];                 // SMTP username
 			$from_email = $_SESSION['email_id'];
