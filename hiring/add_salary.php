@@ -203,9 +203,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					if(!$result = $mysql->execute_query($query)){
 						throw new Exception('Problem in getting employee details');
 					}
-					$obj = $mysql->display_result($result);
-					$user_name = $obj['user_name'];
-					$user_email_id = $obj['email_id'];
+					$obj_admin = $mysql->display_result($result);
+					$user_name = $obj_admin['user_name'];
+					$user_email_id = $obj_admin['email_id'];
 							
 					// free the memory
 					$mysql->clear_result($result);
@@ -240,7 +240,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					// send mail to Director				
 					$sub = "Manage Hiring - Salary details updated by " .$user_name;
 					$msg = $content->get_edit_salary_details($_POST,$user_name,$row_account['approval_name'],$emplyee_list,$modified_date);
-					$mailer->send_mail($sub,$msg,$user_name,$user_email,$row_account['approval_name'],$row_account['email_id']);	
+					$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$row_account['approval_name'],$row_account['email_id']);	
 					$success = '1';
 				}
 				

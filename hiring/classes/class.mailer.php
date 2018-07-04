@@ -7,8 +7,7 @@ class phpMail{
 	function send_mail($sub,$msg,$from,$from_email,$recipient, $recipient_email){
 		$mail = new PHPMailer;
 		// $mail->SMTPDebug = 3;                               // Enable verbose debug output
-	
-		
+
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		
 		/*
@@ -72,18 +71,58 @@ class phpMail{
 		}
 	} 
 	
-	function send_mail_to_client($sub,$msg,$from,$from_email,$recipient, $recipient_email,$resume_type,$file){
-		$mail = new PHPMailer;
+	function send_mail_to_client($sub,$message,$from,$from_email,$recipient, $recipient_email,$mail_cc,$resume_type,$file){
+		$mail = new PHPMailer;	
+		
+		// cc mail 
+				
+		
+		
+		if($mail_cc[0] != '' && count($mail_cc) > 0){
+			foreach($mail_cc as $cc_mail){ 
+				$mail->AddCC($cc_mail, '');
+			}
+		}
+		
+		
+		//$mail->AddCC($mail_cc[0], 'ravichandran3');
+		//$mail->AddCC($mail_cc[1], 'ravichandran2');
+		
+		
+		$mail->SMTPAuth = true;  // Enable SMTP authentication
 		$mail->isSMTP();                                      // Set mailer to use SMTP
-		$mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers
-		$mail->SMTPAuth = true;                               // Enable SMTP authentication
+		
+		
+		// checking for local
+		
+				
+		$mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers		                              
 		$mail->Username = 'testing@bigspire.com';                 // SMTP username
 		$mail->Password = 'bigspire1230';                           // SMTP password
-		$mail->Port = 587;                                    // TCP port to connect to
-
-		$mail->AddAttachment($resume_type, $file);
-
+		$mail->Port = 587;   
+		
+		
+		
+		// checking in live
+		
+		/*
+		$mail->Port = 465; 
+		if($from_email == 'noreply@managehiring.com'){
+			$mail->Host = 'ssl://smtp.gmail.com';  // Specify main and backup SMTP servers
+			$mail->Username = 'mailer.managehiring@gmail.com';                 // SMTP username
+			$mail->Password = 'ur$939!3';                           // SMTP password
+			//$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 			
+		}else{
+			$mail->Host = 'ssl://smtp.bizmail.yahoo.com';  // Specify main and backup SMTP servers
+			$mail->Username = $_SESSION['email_id'];                 // SMTP username
+			$from_email = $_SESSION['email_id'];
+			$mail->Password = $_SESSION['user_pass'];                           // SMTP password
+			// $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+		}
+		*/
+		
+		
 		$mail->SMTPOptions = array(
 			'ssl' => array(
 				'verify_peer' => false,
@@ -91,13 +130,20 @@ class phpMail{
 				'allow_self_signed' => true
 			)
 		);
-		
-		
 		$mail->setFrom($from_email, $from);
+
+		// $mail->setFrom($from_email, $from);
+
 		$mail->addAddress($recipient_email, $recipient);     // Add a recipient
+		
+		if($file != ''){
+			$mail->AddAttachment($resume_type, $file);
+		}
+	
+		// Add a recipient
 		$mail->isHTML(true);                                  // Set email format to HTML
 		$mail->Subject = $sub;
-		$mail->Body    = $msg;
+		$mail->Body    = $message;
 		if(!$mail->send()){
 			echo 'Message could not be sent.';
 			echo 'Mailer Error: ' . $mail->ErrorInfo;

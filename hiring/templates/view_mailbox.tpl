@@ -45,7 +45,12 @@
 										<td width="120" class="tbl_column">To </td>
 										<td>{if $data.mail_type == 'R'}{ucwords($data.candidate_name)} ({$data.email_id}){else}{$data.client_con_name} ({$data.email}){/if} </td>
 									</tr>
-									
+									{if $data.mail_type == 'C'}
+									<tr>
+										<td width="120" class="tbl_column">Cc </td>
+										<td>{$data.cc}</td>
+									</tr>
+									{/if}
 									<tr>
 										<td width="120" class="tbl_column">Client Name </td>
 										<td>{ucwords($data.client_name)}</td>

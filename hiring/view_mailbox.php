@@ -58,8 +58,18 @@ try{
 }catch(Exception $e){
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
-
+			
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+		
+	// cc mail validation
+	if($obj['cc'] != ''){
+		$replace_str = str_replace(';', ',', $obj['cc']);
+		$cc = explode(',', $replace_str);
+		$cc_new = array_map('trim',$cc);
+		$cc_new2 = array_map(array($fun, 'email_validation_cc'), $cc_new);	
+		$cc_new3 = array_filter($cc_new2);
+	}
+
 	// query to fetch admin details. 
 	$query = "CALL get_employee_by_id('".$_SESSION['user_id']."')";
 	try{
@@ -79,11 +89,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		echo 'Caught exception: ',  $e->getMessage(), "\n";
 	}
 	
+	$success = '0';
 	if($obj['email'] != ''){
-		/*
-		$filebroken = explode( '.', $obj['resume']);
-		$extension = array_pop($filebroken);
-		$file = implode('.', $filebroken); */
 		
 		$output = substr($obj['resume'], 0, strlen($obj['resume'])-5);
 		$file = str_replace('_', '', $output);
@@ -102,15 +109,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			}
 		}
 		
-		// send mail to client					
-		$msg = $content->send_mail_to_client($obj,$emp_name);
-		$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$resume_type,$file);	
-		
 		// assigning the date
 		$date =  $fun->current_date();
 		// query to insert mailbox. 
-		$query = "CALL add_mailbox('".$obj['subject']."','".$obj['message']."','".$date."','".$_SESSION['user_id']."',
-		'".$obj['mail_type']."','".$obj['req_resume_id']."')";
+		$query = "CALL add_mailbox('".$obj['subject']."','".$obj['cc']."','".$obj['message']."','".$date."','".$_SESSION['user_id']."',
+		'".$obj['mail_type']."','".$obj['req_resume_id']."','".$obj['mail_templates_id']."')";
 		// Calling the function that makes the insert
 		try{
 			// calling mysql exe_query function
@@ -121,11 +124,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			$last_id = $row['inserted_id'];
 			// free the memory
 			$mysql->clear_result($result);
+			// call the next result
+			$mysql->next_query();
 		}catch(Exception $e){
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}
+		
+		if(!empty($last_id )){
+			// send mail to client					
+			$msg = $content->send_mail_to_client($obj,$emp_name);
+			$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$resume_type,$file);
+			$success = '1';
+		}
 	}
-	if(!empty($last_id)){
+	if(!empty($success)){
 		$smarty->assign('EXIST_MSG' , 'Mail Sent Successfully.');
 	}
 }
@@ -135,7 +147,6 @@ $c_c = $mysql->close_connection();
 
 // here assign smarty variables
 $smarty->assign('id' , $_GET['id']); 
-
 // assign page title
 $smarty->assign('page_title' , 'Mailbox - Manage Hiring');  
 // assigning active class status to smarty menu.tpl

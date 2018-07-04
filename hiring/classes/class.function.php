@@ -319,6 +319,15 @@ class fun{
 		}
    }
    
+   // email validation
+	public function email_validation_cc($email){		
+		if(!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)){
+			// return true;
+		}else{
+			return $email;
+		}
+   }
+   
 	// function to validate database target type field 
 	public function target_type($type){
 		if($type == 'I'){
