@@ -236,7 +236,7 @@ if(!empty($_POST)){
 			foreach($row_account as  $approval_user){ 					
 				$sub = "Manage Hiring -  " .$user_name." edited Eligibility!";
 				$msg = $content->get_edit_eligibility_details($_POST,$user_name,$approval_user['approval_name'],$type,$status,$user_type,$period,$amount,$modified_date,$target_elig,$no_resumes);
-				$mailer->send_mail($sub,$msg,$user_name,$user_email,$approval_user['approval_name'],$approval_user['email_id']);	
+				$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$approval_user['approval_name'],$approval_user['email_id']);	
 			}
 			
 			if(!empty($affected_rows)){
