@@ -315,7 +315,7 @@ class TaskplanController extends AppController {
 			)
 		);
 		$pos_list = $this->TaskPlan->Position->find('all', array('fields' => array('id','job_title'),
-		'order' => array('job_title ASC'),'conditions' => array($teamCond, 'Position.status' => 'A', 'Position.is_deleted' => 'N','Position.clients_id' => $id,'ReqTeam.users_id' => $this->Session->read('USER.Login.id'), 'Position.req_status_id' => array('1','2')), 'group' => array('Position.id'), 'joins' => $options));
+		'order' => array('job_title ASC'),'conditions' => array($teamCond, 'Position.status' => 'A', 'Position.is_deleted' => 'N','Position.clients_id' => $id,'ReqTeam.users_id' => $this->Session->read('USER.Login.id'), 'Position.req_status_id' => array('0','1')), 'group' => array('Position.id'), 'joins' => $options));
 		// for retaining
 		$format_list = $this->Functions->format_dropdown($pos_list, 'Position','id','job_title');
 		$this->set('posList', $format_list);

@@ -533,11 +533,285 @@ class ReportController extends AppController {
 	}
 	
 	
-	/* function to show month wise CV Status */
+	/* function to get the month wise CV status */
 	public function month_wise_cv_status(){
+		// set the page title
+		$this->set('title_for_layout', 'Month Wise CV Status - Manage Hiring');	
+		$this->set('empList', $this->get_employee_details());	
+		$this->set('locList', $this->get_loc_details());
+		$client_data = $this->get_client_details();
+		$this->set('clientList', $client_data);
+		$this->get_role_details();
 		
+		// date filter when form submitted
+		if($this->request->data['Report']['from'] != '' || $this->request->data['Report']['to'] != ''){
+			$fin_start_year = $this->request->data['Report']['from'] ? $this->request->data['Report']['from'] : ''; // date('d/m/Y', strtotime('-15 month'));
+			$fin_end_year = $this->request->data['Report']['to'] ? $this->request->data['Report']['to'] :  date('d/m/Y', strtotime('+1 day'));
+			$fin_start_split = explode('/', $this->request->data['Report']['from']);
+			$fin_start_year_cal = $fin_start_split[1].'-'.$fin_start_split[0].'-01';
+			
+			$fin_end_split = explode('/', $this->request->data['Report']['to']);
+			$fin_end_year_cal = $fin_end_split[1].'-'.$fin_end_split[0].'-31';	
+
+			$this->set('FINSTART',$fin_start_year);
+			$this->set('FINEND',$fin_end_year);	
+		}else{
+			// get the financial year	
+			if(date('m') >= 3){
+				$fin_start_year = '04/'.date('Y');
+				$fin_end_year = '03/'.(date('Y') + 1);
+				// for calculation
+				$fin_start_year_cal = date('Y').'-04-01';
+				$fin_end_year_cal = (date('Y') + 1).'-03-31';
 				
+			}else{
+				$fin_start_year = '04/'.(date('Y') - 1);
+				$fin_end_year = '03/'.date('Y');
+				// for calculation
+				$fin_start_year_cal = (date('Y') - 1).'-04-01';
+				$fin_end_year_cal = date('Y').'-03-31';
+			}
+			$this->set('FINSTART',$fin_start_year);
+			$this->set('FINEND',$fin_end_year);
+		}
+		
+		
+		// search filters
+		if(!empty($this->request->data['Report']['from'])){
+			$this->set('fromDate', date('M, Y', strtotime($this->Functions->format_date_save_month($this->request->data['Report']['from']))));
+		}
+		if(!empty($this->request->data['Report']['to'])){
+			$this->set('toDate', date('M, Y', strtotime($this->Functions->format_date_save_month($this->request->data['Report']['to']))));
+		}
+		
+
+		// get client name
+		if(!empty($this->request->data['Report']['client_id'])){
+			$data = $this->Client->findById($this->request->data['Report']['client_id'], array('fields' => 'client_name'));
+			$this->set('clientName', $data['Client']['client_name']);
+			$client_cond = array('Client.id' => $this->request->data['Report']['client_id']);
+		}
+		
+		// get branch name
+		if(!empty($this->request->data['Report']['branch_id'])){
+			$this->loadModel('Location');
+			$data = $this->Location->findById($this->request->data['Report']['branch_id'], array('fields' => 'location'));
+			$this->set('locName', $data['Location']['location']);
+		}
+		// get role name
+		if(!empty($this->request->data['Report']['role_id'])){
+			$this->loadModel('Role');
+			$data = $this->Role->findById($this->request->data['Report']['role_id'], array('fields' => 'role_name'));
+			$this->set('roleName', $data['Role']['role_name']);
+		}
+		// get employee name
+		if(!empty($this->request->data['Report']['emp_id'])){
+			$this->loadModel('User');
+			$data = $this->User->findById($this->request->data['Report']['emp_id'], array('fields' => 'first_name','last_name'));
+			$this->set('empName', ucwords($data['User']['first_name'].' '.$data['User']['last_name']));
+			$emp_cond = array('ReqTeam.users_id' => $this->request->data['Report']['emp_id']);
+			$req_team_cond = array('ReqTeam.is_approve !=' => array('S','R'));
+		}
+		
+		
+		//$client_detail = $this->get_client_details($this->request->data['Report']['client_id']);
+		// $this->set('clientDetail', $client_detail);
+
+		// iterate the clients
+		$i = 0;
+		while($i < 12){
+			$month_detail[] = date('M,y', strtotime($fin_start_year_cal." +$i month"));
+			// month condition
+			$month_str = date('Y-m', strtotime($fin_start_year_cal." +$i month"));
+			$month_cond = array('Report.created_date like' => "$month_str%");
+			$month_cond2 = array('Position.created_date like' => "$month_str%");
+			// get all the openings of the client		
+		
+			$ow_options = array(				
+				array('table' => 'clients',
+					'alias' => 'Client',				
+					'type' => 'LEFT',
+					'conditions' => array('`Client`.`id` = `Report`.`clients_id`')					
+					),	
+				array('table' => 'req_team',
+					'alias' => 'ReqTeam',					
+					'type' => 'LEFT',
+					'conditions' => array('`ReqTeam`.`requirements_id` = `Report`.`id`')
+				),					
+			);	
+			
+			$opening_worked[] = $this->Report->find('all', array('fields' => array("sum(Report.no_job) no_job"), 'conditions' => array('Report.status' => 'A', 'Report.is_approve' => 'A', $month_cond, $emp_cond),
+			'joins' => $ow_options));
+			
+			$position_worked = $this->Report->find('all', array('fields' => array("group_concat(Distinct Report.id) pos_work"), 'conditions' => array('Report.status' => 'A', 'Report.is_approve' => 'A', $month_cond, $emp_cond),'joins' => $ow_options));
+			
+			$pos_split = explode(',', $position_worked[0][0]['pos_work']);
+			$pos_work_cond = array('Position.id' => $pos_split);
+			// get all the cv sent details of the client positions
+			
+			$this->loadModel('ReqResumeStatus');
+			$options = array(
+					array('table' => 'users',
+						'alias' => 'User',					
+						'type' => 'LEFT',
+						'conditions' => array('`User`.`id` = `ReqResume`.`created_by`')
+					),
+					array('table' => 'location',
+						'alias' => 'Location',					
+						'type' => 'LEFT',
+						'conditions' => array('`Location`.`id` = `User`.`location_id`')
+					)
+					,
+					array('table' => 'resume',
+						'alias' => 'Resume',					
+						'type' => 'LEFT',
+						'conditions' => array('`Resume`.`id` = `ReqResume`.`resume_id`')
+					),			
+					array('table' => 'requirements',
+						'alias' => 'Position',					
+						'type' => 'LEFT',
+						'conditions' => array('`Position`.`id` = `ReqResume`.`requirements_id`')
+					),
+					array('table' => 'clients',
+						'alias' => 'Client',					
+						'type' => 'LEFT',
+						'conditions' => array('`Client`.`id` = `Position`.`clients_id`')
+					),
+					array('table' => 'req_team',
+						'alias' => 'ReqTeam',					
+						'type' => 'LEFT',
+						'conditions' => array('`ReqTeam`.`requirements_id` = `Position`.`id`')
+					)
+				);
+			$sent_cond = array('ReqResumeStatus.stage_title' => 'Shortlist','ReqResumeStatus.status_title' => 'CV-Sent');
+			$cv_sent_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($sent_cond,$month_cond2,$req_team_cond, $emp_cond, $client_cond,$pos_work_cond), 'joins' => $options));
+			
+			// get all the cv short list details of the client positions
+			
+			$shortlist_cond = array('ReqResumeStatus.status_title' => 'Shortlisted');
+			$cv_shortlist_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($shortlist_cond,$month_cond2,$req_team_cond, $emp_cond, $client_cond,$pos_work_cond), 'group' => array('ReqResumeStatus.req_resume_id'), 'joins' => $options));
+			
+			// get all the cv feedback awaiting list details of the client positions
+							
+			$feedback_awaiting_cond = array('ReqResume.stage_title' => 'Shortlist', 'ReqResume.status_title !=' => array('Shortlisted','Rejected'));
+			$feedback_await_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($feedback_awaiting_cond,$month_cond2,$req_team_cond,$emp_cond, $client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get all the interview schedule awaiting list details of the client positions
+							
+			$interview_awaiting_cond = array('ReqResume.stage_title' => 'Shortlist', 'ReqResume.status_title' => array('Shortlisted'));
+			$interview_await_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($interview_awaiting_cond,$month_cond2, $req_team_cond,$emp_cond,$client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get all the preliminary interview schedule list details of the client positions
+							
+			$prili_awaiting_cond = array('ReqResumeStatus.stage_title like' => '%Interview');
+			$prili_interview_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($prili_awaiting_cond,$req_team_cond, $month_cond2,$emp_cond,$client_cond,$pos_work_cond), 'group' => array('ReqResumeStatus.req_resume_id'), 'joins' => $options));
+			
+			// get all the final interview schedule list details of the client position
+							
+			$final_interview_cond = array('ReqResumeStatus.stage_title' => 'Final Interview');
+			$final_interview_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($final_interview_cond,$month_cond2,$req_team_cond,$emp_cond, $client_cond,$pos_work_cond), 'group' => array('ReqResumeStatus.req_resume_id'), 'joins' => $options));
+			
+			// get all the offer pending list details of the client position
+							
+			$offer_pending_cond = array('ReqResume.stage_title' => 'Offer', 'ReqResume.status_title' => 'Offer Pending');
+			$offer_pending_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($offer_pending_cond,$month_cond2,$req_team_cond,$emp_cond, $client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get all the offer accepted list details of the client position
+							
+			$offer_accept_cond = array('ReqResumeStatus.stage_title' => 'Offer', 'ReqResumeStatus.status_title' => 'Offer Accepted');
+			$offer_accept_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($offer_accept_cond,$month_cond2,$req_team_cond, $emp_cond,$client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get all the offer rejected list details of the client position
+							
+			$offer_reject_cond = array('ReqResumeStatus.stage_title' => 'Offer', 'ReqResumeStatus.status_title' => 'Declined');
+			$offer_reject_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($offer_reject_cond,$month_cond2,$req_team_cond, $emp_cond,$client_cond,$pos_work_cond), 'group' => array('ReqResumeStatus.req_resume_id'), 'joins' => $options));
+			
+			// get all the joining pending list details of the client position
+							
+			$join_pending_cond = array('ReqResume.stage_title' => 'Offer', 'ReqResume.status_title' => 'Offer Accepted');
+			$join_pending_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($join_pending_cond,$month_cond2,$req_team_cond,$emp_cond, $client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get all the joining accepted list details of the client position
+							
+			$join_accept_cond = array('ReqResume.stage_title' => 'Joining', 'ReqResume.status_title' => 'Joined');
+			$join_accept_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($join_accept_cond,$month_cond2,$req_team_cond, $emp_cond,$client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get all the joining rejected list details of the client position
+							
+			$join_reject_cond = array('ReqResume.stage_title' => 'Joining', 'ReqResume.status_title' => 'Not Joined');
+			$join_reject_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($join_reject_cond,$month_cond2,$req_team_cond,$emp_cond, $client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get all the joining deferred list details of the client position
+							
+			$join_defer_cond = array('ReqResume.stage_title' => 'Joining', 'ReqResume.status_title' => 'Deferred');
+			$join_defer_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($join_defer_cond,$month_cond2,$req_team_cond,$emp_cond, $client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get all the not billed details of the client position
+							
+			$not_billed_cond = array('ReqResume.stage_title' => 'Joining', 'ReqResume.status_title' => 'Joined', 'ReqResume.bill_ctc' => NULL);
+			$not_billed_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($not_billed_cond,$month_cond2,$req_team_cond,$emp_cond, $client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get all the billed details of the client position
+							
+			$billed_cond = array('ReqResume.stage_title' => 'Joining', 'ReqResume.status_title' => 'Joined', 'ReqResume.bill_ctc >' => '0');
+			$billed_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($billed_cond,$month_cond2,$req_team_cond,$emp_cond,	$client_cond,$pos_work_cond), 'group' => array('ReqResume.id'), 'joins' => $options));
+			
+			// get the CV Sent to shortlisted percentage
+			$i++;
+		}
+		
+		$this->set('monthDetail', $month_detail);
+		
+		// for export
+		if($this->request->query['action'] == 'export'){			
+			$this->Excel->generate_report('month_wise_cv_status_report', $client_detail, $opening_worked,
+			$cv_sent_count,$cv_shortlist_count,$cv_reject_count,$feedback_await_count,$interview_await_count,
+			$prili_interview_count,$final_interview_count,$offer_pending_count,$offer_accept_count,$offer_reject_count,
+			$join_pending_count,$join_accept_count,$join_reject_count,$join_defer_count,
+			$not_billed_count,$billed_count,'client wise cv status', 'client wise cv status');
+		}
+		
+	
+		// for pdf generation
+		if($this->request->query['action'] == 'pdf'){
+			$pdf_file = 'month_wise_cv_status_'.date('y-m-d');
+			
+			include('vendor/dompdf_0-8-2/pdf.php');
+		}
+					
+
+
+		// die;
+
+		// assign all the counts
+		$this->set('OPENING_WORKED', $opening_worked);
+		$this->set('CV_SENT', $cv_sent_count);
+		$this->set('CV_SHORTLIST', $cv_shortlist_count);
+		$this->set('CV_REJECT', $cv_reject_count);
+		$this->set('FEEDBACK_AWAITING', $feedback_await_count);
+		$this->set('INTERVIEW_AWAITING', $interview_await_count);
+		$this->set('PRILIMINARY_INTERVIEW_ATTEND', $prili_interview_count);
+		$this->set('FINAL_INTERVIEW_ATTEND', $final_interview_count);
+		
+		$this->set('OFFER_PENDING', $offer_pending_count);
+		$this->set('OFFER_ACCEPT', $offer_accept_count);
+		$this->set('OFFER_REJECT', $offer_reject_count);
+		
+		$this->set('JOIN_PENDING', $join_pending_count);
+		$this->set('JOIN_ACCEPT', $join_accept_count);
+		$this->set('NOT_JOIN', $join_reject_count);		
+		$this->set('JOIN_DEFER', $join_defer_count);
+		
+		$this->set('NOT_BILLED', $not_billed_count);		
+		$this->set('BILLED', $billed_count);
+		
+		$count_client = count($client_data);
+		$this->set('chart_height', $count_client < 10 ? '500' :  $count_client*50);
+		
+		
+		
 	}
+	
 	
 	/* function to show employee productivity */
 	public function employee_productivity(){

@@ -1061,10 +1061,12 @@ if(!empty($_POST)){
 							echo 'Caught exception: ',  $e->getMessage(), "\n";
 						}
 					}else{
-						// save incentive as empty
-						
+						// redirect to incentive page
+						header("Location: approve_incentive.php?status=no_incentive");
 					}
 				}
+			}else{
+				header("Location: approve_incentive.php?status=Exist");
 			}
 			
 			// get the incentive user details
@@ -1123,8 +1125,6 @@ if(!empty($_POST)){
 				$mailer->send_mail($sub,$msg,$admin_name,$admin_email,$level1_name,$level1_email);
 				
 				header("Location: approve_incentive.php?status=Created");
-			}else{
-				header("Location: approve_incentive.php?status=Exist");
 			}
 	}else if($_POST['type'] == 'J'){
 		
@@ -1176,7 +1176,6 @@ if(!empty($_POST)){
 				$emp_id = $record['id'];
 				$emp_name = $record['emp_name'];
 				$inc_month = 1;
-				$year_month = $incentive_year.'-'.$incentive_month;
 				$employee_sal = '';
 				
 				// query to check whether it is approved or not. 
@@ -1213,7 +1212,8 @@ if(!empty($_POST)){
 				}catch(Exception $e){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}
-				if(($total == 0) && ($check_approved['is_approve'] != 'Y')){echo 'asdad';
+				
+				if(($total == 0) && ($check_approved['is_approve'] != 'Y')){
 					// get the incentive amount for the position CTC from eligibility table
 					$query = "CALL get_employee_salary('".$emp_id."','".$year_month."','".$year_month2."')";
 				
@@ -1330,6 +1330,9 @@ if(!empty($_POST)){
 											echo 'Caught exception: ',  $e->getMessage(), "\n";
 										}
 									}							
+								}else{
+									// redirect to incentive page
+									header("Location: approve_incentive.php?status=no_incentive");
 								}
 
 							

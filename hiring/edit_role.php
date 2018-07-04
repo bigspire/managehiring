@@ -212,7 +212,7 @@ if(!empty($_POST)){
 				}
 				
 				// query to fetch admin details. 
-				$query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
+				 $query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
 				try{
 					// calling mysql exe_query function
 					if(!$result = $mysql->execute_query($query)){

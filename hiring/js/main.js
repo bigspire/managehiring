@@ -296,9 +296,9 @@ $(document).ready(function() {
 			  plugins: [
 				'advlist autolink lists link image charmap print preview anchor',
 				'searchreplace visualblocks code fullscreen' ,
-				'insertdatetime media table contextmenu paste code'
+				'insertdatetime media table contextmenu paste code textcolor colorpicker'
 			  ],
-			  toolbar: "image | undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table ",
+			  toolbar: "image | undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table | forecolor | backcolor",
 			  // imagetools_toolbar: "imageoptions"
 			});
 		});
@@ -356,7 +356,43 @@ $(document).ready(function() {
 			endDate:$('#end_date').val(),
 		});
 	}
-	 
+	
+	
+	 $(function () {
+            $('.input-monthrange').datepicker({
+                startView: 1,
+				minViewMode:1,
+                format: 'mm/yyyy',
+				showOtherMonths: true,
+				selectOtherMonths: true,
+				prevText: "",
+				nextText: "",
+				autoclose:true,
+				todayHighlight: true,
+				viewMode: 'years',
+				startDate:$('#start_date').val(),
+				endDate:$('#end_date').val(),
+            });
+        });
+		
+	/*
+	if($('.input-monthrange').length > 0){
+	
+		$('#sandbox-container .input-monthrange').datepicker({
+			showOtherMonths: true,
+			selectOtherMonths: true,
+			format: 'm/yy',
+			prevText: "",
+			nextText: "",
+			autoclose:true,
+			todayHighlight: true,
+			viewMode: 'years',
+			startDate:$('#start_date').val(),
+			endDate:$('#end_date').val(),
+		});
+	}
+	*/
+	
 	/* when the form submitted */
 	$('.formID').submit(function(){ 		
 		// Disable the 'Next' button to prevent multiple clicks		

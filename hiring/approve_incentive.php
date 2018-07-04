@@ -278,6 +278,8 @@ try{
 		$success_msg = 'Incentive  ' . ucfirst($_GET['status']) . ' Successfully';
 	}else if($_GET['status'] == 'Exist'){
 		$success_msg = 'Incentive Already Generated for the Period';
+	}else if($_GET['status'] == 'no_incentive'){
+		$success_msg = 'No incentive available ';
 	}
 
 	// validating pagination
