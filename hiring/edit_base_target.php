@@ -219,7 +219,7 @@ if(!empty($_POST)){
 			foreach($row_account as  $approval_user){ 					
 				$sub = "Manage Hiring -  " .$user_name." edited Base Target!";
 				$msg = $content->get_edit_base_target_details($_POST,$user_name,$approval_user['approval_name'],$base_target,$base_target_type,$status,$modified_date);
-				$mailer->send_mail($sub,$msg,$user_name,$user_email,$approval_user['approval_name'],$approval_user['email_id']);	
+				$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$approval_user['approval_name'],$approval_user['email_id']);	
 			}
 			
 			if(!empty($affected_rows)){

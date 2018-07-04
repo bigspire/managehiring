@@ -80,8 +80,6 @@
 						<input type="hidden" value="#" id="webroot">
 						</form>
 
-							
-							
 							<table class="table table-striped table-bordered dataTable stickyTable">
 								<thead>
 									<tr>

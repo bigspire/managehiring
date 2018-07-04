@@ -194,7 +194,7 @@ if(!empty($_POST)){
 			foreach($row_account as  $approval_user){ 					
 				$sub = "Manage Hiring -  " .$user_name." edited Mailer Template!";
 				$msg = $content->get_edit_mailer_template_details($_POST,$user_name,$approval_user['approval_name'],$temp_name['subject'],$temp_name['template'],$modified_date);
-				$mailer->send_mail($sub,$msg,$user_name,$user_email,$approval_user['approval_name'],$approval_user['email_id']);	
+				$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$approval_user['approval_name'],$approval_user['email_id']);	
 			}
 	}elseif(empty($test) && $getid == 'new'){ 
 

@@ -180,7 +180,7 @@ if(!empty($_POST)){
 		foreach($row_account as  $approval_user){ 					
 			$sub = "Manage Hiring -  " .$user_name." edited Reusme API!";
 			$msg = $content->get_edit_resume_api_details($_POST,$user_name,$approval_user['approval_name'],$modified_date);
-			$mailer->send_mail($sub,$msg,$user_name,$user_email,$approval_user['approval_name'],$approval_user['email_id']);	
+			$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$approval_user['approval_name'],$approval_user['email_id']);	
 		}
 		if(!empty($affected_rows) && !empty($inserted_id)){
 			// redirecting to view page
