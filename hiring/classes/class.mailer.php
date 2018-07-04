@@ -27,7 +27,6 @@ class phpMail{
 			$from_email = 'noreply@managehiring.com';
 		}
 		
-	
 		if($from_email == 'noreply@managehiring.com'){
 			$mail->Port = 587; 
 			$mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -44,6 +43,7 @@ class phpMail{
 			$mail->Password = $_SESSION['user_pass'];                           // SMTP password
 			// $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 		}
+		
 		
 		$mail->SMTPOptions = array(
 			'ssl' => array(
@@ -72,7 +72,7 @@ class phpMail{
 		// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 		if(!$mail->send()){
-			echo 'Message could not be sent.';
+			// echo 'Message could not be sent.';
 			//echo 'Mailer Error: ' . $mail->ErrorInfo;
 		} else {
 			 // echo 'Message has been sent';
@@ -114,6 +114,9 @@ class phpMail{
 		// checking in live
 		
 		
+		if($from_email == ''){
+			$from_email = 'noreply@managehiring.com';
+		}
 		
 		if($from_email == 'noreply@managehiring.com'){
 			$mail->Port = 587; 
