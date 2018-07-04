@@ -822,9 +822,26 @@ if(!empty($_POST)){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}
 				
-
+				
+				// query to check whether it is approved or not. 
+				$query = "CALL check_incentive_approved('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$year_month."')";
+				// Calling the function that makes the insert
+				try{
+					// calling mysql exe_query function
+					if(!$result = $mysql->execute_query($query)){
+						throw new Exception('Problem in executing to check incentive approved');
+					}
+					$check_approved = $mysql->display_result($result);
+					// free the memory
+					$mysql->clear_result($result);
+					// call the next result
+					$mysql->next_query();
+				}catch(Exception $e){
+					echo 'Caught exception: ',  $e->getMessage(), "\n";
+				}
+						
 				// query to check whether it is exist or not. 
-				$query = "CALL check_incentive_exist('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$mysql->real_escape_str($year_month )."')";
+				$query = "CALL check_incentive_exist('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$mysql->real_escape_str($year_month)."')";
 				// Calling the function that makes the insert
 				try{
 					// calling mysql exe_query function
@@ -847,24 +864,6 @@ if(!empty($_POST)){
 						
 						$date = date('Y-m-d', strtotime($incentive_year.'-'.$incentive_month.'-'.$j));		
 
-						// query to check whether it is approved or not. 
-						$query = "CALL check_incentive_approved('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."',
-						'".$mysql->real_escape_str($date)."')";
-						// Calling the function that makes the insert
-						try{
-							// calling mysql exe_query function
-							if(!$result = $mysql->execute_query($query)){
-								throw new Exception('Problem in executing to check incentive approved');
-							}
-							$check_approved = $mysql->display_result($result);
-							// free the memory
-							$mysql->clear_result($result);
-							// call the next result
-							$mysql->next_query();
-						}catch(Exception $e){
-							echo 'Caught exception: ',  $e->getMessage(), "\n";
-						}
-						
 						// query to fetch employee position details. 
 						$query = "CALL get_inc_emp_position_ctc('".$emp_id."', '".$date."')";
 						try{
@@ -930,14 +929,15 @@ if(!empty($_POST)){
 					$work_avg = '';					
 				}
 			}
-			if($check_approved['is_approve'] != 'A' && $check['id'] == ''){				
-				// echo '<pre>';  print_r($avg);
+			
+			if(($check_approved['is_approve'] != 'Y') && $check['id'] == ''){	
+		
 				// check if percentage >= 100 and calculate incentive
 				foreach($avg as $id => $avg_rec){
 					$avg_user = $avg_rec[0];
 					if($avg_user >= '100'){
 						// get the interview sent candidates Position CTC for the month
-						echo $query = "CALL get_candidate_interview('".$id."','".$year_month."')";
+						$query = "CALL get_candidate_interview('".$id."','".$year_month."')";
 						try{
 							// calling mysql exe_query function
 							if(!$result_candi = $mysql->execute_query($query)){
@@ -946,11 +946,6 @@ if(!empty($_POST)){
 							$n = 0;
 							while($int_candidates = $mysql->display_result($result_candi)){ 
 								 $ctc = $int_candidates['ctc'];
-								/*
-								$total_ctc = explode(".",$ctc);
-								$ctc_from = $total_ctc[0];
-								$ctc_to = $total_ctc[1];
-								*/
 								if($avg_user >= 100){
 									
 									if($n == 0){
@@ -1071,7 +1066,7 @@ if(!empty($_POST)){
 					}
 				}
 			}
-				
+			
 			// get the incentive user details
 			$query = "CALL get_incentive_user_details('I')";
 			try{
@@ -1185,7 +1180,7 @@ if(!empty($_POST)){
 				$employee_sal = '';
 				
 				// query to check whether it is approved or not. 
-				$query = "CALL check_incentive_approved('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$mysql->real_escape_str($date)."')";
+				$query = "CALL check_incentive_approved('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$year_month."')";
 				// Calling the function that makes the insert
 				try{
 					// calling mysql exe_query function
@@ -1218,7 +1213,7 @@ if(!empty($_POST)){
 				}catch(Exception $e){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}
-				if($total == 0){
+				if(($total == 0) && ($check_approved['is_approve'] != 'Y')){echo 'asdad';
 					// get the incentive amount for the position CTC from eligibility table
 					$query = "CALL get_employee_salary('".$emp_id."','".$year_month."','".$year_month2."')";
 				
