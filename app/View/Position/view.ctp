@@ -971,12 +971,14 @@ if($resume['ReqResume']['stage_title'] == 'Validation - Account Holder' &&
 										<?php endif; ?>
 										
 										
-					<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
+					
 
 
 										<span data-toggle="dropdown" style="padding-top:1px;margin-left:1px;border:1px solid #fbfcbd" class=" dropdown-toggle  alert-action"><span class="caret" style="margin-top:7px;"></span></span>
 										
 										<ul class="dropdown-menu">
+										
+										<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
 										
 										<?php if($resume['ReqResume']['status_title'] == 'Shortlisted' || $resume['ReqResume']['status_title'] == 'Selected' || $resume['ReqResume']['status_title'] == 'Cancelled' || $resume['ReqResume']['status_title'] == 'No Show'
 										):?>
@@ -984,12 +986,15 @@ if($resume['ReqResume']['stage_title'] == 'Validation - Account Holder' &&
 										
 										<?php endif; ?>
 
-										<?php //echo $int_lev;?>
-										
-										<?php if($int_lev_same > 0 || $int_level_same == 'F'  || $int_lev == 'Final'): ?>
-										<li><a  href="<?php echo $this->webroot;?>position/view_interview_schedule/<?php echo  $resume['ReqResume']['id'];?>/<?php echo $int_lev_same;?>/" val="65_90"  class="iframeBox sepV_a cboxElement">View Interview Details</a></li>
 										<?php endif; ?>
 										
+										<?php  if($int_lev_same > 0 || $int_level_same == 'F'  || $int_lev == 'Final'): ?>
+										<li><a  href="<?php echo $this->webroot;?>position/view_interview_schedule/<?php echo  $resume['ReqResume']['id'];?>/<?php echo $int_lev_same;?>/" val="65_90"  class="iframeBox sepV_a cboxElement">View Interview Details</a></li>
+										<?php endif; ?>
+			
+
+<?php if($this->Session->read('USER.Login.id') == $position_data['Position']['created_by']):?>
+			
 <?php if($resume['ReqResume']['status_title'] == 'Scheduled'
 										|| $resume['ReqResume']['status_title'] == 'Re-Scheduled'): $reschedule = '1';?>										
 										<li><a  href="<?php echo $this->webroot;?>position/schedule_interview/<?php echo  $resume['Resume']['id'];?>/<?php echo $this->request->params['pass'][0];?>/<?php echo $resume['ReqResume']['id'];?>/<?php echo $int_lev_same == 'Final' ? '5' : $int_lev_same;?>/reschedule/?client_name=<?php echo $position_data['Client']['client_name'];?> <<?php echo ucwords($position_data['Contact']['first_name'].' '.$position_data['Contact']['last_name']);?>> <<?php echo $position_data['Contact']['email'];?>>" val="65_94"  class="iframeBox sepV_a cboxElement">Re-Schedule Interview</a></li>
@@ -1001,20 +1006,16 @@ if($resume['ReqResume']['stage_title'] == 'Validation - Account Holder' &&
 											
 										<?php endif; ?>
 										
-										
+						<?php endif; ?>				
 										</ul>
 										
 										
-										<?php //elseif($int_lev_same > 0 || $int_level_same == 'Final'): ?>									
-										<!--span data-toggle="dropdown" style="padding-top:1px;margin-left:1px;border:1px solid #fbfcbd" class=" dropdown-toggle  alert-action"><span class="caret" style="margin-top:7px;"></span></span>
+									
 										
-										<ul class="dropdown-menu">										
-										<li><a  href="<?php echo $this->webroot;?>position/view_interview_schedule/<?php echo  $resume['ReqResume']['id'];?>/<?php echo $int_lev_same;?>/" val="65_90"  class="iframeBox sepV_a cboxElement">View Interview Details</a></li>
-										
-										</ul-->
-										<?php endif; ?>
 										
 									</div>	
+									
+									
 								
 <?php elseif((strstr($resume['ReqResume']['stage_title'], 'Interview') && $resume['ReqResume']['status_title'] == 'Selected')
 || (strstr($resume['ReqResume']['stage_title'], 'Interview') && $resume['ReqResume']['status_title'] == 'Qualified')
