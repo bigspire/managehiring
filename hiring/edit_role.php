@@ -212,7 +212,7 @@ if(!empty($_POST)){
 				}
 				
 				// query to fetch admin details. 
-				$query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
+				 $query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
 				try{
 					// calling mysql exe_query function
 					if(!$result = $mysql->execute_query($query)){
@@ -255,7 +255,7 @@ if(!empty($_POST)){
 				// send mail to Director								
 					$sub = "Manage Hiring -  " .$user_name." edited Role!";
 					$msg = $content->get_edit_role_details($_POST,$user_name,$row_account['approval_name'],$_POST['role_name'],$modified_date);
-					$mailer->send_mail($sub,$msg,$user_name,$user_email,$row_account['approval_name'],$row_account['email_id']);	
+					$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$row_account['approval_name'],$row_account['email_id']);	
 				// }
 
 				if(!empty($last_id)){

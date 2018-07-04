@@ -21,17 +21,25 @@ class phpMail{
 		*/
 		
 		
-			$mail->SMTPAuth = true;                               // Enable SMTP authentication
-			$mail->Port = 465; 
-
+		$mail->SMTPAuth = true;                               // Enable SMTP authentication
+			
+	
+		if($from_email == ''){
+			$from_email = 'noreply@managehiring.com';
+		}
+		
+	
 		if($from_email == 'noreply@managehiring.com'){
-			$mail->Host = 'ssl://smtp.gmail.com';  // Specify main and backup SMTP servers
+			$mail->Port = 587; 
+			$mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers
 			$mail->Username = 'mailer.managehiring@gmail.com';                 // SMTP username
 			$mail->Password = 'ur$939!3';                           // SMTP password
 			//$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 			
 		}else{
-			$mail->Host = 'ssl://smtp.bizmail.yahoo.com';  // Specify main and backup SMTP servers
+			$mail->Host = 'ssl://smtp.bizmail.yahoo.com';
+			// Specify main and backup SMTP servers
+			$mail->Port = 465; 
 			$mail->Username = $_SESSION['email_id'];                 // SMTP username
 			$from_email = $_SESSION['email_id'];
 			$mail->Password = $_SESSION['user_pass'];                           // SMTP password
@@ -66,7 +74,7 @@ class phpMail{
 
 		if(!$mail->send()){
 			echo 'Message could not be sent.';
-			echo 'Mailer Error: ' . $mail->ErrorInfo;
+			//echo 'Mailer Error: ' . $mail->ErrorInfo;
 		} else {
 			 // echo 'Message has been sent';
 		}

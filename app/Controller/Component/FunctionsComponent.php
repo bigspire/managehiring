@@ -74,6 +74,14 @@ class FunctionsComponent extends Component {
 		}
 	}
 	
+	/* function to format the date to save */
+	public function format_date_save_month($date){
+		if(!empty($date)){
+			$exp_date = explode('/', $date); 
+			return $exp_date[1].'-'.$exp_date[0].'-01';
+		}
+	}
+	
 	/* function to filter the file */
 	public function filter_file($snap_file_name){
 		return str_replace(array('.','_','-','(',')',' '), '', $snap_file_name);

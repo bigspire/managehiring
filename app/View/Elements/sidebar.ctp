@@ -59,9 +59,9 @@ background:#f2f2f2
 										<div class="accordion-body collapse  <?php echo $month_wise_cv_status_sidebar;?> <?php echo $client_wise_cv_status_sidebar;?>" id="collapseTwo">
 											<div class="accordion-inner">
 												<ul class="nav nav-list">
-													<li class="<?php echo $month_wise_cv_status_sidebar_menu;?>"><a href="javascript:void(0)" >CTC Wise CV Status</a></li>
+													<li class="<?php echo $ctc_wise_cv_status_sidebar_menu;?>"><a href="javascript:void(0)" >CTC Wise CV Status</a></li>
 													<li class="<?php echo $client_wise_cv_status_sidebar_menu;?>"><a href="<?php echo $this->webroot;?>report/client_wise_cv_status/">Client Wise CV Status</a></li>
-													<li><a href="javascript:void(0)">Month Wise CV Status</a></li>
+													<li class="<?php echo $month_wise_cv_status_sidebar_menu;?>"><a href="<?php echo $this->webroot;?>report/month_wise_cv_status/">Month Wise CV Status</a></li>
 													
 												</ul>
 											</div>
