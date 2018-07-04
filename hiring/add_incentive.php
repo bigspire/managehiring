@@ -1185,7 +1185,7 @@ if(!empty($_POST)){
 				$employee_sal = '';
 				
 				// query to check whether it is approved or not. 
-				echo $query = "CALL check_incentive_approved('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$mysql->real_escape_str($date)."')";die;
+				$query = "CALL check_incentive_approved('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$mysql->real_escape_str($date)."')";
 				// Calling the function that makes the insert
 				try{
 					// calling mysql exe_query function
