@@ -37,7 +37,7 @@ if(($fun->isnumeric($id)) || ($fun->is_empty($id)) || ($id == 0)){
 }
 
 // select and execute query and fetch the result
-$query = "CALL view_mailbox('$id')";
+echo $query = "CALL view_mailbox('$id')";die;
 try{
 	if(!$result = $mysql->execute_query($query)){
 		throw new Exception('Problem in executing view mail box page');

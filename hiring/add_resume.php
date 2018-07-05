@@ -339,7 +339,9 @@ if($_POST['hdnSubmit'] == 1){
 			// $tot_exp_years = $_POST['year_of_exp_'.$i] == 0 ? '0' : $_POST['year_of_exp_'.$i].'.'.$_POST['month_of_exp_'.$i];
 
 			// $expStr = $fun->show_exp_details($tot_exp_years);
-			$expStr = date('M',$from_month_expData).' '.$from_year_expData.' to '.date('M',$to_month_expData).' '.$to_year_expData;
+			// $expStr = date('M',$from_month_expData).' '.$from_year_expData.' to '.date('M',$to_month_expData).' '.$to_year_expData;
+			$expStr = $fun->display_months($from_month_expData).' '.$from_year_expData.' to '.$fun->display_months($to_month_expData).' '.$to_year_expData;
+			
 			$locationDataCase = ucwords($locationData);
 			// get the designation details
 			$query = "call get_designation_id('".$mysql->real_escape_str($desigData)."')";
@@ -970,7 +972,9 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			// $tot_exp_years = $_POST['year_of_exp_'.$i] == 0 ? '0' : $_POST['year_of_exp_'.$i].'.'.$_POST['month_of_exp_'.$i];
 
 			// $expStr = $fun->show_exp_details($tot_exp_years);
-			$expStr = date('M',$from_month_expData).' '.$from_year_expData.' to '.date('M',$to_month_expData).' '.$to_year_expData;
+			// $expStr = date('M',$from_month_expData).' '.$from_year_expData.' to '.date('M',$to_month_expData).' '.$to_year_expData;
+			$expStr = $fun->display_months($from_month_expData).' '.$from_year_expData.' to '.$fun->display_months($to_month_expData).' '.$to_year_expData;
+			
 			$locationDataCase = ucwords($locationData);
 			// get the designation details
 			$query = "call get_designation_id('".$mysql->real_escape_str($desigData)."')";
@@ -1378,8 +1382,8 @@ $smarty->assign('grade_status', array('' => 'Select', '1' => 'Active', '2' => 'I
 $smarty->assign('grade_type', array('' => 'Select', 'I' => 'Individual', 'T' => 'Team'));
 
 // smarty drop down for exp month and year
-$smarty->assign('exp_month', array('1' => 'Jan', '2' => 'Feb', '3' => 'Mar', '4' => 'Apr', '5' => 'May', '6' => 'Jun',
- '7' => 'Jul', '8' => 'Aug', '9' => 'Sep', '10' => 'Oct', '11' => 'Nov', '12' => 'Dec'));
+$smarty->assign('exp_month', array('01' => 'Jan', '02' => 'Feb', '03' => 'Mar', '04' => 'Apr', '05' => 'May', '06' => 'Jun',
+ '07' => 'Jul', '08' => 'Aug', '09' => 'Sep', '10' => 'Oct', '11' => 'Nov', '12' => 'Dec'));
  
 $exp_yr = array(); 
 for($l = date('Y'); $l >= 1950; $l--){ 
