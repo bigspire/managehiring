@@ -138,7 +138,7 @@ if(!empty($_POST)){
 		}
 			
 		// query to fetch admin details. 
-		$query = "CALL get_BH_Director_employee_details('A','".$_SESSION['user_id']."')";
+		$query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
 		try{
 			// calling mysql exe_query function
 			if(!$result = $mysql->execute_query($query)){
@@ -157,14 +157,15 @@ if(!empty($_POST)){
 		}
 				
 		// query to fetch BH/Director details 
-		$query = "CALL get_BH_Director_employee_details('D','')";
+		$query = "CALL get_admin_director_details('D','')";
 		try{
 			// calling mysql exe_query function
 			if(!$result = $mysql->execute_query($query)){
 				throw new Exception('Problem in getting approval user details');
 			}
 			while($account = $mysql->display_result($result)){
-				$row_account[] = $account;
+				// $row_account[] = $account;
+				$row_account = $account;
 			}
 			// free the memory
 			$mysql->clear_result($result);
@@ -177,11 +178,11 @@ if(!empty($_POST)){
 		$modified_date = $fun->convert_date_to_display($date);
 			
 		// send mail to BH/Director
-		foreach($row_account as  $approval_user){ 					
-			$sub = "Manage Hiring -  " .$user_name." edited Reusme API!";
-			$msg = $content->get_edit_resume_api_details($_POST,$user_name,$approval_user['approval_name'],$modified_date);
-			$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$approval_user['approval_name'],$approval_user['email_id']);	
-		}
+		// foreach($row_account as  $approval_user){ 					
+			$sub = "Manage Hiring -  " .$user_name." edited Resume API!";
+			$msg = $content->get_edit_resume_api_details($_POST,$user_name,$row_account['approval_name'],$modified_date);
+			$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$row_account['approval_name'],$row_account['email_id']);	
+		// }die;
 		if(!empty($affected_rows) && !empty($inserted_id)){
 			// redirecting to view page
 			header('Location: view_resume_api.php?status=updated');	
