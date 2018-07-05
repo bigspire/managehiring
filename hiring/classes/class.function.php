@@ -307,7 +307,7 @@ class fun{
 		if (!empty($contact_no) && ctype_digit($contact_no)){			
 			if (strlen($contact_no) < 10){
 				return true;
-			}else if(strlen($contact_no) > 12){
+			}else if(strlen($contact_no) > 10){
 				return true;
 			}
  	   }

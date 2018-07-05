@@ -726,8 +726,13 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 	$smarty->assign('expErr',$er1);
 		
 	// mobile validation
-	if($fun->is_phonenumber($_POST['mobile']) || $fun->size_of_phonenumber($_POST['mobile'])){
+	if($fun->is_phonenumber($_POST['mobile'])){
 		$mobileErr = 'Please enter the valid mobile';
+    	$smarty->assign('mobileErr',$mobileErr);
+    	$test = 'error';
+	}
+	if($fun->size_of_phonenumber($_POST['mobile'])){
+		$mobileErr = 'Mobile Number must be 10 digits only.';
     	$smarty->assign('mobileErr',$mobileErr);
     	$test = 'error';
 	}
