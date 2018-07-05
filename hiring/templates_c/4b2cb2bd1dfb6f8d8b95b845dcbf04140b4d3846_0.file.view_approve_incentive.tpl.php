@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-03 17:13:46
+/* Smarty version 3.1.29, created on 2018-07-05 13:59:24
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\view_approve_incentive.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3b61728f8bb8_96886272',
+  'unifunc' => 'content_5b3dd6e46b9468_52879986',
   'file_dependency' => 
   array (
     '4b2cb2bd1dfb6f8d8b95b845dcbf04140b4d3846' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\view_approve_incentive.tpl',
-      1 => 1530618224,
+      1 => 1530779362,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3b61728f8bb8_96886272 ($_smarty_tpl) {
+function content_5b3dd6e46b9468_52879986 ($_smarty_tpl) {
 ?>
 
    
@@ -109,7 +109,7 @@ home"><i class="icon-home"></i></a>
 									</tr>
 							<tr>
 										<td width="" class="tbl_column">Individual Contribution - YTD <br>(In Rs.) </td>
-										<td><?php echo $_smarty_tpl->tpl_vars['incentive_ytd']->value;?>
+										<td>₹<?php echo $_smarty_tpl->tpl_vars['incentive_ytd']->value;?>
 </td>
 									</tr>
 								<tr>
@@ -190,7 +190,7 @@ home"><i class="icon-home"></i></a>
 
 									<tr>
 										<td width="180" class="tbl_column">Individual Contribution - YTD <br>(In Rs.) </td>
-										<td><?php echo $_smarty_tpl->tpl_vars['incentive_ytd']->value;?>
+										<td>₹<?php echo $_smarty_tpl->tpl_vars['incentive_ytd']->value;?>
 </td>
 									</tr>	
 								

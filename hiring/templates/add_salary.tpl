@@ -85,21 +85,13 @@
 <input type="hidden" value="{$page_redirect}" class="redirect_url"/>		
 <!-- main bootstrap js -->
 		 
-{if $form_sent == '1'}
 {literal}
 <script type="text/javascript">
-/* redirect to list page successfully */
-self.parent.location.href = jQuery('.redirect_url').val();
-parent.jQuery(".modalCloseImg").click();
-parent.$.colorbox.close();
-</script>
-{/literal}
-{/if}
-
-{literal}
-<script type="text/javascript">
+$(".cancel").click(function(){
+	parent.$.colorbox.close();
+});
 $(document).ready(function(){
-		/* when the form submitted */
+	/* when the form submitted */
 	$('.formID').submit(function(){ 		
 		// Disable the 'Next' button to prevent multiple clicks		
 		$('input[type=submit]', this).attr('value', 'Processing...');		
@@ -110,10 +102,19 @@ $(document).ready(function(){
 		
 	});
 });
-$(".cancel").click(function(){
-	parent.$.colorbox.close();
-});
 </script>	
 {/literal}
+
+{if $form_sent == '1'}
+{literal}
+<script type="text/javascript">
+
+/* redirect to list page successfully */
+self.parent.location.href = jQuery('.redirect_url').val();
+parent.jQuery(".modalCloseImg").click();
+parent.$.colorbox.close();
+</script>
+{/literal}
+{/if}
 </body>
 </html>

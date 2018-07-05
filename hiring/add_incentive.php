@@ -1060,10 +1060,10 @@ if(!empty($_POST)){
 						}catch(Exception $e){
 							echo 'Caught exception: ',  $e->getMessage(), "\n";
 						}
-					}else{
+					}/* elseif(empty($last_inserted_id) && empty($incentive_id)){
 						// redirect to incentive page
 						header("Location: approve_incentive.php?status=no_incentive");
-					}
+					}*/
 				}
 			}else{
 				header("Location: approve_incentive.php?status=Exist");
@@ -1343,8 +1343,6 @@ if(!empty($_POST)){
 							$mysql->clear_result($result);
 							// next query execution
 							$mysql->next_query();
-					
-						
 						
 						
 						$date = date('Y-m-d', strtotime($year_month.'-01'));	
@@ -1406,11 +1404,13 @@ if(!empty($_POST)){
 							}
 			
 						}
-						
 						$inc_month++;	
 						$year_month = date('Y-m', strtotime($year_month . "+1 months"));
 					}
 						
+				}else{
+					// redirect to incentive page
+					header("Location: approve_incentive.php?status=no_incentive");
 				}
 			}
 			
@@ -1470,7 +1470,7 @@ if(!empty($_POST)){
 				$mailer->send_mail($sub,$msg,$admin_name,$admin_email,$level1_name,$level1_email);
 				header("Location: approve_incentive.php?status=Created");
 			}else{
-				header("Location: approve_incentive.php?status=Exist");
+				header("Location: approve_incentive.php?status=no_incentive");
 			}
 			
 		}

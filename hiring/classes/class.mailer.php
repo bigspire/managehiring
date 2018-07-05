@@ -22,11 +22,21 @@ class phpMail{
 		
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
 			
-	
+		// checking for local
+
+			/*	
+		$mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers		                              
+		$mail->Username = 'testing@bigspire.com';                 // SMTP username
+		$mail->Password = 'bigspire1230';                           // SMTP password
+		$mail->Port = 587;   
+		
+		*/
+		
+		// checking in live
 		if($from_email == ''){
 			$from_email = 'noreply@managehiring.com';
 		}
-		
+
 		if($from_email == 'noreply@managehiring.com'){
 			$mail->Port = 587; 
 			$mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -73,7 +83,7 @@ class phpMail{
 
 		if(!$mail->send()){
 			// echo 'Message could not be sent.';
-			//echo 'Mailer Error: ' . $mail->ErrorInfo;
+			// echo 'Mailer Error: ' . $mail->ErrorInfo;
 		} else {
 			 // echo 'Message has been sent';
 		}
@@ -82,27 +92,19 @@ class phpMail{
 	function send_mail_to_client($sub,$message,$from,$from_email,$recipient, $recipient_email,$mail_cc,$resume_type,$file){
 		$mail = new PHPMailer;	
 		
-		// cc mail 
-				
-		
-		
+		// cc mail 		
 		if($mail_cc[0] != '' && count($mail_cc) > 0){
 			foreach($mail_cc as $cc_mail){ 
 				$mail->AddCC($cc_mail, '');
 			}
 		}
-		
-		
-		//$mail->AddCC($mail_cc[0], 'ravichandran3');
-		//$mail->AddCC($mail_cc[1], 'ravichandran2');
-		
-		
+
 		$mail->SMTPAuth = true;  // Enable SMTP authentication
-		$mail->isSMTP();                                      // Set mailer to use SMTP
+		$mail->isSMTP();         // Set mailer to use SMTP
 		
 		
 		// checking for local
-		
+
 			/*	
 		$mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers		                              
 		$mail->Username = 'testing@bigspire.com';                 // SMTP username
@@ -112,8 +114,7 @@ class phpMail{
 		*/
 		
 		// checking in live
-		
-		
+
 		if($from_email == ''){
 			$from_email = 'noreply@managehiring.com';
 		}
@@ -134,8 +135,6 @@ class phpMail{
 			// $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 		}
 		
-		
-		
 		$mail->SMTPOptions = array(
 			'ssl' => array(
 				'verify_peer' => false,
@@ -144,9 +143,6 @@ class phpMail{
 			)
 		);
 		$mail->setFrom($from_email, $from);
-
-		// $mail->setFrom($from_email, $from);
-
 		$mail->addAddress($recipient_email, $recipient);     // Add a recipient
 		
 		if($file != ''){
@@ -154,7 +150,7 @@ class phpMail{
 		}
 	
 		// Add a recipient
-		$mail->isHTML(true);                                  // Set email format to HTML
+		$mail->isHTML(true);   // Set email format to HTML
 		$mail->Subject = $sub;
 		$mail->Body    = $message;
 		if(!$mail->send()){

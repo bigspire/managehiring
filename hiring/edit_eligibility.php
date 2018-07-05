@@ -183,7 +183,7 @@ if(!empty($_POST)){
 			}
 				
 			// query to fetch admin details. 
-			$query = "CALL get_BH_Director_employee_details('A','".$_SESSION['user_id']."')";
+			$query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
 			try{
 				// calling mysql exe_query function
 				if(!$result = $mysql->execute_query($query)){
@@ -191,8 +191,8 @@ if(!empty($_POST)){
 				}
 				$obj = $mysql->display_result($result);
 				$user_name = $obj['user_name'];
-				$user_email_id = $obj['email_id'];
-						
+				// $user_email_id = $obj['email_id'];
+				$user_email_id = 'noreply@managehiring.com';
 				// free the memory
 				$mysql->clear_result($result);
 				// call the next result
@@ -202,14 +202,15 @@ if(!empty($_POST)){
 			}
 				
 			// query to fetch BH/Director details 
-			$query = "CALL get_BH_Director_employee_details('D','')";
+			$query = "CALL get_admin_director_details('D','')";
 			try{
 				// calling mysql exe_query function
 				if(!$result = $mysql->execute_query($query)){
 					throw new Exception('Problem in getting approval user details');
 				}
 				while($account = $mysql->display_result($result)){
-					$row_account[] = $account;
+					// $row_account[] = $account;
+					$row_account = $account;
 				}
 				// free the memory
 				$mysql->clear_result($result);
@@ -233,11 +234,11 @@ if(!empty($_POST)){
 			}
 			
 			// send mail to BH/Director
-			foreach($row_account as  $approval_user){ 					
+			// foreach($row_account as  $approval_user){ 					
 				$sub = "Manage Hiring -  " .$user_name." edited Eligibility!";
-				$msg = $content->get_edit_eligibility_details($_POST,$user_name,$approval_user['approval_name'],$type,$status,$user_type,$period,$amount,$modified_date,$target_elig,$no_resumes);
-				$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$approval_user['approval_name'],$approval_user['email_id']);	
-			}
+				$msg = $content->get_edit_eligibility_details($_POST,$user_name,$row_account['approval_name'],$type,$status,$user_type,$period,$amount,$modified_date,$target_elig,$no_resumes);
+				$mailer->send_mail($sub,$msg,$user_name,$user_email_id,$row_account['approval_name'],$row_account['email_id']);	
+			// }
 			
 			if(!empty($affected_rows)){
 					// redirecting to list eligibility page

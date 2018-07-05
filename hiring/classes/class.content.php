@@ -173,29 +173,24 @@ EOD;
   <tr>
     <td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="490" valign="top"  ><br><h1 style="font:bold 15px Arial, Helvetica, sans-serif; color:#212428; margin:0 0 10px 0;">Dear Karthik,</h1>
+        <td width="490" valign="top"  ><br><h1 style="font:bold 15px Arial, Helvetica, sans-serif; color:#212428; margin:0 0 10px 0;">Dear {$approval_user_name},</h1>
           <p style="font:13px Arial, Helvetica, sans-serif; color:#212428; margin:0;">
-		  Ranjeet has approved the incentive details of Bhargavi. Please login to Manage Hiring and approve the incentive.</p><br />
+		  {$user_name} has modified the Resume API Key details. Please login to Manage Hiring and check the details.</p><br />
 		  
-          <p style="font:bold 13px Arial, Helvetica, sans-serif; color:#212428; margin:0;">Please check the incentive details below,</p>
+          <p style="font:bold 13px Arial, Helvetica, sans-serif; color:#212428; margin:0;">Please check the Resume API Key details below,</p>
           <table width="100%" border="0" cellspacing="0" cellpadding="10" style="border:1px solid #ededed; font:bold 13px Arial, Helvetica, sans-serif; color:#212428; ">
-		   <tr style="background:#f5f4f4;">
-             	<td style="color:#2a2a2a;" width="200">Employee Name</td>
-              	<td style="color:#2a2a2a;" width="200">Designation</td>	
-					<td style="color:#2a2a2a;">Amount</td>			
-             </tr>
-			 <tr>
-              	<td width="">Bhargavi</td>
-              	<td> Account Holder</td>	
-				<td> Rs. 4000</td>				
-             </tr>
-			 
-			 <tr style="background:;">
-              	<td width="">Lavanya</td>
-              	<td> Senior Recruiter</td>
-				<td> Rs. 3000</td>					
-             </tr>
-			 
+			<tr style="background:#f5f4f4;">
+				<td width="130">HTML2PDF Rocket API Key</td>
+             	<td style="color:#2a2a2a;" width="200">{$form_data['api_key']}</td>
+			</tr>	
+			<tr style="background:#f5f4f4;">
+				<td width="130">ILOVEPDF Public Key</td>
+				<td style="color:#2a2a2a;" width="200">{$form_data['public_key']}</td>	
+			</tr>	
+			<tr style="background:#f5f4f4;">
+				<td width="130">ILOVEPDF Secret Key</td>
+				<td style="color:#2a2a2a;">{$form_data['secret_key']}</td>			
+            </tr>
           </table>
 </td>
       </tr>

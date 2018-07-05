@@ -182,8 +182,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 					}
 					$obj = $mysql->display_result($result);
 					$user_name = $obj['user_name'];
-					$user_email_id = $obj['email_id'];
-							
+					// $user_email_id = $obj['email_id'];
+					$user_email_id = 'noreply@managehiring.com';	
 					// free the memory
 					$mysql->clear_result($result);
 					// call the next result

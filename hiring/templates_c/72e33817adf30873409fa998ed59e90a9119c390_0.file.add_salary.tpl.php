@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-28 12:22:57
+/* Smarty version 3.1.29, created on 2018-07-05 15:14:29
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\add_salary.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3485c93a12d6_60471292',
+  'unifunc' => 'content_5b3de87d44c092_59171489',
   'file_dependency' => 
   array (
     '72e33817adf30873409fa998ed59e90a9119c390' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\add_salary.tpl',
-      1 => 1530078138,
+      1 => 1530783857,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5b3485c93a12d6_60471292 ($_smarty_tpl) {
+function content_5b3de87d44c092_59171489 ($_smarty_tpl) {
 ?>
 
 
@@ -115,24 +115,14 @@ echo $_smarty_tpl->tpl_vars['attachmentuploadErr']->value;?>
 " class="redirect_url"/>		
 <!-- main bootstrap js -->
 		 
-<?php if ($_smarty_tpl->tpl_vars['form_sent']->value == '1') {?>
 
 <?php echo '<script'; ?>
  type="text/javascript">
-/* redirect to list page successfully */
-self.parent.location.href = jQuery('.redirect_url').val();
-parent.jQuery(".modalCloseImg").click();
-parent.$.colorbox.close();
-<?php echo '</script'; ?>
->
-
-<?php }?>
-
-
-<?php echo '<script'; ?>
- type="text/javascript">
+$(".cancel").click(function(){
+	parent.$.colorbox.close();
+});
 $(document).ready(function(){
-		/* when the form submitted */
+	/* when the form submitted */
 	$('.formID').submit(function(){ 		
 		// Disable the 'Next' button to prevent multiple clicks		
 		$('input[type=submit]', this).attr('value', 'Processing...');		
@@ -143,12 +133,23 @@ $(document).ready(function(){
 		
 	});
 });
-$(".cancel").click(function(){
-	parent.$.colorbox.close();
-});
 <?php echo '</script'; ?>
 >	
 
+
+<?php if ($_smarty_tpl->tpl_vars['form_sent']->value == '1') {?>
+
+<?php echo '<script'; ?>
+ type="text/javascript">
+
+/* redirect to list page successfully */
+self.parent.location.href = jQuery('.redirect_url').val();
+parent.jQuery(".modalCloseImg").click();
+parent.$.colorbox.close();
+<?php echo '</script'; ?>
+>
+
+<?php }?>
 </body>
 </html><?php }
 }

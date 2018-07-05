@@ -350,7 +350,7 @@ if($_POST['hdnSubmit'] == 1){
 			$desigStr = $row['desig'];
 			$mysql->next_query();
 			$snap_exp .=  "<div style='margin-bottom:7px;'>".$expStr.'<br>'.ucwords($companyData).', '.ucwords($desigStr).', '.ucfirst($locationData).'</div>';
-			$snap_skill .= $areaData.' ';
+			$snap_skill .= $areaData.' ';echo '<br>';
 			$snap_exp = $from_month_expData == '' ? 'Fresher' : $snap_exp;
 			
 			// query to add experience details
@@ -687,8 +687,13 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 	$smarty->assign('expErr',$er1);
 		
 	// mobile validation
-	if($fun->is_phonenumber($_POST['mobile']) || $fun->size_of_phonenumber($_POST['mobile'])){
+	if($fun->is_phonenumber($_POST['mobile'])){
 		$mobileErr = 'Please enter the valid mobile';
+    	$smarty->assign('mobileErr',$mobileErr);
+    	$test = 'error';
+	}
+	if($fun->size_of_phonenumber($_POST['mobile'])){
+		$mobileErr = 'Mobile Number must be 10 digits only.';
     	$smarty->assign('mobileErr',$mobileErr);
     	$test = 'error';
 	}
