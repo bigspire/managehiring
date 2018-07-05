@@ -350,7 +350,7 @@ if($_POST['hdnSubmit'] == 1){
 			$desigStr = $row['desig'];
 			$mysql->next_query();
 			$snap_exp .=  "<div style='margin-bottom:7px;'>".$expStr.'<br>'.ucwords($companyData).', '.ucwords($desigStr).', '.ucfirst($locationData).'</div>';
-			$snap_skill .= $areaData.' ';
+			$snap_skill .= $areaData.' ';echo '<br>';
 			$snap_exp = $from_month_expData == '' ? 'Fresher' : $snap_exp;
 			
 			// query to add experience details

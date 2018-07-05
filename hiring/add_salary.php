@@ -195,6 +195,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				}
 			}
 			
+			$success = '0';
 			if($affected_rows != ''){
 				// query to fetch admin details. 
 				$query = "CALL get_admin_director_details('A','".$_SESSION['user_id']."')";
