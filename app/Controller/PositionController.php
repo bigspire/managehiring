@@ -1384,6 +1384,7 @@ class PositionController extends AppController {
 				foreach($resume_check as $check){
 					if(trim($check) != ''){
 						$check_ids = explode('-', $check);
+						$multi_req_resume .= $check_ids[2].',';
 						// $chk_resume_id[] = $check_ids[0];	
 						$chk_pos_id[] = $check_ids[1];
 						$req_res_ids[] = $check_ids[2];
@@ -1498,23 +1499,27 @@ class PositionController extends AppController {
 				// send mail to client 
 				// $contact_data['Contact']['email'] = 'testing7@bigspire.com'; // for testing
 				$vars = array('from_name' => $from, 'to_name' => ucwords($to_name), 'position' => $this->request->data['Position']['job_title'],'msg'=> $message, 'location' => $this->request->data['Position']['location']);
-				// save the mail box
-				$this->save_mail_box($subject, $message, $req_res_id, 'C',1,$this->request->data['Position']['client_cc']);
+				
 				// send cc mails
 				if($this->request->data['Position']['client_cc'] != ''){
 					$replace_str = str_replace(';', ',', $this->request->data['Position']['client_cc']);
 					$cc = explode(',', $replace_str);	
 					$cc_new = array_map('trim',$cc);
-					$cc_new2 = array_map(array($this, 'validate_email_form'), $cc_new);					
+					$cc_new2 = array_map(array($this, 'validate_email_form'), $cc_new);	
+					$cc_new3 = array_filter($cc_new2);					
 				}
 				
+			
 				if($this->request->data['Position']['client_attach']['tmp_name'] != ''){
 					$attach_file = date('ymdhis').'_'.$this->request->data['Position']['client_attach']['name'];
 					$resume_path[] = $this->upload_attachment($this->request->data['Position']['client_attach'], $attach_file);
 				}
 
+					// save the mail box
+				$this->save_mail_box($subject, $message, $req_res_id, 'C',1,$this->request->data['Position']['client_cc'],$multi_req_resume,$attach_file);
 				
-				if(!$this->send_email($subject, 'send_cv', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new2)){	
+				
+				if(!$this->send_email($subject, 'send_cv', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new3)){	
 					// show the msg.								
 					$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to client...', 'default', array('class' => 'alert alert-error'));				
 				}else{						
@@ -1531,12 +1536,13 @@ class PositionController extends AppController {
 
 
 	/* function to save the mail box */
-	public function save_mail_box($sub, $msg, $req_res_id,$type,$mailtype,$cc){
+	public function save_mail_box($sub, $msg, $req_res_id,$type,$mailtype,$cc,$multi_res,
+	$attach){
 	
 		$this->loadModel('MailBox');
 		$this->MailBox->id = '';
 		$data = array('created_date' => $this->Functions->get_current_date(),
-		'created_by' => $this->Session->read('USER.Login.id'), 'req_resume_id' => $req_res_id, 'subject' => $sub, 
+		'created_by' => $this->Session->read('USER.Login.id'), 'req_resume_id' => $req_res_id, 'subject' => $sub, 'multi_req_resume_id' => $multi_res, 'attachment' => $attach,
 		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc);
 		
 		// save  mail box resume
@@ -2815,7 +2821,9 @@ class PositionController extends AppController {
 						$replace_str = str_replace(';', ',', $this->request->data['Position']['client_cc']);
 						$cc = explode(',', $replace_str);
 						$cc_new = array_map('trim',$cc);
-						$cc_new2 = array_map(array($this, 'validate_email_form'), $cc_new);						
+						$cc_new2 = array_map(array($this, 'validate_email_form'), $cc_new);	
+						$cc_new3 = array_filter($cc_new2);					
+						
 					}
 					
 					/*
@@ -2826,7 +2834,7 @@ class PositionController extends AppController {
 					*/					
 					// send mail
 					
-					if(!$this->send_email($subject, 'confirm_interview', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'], $vars, '', $cc_new2)){
+					if(!$this->send_email($subject, 'confirm_interview', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'], $vars, '', $cc_new3)){
 						// show the msg.								
 						$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Problem in sending the mail to candidate...', 'default', array('class' => 'alert alert-error'));				
 					}						

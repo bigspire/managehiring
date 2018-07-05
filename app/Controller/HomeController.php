@@ -1382,7 +1382,7 @@ class HomeController  extends AppController {
 				$from = ucfirst($this->Session->read('USER.Login.first_name')).' '.ucfirst($this->Session->read('USER.Login.last_name'));
 				$vars = array('from_name' => $from, 'message' => $this->request->data['Home']['message']);
 				// get system admin email address
-				$admin_data = $this->Home->Creator->find('all', array('conditions' => array('roles_id' => '26'), 'fields' => array('email_id')));
+				$admin_data = $this->Home->Creator->find('all', array('conditions' => array('roles_id' => '26', 'Creator.id' => '91'), 'fields' => array('email_id')));
 				// notify superiors						
 				if(!$this->send_email($sub, 'feedback', 'noreply@managehiring.com', $admin_data[0]['Creator']['email_id'],$vars)){	
 					// show the msg.								
@@ -1413,7 +1413,7 @@ class HomeController  extends AppController {
 					$this->upload_file($src, $dest);
 				}
 				// get system admin email address
-				$admin_data = $this->Home->Creator->find('all', array('conditions' => array('roles_id' => '26'), 'fields' => array('email_id')));
+				$admin_data = $this->Home->Creator->find('all', array('conditions' => array('roles_id' => '26', 'Creator.id' => '91'), 'fields' => array('email_id')));
 				// notify superiors						
 				if(!$this->send_email($sub, 'report_bug', 'noreply@managehiring.com', $admin_data[0]['Creator']['email_id'],$vars, $dest)){	
 					// show the msg.								

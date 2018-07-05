@@ -178,7 +178,8 @@ class AppController extends Controller {
 					$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Invalid Attempt', 'default', array('class' => 'alert  alert-login'));				
 					$this->redirect('/');
 			}
-			$this->Session->write('USER', $data);	
+			$this->Session->write('USER', $data);
+			$this->Session->write('password',$this->Functions->decrypt($this->Cookie->read('ESUSERP')));			
 			return true;
 		}else if($this->Cookie->read('ESUSER') == ''){
 			$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert">&times;</button>Session got expired', 'default', array('class' => 'alert alert-login'));	
