@@ -24,14 +24,14 @@ class phpMail{
 			
 		// checking for local
 
-				
+			/*	
 		$mail->Host = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers		                              
 		$mail->Username = 'testing@bigspire.com';                 // SMTP username
 		$mail->Password = 'bigspire1230';                           // SMTP password
 		$mail->Port = 587;   
 		
+		*/
 		
-		/*
 		// checking in live
 		if($from_email == ''){
 			$from_email = 'noreply@managehiring.com';
@@ -54,7 +54,7 @@ class phpMail{
 			// $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 		}
 		
-		*/
+		
 		$mail->SMTPOptions = array(
 			'ssl' => array(
 				'verify_peer' => false,
