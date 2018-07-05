@@ -45,9 +45,9 @@ class phpMail{
 			//$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 			
 		}else{
-			$mail->Host = 'ssl://smtp.bizmail.yahoo.com';
+			$mail->Host = 'tls://smtp.bizmail.yahoo.com';
 			// Specify main and backup SMTP servers
-			$mail->Port = 465; 
+			$mail->Port = 587; 
 			$mail->Username = $_SESSION['email_id'];                 // SMTP username
 			$from_email = $_SESSION['email_id'];
 			$mail->Password = $_SESSION['user_pass'];                           // SMTP password
