@@ -71,7 +71,25 @@ if(!empty($obj['multi_resume_id'])){
 	$mul_resume = explode(",", $mult_res_details['res_details']);
 	$mul_candidate_name = explode(",", $mult_res_details['candidate_name']);
 	for($i = 0; $i < count($mult_res_details); $i++){
-		$mul_res_id[$i];
+		echo $mul_resume[$i];
+		echo $mul_candidate_name[$i];
+	}
+	
+	$output = substr($obj['resume'], 0, strlen($obj['resume'])-5);
+	$file = str_replace('_', '', $output);
+		
+	if($obj['resume_type'] == 'S'){
+		if($obj['modified_date'] != '0000-00-00 00:00:00' && $obj['modified_date'] != ''){
+			   $resume_type =  "uploads/snapshotwatermarked/".$file.'_'.$fun->convert_date_type_display($obj['modified_date']).'.pdf';
+		}else{
+			   $resume_type =  "uploads/snapshotwatermarked/".$file.'_'.$fun->convert_date_type_display($obj['created_date']).'.pdf';
+		}
+	}else if($obj['resume_type'] == 'F'){
+		if($obj['modified_date'] != '0000-00-00 00:00:00' && $obj['modified_date'] != ''){
+			   $resume_type =  "uploads/autoresumepdf/".$file.'_'.$fun->convert_date_type_display($obj['modified_date']).'.pdf';
+		}else{
+			  $resume_type =  "uploads/autoresumepdf/".$file.'_'.$fun->convert_date_type_display($obj['created_date']).'.pdf';
+		}
 	}
 }
 
