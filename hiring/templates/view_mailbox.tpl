@@ -54,7 +54,7 @@
 									{/if}
 									<tr>
 										<td width="120" class="tbl_column">Client Name </td>
-										<td>{ucwords($data.client_name)}</td>
+										<td>{ucwords($client_name)}</td>
 									</tr>
 									
 									<tr>

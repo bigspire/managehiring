@@ -65,6 +65,8 @@ try{
 $mul_res_client_split = explode("<", $obj['mail_to_details']);
 $mul_res_client_email = explode(">", $mul_res_client_split[2]);
 $mul_res_client_name = explode(">", $mul_res_client_split[1]);
+// splitting and assigning client name
+$smarty->assign('client_name', $mul_res_client_split[0]);
 
 // to download files
 if($_GET['action'] == 'download'){
@@ -211,17 +213,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				$attach[$obj['attachment']] = 'uploads/attachment/'.$obj['attachment'];
 			} 
 			
-			if($_GET['multi_resume_id'] == ''){
-				// send mail to client					
-				$msg = $content->send_mail_to_client($obj,$emp_name);
-				$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$resume_file,$candidate_name,$attach);
-				$success = '1';
-			}else{
-				
+			if(!empty($_GET['multi_resume_id'])){				
 				// send mail to client					
 				$msg = $content->send_mail_to_client($obj,$emp_name);
 				$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$mul_res_client_name[0],$mul_res_client_email[0],$cc_new3,$resume_file,$candidate_name,$attach);
 				$success = '1';
+			}else{	
+				// send mail to client					
+				$msg = $content->send_mail_to_client($obj,$emp_name);
+				$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$resume_file,$candidate_name,$attach);
+				$success = '1';			
+				
 			}
 		}
 	} 
