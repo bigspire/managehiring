@@ -52,10 +52,10 @@
 										<td>{$data.cc}</td>
 									</tr>
 									{/if}
-									<tr>
+									<!-- tr>
 										<td width="120" class="tbl_column">Client Name </td>
 										<td>{ucwords($client_name)}</td>
-									</tr>
+									</tr-->
 									
 									<tr>
 										<td width="" class="tbl_column">Subject  </td>

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-06 18:17:14
+/* Smarty version 3.1.29, created on 2018-07-06 18:19:51
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\view_mailbox.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3f64d2d192d5_29910906',
+  'unifunc' => 'content_5b3f656fb63922_48878984',
   'file_dependency' => 
   array (
     '3b039cdace9197ecb9ff2c54c75d247b3d9a927b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\view_mailbox.tpl',
-      1 => 1530881228,
+      1 => 1530881389,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3f64d2d192d5_29910906 ($_smarty_tpl) {
+function content_5b3f656fb63922_48878984 ($_smarty_tpl) {
 ?>
 
    
@@ -85,11 +85,11 @@ home"><i class="icon-home"></i></a>
 </td>
 									</tr>
 									<?php }?>
-									<tr>
+									<!-- tr>
 										<td width="120" class="tbl_column">Client Name </td>
 										<td><?php echo ucwords($_smarty_tpl->tpl_vars['client_name']->value);?>
 </td>
-									</tr>
+									</tr-->
 									
 									<tr>
 										<td width="" class="tbl_column">Subject  </td>
