@@ -37,7 +37,7 @@ if(($fun->isnumeric($id)) || ($fun->is_empty($id)) || ($id == 0)){
 }
 
 // select and execute query and fetch the result
-echo $query = "CALL view_mailbox('$id')";die;
+$query = "CALL view_mailbox('$id')";
 try{
 	if(!$result = $mysql->execute_query($query)){
 		throw new Exception('Problem in executing view mail box page');
@@ -58,6 +58,23 @@ try{
 }catch(Exception $e){
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
+
+if(!empty($obj['multi_resume_id'])){
+	$multi_id = $obj['multi_resume_id'];
+	 // $str = implode("','", $multi_id);
+	// $multi_id = "\"'137','136'\"";
+	// echo $query = "CALL view_mailbox_multi_resume($multi_id)";die;
+	$query = "select group_concat(distinct rd.resume) as res_details,group_concat(distinct r.first_name) as candidate_name from resume_doc rd 
+				left join resume r on (r.resume_doc_id = rd.id) where r.is_deleted = 'N' and r.id in ($multi_id)";
+	$result = $mysql->execute_query($query);		
+	$mult_res_details = $mysql->display_result($result);
+	$mul_resume = explode(",", $mult_res_details['res_details']);
+	$mul_candidate_name = explode(",", $mult_res_details['candidate_name']);
+	for($i = 0; $i < count($mult_res_details); $i++){
+		$mul_res_id[$i];
+	}
+}
+
 			
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 		
@@ -140,6 +157,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	if(!empty($success)){
 		$smarty->assign('EXIST_MSG' , 'Mail Sent Successfully.');
 	}
+}
+
+
+// to download files
+if($_GET['action'] == 'download'){
+	$path = 'uploads/attachment/'.$_GET['file'];
+	$fun->download_file($path);
+}
+
+// to download files
+if($_GET['action'] == 'download_resume'){
+	$path = 'uploads/attachment/'.$_GET['file'];
+	$fun->download_file($path);
 }
 
 // calling mysql close db connection function

@@ -28,7 +28,7 @@
 					{if $EXIST_MSG}
 				 <div id="flashMessage" class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>{$EXIST_MSG}</div>					
 				{/if}
-		<form action="view_mailbox.php?id={$smarty.get.id}" name="formID" class="formID" id="formID" method="post" enctype="multipart/form-data" accept-charset="utf-8">
+		<form action="view_mailbox.php?id={$smarty.get.id}&multi_resume_id={$smarty.get.multi_resume_id}" name="formID" class="formID" id="formID" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 					
 		<div class="box">
 		<div class="row-fluid">
@@ -63,8 +63,15 @@
 									<tr>
 										<td width="" class="tbl_column">Message </td>
 										<td>{$data.message}</td>
+									</tr>
+									<tr>
+										<td width="" class="tbl_column">Attachment </td>
+										<td><a href = "view_mailbox.php?id={$smarty.get.id}&multi_resume_id={$smarty.get.multi_resume_id}&action=download&file={$data.attachment}">{$data.attachment}</a></td>
 									</tr>	
-										
+									<!-- tr>
+										<td width="" class="tbl_column">Candidate Resumes </td>
+										<td><a href = "view_mailbox.php?id={$smarty.get.id}&multi_resume_id={$smarty.get.multi_resume_id}&action=download_resume&file={$cond}">{$cond}</a></td>
+									</tr-->									
 									<tr>
 										<td width="" class="tbl_column">Sent Date </td>
 										<td>{$created_date}</td>

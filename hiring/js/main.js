@@ -1173,6 +1173,8 @@ $(document).ready(function() {
 		});
 		var client_mail = $('#client_mail').val();
 		var client_person = $('#client_person').val();
+		var client_id = $('#client_id').val();
+		
 		
 		var client = $('#client').val()+client_person+client_mail;
 
@@ -1181,7 +1183,7 @@ $(document).ready(function() {
 			alert('Please select atleast a record to proceed!');
 			return false;
 		}else{
-			$(this).colorbox({href:$('#cv_url').val()+'multi_select/'+sel_item+'/?client_name='+client, iframe:true, rel: 'nofollow',  width:'65%', height:'94%',opacity:   '.8', 	  scrolling: true, fixed:true,overlayClose:false, escKey: false,
+			$(this).colorbox({href:$('#cv_url').val()+'multi_select/'+sel_item+'/?client_name='+client+'&client_id='+client_id, iframe:true, rel: 'nofollow',  width:'65%', height:'94%',opacity:   '.8', 	  scrolling: true, fixed:true,overlayClose:false, escKey: false,
 			onClosed:function(){					
 			
 				}

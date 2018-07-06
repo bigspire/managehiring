@@ -93,7 +93,7 @@
 					
 					<input type="hidden" id="client_mail" value=" <<?php echo $position_data['Contact']['email'];?>>"/>
 					<input type="hidden" id="client_person" value=" <<?php echo ucwords($position_data['Contact']['first_name'].' '.$position_data['Contact']['last_name']);?>>"/>					
-
+					<input type="hidden" id="client_id" value="<?php echo $position_data['Client']['id'];?>"/>
 																		
 										</td>
 											

@@ -1032,7 +1032,7 @@ class PositionController extends AppController {
 			$this->Position->unBindModel(array('hasOne' => array('ReqResume')));
 
 			$fields = array('id','Client.id','job_title','job_code','education','location','no_job','min_exp','max_exp','ctc_from','ctc_to','ReqStatus.title','job_desc',
-			'Client.client_name', 'Creator.first_name','created_date','modified_date','Contact.last_name','req_status_id',
+			'Client.client_name', 'Creator.first_name','created_date','modified_date','Contact.last_name','req_status_id',			
 			//'count(DISTINCT  ReqResume.id) cv_sent','req_status_id',
 			//'group_concat(ReqResume.status_title) joined',
 			'start_date', 'end_date', //"group_concat(distinct ResOwner.first_name  SEPARATOR ', ') team_member",
@@ -1384,7 +1384,7 @@ class PositionController extends AppController {
 				foreach($resume_check as $check){
 					if(trim($check) != ''){
 						$check_ids = explode('-', $check);
-						$multi_req_resume .= $check_ids[2].',';
+						$multi_resume .= $check_ids[0].',';
 						// $chk_resume_id[] = $check_ids[0];	
 						$chk_pos_id[] = $check_ids[1];
 						$req_res_ids[] = $check_ids[2];
@@ -1516,7 +1516,7 @@ class PositionController extends AppController {
 				}
 
 					// save the mail box
-				$this->save_mail_box($subject, $message, $req_res_id, 'C',1,$this->request->data['Position']['client_cc'],$multi_req_resume,$attach_file);
+				$this->save_mail_box($subject, $message, $req_res_id, 'C',1,$this->request->data['Position']['client_cc'],$multi_resume,$attach_file);
 				
 				
 				if(!$this->send_email($subject, 'send_cv', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new3)){	
@@ -1542,8 +1542,8 @@ class PositionController extends AppController {
 		$this->loadModel('MailBox');
 		$this->MailBox->id = '';
 		$data = array('created_date' => $this->Functions->get_current_date(),
-		'created_by' => $this->Session->read('USER.Login.id'), 'req_resume_id' => $req_res_id, 'subject' => $sub, 'multi_req_resume_id' => $multi_res, 'attachment' => $attach,
-		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc);
+		'created_by' => $this->Session->read('USER.Login.id'), 'req_resume_id' => $req_res_id, 'subject' => $sub, 'multi_resume_id' => $multi_res, 'attachment' => $attach,
+		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc, 'client_id' => $this->request->query['client_id']);
 		
 		// save  mail box resume
 		if($this->MailBox->save($data, array('validate' => false))){
