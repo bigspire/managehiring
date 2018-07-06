@@ -93,6 +93,8 @@
 				</tbody>
 			</table>
 				
+					<?php echo $this->Form->input('to', array('type' => 'text', 'value' => $this->request->query['client_name'])); ?> 
+
 								<input type="hidden" id="tiny_readonly" name="tiny_readonly" value="<?php echo $tiny_readonly;?>">
 
 			<div class="form-actions">
