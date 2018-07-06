@@ -155,7 +155,10 @@ class phpMail{
 		}
 		
 		if(count($attach) > 0){
-			$mail->AddAttachment($attach, $attach);
+			foreach($attach as $key => $file_attach){
+				
+				$mail->AddAttachment($file_attach, $key);
+			}
 		}
 		
 		//if($file != ''){

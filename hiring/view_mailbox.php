@@ -200,8 +200,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		
 		if(!empty($last_id )){
 			if($obj['attachment'] != ''){
+				/*
 				$attach = 'uploads/attachment/'.$obj['attachment'];
+				$attc =  explode('_',$obj['attachment']);
+				$attc_file[$attach] = $attc[1];
+				*/
+				$attach[$obj['attachment']] = 'uploads/attachment/'.$obj['attachment'];
 			} 
+			
 			// send mail to client					
 			$msg = $content->send_mail_to_client($obj,$emp_name);
 			$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$resume_file,$candidate_name,$attach);
