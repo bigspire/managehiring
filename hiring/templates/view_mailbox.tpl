@@ -64,10 +64,12 @@
 										<td width="" class="tbl_column">Message </td>
 										<td>{$data.message}</td>
 									</tr>
+									{if $data.attachment}
 									<tr>
 										<td width="" class="tbl_column">Attachment </td>
 										<td><a href = "view_mailbox.php?id={$smarty.get.id}&multi_resume_id={$smarty.get.multi_resume_id}&req_id={$smarty.get.req_id}&action=download&file={$data.attachment}">{$data.attachment}</a></td>
 									</tr>	
+									{/if}
 									<!-- tr>
 										<td width="" class="tbl_column">Candidate Resumes </td>
 										<td><a href = "view_mailbox.php?id={$smarty.get.id}&multi_resume_id={$smarty.get.multi_resume_id}&req_id={$smarty.get.req_id}&action=download_resume&file={$cond}">{$cond}</a></td>

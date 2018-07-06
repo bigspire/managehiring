@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-06 12:59:54
+/* Smarty version 3.1.29, created on 2018-07-06 14:29:24
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\view_mailbox.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3f1a7212dbc8_57000243',
+  'unifunc' => 'content_5b3f2f6cd73e60_63578085',
   'file_dependency' => 
   array (
     '3b039cdace9197ecb9ff2c54c75d247b3d9a927b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\view_mailbox.tpl',
-      1 => 1530862187,
+      1 => 1530867556,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3f1a7212dbc8_57000243 ($_smarty_tpl) {
+function content_5b3f2f6cd73e60_63578085 ($_smarty_tpl) {
 ?>
 
    
@@ -104,6 +104,7 @@ echo $_smarty_tpl->tpl_vars['data']->value['client_con_name'];?>
 										<td><?php echo $_smarty_tpl->tpl_vars['data']->value['message'];?>
 </td>
 									</tr>
+									<?php if ($_smarty_tpl->tpl_vars['data']->value['attachment']) {?>
 									<tr>
 										<td width="" class="tbl_column">Attachment </td>
 										<td><a href = "view_mailbox.php?id=<?php echo $_GET['id'];?>
@@ -113,6 +114,7 @@ echo $_smarty_tpl->tpl_vars['data']->value['client_con_name'];?>
 "><?php echo $_smarty_tpl->tpl_vars['data']->value['attachment'];?>
 </a></td>
 									</tr>	
+									<?php }?>
 									<!-- tr>
 										<td width="" class="tbl_column">Candidate Resumes </td>
 										<td><a href = "view_mailbox.php?id=<?php echo $_GET['id'];?>
