@@ -1551,7 +1551,7 @@ class PositionController extends AppController {
 		
 		$data = array('created_date' => $this->Functions->get_current_date(),
 		'created_by' => $this->Session->read('USER.Login.id'), 'req_resume_id' => $req_res_id, 'subject' => $sub, 'multi_resume_id' => $multi_res, 'attachment' => $attach,
-		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc, 'to' => $this->request->data['Position']['to'], 'requirement_id' => $req_id);
+		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc, 'to_mail' => $this->request->data['Position']['to'], 'requirement_id' => $req_id);
 		
 		// save  mail box resume
 		if($this->MailBox->save($data, array('validate' => false))){
