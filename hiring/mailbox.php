@@ -104,6 +104,7 @@ try{
 	while($obj = $mysql->display_result($result))
 	{
  		$data[] = $obj;
+		$data[$i]['client_name'] = $obj['client_name2'] ? $obj['client_name2'] : $obj['client_name'];
  		$data[$i]['created_date'] = $fun->convert_date_to_display($obj['created_date']);
 		$data[$i]['message'] = $fun->string_truncate($obj['message'],'120');
  		$i++;
