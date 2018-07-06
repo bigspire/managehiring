@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-06 11:48:34
+/* Smarty version 3.1.29, created on 2018-07-06 12:59:54
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\view_mailbox.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3f09ba21ccd9_94606912',
+  'unifunc' => 'content_5b3f1a7212dbc8_57000243',
   'file_dependency' => 
   array (
     '3b039cdace9197ecb9ff2c54c75d247b3d9a927b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\view_mailbox.tpl',
-      1 => 1530857792,
+      1 => 1530862187,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3f09ba21ccd9_94606912 ($_smarty_tpl) {
+function content_5b3f1a7212dbc8_57000243 ($_smarty_tpl) {
 ?>
 
    
@@ -57,6 +57,7 @@ home"><i class="icon-home"></i></a>
 				<?php }?>
 		<form action="view_mailbox.php?id=<?php echo $_GET['id'];?>
 &multi_resume_id=<?php echo $_GET['multi_resume_id'];?>
+&req_id=<?php echo $_GET['req_id'];?>
 " name="formID" class="formID" id="formID" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 					
 		<div class="box">
@@ -107,6 +108,7 @@ echo $_smarty_tpl->tpl_vars['data']->value['client_con_name'];?>
 										<td width="" class="tbl_column">Attachment </td>
 										<td><a href = "view_mailbox.php?id=<?php echo $_GET['id'];?>
 &multi_resume_id=<?php echo $_GET['multi_resume_id'];?>
+&req_id=<?php echo $_GET['req_id'];?>
 &action=download&file=<?php echo $_smarty_tpl->tpl_vars['data']->value['attachment'];?>
 "><?php echo $_smarty_tpl->tpl_vars['data']->value['attachment'];?>
 </a></td>
@@ -115,6 +117,7 @@ echo $_smarty_tpl->tpl_vars['data']->value['client_con_name'];?>
 										<td width="" class="tbl_column">Candidate Resumes </td>
 										<td><a href = "view_mailbox.php?id=<?php echo $_GET['id'];?>
 &multi_resume_id=<?php echo $_GET['multi_resume_id'];?>
+&req_id=<?php echo $_GET['req_id'];?>
 &action=download_resume&file=<?php echo $_smarty_tpl->tpl_vars['cond']->value;?>
 "><?php echo $_smarty_tpl->tpl_vars['cond']->value;?>
 </a></td>

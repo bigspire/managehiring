@@ -89,7 +89,7 @@ class phpMail{
 		}
 	} 
 	
-	function send_mail_to_client($sub,$message,$from,$from_email,$recipient, $recipient_email,$mail_cc,$resume_type,$file){
+	function send_mail_to_client($sub,$message,$from,$from_email,$recipient, $recipient_email,$mail_cc,$resume_file,$candidate_name,$attach){
 		$mail = new PHPMailer;	
 		
 		// cc mail 		
@@ -145,9 +145,22 @@ class phpMail{
 		$mail->setFrom($from_email, $from);
 		$mail->addAddress($recipient_email, $recipient);     // Add a recipient
 		
-		if($file != ''){
-			$mail->AddAttachment($resume_type, $file);
+		
+		// attachment mail 
+	
+		if(count($resume_file) > 0){
+			foreach($resume_file as $key => $file_attach){
+				$mail->AddAttachment($file_attach, $key);
+			}
 		}
+		
+		if(count($attach) > 0){
+			$mail->AddAttachment($attach, $attach);
+		}
+		
+		//if($file != ''){
+		//	$mail->AddAttachment($file_attach, $file_attach);
+		///}
 	
 		// Add a recipient
 		$mail->isHTML(true);   // Set email format to HTML

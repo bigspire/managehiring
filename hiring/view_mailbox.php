@@ -59,6 +59,14 @@ try{
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
 
+
+
+// to download files
+if($_GET['action'] == 'download'){
+	$path = 'uploads/attachment/'.$_GET['file'];
+	$fun->download_file($path);
+}
+
 if(!empty($obj['multi_resume_id'])){
 	$multi_id = $obj['multi_resume_id'];
 	 // $str = implode("','", $multi_id);
@@ -71,8 +79,8 @@ if(!empty($obj['multi_resume_id'])){
 	$mul_resume = explode(",", $mult_res_details['res_details']);
 	$mul_candidate_name = explode(",", $mult_res_details['candidate_name']);
 	for($i = 0; $i < count($mult_res_details); $i++){
-		echo $mul_resume[$i];
-		echo $mul_candidate_name[$i];
+		// echo $mul_resume[$i];
+		// echo $mul_candidate_name[$i];
 	}
 	
 	$output = substr($obj['resume'], 0, strlen($obj['resume'])-5);
@@ -127,28 +135,51 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	$success = '0';
 	if($obj['email'] != ''){
 		
-		$output = substr($obj['resume'], 0, strlen($obj['resume'])-5);
-		$file = str_replace('_', '', $output);
+		// get resume type
+		$query = "select req.resume_type,req.clients_id from requirements req  where req.id = '".$_GET['req_id']."'";
+		$result = $mysql->execute_query($query);	
+		$res1 = $mysql->display_result($result);
 		
-		if($obj['resume_type'] == 'S'){
-			if($obj['modified_date'] != '0000-00-00 00:00:00' && $obj['modified_date'] != ''){
-				   $resume_type =  "uploads/snapshotwatermarked/".$file.'_'.$fun->convert_date_type_display($obj['modified_date']).'.pdf';
-			}else{
-				   $resume_type =  "uploads/snapshotwatermarked/".$file.'_'.$fun->convert_date_type_display($obj['created_date']).'.pdf';
+		// get multi resume details
+		$query = "select r.email_id,rd.resume,concat(r.first_name,' ',last_name) as candidate_name, r.created_date,r.modified_date from resume_doc rd 
+					left join resume r on (r.resume_doc_id = rd.id) where r.is_deleted = 'N' and r.id in ($multi_id)";
+		$result = $mysql->execute_query($query);	
+		
+		while($res2 = $mysql->display_result($result)){ 
+			// $mul_resume[$i];
+			$candidate_name[] = $res2['candidate_name'];
+			$output = substr($res2['resume'], 0, strlen($res2['resume'])-5);
+			$file = str_replace('_', '', $output);
+		
+			if($res1['resume_type'] == 'S'){
+				if($res2['modified_date'] != '0000-00-00 00:00:00' && $res2['modified_date'] != ''){
+					  $resume_file[$res2['candidate_name'].'.pdf'] =  "uploads/snapshotwatermarked/".$file.'_'.$fun->convert_date_type_display($res2['modified_date']).'.pdf';
+				}else{
+					$resume_file[$res2['candidate_name'].'.pdf'] =  "uploads/snapshotwatermarked/".$file.'_'.$fun->convert_date_type_display($res2['created_date']).'.pdf';
+				}
+			}else if($res1['resume_type'] == 'F'){
+				if($res2['modified_date'] != '0000-00-00 00:00:00' && $res2['modified_date'] != ''){
+					   $resume_file[$res2['candidate_name'].'.pdf'] =  "uploads/autoresumepdf/".$file.'_'.$fun->convert_date_type_display($res2['modified_date']).'.pdf';
+				}else{
+					  $resume_file[$res2['candidate_name'].'.pdf'] =  "uploads/autoresumepdf/".$file.'_'.$fun->convert_date_type_display($res2['created_date']).'.pdf';
+				}
 			}
-		}else if($obj['resume_type'] == 'F'){
-			if($obj['modified_date'] != '0000-00-00 00:00:00' && $obj['modified_date'] != ''){
-				   $resume_type =  "uploads/autoresumepdf/".$file.'_'.$fun->convert_date_type_display($obj['modified_date']).'.pdf';
-			}else{
-				  $resume_type =  "uploads/autoresumepdf/".$file.'_'.$fun->convert_date_type_display($obj['created_date']).'.pdf';
-			}
+			
 		}
+
+		$smarty->assign('mult_cand_name' , $candidate_name);
 		
 		// assigning the date
 		$date =  $fun->current_date();
+		if(!empty($obj['multi_resume_id'])){
+			$req_resume_id = '0';
+		}else{
+			$req_resume_id = $obj['req_resume_id'];
+		}
+
 		// query to insert mailbox. 
 		$query = "CALL add_mailbox('".$obj['subject']."','".$obj['cc']."','".$obj['message']."','".$date."','".$_SESSION['user_id']."',
-		'".$obj['mail_type']."','".$obj['req_resume_id']."','".$obj['mail_templates_id']."')";
+		'".$obj['mail_type']."','".$req_resume_id."','".$obj['mail_templates_id']."','".$obj['multi_resume_id']."','".$obj['attachment']."','".$res1['clients_id']."')";
 		// Calling the function that makes the insert
 		try{
 			// calling mysql exe_query function
@@ -166,23 +197,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		}
 		
 		if(!empty($last_id )){
+			if($obj['attachment'] != ''){
+				$attach['attachment'] =  "uploads/attachment/".$obj['attachment'];
+			} 
 			// send mail to client					
 			$msg = $content->send_mail_to_client($obj,$emp_name);
-			$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$resume_type,$file);
+			$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$resume_file,$candidate_name,$attach);
 			$success = '1';
 		}
-	}
-	if(!empty($success)){
+	} 
+	if($success == '1'){
 		$smarty->assign('EXIST_MSG' , 'Mail Sent Successfully.');
 	}
 }
 
 
-// to download files
-if($_GET['action'] == 'download'){
-	$path = 'uploads/attachment/'.$_GET['file'];
-	$fun->download_file($path);
-}
+
 
 // to download files
 if($_GET['action'] == 'download_resume'){

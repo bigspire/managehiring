@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-06 09:35:29
+/* Smarty version 3.1.29, created on 2018-07-06 12:59:52
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\mailbox.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3eea8979c7f4_86369136',
+  'unifunc' => 'content_5b3f1a701e8cc5_02704655',
   'file_dependency' => 
   array (
     'a4afcd698620d574cae0218cb7b5aed161665f61' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\mailbox.tpl',
-      1 => 1530849926,
+      1 => 1530862171,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3eea8979c7f4_86369136 ($_smarty_tpl) {
+function content_5b3f1a701e8cc5_02704655 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -197,6 +197,7 @@ echo $_smarty_tpl->tpl_vars['item']->value['candidate_name'];?>
 </td>
 										<td><a href="view_mailbox.php?id=<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
 &multi_resume_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['multi_resume_id'];?>
+&req_id=<?php echo $_smarty_tpl->tpl_vars['item']->value['req_id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['item']->value['message'];?>
 </a></td>
 										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['template'];?>
