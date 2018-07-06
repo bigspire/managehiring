@@ -403,9 +403,10 @@
 							</div>
 							<ul class="list user_list2">
 							
-							<?php foreach($resume_data as $data):?>
+							<?php foreach($resume_data as $data): ?>
 								<li>
-<span class="s_color sl_date2" style="font-size:12px;color:#b2abab;"><?php echo date('d,M', strtotime($data['ReqResume']['cv_sent_date']));?>, </span>
+<?php $res_sent_date = $data['ReqResume']['cv_sent_date'] ? $data['ReqResume']['cv_sent_date']: $data['ReqResume']['modified_date'];?>
+<span class="s_color sl_date2" style="font-size:12px;color:#b2abab;"><?php echo date('d,M', strtotime($res_sent_date));?>, </span>
 <span class="label label-<?php echo $this->Functions->get_res_status_color($data['ReqResume']['status_title']);?> pull-right sl_status2"><?php echo $this->Functions->get_status_crisp($data['ReqResume']['stage_title'], $data['ReqResume']['status_title']);?></span>
 <a  href="<?php echo $this->webroot;?>resume/view/<?php echo $data['Resume']['id'];?>" class="sl_name2"><?php echo $data[0]['full_name'];?></a><br />
 <small class="s_color sl_email2"> <?php echo $data['Resume']['email_id'];?> <i class="splashy-bullet_blue_small"></i> <?php echo $data['Resume']['mobile'];?></small>

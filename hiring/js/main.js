@@ -1142,6 +1142,7 @@ $(document).ready(function() {
 		
 		var client_mail = $('#client_mail').val();
 		var client_person = $('#client_person').val();
+		var client_id = $('#client').val();
 		
 		var client = $('#client').val()+client_person+client_mail;
 		
