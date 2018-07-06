@@ -66,7 +66,8 @@
 						<?php echo $this->Form->input('client_name', array('div'=> false,'type' => 'text', 'label' => false, 'class' => 'span8', 'readonly' => 'readonly', 'value' => $this->request->query['client_name'],   'required' => false, 'placeholder' => '')); ?> 					
 						</td>	
 						
-		<?php echo $this->Form->input('to', array('type' => 'text', 'value' => $this->request->query['client_name'])); ?> 
+			<?php echo $this->Form->input('to', array('type' => 'hidden', 'value' => $this->request->query['client_name'])); ?> 
+				
 				</tr>
 				
 					<tr class="" >
