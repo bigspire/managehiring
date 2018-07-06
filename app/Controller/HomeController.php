@@ -41,8 +41,7 @@ class HomeController  extends AppController {
 	public $components = array('Session', 'Functions');
 	
 	public function index($dash_type){ 
-	
-	
+		
 		// set the page title
 		$this->set('title_for_layout', 'Home - Manage Hiring');
 		// set the validation

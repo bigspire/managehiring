@@ -1537,10 +1537,16 @@ class PositionController extends AppController {
 
 	/* function to save the mail box */
 	public function save_mail_box($sub, $msg, $req_res_id,$type,$mailtype,$cc,$multi_res,
-	$attach){
-	
+	$attach){	
 		$this->loadModel('MailBox');
 		$this->MailBox->id = '';
+		$multi_res = substr($multi_res, 0, strlen($multi_res)-1);
+		$res_id = explode(',' ,$multi_res);
+		if(count($res_id) <= 1){
+			$multi_res = 0;
+		}else{
+			$req_res_id = $multi_res;
+		}
 		$data = array('created_date' => $this->Functions->get_current_date(),
 		'created_by' => $this->Session->read('USER.Login.id'), 'req_resume_id' => $req_res_id, 'subject' => $sub, 'multi_resume_id' => $multi_res, 'attachment' => $attach,
 		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc, 'client_id' => $this->request->query['client_id']);
@@ -2355,6 +2361,7 @@ class PositionController extends AppController {
 					$req_res_ids[] = $check_ids[2];
 					// save resume ids in array
 					$chk_resume_id_ar[] = $check_ids[0];
+					$multi_resume .= $check_ids[0].',';					
 				}
 			}
 		}
@@ -2738,7 +2745,7 @@ class PositionController extends AppController {
 								// $resume_data['Resume']['email_id'] = 'testing7@bigspire.com'; // for testing
 								$vars = array('from_name' => $from, 'to_name' => ucwords($to_name), 'msg'=> $message);
 								// save the mail box
-								$this->save_mail_box($subject, $message, $req_res_id, 'R',3, '');
+								$this->save_mail_box($subject, $message, $req_res_id, 'R',3);
 								// send mail
 								if(!$this->send_email($subject, 'send_interview', array($this->Session->read('USER.Login.email_id') => $from), $resume_data['Resume']['email_id'], $vars)){	
 									// show the msg.								
@@ -2815,7 +2822,7 @@ class PositionController extends AppController {
 					// $contact_data['Contact']['email'] = 'testing7@bigspire.com'; // for testing
 					$vars = array('from_name' => $from, 'to_name' => ucwords($to_name),'msg'=> $message);
 					// save the mail box
-					$this->save_mail_box($subject, $message, $req_res_id, 'C',2,$this->request->data['Position']['client_cc']);
+					$this->save_mail_box($subject, $message, $req_res_id, 'C',2,$this->request->data['Position']['client_cc'], );
 					// send cc to client
 					if($this->request->data['Position']['client_cc'] != ''){
 						$replace_str = str_replace(';', ',', $this->request->data['Position']['client_cc']);
