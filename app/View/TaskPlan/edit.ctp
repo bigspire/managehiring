@@ -43,7 +43,7 @@
 										<td width="120" class="tbl_column">Task Date <span class="f_req">*</span></td>
 										<td> 
 										
-	<?php echo $this->Form->input('task_date', array('div'=> false,'type' => 'text', 'label' => false, 'class' => 'span8 datepick',  'required' => false, 'placeholder' => '',
+	<?php echo $this->Form->input('task_date', array('div'=> false,'type' => 'text', 'label' => false, 'class' => 'span8 datepick',  'required' => false, 'placeholder' => '','autocomplete' => 'off',
 				'error' =>  array('attributes' => array('wrap' => 'div', 'class' => 'error')))); ?> 	
 					
 

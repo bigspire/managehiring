@@ -1516,7 +1516,7 @@ class PositionController extends AppController {
 				}
 
 					// save the mail box
-				$this->save_mail_box($subject, $message, $req_res_id, 'C',1,$this->request->data['Position']['client_cc'],$multi_resume,$attach_file);
+				$this->save_mail_box($subject, $message, $req_res_id, 'C',1,$this->request->data['Position']['client_cc'],$multi_resume,$attach_file,$pos_id);
 				
 				
 				if(!$this->send_email($subject, 'send_cv', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new3)){	
@@ -1537,7 +1537,7 @@ class PositionController extends AppController {
 
 	/* function to save the mail box */
 	public function save_mail_box($sub, $msg, $req_res_id,$type,$mailtype,$cc,$multi_res,
-	$attach){	
+	$attach,$req_id){	
 		$this->loadModel('MailBox');
 		$this->MailBox->id = '';
 		$multi_res = substr($multi_res, 0, strlen($multi_res)-1);
@@ -1549,7 +1549,7 @@ class PositionController extends AppController {
 		}
 		$data = array('created_date' => $this->Functions->get_current_date(),
 		'created_by' => $this->Session->read('USER.Login.id'), 'req_resume_id' => $req_res_id, 'subject' => $sub, 'multi_resume_id' => $multi_res, 'attachment' => $attach,
-		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc, 'to' => $this->request->data['Position']['to']);
+		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc, 'to' => $this->request->data['Position']['to'], 'requirement_id' => $req_id);
 		
 		// save  mail box resume
 		if($this->MailBox->save($data, array('validate' => false))){
@@ -2361,7 +2361,7 @@ class PositionController extends AppController {
 					$req_res_ids[] = $check_ids[2];
 					// save resume ids in array
 					$chk_resume_id_ar[] = $check_ids[0];
-					$multi_resume .= $check_ids[0].',';					
+					//$multi_resume .= $check_ids[0].',';					
 				}
 			}
 		}
