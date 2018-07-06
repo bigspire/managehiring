@@ -213,6 +213,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				$attach[$obj['attachment']] = 'uploads/attachment/'.$obj['attachment'];
 			} 
 			
+			
 			if(!empty($_GET['multi_resume_id'])){				
 				// send mail to client					
 				$msg = $content->send_mail_to_client($obj,$emp_name);
