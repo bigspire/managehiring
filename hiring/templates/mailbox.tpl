@@ -94,7 +94,8 @@
 								<tbody>	
 								{foreach from=$data item=item key=key}
 									<tr>									
-										<td>{if $item.mail_type == 'C'}{$item.company_name}, ({$item.client_name}), ({$item.email}){else}{$item.candidate_name}, ({$item.email_id}){/if}</td>
+										<!-- td>{if $item.mail_type == 'C'}{$item.company_name}, ({$item.client_name}), ({$item.email}){else}{$item.candidate_name}, ({$item.email_id}){/if}</td-->
+										<td>{$item.mail_to_details}</td>
 										<td>{$item.subject}</td>
 										<td><a href="view_mailbox.php?id={$item.id}&multi_resume_id={$item.multi_resume_id}&req_id={$item.req_id}">{$item.message}</a></td>
 										<td>{$item.template}</td>
