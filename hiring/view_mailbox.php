@@ -36,32 +36,35 @@ if(($fun->isnumeric($id)) || ($fun->is_empty($id)) || ($id == 0)){
   	header('Location: ../?access=invalid');
 }
 
-// if($_GET['multi_resume_id'] == ''){
-	// select and execute query and fetch the result
-	$query = "CALL view_mailbox('$id')";
-	try{
-		if(!$result = $mysql->execute_query($query)){
-			throw new Exception('Problem in executing view mail box page');
-		}
-		// check record exists
-		if($result->num_rows){
-			// calling mysql fetch_result function
-			$obj = $mysql->display_result($result);
-			$smarty->assign('created_date', $fun->convert_date_to_display($obj['created_date']));
-			$smarty->assign('data', $obj);
-		}else{
-			header('Location: ../?access=invalid');
-		}
-		// free the memory
-		$mysql->clear_result($result);
-		// call the next result
-		$mysql->next_query();
-	}catch(Exception $e){
-		echo 'Caught exception: ',  $e->getMessage(), "\n";
+
+// select and execute query and fetch the result
+$query = "CALL view_mailbox('$id')";
+try{
+	if(!$result = $mysql->execute_query($query)){
+		throw new Exception('Problem in executing view mail box page');
 	}
-// }
+	// check record exists
+	if($result->num_rows){
+		// calling mysql fetch_result function
+		$obj = $mysql->display_result($result);
+		$smarty->assign('mail_to_details', htmlentities($obj['mail_to_details']));
+		$smarty->assign('created_date', $fun->convert_date_to_display($obj['created_date']));
+		$smarty->assign('data', $obj);
+	}else{
+		header('Location: ../?access=invalid');
+	}
+	// free the memory
+	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
 
-
+// get the client email by splitting database filed
+$mul_res_client_split = explode("<", $obj['mail_to_details']);
+$mul_res_client_email = explode(">", $mul_res_client_split[2]);
+$mul_res_client_name = explode(">", $mul_res_client_split[1]);
 
 // to download files
 if($_GET['action'] == 'download'){
@@ -135,7 +138,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	}
 	
 	$success = '0';
-	if($obj['email'] != ''){
+	if($obj['email'] != '' || !empty($mul_res_client_email[0])){
 		
 		// get resume type
 		$query = "select req.resume_type,req.clients_id from requirements req  where req.id = '".$_GET['req_id']."'";
@@ -180,8 +183,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		}
 
 		// query to insert mailbox. 
-		$query = "CALL add_mailbox('".$obj['subject']."','".$obj['cc']."','".$obj['message']."','".$date."','".$_SESSION['user_id']."',
-		'".$obj['mail_type']."','".$req_resume_id."','".$obj['mail_templates_id']."','".$obj['multi_resume_id']."','".$obj['attachment']."','".$res1['clients_id']."')";
+		$query = "CALL add_mailbox('".$obj['subject']."','".$obj['cc']."','".$obj['message']."','".$date."','".$_SESSION['user_id']."','".$obj['mail_type']."',
+		'".$req_resume_id."','".$obj['mail_templates_id']."','".$obj['multi_resume_id']."','".$obj['attachment']."','".$_POST['mail_to_details']."','".$_GET['req_id']."')";
 		// Calling the function that makes the insert
 		try{
 			// calling mysql exe_query function
@@ -197,8 +200,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		}catch(Exception $e){
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}
-		
-		if(!empty($last_id )){
+	
+		if(!empty($last_id)){
 			if($obj['attachment'] != ''){
 				/*
 				$attach = 'uploads/attachment/'.$obj['attachment'];
@@ -208,10 +211,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				$attach[$obj['attachment']] = 'uploads/attachment/'.$obj['attachment'];
 			} 
 			
-			// send mail to client					
-			$msg = $content->send_mail_to_client($obj,$emp_name);
-			$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$resume_file,$candidate_name,$attach);
-			$success = '1';
+			if($_GET['multi_resume_id'] == ''){
+				// send mail to client					
+				$msg = $content->send_mail_to_client($obj,$emp_name);
+				$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$resume_file,$candidate_name,$attach);
+				$success = '1';
+			}else{
+				
+				// send mail to client					
+				$msg = $content->send_mail_to_client($obj,$emp_name);
+				$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$mul_res_client_name[0],$mul_res_client_email[0],$cc_new3,$resume_file,$candidate_name,$attach);
+				$success = '1';
+			}
 		}
 	} 
 	if($success == '1'){
@@ -219,14 +230,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	}
 }
 
-
-
-
-// to download files
-if($_GET['action'] == 'download_resume'){
-	$path = 'uploads/attachment/'.$_GET['file'];
-	$fun->download_file($path);
-}
 
 // calling mysql close db connection function
 $c_c = $mysql->close_connection();

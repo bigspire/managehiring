@@ -43,7 +43,8 @@
 								<tbody>
 									<tr>
 										<td width="120" class="tbl_column">To </td>
-										<td>{if $data.mail_type == 'R'}{ucwords($data.candidate_name)} ({$data.email_id}){else}{$data.client_con_name} ({$data.email}){/if} </td>
+											<td>{$mail_to_details}</td>
+											<input type="hidden" tabindex="1" name="mail_to_details" value="{$mail_to_details}" class="span8 ui-autocomplete-input" autocomplete="off">
 									</tr>
 									{if $data.mail_type == 'C'}
 									<tr>
