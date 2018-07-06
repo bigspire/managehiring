@@ -1542,11 +1542,13 @@ class PositionController extends AppController {
 		$this->MailBox->id = '';
 		$multi_res = substr($multi_res, 0, strlen($multi_res)-1);
 		$res_id = explode(',' ,$multi_res);
-		if(count($res_id) <= 1){
-			$multi_res = 0;
-		}else{
-			$req_res_id = $multi_res;
+		if(count($res_id) == 1){
+			$req_res_id = $multi_res;		
+		}else if(count($res_id) > 1){
+			$multi_res = 0;	
+			$req_res_id = 0;		
 		}
+		
 		$data = array('created_date' => $this->Functions->get_current_date(),
 		'created_by' => $this->Session->read('USER.Login.id'), 'req_resume_id' => $req_res_id, 'subject' => $sub, 'multi_resume_id' => $multi_res, 'attachment' => $attach,
 		'message' => $msg, 'mail_type' => $type, 'mail_templates_id' => $mailtype, 'cc' => $cc, 'to' => $this->request->data['Position']['to'], 'requirement_id' => $req_id);
