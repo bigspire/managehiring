@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-06 12:59:52
+/* Smarty version 3.1.29, created on 2018-07-06 15:09:57
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\mailbox.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3f1a701e8cc5_02704655',
+  'unifunc' => 'content_5b3f38ed886282_05013094',
   'file_dependency' => 
   array (
     'a4afcd698620d574cae0218cb7b5aed161665f61' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\mailbox.tpl',
-      1 => 1530862171,
+      1 => 1530869931,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3f1a701e8cc5_02704655 ($_smarty_tpl) {
+function content_5b3f38ed886282_05013094 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -184,7 +184,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
-									<tr>
+									<tr>									
 										<td><?php if ($_smarty_tpl->tpl_vars['item']->value['mail_type'] == 'C') {
 echo $_smarty_tpl->tpl_vars['item']->value['company_name'];?>
 , (<?php echo $_smarty_tpl->tpl_vars['item']->value['client_name'];?>

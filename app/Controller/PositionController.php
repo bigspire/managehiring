@@ -2822,7 +2822,7 @@ class PositionController extends AppController {
 					// $contact_data['Contact']['email'] = 'testing7@bigspire.com'; // for testing
 					$vars = array('from_name' => $from, 'to_name' => ucwords($to_name),'msg'=> $message);
 					// save the mail box
-					$this->save_mail_box($subject, $message, $req_res_id, 'C',2,$this->request->data['Position']['client_cc'], );
+					$this->save_mail_box($subject, $message, $req_res_id, 'C',2,$this->request->data['Position']['client_cc'] );
 					// send cc to client
 					if($this->request->data['Position']['client_cc'] != ''){
 						$replace_str = str_replace(';', ',', $this->request->data['Position']['client_cc']);

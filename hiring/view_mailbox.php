@@ -36,28 +36,30 @@ if(($fun->isnumeric($id)) || ($fun->is_empty($id)) || ($id == 0)){
   	header('Location: ../?access=invalid');
 }
 
-// select and execute query and fetch the result
-$query = "CALL view_mailbox('$id')";
-try{
-	if(!$result = $mysql->execute_query($query)){
-		throw new Exception('Problem in executing view mail box page');
+// if($_GET['multi_resume_id'] == ''){
+	// select and execute query and fetch the result
+	$query = "CALL view_mailbox('$id')";
+	try{
+		if(!$result = $mysql->execute_query($query)){
+			throw new Exception('Problem in executing view mail box page');
+		}
+		// check record exists
+		if($result->num_rows){
+			// calling mysql fetch_result function
+			$obj = $mysql->display_result($result);
+			$smarty->assign('created_date', $fun->convert_date_to_display($obj['created_date']));
+			$smarty->assign('data', $obj);
+		}else{
+			header('Location: ../?access=invalid');
+		}
+		// free the memory
+		$mysql->clear_result($result);
+		// call the next result
+		$mysql->next_query();
+	}catch(Exception $e){
+		echo 'Caught exception: ',  $e->getMessage(), "\n";
 	}
-	// check record exists
-	if($result->num_rows){
-		// calling mysql fetch_result function
-		$obj = $mysql->display_result($result);
-		$smarty->assign('created_date', $fun->convert_date_to_display($obj['created_date']));
-		$smarty->assign('data', $obj);
-	}else{
-		header('Location: ../?access=invalid');
-	}
-	// free the memory
-	$mysql->clear_result($result);
-	// call the next result
-	$mysql->next_query();
-}catch(Exception $e){
-	echo 'Caught exception: ',  $e->getMessage(), "\n";
-}
+// }
 
 
 
