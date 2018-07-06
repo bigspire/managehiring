@@ -198,7 +198,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		
 		if(!empty($last_id )){
 			if($obj['attachment'] != ''){
-				$attach['attachment'] =  "uploads/attachment/".$obj['attachment'];
+				$attach = 'uploads/attachment/'.$obj['attachment'];
 			} 
 			// send mail to client					
 			$msg = $content->send_mail_to_client($obj,$emp_name);
