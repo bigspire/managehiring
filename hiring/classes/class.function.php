@@ -897,16 +897,6 @@ class fun{
 			die('File Not Found');
 		}
 	}
-	
-	/* function to enable main menu */
-	/*function set_menu_active($page){ 
-		$file_name = explode('?', basename($_SERVER['REQUEST_URI']));
-		if($file_name[0] == $page.'.php'){	
-			return 'active';
-		}else{
-			// return '';
-		}
-	}*/
 
 	/* parse the status of the request */
 	public function format_status($st,$st_created,$st_user, $st_modified){

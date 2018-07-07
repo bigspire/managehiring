@@ -74,41 +74,20 @@ if($_GET['action'] == 'download'){
 	$fun->download_file($path);
 }
 
+// to show in the list of resumes in the view pages
 if(!empty($obj['multi_resume_id'])){
 	$multi_id = $obj['multi_resume_id'];
-	 // $str = implode("','", $multi_id);
-	// $multi_id = "\"'137','136'\"";
-	// echo $query = "CALL view_mailbox_multi_resume($multi_id)";die;
+
 	$query = "select group_concat(distinct rd.resume) as res_details,group_concat(distinct r.first_name) as candidate_name from resume_doc rd 
 				left join resume r on (r.resume_doc_id = rd.id) where r.is_deleted = 'N' and r.id in ($multi_id)";
 	$result = $mysql->execute_query($query);		
 	$mult_res_details = $mysql->display_result($result);
 	$mul_resume = explode(",", $mult_res_details['res_details']);
 	$mul_candidate_name = explode(",", $mult_res_details['candidate_name']);
-	for($i = 0; $i < count($mult_res_details); $i++){
-		// echo $mul_resume[$i];
-		// echo $mul_candidate_name[$i];
-	}
 	
-	$output = substr($obj['resume'], 0, strlen($obj['resume'])-5);
-	$file = str_replace('_', '', $output);
-		
-	if($obj['resume_type'] == 'S'){
-		if($obj['modified_date'] != '0000-00-00 00:00:00' && $obj['modified_date'] != ''){
-			   $resume_type =  "uploads/snapshotwatermarked/".$file.'_'.$fun->convert_date_type_display($obj['modified_date']).'.pdf';
-		}else{
-			   $resume_type =  "uploads/snapshotwatermarked/".$file.'_'.$fun->convert_date_type_display($obj['created_date']).'.pdf';
-		}
-	}else if($obj['resume_type'] == 'F'){
-		if($obj['modified_date'] != '0000-00-00 00:00:00' && $obj['modified_date'] != ''){
-			   $resume_type =  "uploads/autoresumepdf/".$file.'_'.$fun->convert_date_type_display($obj['modified_date']).'.pdf';
-		}else{
-			  $resume_type =  "uploads/autoresumepdf/".$file.'_'.$fun->convert_date_type_display($obj['created_date']).'.pdf';
-		}
-	}
 }
 
-			
+// when the form submitted			
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 		
 	// cc mail validation
@@ -147,16 +126,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		$result = $mysql->execute_query($query);	
 		$res1 = $mysql->display_result($result);
 		
-		// get multi resume details
 		$query = "select r.email_id,rd.resume,concat(r.first_name,' ',last_name) as candidate_name, r.created_date,r.modified_date from resume_doc rd 
 					left join resume r on (r.resume_doc_id = rd.id) where r.is_deleted = 'N' and r.id in ($multi_id)";
+		
 		$result = $mysql->execute_query($query);	
 		
 		while($res2 = $mysql->display_result($result)){ 
 			// $mul_resume[$i];
 			$candidate_name[] = $res2['candidate_name'];
 			$output = substr($res2['resume'], 0, strlen($res2['resume'])-5);
-			$file = str_replace('_', '', $output);
+			$file = $fun->filter_file($output);
 		
 			if($res1['resume_type'] == 'S'){
 				if($res2['modified_date'] != '0000-00-00 00:00:00' && $res2['modified_date'] != ''){
@@ -170,9 +149,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				}else{
 					  $resume_file[$res2['candidate_name'].'.pdf'] =  "uploads/autoresumepdf/".$file.'_'.$fun->convert_date_type_display($res2['created_date']).'.pdf';
 				}
-			}
+			}			
 			
 		}
+		
+		
 
 		$smarty->assign('mult_cand_name' , $candidate_name);
 		

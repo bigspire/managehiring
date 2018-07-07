@@ -1412,7 +1412,7 @@ class PositionController extends AppController {
 				$cand_name = substr($can_name, 0, strlen($can_name)-3);
 			}else{
 				$req_res_ids[] = $req_res_id;
-				
+				$resume_mail_id = $res_id;
 			}
 			// for success page redirect
 			$this->set('spec_id', $pos_id);
@@ -1516,7 +1516,7 @@ class PositionController extends AppController {
 				}
 
 					// save the mail box
-				$this->save_mail_box($subject, $message, $req_res_id, 'C',1,$this->request->data['Position']['client_cc'],$multi_resume,$attach_file,$pos_id);
+				$this->save_mail_box($subject, $message, $req_res_id, 'C',1,$this->request->data['Position']['client_cc'],$multi_resume,$attach_file,$pos_id,$resume_mail_id);
 				
 				
 				if(!$this->send_email($subject, 'send_cv', array($this->Session->read('USER.Login.email_id') => $from), $contact_data['Contact']['email'],$vars,$resume_path,$cc_new3)){	
@@ -1537,15 +1537,15 @@ class PositionController extends AppController {
 
 	/* function to save the mail box */
 	public function save_mail_box($sub, $msg, $req_res_id,$type,$mailtype,$cc,$multi_res,
-	$attach,$req_id){	
+	$attach,$req_id,$resume_id){	
 		$this->loadModel('MailBox');
 		$this->MailBox->id = '';
 		$multi_res = substr($multi_res, 0, strlen($multi_res)-1);
 		$res_id = explode(',' ,$multi_res);
 		if(count($res_id) == 1){
-			$req_res_id = $multi_res;		
+			$multi_res = $resume_id;		
 		}else if(count($res_id) > 1){
-			$multi_res = 0;	
+			// $multi_res = 0;	
 			$req_res_id = 0;		
 		}
 		

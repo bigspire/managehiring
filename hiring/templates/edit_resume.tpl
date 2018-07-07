@@ -121,6 +121,7 @@
 										</select>
 										<select name="month_of_exp" tabindex="8" class="inline_text span4">
 										<option value="">Month</option>
+										
 										{html_options options=$tot_exp_month selected=$month_of_exp}	
 										</select>
 										<label for="reg_city" generated="true" class="error">{$year_of_expErr}</label>	
@@ -635,7 +636,10 @@
 		<input type="hidden" id="from_year_of_expData_{$i}" name="from_year_of_expData_{$i}" value="{$from_year_of_expData[$i]}">
 		<input type="hidden" id="from_month_of_expData_{$i}" name="from_month_of_expData_{$i}" value="{$from_month_of_expData[$i]}">
 		<input type="hidden" id="to_year_of_expData_{$i}" name="to_year_of_expData_{$i}" value="{$to_year_of_expData[$i]}">
-		<input type="hidden" id="to_month_of_expData_{$i}" name="to_month_of_expData_{$i}" value="{$to_month_of_expData[$i]}">
+		
+		
+		<input type="hidden" id="to_month_of_expData_{$i}" name="to_month_of_expData_{$i}" value="{}">
+		
 		<input type="hidden" id="reporting_to_Data_{$i}" name="reporting_to_Data_{$i}" value="{$reporting_toData[$i]}">
 		<!--<input type="hidden" id="current_locData_{$i}" name="current_locData_{$i}" value="{$current_locData[$i]}">-->
 		<input type="hidden" id="companyData_{$i}" name="companyData_{$i}" value="{$companyData[$i]}">
