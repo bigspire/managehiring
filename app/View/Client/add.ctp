@@ -224,7 +224,7 @@
 					</tr>	
 									
 					<tr>
-						<td width="120" class="tbl_column">Branch <span class="f_req"></span></td>
+						<td width="120" class="tbl_column">Branch <span class="f_req">*</span></td>
 						<td>	
 						
 
@@ -234,6 +234,7 @@
 		
 		<a href="<?php echo $this->webroot;?>hiring/add_contact_branch.php?action=dropdown" rel="branch_#index#" class="iframeBox clearDesig" val="40_55">Add New</a>
 		
+		<div id="branchErrData_#index#" class="error"></div>
 		
 				
 					<input type="hidden" name="fr_branch" id="fr_branch">	
@@ -300,7 +301,8 @@
 		<input type="hidden" id="mobileErr_<?php echo $i;?>" value="<?php echo $errorData[$i]['mobile'];?>">
 		<input type="hidden" id="titleErr_<?php echo $i;?>" value="<?php echo $errorData[$i]['title'];?>">
 		<input type="hidden" id="desigErr_<?php echo $i;?>" value="<?php echo $errorData[$i]['designation'];?>">
-				
+		<input type="hidden" id="branchErr_<?php echo $i;?>" value="<?php echo $errorData[$i]['branch'];?>">
+		
 <?php endfor;?>
 
 <?php echo $this->Form->input('add_client', array('type' => 'hidden',  'id' => 'add_client')); ?>

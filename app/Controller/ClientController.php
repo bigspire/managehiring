@@ -684,6 +684,10 @@ class ClientController extends AppController {
 				$error[$i]['designation'] = 'Please select the designation';
 				$er_flag = false;
 			}
+			if($this->request->data['Client']['branch_'.$i] == ''){
+				$error[$i]['branch'] = 'Please select the branch';
+				$er_flag = false;
+			}
 		}
 		$this->set('errorData', $error);
 		return $er_flag;
