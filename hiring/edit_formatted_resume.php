@@ -80,6 +80,8 @@ if($getid !=''){
 
 // draft validation
 if($_POST['hdnSubmit'] == 1){
+
+	
 	// echo 'you pressed draft re';die;
 	
 	/* if(!empty($_POST['email'])){

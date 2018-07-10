@@ -5,6 +5,7 @@ Created : Nikitasa
 Date : 11-05-2017
 */
 session_start();
+// session_destroy();die;
 ob_start();
 use Ilovepdf\Ilovepdf;
 // including smarty config
@@ -233,7 +234,9 @@ if($getid !=''){
 }
 
 // checking for draft 
-if($_POST['hdnSubmit'] == 1){ 
+if($_POST['hdnSubmit'] == 1){
+	
+	
 	// echo 'you pressed draft re';die;
 	/* if(!empty($_POST['email'])){
 		// query to check whether it is exist or not. 

@@ -7,6 +7,8 @@ Date : 30-01-2017
 
 // starting session
 session_start();
+$path = $_SERVER['PHP_SELF'];
+$file_nam = basename($path);
 
 //assign user id
 $_SESSION['user_id'] = $fun->decrypt($_COOKIE['CakeCookie']['ESUSER']);
@@ -15,9 +17,21 @@ $theme = $_GET['color'] ? $_GET['color'] : $_COOKIE['CakeCookie']['THEME'];
 $smarty->assign('THEME', $theme);
 
 
+// when the form submitted
+if(!empty($_POST)){
+	if($file_nam == 'add_resume.php' || $file_nam == 'edit_resume.php' || $file_nam == 'add_formatted_resume.php'
+	|| $file_nam == 'edit_formatted_resume.php'){	
+		if($_SESSION['user_id'] == '' || $_SESSION['position_for'] == ''){	
+			header('Location: ../');
+			exit;
+		}
+	}
+}
 
-if($_SESSION['user_id'] == '' || $_SESSION['position_for'] == ''){
+
+if($_SESSION['user_id'] == ''){
 	header('Location: ../');
+	exit;
 }
 
 // get user name

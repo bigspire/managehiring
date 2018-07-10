@@ -121,6 +121,7 @@ if($_SESSION['IGNORE_CV'] == ''){
 
 // checking for draft 
 if($_POST['hdnSubmit'] == 1){
+	
 	// echo 'you pressed draft re';die;
 	
 	/* if(!empty($_POST['email'])){
