@@ -14,7 +14,9 @@ $_SESSION['user_pass'] = $fun->decrypt($_COOKIE['CakeCookie']['ESUSERP']);
 $theme = $_GET['color'] ? $_GET['color'] : $_COOKIE['CakeCookie']['THEME'];
 $smarty->assign('THEME', $theme);
 
-if($_SESSION['user_id'] == ''){
+
+
+if($_SESSION['user_id'] == '' || $_SESSION['position_for'] == ''){
 	header('Location: ../');
 }
 

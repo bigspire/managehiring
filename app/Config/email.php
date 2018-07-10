@@ -52,17 +52,19 @@ class EmailConfig {
 	
 			
 	public $gmail = array(
-       'host' => 'ssl://smtp.gmail.com',	 
-        'port' => 465,
+       'host' => 'smtp.gmail.com',	 
+        'port' => 587,
 		'username' => 'mailer.managehiring@gmail.com',
         'password' => 'ur$939!3',
-        'transport' => 'Smtp'
+        'transport' => 'Smtp',
+		'tls' => true
     );
 	
 	public $yahoo = array(
-       'host' => 'ssl://smtp.bizmail.yahoo.com',	 
-        'port' => 465,		
+       'host' => 'smtp.bizmail.yahoo.com',	 
+        'port' => 587,		
         'transport' => 'Smtp',
+		'tls' => true
     );
 	
 	
