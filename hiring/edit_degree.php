@@ -96,7 +96,7 @@ if(!empty($_POST)){
 	// assigning the date
 	$date =  $fun->current_date();
 	// query to check whether it is exist or not. 
-	$query = "CALL check_degree_exist('".$getid."', '".$fun->is_white_space($_POST['degree'])."')";
+	$query = "CALL check_degree_exist('".$getid."','".$fun->is_white_space($_POST['degree'])."','".$_POST['qualification']."')";
 	// Calling the function that makes the insert
 	try{
 		// calling mysql exe_query function

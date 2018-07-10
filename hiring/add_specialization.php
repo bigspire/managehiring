@@ -45,7 +45,7 @@ if(!empty($_POST)){
 	// assigning the date
 	$date =  $fun->current_date();
 	// query to check whether it is exist or not. 
-	$query = "CALL check_specialization_exist('0', '".$fun->is_white_space($_POST['specialization'])."')";
+	$query = "CALL check_specialization_exist('0', '".$fun->is_white_space($_POST['specialization'])."','".$_POST['degree']."')";
 	// Calling the function that makes the insert
 	try{
 		// calling mysql exe_query function

@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-05 10:18:40
+/* Smarty version 3.1.29, created on 2018-07-10 16:45:06
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\approve_incentive.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3da32825f7c3_30071574',
+  'unifunc' => 'content_5b44953aa86a53_39799986',
   'file_dependency' => 
   array (
     'c0a6e91d8fa726bd6909a08db770bf61753dbbc3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\approve_incentive.tpl',
-      1 => 1530766118,
+      1 => 1531221305,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3da32825f7c3_30071574 ($_smarty_tpl) {
+function content_5b44953aa86a53_39799986 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -251,8 +251,7 @@ $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 										<td width=""><?php echo $_smarty_tpl->tpl_vars['item']->value['incentive_type'];?>
 </td>
 										<td width=""><?php echo $_smarty_tpl->tpl_vars['item']->value['incent_period_display'];?>
- <?php if ($_smarty_tpl->tpl_vars['item']->value['incent_type'] != 'I') {?>(<?php echo $_smarty_tpl->tpl_vars['item']->value['month'];?>
-)<?php }?></td>
+</td>
 										<td width=""><?php echo $_smarty_tpl->tpl_vars['item']->value['productivity'];?>
 </td>
 										<td width=""><?php echo $_smarty_tpl->tpl_vars['item']->value['interview_candidate'];?>

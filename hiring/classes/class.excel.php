@@ -105,7 +105,7 @@ class libExcel{
 	
 	
 	// Add some data, we will use printing features
-	function printCell($data,$total,$col,$field,$file_name, $module, $data2,$incentive_ytd, $incentive_type,$period,$created_date,$modified_date){
+	function printCell($data,$total,$col,$field,$file_name,$module,$data2,$incentive_ytd,$incentive_type,$period,$created_date,$modified_date){
 		$j = 1;
 		$total =  $total;
 		$field_count = count($field);
@@ -123,7 +123,7 @@ class libExcel{
 			$this->objPHPExcel->getActiveSheet()->getStyle('A2')->getFont()->setBold(true);	
 			$this->objPHPExcel->getActiveSheet()->getColumnDimension('A2')->setAutoSize(true);	
 			$this->objPHPExcel->getActiveSheet()->setCellValue('B2', $incentive_type);
-			
+
 			$this->objPHPExcel->getActiveSheet()->setCellValue('A3', 'Period');
 			$this->objPHPExcel->getActiveSheet()->getStyle('A3')->getFont()->setBold(true);	
 			$this->objPHPExcel->getActiveSheet()->getColumnDimension('A3')->setAutoSize(true);	
@@ -133,22 +133,26 @@ class libExcel{
 			$this->objPHPExcel->getActiveSheet()->getStyle('A4')->getFont()->setBold(true);	
 			$this->objPHPExcel->getActiveSheet()->getColumnDimension('A4')->setAutoSize(true);	
 			$this->objPHPExcel->getActiveSheet()->setCellValue('B4', $data2['productivity']);
+			$this->objPHPExcel->getActiveSheet()->getStyle('B4')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 			
 			$this->objPHPExcel->getActiveSheet()->setCellValue('A5', 'Incentive Amount (In Rs.)');
 			$this->objPHPExcel->getActiveSheet()->getStyle('A5')->getFont()->setBold(true);	
 			$this->objPHPExcel->getActiveSheet()->getColumnDimension('A5')->setAutoSize(true);	
 			$this->objPHPExcel->getActiveSheet()->setCellValue('B5', $data2['eligible_incentive_amt']);
+			$this->objPHPExcel->getActiveSheet()->getStyle('B5')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 							
 				
 			$this->objPHPExcel->getActiveSheet()->setCellValue('C1', 'No. of Candidates Interviewed');
 			$this->objPHPExcel->getActiveSheet()->getStyle('C1')->getFont()->setBold(true);	
 			$this->objPHPExcel->getActiveSheet()->getColumnDimension('C1')->setAutoSize(true);	
 			$this->objPHPExcel->getActiveSheet()->setCellValue('D1', $data2['interview_candidate']);
+			$this->objPHPExcel->getActiveSheet()->getStyle('D1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 			
 			$this->objPHPExcel->getActiveSheet()->setCellValue('C2', 'Individual Contribution - YTD (In Rs.)');
 			$this->objPHPExcel->getActiveSheet()->getStyle('C2')->getFont()->setBold(true);	
 			$this->objPHPExcel->getActiveSheet()->getColumnDimension('C2')->setAutoSize(true);	
 			$this->objPHPExcel->getActiveSheet()->setCellValue('D2', $incentive_ytd);
+			$this->objPHPExcel->getActiveSheet()->getStyle('D2')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_LEFT);
 			
 			$this->objPHPExcel->getActiveSheet()->setCellValue('C3', 'Created Date');
 			$this->objPHPExcel->getActiveSheet()->getStyle('C3')->getFont()->setBold(true);	
@@ -159,8 +163,7 @@ class libExcel{
 			$this->objPHPExcel->getActiveSheet()->getStyle('C4')->getFont()->setBold(true);	
 			$this->objPHPExcel->getActiveSheet()->getColumnDimension('C4')->setAutoSize(true);	
 			$this->objPHPExcel->getActiveSheet()->setCellValue('D4', $modified_date);
-			
-			
+
 			// iterate the multiple rows
 			for($i = 8; $i <= $total+7; $i++){
 				for($j = 0; $j < $field_count; $j++){
@@ -208,7 +211,7 @@ class libExcel{
 			$this->objPHPExcel->getActiveSheet()->setCellValue('C3', 'Individual Contribution - YTD (In Rs.)');
 			$this->objPHPExcel->getActiveSheet()->getStyle('C3')->getFont()->setBold(true);	
 			$this->objPHPExcel->getActiveSheet()->getColumnDimension('C3')->setAutoSize(true);	
-			$this->objPHPExcel->getActiveSheet()->setCellValue('D3', '-');
+			$this->objPHPExcel->getActiveSheet()->setCellValue('D3', $incentive_ytd);
 
 			$this->objPHPExcel->getActiveSheet()->setCellValue('C4', 'Created Date');
 			$this->objPHPExcel->getActiveSheet()->getStyle('C4')->getFont()->setBold(true);	

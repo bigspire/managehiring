@@ -930,14 +930,13 @@ if(!empty($_POST)){
 				}
 			}
 			
-			if(($check_approved['is_approve'] != 'Y') && $check['id'] == ''){	
-		
+			if(($check_approved['is_approve'] != 'Y') && $check['id'] == ''){
 				// check if percentage >= 100 and calculate incentive
 				foreach($avg as $id => $avg_rec){
-					$avg_user = $avg_rec[0];
+					echo $avg_user = $avg_rec[0];echo '<br>';
 					if($avg_user >= '100'){
 						// get the interview sent candidates Position CTC for the month
-						$query = "CALL get_candidate_interview('".$id."','".$year_month."')";
+						echo $query = "CALL get_candidate_interview('".$id."','".$year_month."')";
 						try{
 							// calling mysql exe_query function
 							if(!$result_candi = $mysql->execute_query($query)){
@@ -954,7 +953,7 @@ if(!empty($_POST)){
 									}
 									$n++;
 									// get the incentive amount for the position CTC from eligibility table
-									$query = "CALL get_incentive_amount_ctc('".$ctc."','R','M','PI')";	 								
+									echo $query = "CALL get_incentive_amount_ctc('".$ctc."','R','M','PI')";	 								
 									try{
 										// calling mysql exe_query function
 										if(!$result2 = $mysql->execute_query($query)){
@@ -968,7 +967,7 @@ if(!empty($_POST)){
 										// next query execution
 										$mysql->next_query();
 										// save the candidate interview details
-										$query = "CALL save_candidate_interview('".$year_month.'-01'."','".$int_candidates['id']."','".$created_date."')";	 								
+										echo $query = "CALL save_candidate_interview('".$year_month.'-01'."','".$int_candidates['id']."','".$created_date."')";	 								
 										try{
 											// calling mysql exe_query function
 											if(!$result = $mysql->execute_query($query)){
@@ -999,7 +998,7 @@ if(!empty($_POST)){
 							if($incentive_amount != '' and $incentive_amount != '0'){
 							// save the incentive details of the candidates
 							$incentive_period = date('Y-m-d', strtotime($incentive_year.'-'.$incentive_month.'-01'));	
-							$query = "CALL save_candidate_incentive('".$id."','I','".$incentive_period."','".$incentive_amount."','".$_SESSION['user_id']."','".$created_date."','','',
+							echo $query = "CALL save_candidate_incentive('".$id."','I','".$incentive_period."','".$incentive_amount."','".$_SESSION['user_id']."','".$created_date."','','',
 							'".$avg_user."','".$n."','')";
 								try{
 									// calling mysql exe_query function
@@ -1060,10 +1059,10 @@ if(!empty($_POST)){
 						}catch(Exception $e){
 							echo 'Caught exception: ',  $e->getMessage(), "\n";
 						}
-					}/* elseif(empty($last_inserted_id) && empty($incentive_id)){
+					}else{/* elseif(empty($last_inserted_id) && empty($incentive_id)){*/
 						// redirect to incentive page
 						header("Location: approve_incentive.php?status=no_incentive");
-					}*/
+					}
 				}
 			}else{
 				header("Location: approve_incentive.php?status=Exist");
@@ -1117,7 +1116,7 @@ if(!empty($_POST)){
 			$position_month = $fun->display_pc_Months($_POST['position_month']);
 			$month = $ps_month ? $ps_month : $position_month;
 			$year = $_POST['year'] ? $_POST['year'] : $_POST['ps_year'];
-				
+			echo $last_inserted_id;die;	
 			if(!empty($last_inserted_id)){
 				// send mail to L1 
 				$sub = "Manage Hiring -  Incentive -  ".$fun->check_incentive_tp($_POST['type']).",  ".$month.' '.$year." Created By ".$admin_name;
@@ -1175,245 +1174,259 @@ if(!empty($_POST)){
 			foreach($row_employee as $record){ 
 				$emp_id = $record['id'];
 				$emp_name = $record['emp_name'];
-				$inc_month = 1;
+				// $inc_month = 1;
 				$employee_sal = '';
-				
-				// query to check whether it is approved or not. 
-				$query = "CALL check_incentive_approved('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$year_month."')";
-				// Calling the function that makes the insert
-				try{
-					// calling mysql exe_query function
-					if(!$result = $mysql->execute_query($query)){
-						throw new Exception('Problem in executing to check incentive approved');
-					}
-					$check_approved = $mysql->display_result($result);
-					// free the memory
-					$mysql->clear_result($result);
-					// call the next result
-					$mysql->next_query();
-				}catch(Exception $e){
-					echo 'Caught exception: ',  $e->getMessage(), "\n";
-				}
-						
-				// check incentive exists
-				$query = "CALL check_incentive_exist('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$year_month."')";
-				// Calling the function that makes the insert
-				try{
-					// calling mysql exe_query function
-					if(!$result = $mysql->execute_query($query)){
-						throw new Exception('Problem in executing to check incetive exist');
-					}
-					$check = $mysql->display_result($result);
-					$total = count($check['id']);
-					// free the memory
-					$mysql->clear_result($result);
-					// call the next result
-					$mysql->next_query();
-				}catch(Exception $e){
-					echo 'Caught exception: ',  $e->getMessage(), "\n";
-				}
-				
-				if(($total == 0) && ($check_approved['is_approve'] != 'Y')){
-					// get the incentive amount for the position CTC from eligibility table
-					$query = "CALL get_employee_salary('".$emp_id."','".$year_month."','".$year_month2."')";
-				
+				$incentive_target = '';
+				// for particular employee
+				if($record['id'] == '98'){
+					// query to check whether it is approved or not. 
+					$query = "CALL check_incentive_approved('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$year_month."')";
+					// Calling the function that makes the insert
 					try{
 						// calling mysql exe_query function
 						if(!$result = $mysql->execute_query($query)){
-							throw new Exception('Problem in getting employee salary details');
+							throw new Exception('Problem in executing to check incentive approved');
 						}
-						while($row_sal = $mysql->display_result($result)){
-							$employee_sal_month[$row_sal['users_id']][$row_sal['sal_month']] = $row_sal['employee_salary'];
-							$employee_sal += $row_sal['employee_salary'];
-						}
+						$check_approved = $mysql->display_result($result);
 						// free the memory
 						$mysql->clear_result($result);
-						// next query execution
+						// call the next result
 						$mysql->next_query();
 					}catch(Exception $e){
 						echo 'Caught exception: ',  $e->getMessage(), "\n";
 					}
-
-					// get monthly billing until 6 months
-					while($inc_month <= 6){
-						// get employee billing details
-						$query = "CALL get_inc_emp_billing_ctc('".$emp_id."','".$year_month."','".$year_month2."')";
+							
+					// check incentive exists
+					$query = "CALL check_incentive_exist('".$emp_id."','".$mysql->real_escape_str($_POST['type'])."','".$year_month."')";
+					// Calling the function that makes the insert
+					try{
+						// calling mysql exe_query function
+						if(!$result = $mysql->execute_query($query)){
+							throw new Exception('Problem in executing to check incetive exist');
+						}
+						$check = $mysql->display_result($result);
+						$total = count($check['id']);
+						// free the memory
+						$mysql->clear_result($result);
+						// call the next result
+						$mysql->next_query();
+					}catch(Exception $e){
+						echo 'Caught exception: ',  $e->getMessage(), "\n";
+					}
+					
 						
+					
+					if(($total == 0) && ($check_approved['is_approve'] != 'Y')){
+						// get the incentive amount for the position CTC from eligibility table
+						$query = "CALL get_employee_salary('".$emp_id."','".$year_month."','".$year_month2."')";
+					
 						try{
 							// calling mysql exe_query function
 							if(!$result = $mysql->execute_query($query)){
-								throw new Exception('Problem in getting employee billing details');
+								throw new Exception('Problem in getting employee salary details');
 							}
-								$indiv_ah_percent = '';
-								$rec_billing = '';
-								$ah_billing  = '';
-								$billing_amt = '';
-								$total_billing = '';
-								$employee_salary = '';
-								$bill_ctc = '';
-								$req_ctc = '';
-								$incentive_target = '';								
-								$incentive_amount = '';
-								$bill_user_type = '';
-																
-								while($ctc_row = $mysql->display_result($result)){							
-									$bill_ctc[] = $ctc_row['bill_ctc'];
-									$req_ctc[] = $ctc_row['req_ctc'];
-									// $role_name[] = $ctc_row['role_name'];
-									$ah_id = $ctc_row['account_holder_id'];
-									$rec_id = $ctc_row['recruiter_id'];
-									$req_resume = $ctc_row['req_resume'];
-									// explode the account holder for account holder percentage calculation
-									
-									$ah_split_id = explode(',', $ah_id);
-									$count_ah = count($ah_split_id);
-									$indiv_ah_percent = round($sharing_percent[1]['percent']/$count_ah, 1);
-									foreach($ah_split_id as $ah_new){
-										if($ah_new == $emp_id){
-											$ah_billing = round($ctc_row['bill_ctc'] * ($indiv_ah_percent/100), 1);
-											$bill_user_type[] = 'AH';
-										}
-									}
-									
-									// for recruiter percentage calculation
-									if($rec_id == $emp_id){
-										$rec_billing = round($ctc_row['bill_ctc'] * ($sharing_percent[0]['percent']/100), 1);
-										$bill_user_type[] = 'R';
-									}
-									$total_billing += $ah_billing + $rec_billing;						
-								}						
-												
-								// free the memory
-								$mysql->clear_result($result);
-								// next query execution
-								$mysql->next_query();
-								
-								// get the employee salary
-								$employee_salary = $employee_sal_month[$emp_id][$year_month];
-								
-								// calculate incentive if eligible
-								$incentive_target = $employee_salary * 3;
-								
-								if($total_billing >= $incentive_target && !empty($employee_salary)){
-									// iterate all the values in the bill
-									foreach($req_ctc as $key => $pos_ctc){
-										// get the incentive amount for the position CTC from eligibility table
-										$query = "CALL get_incentive_amount_ctc('".$pos_ctc."','".$bill_user_type[$key]."','H','PC')";						
-										try{
-											// calling mysql exe_query function
-											if(!$result = $mysql->execute_query($query)){
-													throw new Exception('Problem in getting CTC for the Positions');
-											}
-											$row_ctc = $mysql->display_result($result);
-											$incentive_amount += $row_ctc['amount'];
-											// free the memory
-											$mysql->clear_result($result);
-											// next query execution
-											$mysql->next_query();
-											// save the candidate billing details
-											$query = "CALL save_candidate_billing('".$year_month.'-01'."','".$req_resume."','".$created_date."',
-											'".$row_ctc['amount']."','".$bill_user_type[$key]."')";
-											try{
-												// calling mysql exe_query function
-												if(!$result = $mysql->execute_query($query)){
-													throw new Exception('Problem in saving the candidate interview details');
-												}
-												$row = $mysql->display_result($result2);
-												// free the memory
-												$mysql->clear_result($result);
-												// next query execution
-												$mysql->next_query();											
-											}catch(Exception $e){
-												echo 'Caught exception: ',  $e->getMessage(), "\n";
-											}
-										}catch(Exception $e){
-											echo 'Caught exception: ',  $e->getMessage(), "\n";
-										}
-									}							
-								}else{
-									// redirect to incentive page
-									header("Location: approve_incentive.php?status=no_incentive");
-								}
-
-							
-							}catch(Exception $e){
-								echo 'Caught exception: ',  $e->getMessage(), "\n";
+							while($row_sal = $mysql->display_result($result)){
+								// $employee_sal_month[$row_sal['users_id']][$row_sal['sal_month']] = $row_sal['employee_salary'];
+								$employee_sal += $row_sal['employee_salary'];
 							}
+							$incentive_target = round($employee_sal * 3);
 							// free the memory
 							$mysql->clear_result($result);
 							// next query execution
 							$mysql->next_query();
+						}catch(Exception $e){
+							echo 'Caught exception: ',  $e->getMessage(), "\n";
+						}
 						
 						
-						$date = date('Y-m-d', strtotime($year_month.'-01'));	
-						if($total == '0'){						
-							if($incentive_amount > 0){
-								// save the incentive details of the candidates
-								$query = "CALL save_candidate_incentive('".$emp_id."','J','".$date."','".$incentive_amount."','".$_SESSION['user_id']."','".$created_date."',
-								'".$incentive_target."','".$total_billing."','','','".count($bill_ctc)."')";
-								try{
-									// calling mysql exe_query function
-									if(!$result = $mysql->execute_query($query)){
-										throw new Exception('Problem in saving the incentive details');
-									}
-									$row = $mysql->display_result($result);
-									$last_id = $row['inserted_id'];
-									$incentive_id = $last_id;
+						// get monthly billing until 6 months
+						//while($inc_month <= 6){
+							// get employee billing details
+							$query = "CALL get_inc_emp_billing_ctc('".$emp_id."','".$year_month."','".$year_month2."')";
+							try{
+								// calling mysql exe_query function
+								if(!$result = $mysql->execute_query($query)){
+									throw new Exception('Problem in getting employee billing details');
+								}
+									$indiv_ah_percent = '';
+									$rec_billing = '';
+									$ah_billing  = '';
+									$billing_amt = '';
+									$total_billing = '';
+									$employee_salary = '';
+									$bill_ctc = '';
+									$req_ctc = '';
+																
+									$incentive_amount = '';
+									$bill_user_type = '';
+									$bill_date = '';	
+																	
+									while($ctc_row = $mysql->display_result($result)){							
+										$bill_ctc[] = $ctc_row['bill_ctc'];
+										$req_ctc[] = $ctc_row['req_ctc'];
+										$bill_date[] = $ctc_row['bill_date'];
+										
+										// $role_name[] = $ctc_row['role_name'];
+										$ah_id = $ctc_row['account_holder_id'];
+										$rec_id = $ctc_row['recruiter_id'];
+										$req_resume = $ctc_row['req_resume'];
+										
+										
+										// explode the account holder for account holder percentage calculation
+										
+										$ah_split_id = explode(',', $ah_id);
+										$count_ah = count($ah_split_id);
+										$indiv_ah_percent = round($sharing_percent[1]['percent']/$count_ah, 1);
+										foreach($ah_split_id as $ah_new){
+											if($ah_new == $emp_id){
+												$ah_billing = round($ctc_row['bill_ctc'] * ($indiv_ah_percent/100), 1);
+												$bill_user_type[] = 'AH';
+											}
+										}
+										
+										// for recruiter percentage calculation
+										if($rec_id == $emp_id){
+											$rec_billing = round($ctc_row['bill_ctc'] * ($sharing_percent[0]['percent']/100), 1);
+											$bill_user_type[] = 'R';
+										}
+										$total_billing += $ah_billing + $rec_billing;						
+									}						
+													
 									// free the memory
 									$mysql->clear_result($result);
 									// next query execution
 									$mysql->next_query();
-								}catch(Exception $e){
-									echo 'Caught exception: ',  $e->getMessage(), "\n";
-								}
-								
-								// query to insert reward user status details.
-								$query = "CALL add_inc_reward_status('".$created_date."','".$incentive_id."','".$approval_id."')";
-								// Calling the function that makes the insert
-								try{
-									// calling mysql exe_query function
-									if(!$result = $mysql->execute_query($query)){
-										throw new Exception('Problem in adding reward user status');
+									
+									// get the employee salary
+									// $employee_salary = $employee_sal_month[$emp_id][$year_month];
+									
+									// calculate incentive if eligible
+									//$incentive_target = $employee_salary * 3;
+									
+									
+									if($total_billing >= $incentive_target){
+										// iterate all the values in the bill
+										foreach($req_ctc as $key => $pos_ctc){
+											// get the incentive amount for the position CTC from eligibility table
+											$query = "CALL get_incentive_amount_ctc('".$pos_ctc."','".$bill_user_type[$key]."','H','PC')";		
+											
+											try{
+												// calling mysql exe_query function
+												if(!$result = $mysql->execute_query($query)){
+														throw new Exception('Problem in getting CTC for the Positions');
+												}
+												$row_ctc = $mysql->display_result($result);
+												$incentive_amount += $row_ctc['amount'];
+												// free the memory
+												$mysql->clear_result($result);
+												// next query execution
+												$mysql->next_query();
+												// save the candidate billing details
+												$query = "CALL save_candidate_billing('".$bill_date[$key]."','".$req_resume."','".$created_date."',
+												'".$row_ctc['amount']."','".$bill_user_type[$key]."')";
+												
+												try{
+													// calling mysql exe_query function
+													if(!$result = $mysql->execute_query($query)){
+														throw new Exception('Problem in saving the candidate interview details');
+													}
+													$row = $mysql->display_result($result2);
+													// free the memory
+													$mysql->clear_result($result);
+													// next query execution
+													$mysql->next_query();											
+												}catch(Exception $e){
+													echo 'Caught exception: ',  $e->getMessage(), "\n";
+												}
+											}catch(Exception $e){
+												echo 'Caught exception: ',  $e->getMessage(), "\n";
+											}
+										}							
+									}else{
+										// redirect to incentive page
+										header("Location: approve_incentive.php?status=no_incentive");
 									}
-									$row = $mysql->display_result($result);			
-									// free the memory
-									$mysql->clear_result($result);
-									// call the next result
-									$mysql->next_query();
-								}catch(Exception $e){
-									echo 'Caught exception: ',  $e->getMessage(), "\n";
-								}
+
 								
-								// query to insert reward user details.  
-								$query = "CALL add_inc_reward_users('".$incentive_id."', '".$approval_id."')";
-								// Calling the function that makes the insert
-								try{
-									// calling mysql exe_query function
-									if(!$result = $mysql->execute_query($query)){
-										throw new Exception('Problem in adding reward user');
-									}
-									$row = $mysql->display_result($result);
-									$last_inserted_id = $row['inserted_id'];
-									// free the memory
-									$mysql->clear_result($result);
-									// call the next result
-									$mysql->next_query();
 								}catch(Exception $e){
 									echo 'Caught exception: ',  $e->getMessage(), "\n";
 								}
+								// free the memory
+								$mysql->clear_result($result);
+								// next query execution
+								$mysql->next_query();
+							
+							
+							$date = date('Y-m-d', strtotime($year_month.'-01'));	
+							if($total == '0'){						
+								if($incentive_amount > 0){
+									// save the incentive details of the candidates
+									$query = "CALL save_candidate_incentive('".$emp_id."','J','".$date."','".$incentive_amount."','".$_SESSION['user_id']."','".$created_date."',
+									'".$incentive_target."','".$total_billing."','','','".count($bill_ctc)."')";
+									
+									try{
+										// calling mysql exe_query function
+										if(!$result = $mysql->execute_query($query)){
+											throw new Exception('Problem in saving the incentive details');
+										}
+										$row = $mysql->display_result($result);
+										$last_id = $row['inserted_id'];
+										$incentive_id = $last_id;
+										// free the memory
+										$mysql->clear_result($result);
+										// next query execution
+										$mysql->next_query();
+									}catch(Exception $e){
+										echo 'Caught exception: ',  $e->getMessage(), "\n";
+									}
+									
+									// query to insert reward user status details.
+									$query = "CALL add_inc_reward_status('".$created_date."','".$incentive_id."','".$approval_id."')";
+									// Calling the function that makes the insert
+									try{
+										// calling mysql exe_query function
+										if(!$result = $mysql->execute_query($query)){
+											throw new Exception('Problem in adding reward user status');
+										}
+										$row = $mysql->display_result($result);			
+										// free the memory
+										$mysql->clear_result($result);
+										// call the next result
+										$mysql->next_query();
+									}catch(Exception $e){
+										echo 'Caught exception: ',  $e->getMessage(), "\n";
+									}
+									
+									// query to insert reward user details.  
+									$query = "CALL add_inc_reward_users('".$incentive_id."', '".$approval_id."')";
+									// Calling the function that makes the insert
+									try{
+										// calling mysql exe_query function
+										if(!$result = $mysql->execute_query($query)){
+											throw new Exception('Problem in adding reward user');
+										}
+										$row = $mysql->display_result($result);
+										$last_inserted_id = $row['inserted_id'];
+										// free the memory
+										$mysql->clear_result($result);
+										// call the next result
+										$mysql->next_query();
+									}catch(Exception $e){
+										echo 'Caught exception: ',  $e->getMessage(), "\n";
+									}
+								}
+				
 							}
-			
-						}
-						$inc_month++;	
-						$year_month = date('Y-m', strtotime($year_month . "+1 months"));
+							//$inc_month++;	
+							//$year_month = date('Y-m', strtotime($year_month . "+1 months"));
+						//}
+							
+					}else{
+						// redirect to incentive page
+						header("Location: approve_incentive.php?status=no_incentive");
 					}
-						
-				}else{
-					// redirect to incentive page
-					header("Location: approve_incentive.php?status=no_incentive");
 				}
 			}
-			
 			// get the incentive user details
 			$query = "CALL get_incentive_user_details('J')";
 			try{

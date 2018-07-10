@@ -28,8 +28,8 @@
                     </nav>
 						
 						<div class="srch_buttons">
-							<a href="view_incentive.php?id={$smarty.get.id}&emp_id={$smarty.get.emp_id}&action=export">
-							<button type="button" val="view_incentive.php?id={$smarty.get.id}&emp_id={$smarty.get.emp_id}&action=export" name="export" class="jsRedirect btn btn-warning" >Export</button></a></a>							
+							<a href="view_approve_incentive.php?id={$smarty.get.id}&emp_id={$smarty.get.emp_id}&status_id={$smarty.get.status_id}&action=export">
+							<button type="button" val="view_approve_incentive.php?id={$smarty.get.id}&emp_id={$smarty.get.emp_id}&status_id={$smarty.get.status_id}&action=export" name="export" class="jsRedirect btn btn-warning" >Export</button></a></a>							
 						</div>
 						{if $incentive_data['incentive_type'] eq 'I'}	
 						<div class="row-fluid">
