@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-05 13:59:24
+/* Smarty version 3.1.29, created on 2018-07-10 15:05:03
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\view_approve_incentive.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3dd6e46b9468_52879986',
+  'unifunc' => 'content_5b447dc7521177_81657391',
   'file_dependency' => 
   array (
     '4b2cb2bd1dfb6f8d8b95b845dcbf04140b4d3846' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\view_approve_incentive.tpl',
-      1 => 1530779362,
+      1 => 1531215297,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3dd6e46b9468_52879986 ($_smarty_tpl) {
+function content_5b447dc7521177_81657391 ($_smarty_tpl) {
 ?>
 
    
@@ -55,11 +55,13 @@ home"><i class="icon-home"></i></a>
                     </nav>
 						
 						<div class="srch_buttons">
-							<a href="view_incentive.php?id=<?php echo $_GET['id'];?>
+							<a href="view_approve_incentive.php?id=<?php echo $_GET['id'];?>
 &emp_id=<?php echo $_GET['emp_id'];?>
+&status_id=<?php echo $_GET['status_id'];?>
 &action=export">
-							<button type="button" val="view_incentive.php?id=<?php echo $_GET['id'];?>
+							<button type="button" val="view_approve_incentive.php?id=<?php echo $_GET['id'];?>
 &emp_id=<?php echo $_GET['emp_id'];?>
+&status_id=<?php echo $_GET['status_id'];?>
 &action=export" name="export" class="jsRedirect btn btn-warning" >Export</button></a></a>							
 						</div>
 						<?php if ($_smarty_tpl->tpl_vars['incentive_data']->value['incentive_type'] == 'I') {?>	

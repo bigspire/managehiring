@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-29 12:48:27
+/* Smarty version 3.1.29, created on 2018-07-09 09:40:09
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\holidays.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b35dd43baee75_90449239',
+  'unifunc' => 'content_5b42e021db4085_71980837',
   'file_dependency' => 
   array (
     '817544e437e1f1221a78a801f9e018cb4cfafc25' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\holidays.tpl',
-      1 => 1530256687,
+      1 => 1530622372,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b35dd43baee75_90449239 ($_smarty_tpl) {
+function content_5b42e021db4085_71980837 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -184,7 +184,7 @@ $__foreach_item_0_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>	
 									
 									<tr>
-										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['event'];?>
+										<td><?php echo ucwords(strtolower($_smarty_tpl->tpl_vars['item']->value['event']));?>
 </td>
 										<td><?php echo $_smarty_tpl->tpl_vars['item']->value['event_date'];?>
 </td>

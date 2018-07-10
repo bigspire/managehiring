@@ -142,6 +142,8 @@ try{
 }
 
 // split the period 
+
+/*
 $period_splt = explode("-", $row['period']);
 $period_yr = $period_splt[0]; 
 $period_month = $period_splt[1];
@@ -149,7 +151,7 @@ $period_month = $period_splt[1];
 // current month and year
 if($row['incentive_type'] == 'I'){
 	$cur_date = $period_yr.'-'.$period_month;
-	$start_date = $period_yr.'-01';
+	$start_date = $period_yr.'-04';
 }elseif($row['incentive_type'] == 'J'){
 	$period_pc_splt = explode(",", $period);
 	$period_splt_year = explode(" ", $period_pc_splt[1]);
@@ -161,19 +163,29 @@ if($row['incentive_type'] == 'I'){
 		$cur_date = $period_yr.'-'.$period_month;
 	}
 }
+*/
+
+$period_split = explode('-', $row['period']);
+// get the financial year	
+if($period_split[1] == '4'){
+	// for calculation
+	$fin_start_year_cal = $period_split[0].'-04-01';
+	$fin_end_year_cal = ($period_split[0] + 1).'-03-31';				
+}else if($period_split[1] == '10'){
+	// for calculation
+	$fin_start_year_cal = ($period_split[0] - 1).'-04-01';
+	$fin_end_year_cal = $period_split[0].'-03-31';
+}
 
 // select and execute query and fetch the result
-$query = "CALL view_incentive_ytd_details('".$_GET['emp_id']."','".$row['incentive_type']."','".$start_date."','".$cur_date."')";
+
+$query = "CALL view_incentive_ytd_details('".$_GET['emp_id']."','".$fin_start_year_cal."','".$fin_end_year_cal."')";
 try{
 	if(!$result = $mysql->execute_query($query)){
 		throw new Exception('Problem in executing view approve incentive page');
 	}
-	while($incentive_ytd_data = $mysql->display_result($result)){
-		$incentive_ytd += $incentive_ytd_data['eligible_incentive_amt'];
-	}
-	
-	$smarty->assign('incentive_ytd',$incentive_ytd);
-
+	$incentive_ytd_data = $mysql->display_result($result);		
+	$smarty->assign('incentive_ytd', $incentive_ytd_data['ytd_amt']);
 	// free the memory
 	$mysql->clear_result($result);
 	// call the next result
@@ -224,20 +236,28 @@ if(!empty($row)){
 // get current date 
 $current_date = $fun->display_date();
 // call to export the excel data
-if($_GET['action'] == 'export'){ 
+if($_GET['action'] == 'export'){
 	include('classes/class.excel.php');
 	$excelObj = new libExcel();
+	
 	if($row['incentive_type'] == 'I'){
 		// function to print the excel header
-		$excelObj->printHeader($header = array('Position','Client','Candidate Name','Interview Level','Interview Date','Interview Status') ,$col = array('A','B','C','D','E','F'), 'view_incentive1');  
+		$excelObj->printHeader($header = array('Position','Client','Candidate Name','Interview Level','Interview Date','Interview Status'),$col = array('A','B','C','D','E','F'), 'view_incentive1');  
 		// function to print the excel data
-		$excelObj->printCell($data, $i,$col = array('A','B','C','D','E','F'), $field = array('position','client_name','candidate_name','stage_title','int_date','status_title'),'Incentive_'.$current_date, 'view_incentive1',$row,$incentive_ytd,$incentive_type,$period,$created_date,$modified_date);
-	}else if($row['incentive_type'] == 'J'){
+			
+		$excelObj->printCell($data,$i,$col = array('A','B','C','D','E','F'),
+		$field = array('position','client_name','candidate_name','stage_title','int_date','status_title'),'Incentive_'.$current_date,
+		'view_incentive1',$row,$incentive_ytd,$incentive_type,$period,$created_date,$modified_date);
+		
+	}else if($row['incentive_type'] == 'J'){echo $incentive_type;echo 'niki';die;
 		// function to print the excel header
 		$excelObj->printHeader($header = array('Position','Client','Candidate Name','Position CTC','Billing Amount','Offer CTC','Billing Date','Account Type','Individual Contribution (In Rs.)') ,$col = array('A','B','C','D','E','F','G','H','I'), 'view_incentive2');  
 		// function to print the excel data
-		$excelObj->printCell($data, $i,$col = array('A','B','C','D','E','F','G','H','I'), $field = array('position','client_name','candidate_name','ctc','billing_amount','ctc_offer','billing_date','user_type','amount'),'Incentive_'.$current_date, 'view_incentive2',$row,$incentive_ytd,$incentive_type,$period,$created_date,$modified_date);
+		$excelObj->printCell($data, $i,$col = array('A','B','C','D','E','F','G','H','I'), 
+		$field = array('position','client_name','candidate_name','ctc','billing_amount','ctc_offer','billing_date','user_type','amount'),
+		'Incentive_'.$current_date, 'view_incentive2',$row,$incentive_ytd,$incentive_type,$period,$created_date,$modified_date);
 	}
+	die;
 }
 
 
