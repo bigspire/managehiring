@@ -15,7 +15,7 @@ $theme = $_GET['color'] ? $_GET['color'] : $_COOKIE['CakeCookie']['THEME'];
 $smarty->assign('THEME', $theme);
 
 if($_SESSION['user_id'] == ''){
-	header('Location: ../cthiring/');
+	header('Location: ../');
 }
 
 // get user name

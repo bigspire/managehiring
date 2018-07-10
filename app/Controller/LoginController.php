@@ -112,7 +112,7 @@ class LoginController extends AppController {
 	}
 	
 	/* function to validate yahoo */
-	public function validate_yahoo($email, $pass){ return true;
+	public function validate_yahoo($email, $pass){ 
 		$hostname = '{imap.mail.yahoo.com:993/imap/ssl}INBOX';
 		//$username = 'testing.bigspire@yahoo.in';
 		//$password = 'spire123.A';

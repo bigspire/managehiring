@@ -829,6 +829,9 @@ $(document).ready(function() {
 				if($('#mobileErr_'+i).length > 0){
 					$('#mobileErrData_'+i).html($('#mobileErr_'+i).val());
 				}
+				if($('#branchErr_'+i).length > 0){ 
+					$('#branchErrData_'+i).html($('#branchErr_'+i).val());
+				}
 				if($('#titleErr_'+i).length > 0){
 					$('#titleErrData_'+i).html($('#titleErr_'+i).val());
 				}
