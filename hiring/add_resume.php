@@ -61,7 +61,13 @@ foreach($string as $mail){
 foreach($string as $name_key => $name){
 	$name = trim(strtolower($name));
 	if($name != 'name' && $name != 'name:' && $name != 'vitae' && $name != 'curriculam' && $name != 'curriculum' && $name != 'vitae' && $name != 'RESUME' && $name != ''
-		&& $name != 'mailing' && $name != 'address' && $name != ':' && $name != '' && !is_numeric($name)){
+		&& $name != 'mailing' && $name != 'address' 
+		&& $name != 'profile'
+		&& $name != 'snapshot'
+		&& $name != 'of'
+		&& $name != 'the'
+		&& $name != 'candidate'
+		&& $name != ':' && $name != '' && !is_numeric($name)){
 			break;
 	}else{
 		continue;
