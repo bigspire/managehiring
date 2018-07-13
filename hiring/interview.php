@@ -42,7 +42,7 @@ if($_POST){
 }
 
 		// for director and BH
-		if($_SESSION['roles_id'] == '33' || $_SESSION['roles_id'] == '35'){
+		if($_SESSION['roles_id'] == '33' || $_SESSION['roles_id'] == '35' || $_SESSION['roles_id'] == '39'){
 			$show = 'all';
 			$team_cond = false;
 		}else{

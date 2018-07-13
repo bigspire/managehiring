@@ -933,10 +933,10 @@ if(!empty($_POST)){
 			if(($check_approved['is_approve'] != 'Y') && $check['id'] == ''){
 				// check if percentage >= 100 and calculate incentive
 				foreach($avg as $id => $avg_rec){
-					echo $avg_user = $avg_rec[0];echo '<br>';
+					// echo $avg_user = $avg_rec[0];echo '<br>';
 					if($avg_user >= '100'){
 						// get the interview sent candidates Position CTC for the month
-						echo $query = "CALL get_candidate_interview('".$id."','".$year_month."')";
+						$query = "CALL get_candidate_interview('".$id."','".$year_month."')";
 						try{
 							// calling mysql exe_query function
 							if(!$result_candi = $mysql->execute_query($query)){
@@ -953,7 +953,7 @@ if(!empty($_POST)){
 									}
 									$n++;
 									// get the incentive amount for the position CTC from eligibility table
-									echo $query = "CALL get_incentive_amount_ctc('".$ctc."','R','M','PI')";	 								
+									$query = "CALL get_incentive_amount_ctc('".$ctc."','R','M','PI')";	 								
 									try{
 										// calling mysql exe_query function
 										if(!$result2 = $mysql->execute_query($query)){
@@ -967,7 +967,7 @@ if(!empty($_POST)){
 										// next query execution
 										$mysql->next_query();
 										// save the candidate interview details
-										echo $query = "CALL save_candidate_interview('".$year_month.'-01'."','".$int_candidates['id']."','".$created_date."')";	 								
+										$query = "CALL save_candidate_interview('".$year_month.'-01'."','".$int_candidates['id']."','".$created_date."')";	 								
 										try{
 											// calling mysql exe_query function
 											if(!$result = $mysql->execute_query($query)){
@@ -998,7 +998,7 @@ if(!empty($_POST)){
 							if($incentive_amount != '' and $incentive_amount != '0'){
 							// save the incentive details of the candidates
 							$incentive_period = date('Y-m-d', strtotime($incentive_year.'-'.$incentive_month.'-01'));	
-							echo $query = "CALL save_candidate_incentive('".$id."','I','".$incentive_period."','".$incentive_amount."','".$_SESSION['user_id']."','".$created_date."','','',
+							$query = "CALL save_candidate_incentive('".$id."','I','".$incentive_period."','".$incentive_amount."','".$_SESSION['user_id']."','".$created_date."','','',
 							'".$avg_user."','".$n."','')";
 								try{
 									// calling mysql exe_query function
