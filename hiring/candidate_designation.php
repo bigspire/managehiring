@@ -131,12 +131,12 @@ try{
 		// function to print the excel header
       $excelObj->printHeader($header = array('Candidate Designation','Status','Created Date','Modified Date') ,$col = array('A','B','C','D'));  
 		// function to print the excel data
-		$excelObj->printCell($data, $count,$col = array('A','B','C','D'), $field = array('designation','status','created_date','modified_date'),'Candidate Designation_'.$current_date);
+		$excelObj->printCell($data, $count,$col = array('A','B','C','D'), $field = array('designation','status','created_date','modified_date'),'Candidate Desig_'.$current_date);
 	}	
 	
 	// create,update,delete message validation
 	if($_GET['status'] == 'deleted' || $_GET['status'] == 'created' || $_GET['status'] == 'updated'){
- 	 $success_msg = 'Candidate Designation ' . ucfirst($_GET['status']) . ' Successfully';
+		$success_msg = 'Candidate Designation ' . ucfirst($_GET['status']) . ' Successfully';
 	}else if($_GET['current_status'] == 'msg'){
 		$success_msg = 'This record is not available in our database';
 	}
