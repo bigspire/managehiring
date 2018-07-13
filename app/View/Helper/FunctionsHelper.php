@@ -967,6 +967,29 @@ class FunctionsHelper extends AppHelper {
 		}
 		return $year.$month;
    }
+   
+   
+	   /* function to find the min and max exp */
+   public function show_exp_details_list($value){
+		$exp_val = explode('.', $value);
+		if($exp_val[0] == '0'){
+			return $str =  'Fresher';
+		}
+		// for years
+		if($exp_val[0] >= 1){
+			$year = $exp_val[0].'Y ';
+			
+		}
+		// for months
+		if($exp_val[1] >= 1){
+			$month = $exp_val[1].'M';
+			
+		}
+		return $year.$month;
+   }
+   
+   
+   
 	
 }
 ?>
