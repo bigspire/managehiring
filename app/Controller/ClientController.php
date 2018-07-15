@@ -82,7 +82,8 @@ class ClientController extends AppController {
 			$team_cond = true;
 		}
 		
-		
+		$empCond = '';
+		$team_cond = '';
 		
 		// get the team members
 		$result = $this->Client->get_team($this->Session->read('USER.Login.id'),$show);
@@ -141,10 +142,17 @@ class ClientController extends AppController {
 		
 		*/
 		
+		
+		
+		
 		if($this->Session->read('USER.Login.roles_id') == '33' || $this->Session->read('USER.Login.roles_id') == '35'  || $this->Session->read('USER.Login.roles_id') == '39'){ // director & BD
 			$empCond = '';
 			$team_cond = '';
 		}
+		
+		// from karthi request to show all clients to all
+		
+		
 		
 		/*		
 		if($this->Session->read('USER.Login.roles_id') == '33'){
@@ -303,7 +311,7 @@ class ClientController extends AppController {
 					// validates the form
 					$this->request->data['Client']['modified_by'] = $this->Session->read('USER.Login.id');
 					$this->request->data['Client']['modified_date'] = $this->Functions->get_current_date();
-					$this->request->data['Position']['update_date'] = $this->Functions->get_current_date();
+					$this->request->data['Client']['update_date'] = $this->Functions->get_current_date();
 					$this->Client->set($this->request->data);
 					// retain the district
 					$this->get_district_list($this->request->data['Client']['state']);
@@ -557,7 +565,7 @@ class ClientController extends AppController {
 			// validates the form
 			$this->request->data['Client']['created_by'] = $this->Session->read('USER.Login.id');
 		    $this->request->data['Client']['created_date'] = $this->Functions->get_current_date();
-			$this->request->data['Position']['update_date'] = $this->Functions->get_current_date();
+			$this->request->data['Client']['update_date'] = $this->Functions->get_current_date();
 			$this->request->data['Client']['status'] = 2;
 			$this->request->data['Client']['is_inactive'] = 'N';
 			$this->Client->set($this->request->data);
@@ -812,9 +820,10 @@ class ClientController extends AppController {
 	
 	/* function to view the position */
 	public function view($id, $st_id){							
-		$this->loadModel('ClientStatus');
-		$ret_value = $this->auth_action($id, $st_id);
-		if($ret_value == 'pass'){
+		// $this->loadModel('ClientStatus');
+		// enabled view client option for all
+		// $ret_value = $this->auth_action($id, $st_id);
+		// if($ret_value == 'pass'){
 			// update the read req.
 			if($this->request->params['pass'][3] != '' && $this->request->params['pass'][4] == 'U'){
 				$req_id = explode(',', $this->request->params['pass'][3]);
@@ -889,10 +898,13 @@ class ClientController extends AppController {
 			$data = $this->Position->find('all', array('fields' => $fields,'limit' => '25','conditions' => array('clients_id' => $id),
 			'order' => array('created_date' => 'desc'),	'group' => array('Position.id')));
 			$this->set('position_data', $data);
+		
+		/*
 		}else if($ret_value == 'fail'){ 
 			$this->Session->setFlash('<button type="button" class="close" data-dismiss="alert-error">&times;</button>Invalid Entry', 'default', array('class' => 'alert alert-error'));	
 			$this->redirect('/client/');	
 		}
+		*/
 		
 	}
 	
