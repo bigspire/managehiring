@@ -889,8 +889,7 @@ class ReportController extends AppController {
 			$this->loadModel('User');
 			$data = $this->User->findById($this->request->data['Report']['emp_id'], array('fields' => 'first_name','last_name'));
 			$this->set('empName', ucwords($data['User']['first_name'].' '.$data['User']['last_name']));
-			$emp_cond = array('ReqTeam.users_id' => $this->request->data['Report']['emp_id']);
-			$req_team_cond = array('ReqTeam.is_approve !=' => array('S','R'));
+			$emp_cond = array('TaskPlan.users_id' => $this->request->data['Report']['emp_id']);
 		}
 		
 		
@@ -905,80 +904,69 @@ class ReportController extends AppController {
 		}
 
 		// iterate the clients
-		$i = 0;
-		foreach($user_detail as $user){
-			
-			// month condition
-			$month_str = date('Y-m', strtotime($fin_start_year_cal." +$i month"));
-			$month_cond = array('Report.created_date like' => "$month_str%");
-			$month_cond2 = array('Position.created_date like' => "$month_str%");
-			// get all the openings of the client		
 		
-			$ow_options = array(				
-				array('table' => 'clients',
-					'alias' => 'Client',				
-					'type' => 'LEFT',
-					'conditions' => array('`Client`.`id` = `Report`.`clients_id`')					
-					),	
-				array('table' => 'req_team',
-					'alias' => 'ReqTeam',					
-					'type' => 'LEFT',
-					'conditions' => array('`ReqTeam`.`requirements_id` = `Report`.`id`')
-				),					
-			);	
-			
-			$opening_worked[] = $this->Report->find('all', array('fields' => array("sum(Report.no_job) no_job"), 'conditions' => array('Report.status' => 'A', 'Report.is_approve' => 'A', $month_cond, $emp_cond),
-			'joins' => $ow_options));
-			
-			$position_worked = $this->Report->find('all', array('fields' => array("group_concat(Distinct Report.id) pos_work"), 'conditions' => array('Report.status' => 'A', 'Report.is_approve' => 'A', $month_cond, $emp_cond),'joins' => $ow_options));
-			
-			$pos_split = explode(',', $position_worked[0][0]['pos_work']);
-			$pos_work_cond = array('Position.id' => $pos_split);
-			// get all the cv sent details of the client positions
-			
-			$this->loadModel('ReqResumeStatus');
-			$options = array(
-					array('table' => 'users',
-						'alias' => 'User',					
-						'type' => 'LEFT',
-						'conditions' => array('`User`.`id` = `ReqResume`.`created_by`')
-					),
-					array('table' => 'location',
-						'alias' => 'Location',					
-						'type' => 'LEFT',
-						'conditions' => array('`Location`.`id` = `User`.`location_id`')
-					)
-					,
-					array('table' => 'resume',
-						'alias' => 'Resume',					
-						'type' => 'LEFT',
-						'conditions' => array('`Resume`.`id` = `ReqResume`.`resume_id`')
-					),			
-					array('table' => 'requirements',
-						'alias' => 'Position',					
-						'type' => 'LEFT',
-						'conditions' => array('`Position`.`id` = `ReqResume`.`requirements_id`')
-					),
-					array('table' => 'clients',
-						'alias' => 'Client',					
-						'type' => 'LEFT',
-						'conditions' => array('`Client`.`id` = `Position`.`clients_id`')
-					),
-					array('table' => 'req_team',
-						'alias' => 'ReqTeam',					
-						'type' => 'LEFT',
-						'conditions' => array('`ReqTeam`.`requirements_id` = `Position`.`id`')
-					)
-				);
-			$sent_cond = array('ReqResumeStatus.stage_title' => 'Shortlist','ReqResumeStatus.status_title' => 'CV-Sent');
-			$cv_sent_count[] = $this->ReqResumeStatus->find('count', array('conditions' => array($sent_cond,$month_cond2,$req_team_cond, $emp_cond, $client_cond,$pos_work_cond), 'joins' => $options));			
-			
-			// get the CV Sent to shortlisted percentage
-			$i++;
-		}
+		foreach($user_detail as $id => $user){
+			//if($id == '98'){
+				$i = 0;
+				while($i <= 12){
+					// month condition
+					$month_str = date('Y-m', strtotime($fin_start_year_cal." +$i month"));
+					$month_cond = array('Report.created_date like' => "$month_str%");
+					$month_cond2 = array('Position.created_date like' => "$month_str%");
+					
+					$month_val = date('M,y', strtotime($fin_start_year_cal." +$i month"));
+					
+					$this->loadModel('TaskPlan');		
+					// $date_cond = array('or' => array("DATE_FORMAT(TaskPlan.task_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
+					$date_cond = array('task_date like ' => "%$month_str%");
+					
+					$empCond = $emp_cond ? $emp_cond : array('TaskPlan.users_id' => $id);
+
+							
+					$task_plan_data = $this->TaskPlan->find('all', array('fields' => array('task_date','ctc','session','requirements_id'),
+					'conditions' => array($empCond, $date_cond, 'TaskPlan.is_deleted' => 'N'), 
+					'group' => array('TaskPlan.id'), 'order' => array('TaskPlan.task_date' => 'desc')));
+					
+					
+					// get the no. of resumes sent for that day  for that position ctc
+					foreach($task_plan_data as $task_data){
+					
+						$no_resume = $this->Report->get_resumes_ctc($task_data['TaskPlan']['ctc']);
+						$resume_count = $task_data['TaskPlan']['session'] == 'D' ? $no_resume  : round($no_resume/2, 0);
+						$work_days += $task_data['TaskPlan']['session'] == 'D' ? 1 : 0.5;
+						// get the actual resume uploaded				
+						$this->loadModel('ReqResume');
+								
+						$options = array(
+							array('table' => 'req_resume_status',
+								'alias' => 'ReqResumeStatus',					
+								'type' => 'LEFT',
+								'conditions' => array('`ReqResumeStatus`.`req_resume_id` = `ReqResume`.`id`')
+							)
+						);
+						
+						$resume_sent_count = $this->ReqResume->find('count', array('conditions' => array('ReqResume.requirements_id' => $task_data['TaskPlan']['requirements_id'],
+						"date_format(Resume.created_date, '%Y-%m-%d')" => $task_data['TaskPlan']['task_date'], 
+						'Resume.is_deleted' => 'N', 'ReqResumeStatus.stage_title' => 'Shortlist',
+						'ReqResumeStatus.status_title' => 'CV-Sent'), 	'group' => array('ReqResume.id'), 'joins' => $options));
+						$productivity += round(($resume_sent_count / $resume_count) * 100, 1);
+											
+						}
+						
+						$prod_ar[$id][$month_val][] = round(($productivity/$work_days));
+						
+						$productivity = '';
+						$work_days = '';
+						$i++;
+					}
+				//}		
+			}
+		
 		
 		$this->set('monthDetail', $month_detail);
-		
+		// assign all the counts
+		$this->set('EMP_PRODUCTIVITY', $prod_ar);
+
 		// for export
 		if($this->request->query['action'] == 'export'){			
 			$this->Excel->generate_report('month_wise_cv_status_report', $client_detail, $opening_worked,
@@ -997,35 +985,8 @@ class ReportController extends AppController {
 		}
 					
 
-
-		// die;
-
-		// assign all the counts
-		$this->set('OPENING_WORKED', $opening_worked);
-		$this->set('CV_SENT', $cv_sent_count);
-		$this->set('CV_SHORTLIST', $cv_shortlist_count);
-		$this->set('CV_REJECT', $cv_reject_count);
-		$this->set('FEEDBACK_AWAITING', $feedback_await_count);
-		$this->set('INTERVIEW_AWAITING', $interview_await_count);
-		$this->set('PRILIMINARY_INTERVIEW_ATTEND', $prili_interview_count);
-		$this->set('FINAL_INTERVIEW_ATTEND', $final_interview_count);
-		
-		$this->set('OFFER_PENDING', $offer_pending_count);
-		$this->set('OFFER_ACCEPT', $offer_accept_count);
-		$this->set('OFFER_REJECT', $offer_reject_count);
-		
-		$this->set('JOIN_PENDING', $join_pending_count);
-		$this->set('JOIN_ACCEPT', $join_accept_count);
-		$this->set('NOT_JOIN', $join_reject_count);		
-		$this->set('JOIN_DEFER', $join_defer_count);
-		
-		$this->set('NOT_BILLED', $not_billed_count);		
-		$this->set('BILLED', $billed_count);
-		
 		$count_client = count($client_data);
 		$this->set('chart_height', $count_client < 10 ? '500' :  $count_client*50);
-		
-		
 		
 	}
 

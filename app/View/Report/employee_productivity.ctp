@@ -220,86 +220,31 @@ ul.statusLegend li{width:200px;}
 								<tbody>
 								
 								<?php 
-								$j = 0;
+								
+								
+								
 								foreach($userDetail as $id => $employee): ?>
 									
 								<tr>
 										<td width=""><a target="_blank" href="<?php echo $this->webroot;?>client/view/<?php echo $id;?>/"><?php echo $employee;?></td>
+											
+										<?php 
+										foreach($monthDetail as $month):?>
+										
+										
 										
 										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>position/index/ow/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
 										<?php 
-										$ow_total += $OPENING_WORKED[$j][0][0]['no_job'];
-										echo $OPENING_WORKED[$j][0][0]['no_job'] ? $OPENING_WORKED[$j][0][0]['no_job'] : '0';?></a></td>
+										echo $EMP_PRODUCTIVITY[$id][$month][0];?>%</a>
+										</td>
 										
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/cvs/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $sent_total += $CV_SENT[$j];
-										echo $CV_SENT[$j] ? $CV_SENT[$j] : '0';?></a></td>
-										
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/short/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $shortlist_total += $CV_SHORTLIST[$j];
-										echo $CV_SHORTLIST[$j] ? $CV_SHORTLIST[$j] : '0';?></a></td>
-										
-										
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/cvr/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $reject_total += $CV_REJECT[$j];
-										echo $CV_REJECT[$j] ? $CV_REJECT[$j] : '0';?></a></td>
-										
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/fba/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $feedback_total += $FEEDBACK_AWAITING[$j];
-										echo $FEEDBACK_AWAITING[$j] ? $FEEDBACK_AWAITING[$j] : '0';?></a></td>
-										
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/ia/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">										
-										<?php $interview_await_total += $INTERVIEW_AWAITING[$j];
-										echo $INTERVIEW_AWAITING[$j] ? $INTERVIEW_AWAITING[$j] : '0';?>
-										</a></td>
-										
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/pia/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $prili_interview_attend_total += $PRILIMINARY_INTERVIEW_ATTEND[$j];
-										echo $PRILIMINARY_INTERVIEW_ATTEND[$j] ? $PRILIMINARY_INTERVIEW_ATTEND[$j] : '0';?>
-										</a></td>
-										
-										
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/fi/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $final_interview_total += $FINAL_INTERVIEW_ATTEND[$j];
-										echo $FINAL_INTERVIEW_ATTEND[$j] ? $FINAL_INTERVIEW_ATTEND[$j] : '0';?>
-										</a></td>
-						
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/op/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $op_total += $OFFER_PENDING[$j];
-										echo $OFFER_PENDING[$j] ? $OFFER_PENDING[$j] : '0';?></a></td>
-										
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/oa/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $oa_total += $OFFER_ACCEPT[$j];
-										echo $OFFER_ACCEPT[$j] ? $OFFER_ACCEPT[$j] : '0';?></a></td>
-										
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/or/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $or_total += $OFFER_REJECT[$j];
-										echo $OFFER_REJECT[$j] ? $OFFER_REJECT[$j] : '0';?></a></td>
-										
-																
-										<td style="text-align:center"><a class="iframeBox" href="<?php echo $this->webroot;?>resume/index/jp/?iframe=1&from=<?php echo $this->request->data['Report']['from']?>&to=<?php echo $this->request->data['Report']['to']?>&client=<?php echo $id;?>&role=<?php echo $this->request->data['Report']['role_id']?>&branch=<?php echo $this->request->data['Report']['branch_id']?>&emp=<?php echo $this->request->data['Report']['emp_id']?>" val="90_80">
-										<?php $jp_total += $JOIN_PENDING[$j];
-										echo $JOIN_PENDING[$j] ? $JOIN_PENDING[$j] : '0';?></a></td>
-									
-
-																																								
+										<?php 
+										endforeach; ?>																															
 														
 								</tr>
 								
 							<?php 
 							
-							
-							
-							$cv_sent_shortlist[] = round(($CV_SHORTLIST[$j]/$CV_SENT[$j]) * 100);							
-							$cv_sent_interview[] =  round(($PRILIMINARY_INTERVIEW_ATTEND[$j]/$CV_SENT[$j]) * 100); 							
-							$cv_sent_offer[] =  round((($OFFER_PENDING[$j]+$OFFER_ACCEPT[$j])/$CV_SENT[$j]) * 100);
-							$cv_sent_join[] =  round(($JOIN_ACCEPT[$j]/$CV_SENT[$j]) * 100); 
-							$cv_sent_billed[] =  round(($BILLED[$j]/$CV_SENT[$j]) * 100); 
-							$opening_work_billed[] =  round(($BILLED[$j]/$OPENING_WORKED[$j][0][0]['no_job']) * 100); 
-							
-							$j++;
-							
-						
 							
 							endforeach; ?>
 								
