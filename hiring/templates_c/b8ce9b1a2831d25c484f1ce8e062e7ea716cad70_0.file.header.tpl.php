@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-27 13:16:38
+/* Smarty version 3.1.29, created on 2018-07-16 14:27:48
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\include\header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3340de387b05_65335065',
+  'unifunc' => 'content_5b4c5e0c643022_27649376',
   'file_dependency' => 
   array (
     'b8ce9b1a2831d25c484f1ce8e062e7ea716cad70' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\include\\header.tpl',
-      1 => 1530078138,
+      1 => 1531731461,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5b3340de387b05_65335065 ($_smarty_tpl) {
+function content_5b4c5e0c643022_27649376 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -451,20 +451,24 @@ report/recruiter_wise_billing/">Recruiter Wise Billing</a></li>
 														<li><a href="#">Client Retention</a></li>
 
 													</ul>
-											</li>
+											</li-->
 											
-											
-											  <li class="dropdown">
+											<?php if ($_smarty_tpl->tpl_vars['module']->value['cv_rejection_analysis'] == '1' || $_smarty_tpl->tpl_vars['module']->value['position_rejection_analysis'] == '1') {?> 
+											  <li class="<?php echo $_smarty_tpl->tpl_vars['report_menu']->value;?>
+ dropdown">
 													<a href="#">Root Cause Analysis	 <b class="caret-right"></b></a>
 													<ul class="dropdown-menu">
-														<li><a href="#">CV Rejection Analysis</a></li>
-														<li><a href="#">Position Rejection Analysis
-</a></li>
+													<?php if ($_smarty_tpl->tpl_vars['module']->value['cv_rejection_analysis'] == '1') {?>
+														<li><a href="cv_rejection_analysis.php">CV Rejection Analysis</a></li>
+													<?php }?>
+													<?php if ($_smarty_tpl->tpl_vars['module']->value['position_rejection_analysis'] == '1') {?>
+														<li><a href="position_rejection_analysis.php">Position Rejection Analysis
+												    </a></li><?php }?>
 
 													</ul>
 											</li>
-											
-											  <li class="dropdown">
+											<?php }?>
+											  <!-- li class="dropdown">
 													<a href="#">Cash Flow Management	 <b class="caret-right"></b></a>
 													<ul class="dropdown-menu">
 														<li><a href="#">Collection Days
