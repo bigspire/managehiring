@@ -56,15 +56,21 @@ if($_SESSION['extraction'] == '' || $_POST['RESUME_DATA'] == ''){
 		
 		
 	// extract the candidate name
-	foreach($string as $name_key => $name){
-		$name = trim($name);
-		if($name != 'Name' && $name != 'Name:' && $name != 'vitae' && $name != 'CURRICULUM' && $name != 'Curriculum' && $name != 'Curriculam' && $name != 'Vitae' && $name != 'VITAE' && $name != 'RESUME' && $name != ''
-		&& $name != 'Mailing' && $name != 'Address' && $name != ':' && $name != '' && !is_numeric($name)){
+foreach($string as $name_key => $name){
+	$name = trim(strtolower($name));
+	if($name != 'name' && $name != 'name:' && $name != 'vitae' && $name != 'curriculam' && $name != 'curriculum' && $name != 'vitae' && $name != 'RESUME' && $name != ''
+		&& $name != 'mailing' && $name != 'address' 
+		&& $name != 'profile'
+		&& $name != 'snapshot'
+		&& $name != 'of'
+		&& $name != 'the'
+		&& $name != 'candidate'
+		&& $name != ':' && $name != '' && !is_numeric($name)){
 			break;
-		}else{
-			continue;
-		}
+	}else{
+		continue;
 	}
+}
 		
 	$smarty->assign('first_name', ucfirst(strtolower($string[$name_key])));
 	$smarty->assign('last_name', ucfirst(strtolower($string[$name_key+1])));

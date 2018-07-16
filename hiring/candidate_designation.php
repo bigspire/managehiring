@@ -131,7 +131,11 @@ try{
 		// function to print the excel header
       $excelObj->printHeader($header = array('Candidate Designation','Status','Created Date','Modified Date') ,$col = array('A','B','C','D'));  
 		// function to print the excel data
+<<<<<<< HEAD
 		$excelObj->printCell($data, $count,$col = array('A','B','C','D'), $field = array('designation','status','created_date','modified_date'),'Candidate Desig_'.$current_date);
+=======
+		$excelObj->printCell($data, $count,$col = array('A','B','C','D'), $field = array('designation','status','created_date','modified_date'),'Cand Desig_'.$current_date);
+>>>>>>> 757c4c71123f3371511f3e424bfa2dd4fe703137
 	}	
 	
 	// create,update,delete message validation

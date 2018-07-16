@@ -813,9 +813,180 @@ class ReportController extends AppController {
 	}
 	
 	
-	/* function to show employee productivity */
+	/* function to get the employee productivity status */
 	public function employee_productivity(){
+		// set the page title
+		$this->set('title_for_layout', 'Employee Productivity - Manage Hiring');	
+		$this->set('empList', $this->get_employee_details());	
+		$this->set('locList', $this->get_loc_details());
+		$client_data = $this->get_client_details();
+		$this->set('clientList', $client_data);
+		$this->get_role_details();
 		
+		// date filter when form submitted
+		if($this->request->data['Report']['from'] != '' || $this->request->data['Report']['to'] != ''){
+			$fin_start_year = $this->request->data['Report']['from'] ? $this->request->data['Report']['from'] : ''; // date('d/m/Y', strtotime('-15 month'));
+			$fin_end_year = $this->request->data['Report']['to'] ? $this->request->data['Report']['to'] :  date('d/m/Y', strtotime('+1 day'));
+			$fin_start_split = explode('/', $this->request->data['Report']['from']);
+			$fin_start_year_cal = $fin_start_split[1].'-'.$fin_start_split[0].'-01';
+			
+			$fin_end_split = explode('/', $this->request->data['Report']['to']);
+			$fin_end_year_cal = $fin_end_split[1].'-'.$fin_end_split[0].'-31';	
+
+			$this->set('FINSTART',$fin_start_year);
+			$this->set('FINEND',$fin_end_year);	
+		}else{
+			// get the financial year	
+			if(date('m') >= 3){
+				$fin_start_year = '04/'.date('Y');
+				$fin_end_year = '03/'.(date('Y') + 1);
+				// for calculation
+				$fin_start_year_cal = date('Y').'-04-01';
+				$fin_end_year_cal = (date('Y') + 1).'-03-31';
+				
+			}else{
+				$fin_start_year = '04/'.(date('Y') - 1);
+				$fin_end_year = '03/'.date('Y');
+				// for calculation
+				$fin_start_year_cal = (date('Y') - 1).'-04-01';
+				$fin_end_year_cal = date('Y').'-03-31';
+			}
+			$this->set('FINSTART',$fin_start_year);
+			$this->set('FINEND',$fin_end_year);
+		}
+		
+		
+		// search filters
+		if(!empty($this->request->data['Report']['from'])){
+			$this->set('fromDate', date('M, Y', strtotime($this->Functions->format_date_save_month($this->request->data['Report']['from']))));
+		}
+		if(!empty($this->request->data['Report']['to'])){
+			$this->set('toDate', date('M, Y', strtotime($this->Functions->format_date_save_month($this->request->data['Report']['to']))));
+		}
+		
+
+		// get client name
+		if(!empty($this->request->data['Report']['client_id'])){
+			$data = $this->Client->findById($this->request->data['Report']['client_id'], array('fields' => 'client_name'));
+			$this->set('clientName', $data['Client']['client_name']);
+			$client_cond = array('Client.id' => $this->request->data['Report']['client_id']);
+		}
+		
+		// get branch name
+		if(!empty($this->request->data['Report']['branch_id'])){
+			$this->loadModel('Location');
+			$data = $this->Location->findById($this->request->data['Report']['branch_id'], array('fields' => 'location'));
+			$this->set('locName', $data['Location']['location']);
+		}
+		// get role name
+		if(!empty($this->request->data['Report']['role_id'])){
+			$this->loadModel('Role');
+			$data = $this->Role->findById($this->request->data['Report']['role_id'], array('fields' => 'role_name'));
+			$this->set('roleName', $data['Role']['role_name']);
+		}
+		// get employee name
+		if(!empty($this->request->data['Report']['emp_id'])){
+			$this->loadModel('User');
+			$data = $this->User->findById($this->request->data['Report']['emp_id'], array('fields' => 'first_name','last_name'));
+			$this->set('empName', ucwords($data['User']['first_name'].' '.$data['User']['last_name']));
+			$emp_cond = array('TaskPlan.users_id' => $this->request->data['Report']['emp_id']);
+		}
+		
+		
+		$user_detail = $this->get_employee_details($this->request->data['Report']['emp_id']);
+		$this->set('userDetail', $user_detail);
+		
+		// for month lists
+		$j = 1;
+		while($j <= 12){
+			$month_detail[] = date('M,y', strtotime($fin_start_year_cal." +$j month"));
+			$j++;
+		}
+
+		// iterate the clients
+		
+		foreach($user_detail as $id => $user){
+			//if($id == '98'){
+				$i = 0;
+				while($i <= 12){
+					// month condition
+					$month_str = date('Y-m', strtotime($fin_start_year_cal." +$i month"));
+					$month_cond = array('Report.created_date like' => "$month_str%");
+					$month_cond2 = array('Position.created_date like' => "$month_str%");
+					
+					$month_val = date('M,y', strtotime($fin_start_year_cal." +$i month"));
+					
+					$this->loadModel('TaskPlan');		
+					// $date_cond = array('or' => array("DATE_FORMAT(TaskPlan.task_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
+					$date_cond = array('task_date like ' => "%$month_str%");
+					
+					$empCond = $emp_cond ? $emp_cond : array('TaskPlan.users_id' => $id);
+
+							
+					$task_plan_data = $this->TaskPlan->find('all', array('fields' => array('task_date','ctc','session','requirements_id'),
+					'conditions' => array($empCond, $date_cond, 'TaskPlan.is_deleted' => 'N'), 
+					'group' => array('TaskPlan.id'), 'order' => array('TaskPlan.task_date' => 'desc')));
+					
+					
+					// get the no. of resumes sent for that day  for that position ctc
+					foreach($task_plan_data as $task_data){
+					
+						$no_resume = $this->Report->get_resumes_ctc($task_data['TaskPlan']['ctc']);
+						$resume_count = $task_data['TaskPlan']['session'] == 'D' ? $no_resume  : round($no_resume/2, 0);
+						$work_days += $task_data['TaskPlan']['session'] == 'D' ? 1 : 0.5;
+						// get the actual resume uploaded				
+						$this->loadModel('ReqResume');
+								
+						$options = array(
+							array('table' => 'req_resume_status',
+								'alias' => 'ReqResumeStatus',					
+								'type' => 'LEFT',
+								'conditions' => array('`ReqResumeStatus`.`req_resume_id` = `ReqResume`.`id`')
+							)
+						);
+						
+						$resume_sent_count = $this->ReqResume->find('count', array('conditions' => array('ReqResume.requirements_id' => $task_data['TaskPlan']['requirements_id'],
+						"date_format(Resume.created_date, '%Y-%m-%d')" => $task_data['TaskPlan']['task_date'], 
+						'Resume.is_deleted' => 'N', 'ReqResumeStatus.stage_title' => 'Shortlist',
+						'ReqResumeStatus.status_title' => 'CV-Sent'), 	'group' => array('ReqResume.id'), 'joins' => $options));
+						$productivity += round(($resume_sent_count / $resume_count) * 100, 1);
+											
+						}
+						
+						$prod_ar[$id][$month_val][] = round(($productivity/$work_days));
+						
+						$productivity = '';
+						$work_days = '';
+						$i++;
+					}
+				//}		
+			}
+		
+		
+		$this->set('monthDetail', $month_detail);
+		// assign all the counts
+		$this->set('EMP_PRODUCTIVITY', $prod_ar);
+
+		// for export
+		if($this->request->query['action'] == 'export'){			
+			$this->Excel->generate_report('month_wise_cv_status_report', $client_detail, $opening_worked,
+			$cv_sent_count,$cv_shortlist_count,$cv_reject_count,$feedback_await_count,$interview_await_count,
+			$prili_interview_count,$final_interview_count,$offer_pending_count,$offer_accept_count,$offer_reject_count,
+			$join_pending_count,$join_accept_count,$join_reject_count,$join_defer_count,
+			$not_billed_count,$billed_count,'client wise cv status', 'client wise cv status');
+		}
+		
+	
+		// for pdf generation
+		if($this->request->query['action'] == 'pdf'){
+			$pdf_file = 'month_wise_cv_status_'.date('y-m-d');
+			
+			include('vendor/dompdf_0-8-2/pdf.php');
+		}
+					
+
+		$count_client = count($client_data);
+		$this->set('chart_height', $count_client < 10 ? '500' :  $count_client*50);
 		
 	}
 
