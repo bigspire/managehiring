@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-16 13:52:58
+/* Smarty version 3.1.29, created on 2018-07-17 14:34:02
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\include\sidebar.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b4c55e262fc70_22891597',
+  'unifunc' => 'content_5b4db1023ad960_38688104',
   'file_dependency' => 
   array (
     'dd9c72a12f362e7156b8a8bf21e17cfb1df8ccbe' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\include\\sidebar.tpl',
-      1 => 1530078138,
+      1 => 1531818240,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5b4c55e262fc70_22891597 ($_smarty_tpl) {
+function content_5b4db1023ad960_38688104 ($_smarty_tpl) {
 ?>
 
 <style>
@@ -215,8 +215,10 @@ background:#f2f2f2
 										<div class="accordion-body collapse" id="collapse9">
 											<div class="accordion-inner">
 												<ul class="nav nav-list">
-													<li><a href="javascript:void(0)">CV Rejection Analysis</a></li>
-													<li><a href="javascript:void(0)">Position Rejection Analysis</a></li>
+													<li  class="<?php echo $_smarty_tpl->tpl_vars['rie']->value;?>
+"><a href="javascript:void(0)">CV Rejection Analysis</a></li>
+													<li  class="<?php echo $_smarty_tpl->tpl_vars['cie']->value;?>
+"><a href="javascript:void(0)">Position Rejection Analysis</a></li>
 												</ul>
 												
 											</div>

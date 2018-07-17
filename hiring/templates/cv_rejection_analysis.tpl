@@ -139,27 +139,27 @@ ul.statusLegend li{width:200px;}
 								<tr>
 										<th width="">Total CVs Sent </th>
 										{foreach from=$data item=item key=key}
-										<td style="text-align:center"></td>
+										<td style="text-align:center">{$item.total_cv_sent}</td>
 										{/foreach}	
 									
 								</tr>	
 								<tr>
 										<th width="">CVs Billed </th>
 										{foreach from=$data item=item key=key}
-										<td style="text-align:center"></td>
+										<td style="text-align:center">{$item.total_billed}</td>
 									{/foreach}	
 								
 								</tr>
 								<tr>
 										<th width="">CVs Still Active </th>
 										{foreach from=$data item=item key=key}
-										<td style="text-align:center"></td>
+										<td style="text-align:center">{$item.cv_active}</td>
 									{/foreach}	
 								</tr>
 								<tr>
 										<th width="">CVs Rejected / Gone Inactive </th>
 										{foreach from=$data item=item key=key}
-										<td style="text-align:center"></td>
+										<td style="text-align:center">{$item.cv_rejected}</td>
 									{/foreach}	
 								</tr>
 								

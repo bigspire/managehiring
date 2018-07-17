@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-16 16:56:42
+/* Smarty version 3.1.29, created on 2018-07-17 16:07:06
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\cv_rejection_analysis.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b4c80f2936308_49391620',
+  'unifunc' => 'content_5b4dc6d20154b7_39371830',
   'file_dependency' => 
   array (
     '8920a856c820cedbcdd7800c10883e7d8c60d3d0' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\cv_rejection_analysis.tpl',
-      1 => 1531740390,
+      1 => 1531823820,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b4c80f2936308_49391620 ($_smarty_tpl) {
+function content_5b4dc6d20154b7_39371830 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -218,7 +218,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_1_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
-										<td style="text-align:center"></td>
+										<td style="text-align:center"><?php echo $_smarty_tpl->tpl_vars['item']->value['total_cv_sent'];?>
+</td>
 										<?php
 $_smarty_tpl->tpl_vars['item'] = $__foreach_item_1_saved_local_item;
 }
@@ -247,7 +248,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_2_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
-										<td style="text-align:center"></td>
+										<td style="text-align:center"><?php echo $_smarty_tpl->tpl_vars['item']->value['total_billed'];?>
+</td>
 									<?php
 $_smarty_tpl->tpl_vars['item'] = $__foreach_item_2_saved_local_item;
 }
@@ -276,7 +278,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_3_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
-										<td style="text-align:center"></td>
+										<td style="text-align:center"><?php echo $_smarty_tpl->tpl_vars['item']->value['cv_active'];?>
+</td>
 									<?php
 $_smarty_tpl->tpl_vars['item'] = $__foreach_item_3_saved_local_item;
 }
@@ -304,7 +307,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 $__foreach_item_4_saved_local_item = $_smarty_tpl->tpl_vars['item'];
 ?>
-										<td style="text-align:center"></td>
+										<td style="text-align:center"><?php echo $_smarty_tpl->tpl_vars['item']->value['cv_rejected'];?>
+</td>
 									<?php
 $_smarty_tpl->tpl_vars['item'] = $__foreach_item_4_saved_local_item;
 }

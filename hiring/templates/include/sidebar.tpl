@@ -189,8 +189,8 @@ background:#f2f2f2
 										<div class="accordion-body collapse" id="collapse9">
 											<div class="accordion-inner">
 												<ul class="nav nav-list">
-													<li><a href="javascript:void(0)">CV Rejection Analysis</a></li>
-													<li><a href="javascript:void(0)">Position Rejection Analysis</a></li>
+													<li  class="{$rie}"><a href="javascript:void(0)">CV Rejection Analysis</a></li>
+													<li  class="{$cie}"><a href="javascript:void(0)">Position Rejection Analysis</a></li>
 												</ul>
 												
 											</div>

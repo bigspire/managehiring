@@ -113,6 +113,7 @@ try{
 $mysql->close_connection();
 
 $smarty->assign('client_id',$_POST['client_id']);
+$smarty->assign('rie','Active');
 // assign page title
 $smarty->assign('page_title' , 'CV Rejection Analysis - Manage Hiring');  
 // assigning active class status to smarty menu.tpl
