@@ -109,7 +109,7 @@
 									<tr>
 										<th width="170"><?php echo $this->Paginator->sort('client_name', 'Client Name', array('escape' => false, 'direction' => 'desc', 'rel' => 'tooltip', 'title' => 'Sort by Ascending or Descending'));?></th>
 										<th width="90"><?php echo $this->Paginator->sort('city', 'City', array('escape' => false, 'direction' => 'desc', 'rel' => 'tooltip', 'title' => 'Sort by Ascending or Descending'));?></th>
-										<th width="90"><?php echo $this->Paginator->sort('ResLocation.location', 'District', array('escape' => false, 'direction' => 'desc', 'rel' => 'tooltip', 'title' => 'Sort by Ascending or Descending'));?></th>
+										<th width="90"><?php echo $this->Paginator->sort('ContactBranch.branch', 'District', array('escape' => false, 'direction' => 'desc', 'rel' => 'tooltip', 'title' => 'Sort by Ascending or Descending'));?></th>
 										<?php if($this->request->params['pass'][0] != 'pending'):?>
 										<th style="text-align:center" width="70"><?php echo $this->Paginator->sort('no_pos', 'Positions', array('escape' => false, 'direction' => 'desc', 'rel' => 'tooltip', 'title' => 'Sort by Ascending or Descending'));?></th>
 										<?php endif; ?>
@@ -141,7 +141,7 @@
 										
 										</td>
 										<td><?php echo ucfirst($client['Client']['city']);?></td>
-										<td><?php echo ucfirst($client['ResLocation']['location']);?></td>
+										<td><?php echo ucfirst($client['ContactBranch']['branch']);?></td>
 										
 										<?php if($this->request->params['pass'][0] != 'pending'):?>
 										<td style="text-align:center"><a rel="tooltip" title="Click to view the Requirements"  href="<?php echo $this->webroot;?>position/?client_id=<?php echo $client['Client']['id'];?>"><?php echo $client[0]['no_pos'];?></a></td>

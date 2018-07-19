@@ -9,7 +9,7 @@ if(!empty($results)):
 	foreach($results as $data):
 	
 		$result[] = $this->Functions->match_results($keyword,$data['Client']['client_name']);
-		$result[] = $this->Functions->match_results($keyword,$data['ResLocation']['location']);
+		$result[] = $this->Functions->match_results($keyword,$data['ContactBranch']['branch']);
 		
 	endforeach;
 	

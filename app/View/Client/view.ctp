@@ -132,7 +132,7 @@
 										<tr>
 										
 										<td width="" class="tbl_column">District</td>
-										<td><?php echo $client_data['ResLocation']['location'];?></td>
+										<td><?php echo $client_data['ContactBranch']['branch'];?></td>
 											
 									</tr>
 										<tr>

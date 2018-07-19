@@ -32,8 +32,8 @@ class Client extends AppModel {
             'className'  => 'User',
 			'foreignKey' => 'created_by'			
         ),
-		'ResLocation' => array(
-            'className'  => 'ResLocation',
+		'ContactBranch' => array(
+            'className'  => 'ContactBranch',
 			'foreignKey' => 'res_location_id'			
         )		
 	);	
@@ -149,7 +149,7 @@ class Client extends AppModel {
 	
 	/* function to load locations */
 	public function load_district_post($id){
-		$loc_list = $this->ResLocation->find('list', array('fields' => array('id','location'), 'order' => array('location ASC'),
+		$loc_list = $this->ContactBranch->find('list', array('fields' => array('id','branch'), 'order' => array('branch ASC'),
 		'conditions' => array('status' => '1',	'state_id' => $id)));
 		return $loc_list;
 	}
@@ -160,8 +160,8 @@ class Client extends AppModel {
 	
 	/* function to load the districts options */
 	public function load_district($id){
-		$loc_list = $this->ResLocation->find('list', array('fields' => array('id','location'),
-		'order' => array('location ASC'),'conditions' => array('status' => '1', 'is_deleted' => 'N',
+		$loc_list = $this->ContactBranch->find('list', array('fields' => array('id','branch'),
+		'order' => array('branch ASC'),'conditions' => array('status' => '1', 'is_deleted' => 'N',
 		'state_id' => $id)));
 		$options .= "<option value=''>Choose District</option>";
 		foreach($loc_list as $key => $option){ 

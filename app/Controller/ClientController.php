@@ -64,7 +64,7 @@ class ClientController extends AppController {
 			
 		// set keyword condition
 		if($this->params->query['keyword'] != ''){
-			$keyCond = array("MATCH (ResLocation.location,client_name,Creator.first_name,CON.first_name,
+			$keyCond = array("MATCH (ContactBranch.branch,client_name,Creator.first_name,CON.first_name,
 			CAH.first_name) AGAINST ('".$this->Functions->format_search_keyword($this->params->query['keyword'])."' IN BOOLEAN MODE)"); 
 		}
 		// for employee condition
@@ -252,7 +252,7 @@ class ClientController extends AppController {
 		// set the page title
 		$view_title = $this->Functions->get_view_type($this->request->params['pass'][0]);
 		$this->set('title_for_layout', $view_title.' Clients - Manage Hiring');	
-		$fields = array('id','client_name','ResLocation.location','created_date',
+		$fields = array('id','client_name','ContactBranch.branch','created_date',
 		'Creator.first_name','status',"group_concat(distinct CAH.first_name separator ', ') account_holder", 'city',
 		'count(distinct Position.id) no_pos','count(distinct CON.id) no_contact', 'modified_date', 'Client.created_by','Client.is_approve',
 		"max(ClientStatus.id) st_id","max(ClientStatus.users_id) st_user_id", 'ClientStatus.status',
@@ -406,7 +406,7 @@ class ClientController extends AppController {
 						array('table' => 'state',
 								'alias' => 'State',					
 								'type' => 'LEFT',
-								'conditions' => array('`State`.`id` = `ResLocation`.`state_id`')
+								'conditions' => array('`State`.`id` = `ContactBranch`.`state_id`')
 						)
 					);
 					$data = $this->Client->find('all', array('fields' => array('Client.id','client_name','phone','address','door_no',
@@ -842,7 +842,7 @@ class ClientController extends AppController {
 				array('table' => 'state',
 					  'alias' => 'State',					
 					  'type' => 'LEFT',
-					  'conditions' => array('`State`.`id` = `ResLocation`.`state_id`')
+					  'conditions' => array('`State`.`id` = `ContactBranch`.`state_id`')
 				),
 				array('table' => 'users',
 					  'alias' => 'Modifier',					
@@ -855,7 +855,7 @@ class ClientController extends AppController {
 						'conditions' => array('`ClientStatus`.`clients_id` = `Client`.`id`')
 				),
 			);
-			$fields = array('id','client_name','phone','ResLocation.location','address','created_date','Creator.first_name','Creator.last_name',
+			$fields = array('id','client_name','phone','ContactBranch.branch','address','created_date','Creator.first_name','Creator.last_name',
 			'address','status','door_no','street_name','area_name','city','modified_date','pincode','State.state',
 			'Modifier.first_name','is_approve','Client.created_by','Modifier.last_name', 'ClientStatus.status','remarks','is_inactive');
 			$data = $this->Client->find('all', array('fields' => $fields,'conditions' => array('Client.id' => $id),
@@ -1032,9 +1032,9 @@ class ClientController extends AppController {
 			// execute only when the search keywork has value		
 			$this->set('keyword', $q);			
 			$this->Client->unBindModel(array('belongsTo' => array('Creator')));
-			$data = $this->Client->find('all', array('fields' => array('Client.client_name','ResLocation.location'),
-			'group' => array('Client.client_name','ResLocation.location'), 'conditions' => 	array("OR" => array ('Client.client_name like' => '%'.$q.'%',
-			'ResLocation.location like' => '%'.$q.'%'), 'AND' => array('Client.is_deleted' => 'N', $approve_cond))));		
+			$data = $this->Client->find('all', array('fields' => array('Client.client_name','ContactBranch.branch'),
+			'group' => array('Client.client_name','ContactBranch.branch'), 'conditions' => 	array("OR" => array ('Client.client_name like' => '%'.$q.'%',
+			'ContactBranch.branch like' => '%'.$q.'%'), 'AND' => array('Client.is_deleted' => 'N', $approve_cond))));		
 			$this->set('results', $data);
 		}
     }

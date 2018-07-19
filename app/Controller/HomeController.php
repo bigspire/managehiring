@@ -446,7 +446,7 @@ class HomeController  extends AppController {
 		}
 		
 		$date_cond = array('or' => array("DATE_FORMAT(Client.created_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
-		$fields = array('id','client_name','ResLocation.location','created_date','Creator.first_name',
+		$fields = array('id','client_name','ContactBranch.branch','created_date','Creator.first_name',
 		"count(distinct Position.id) req_count");
 		$conditions = array('fields' => $fields,'limit' => '10','conditions' => array($keyCond,$date_cond,$client_emp_cond, 
 		'Client.is_approve' => 'A'),

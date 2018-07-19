@@ -2347,6 +2347,8 @@ class PositionController extends AppController {
 			$this->set('stageList', $stage_list);
 		}		
 		
+		
+		
 		$req_res_ids[] = $req_res_id;
 		$chk_resume_id_ar[] = $id;
 			
@@ -2369,6 +2371,7 @@ class PositionController extends AppController {
 				}
 			}
 		}
+		
 		
 		
 		// for reschedule
@@ -2415,6 +2418,8 @@ class PositionController extends AppController {
 			
 			
 			// get the candidate names
+			
+			/*
 			$options = array(			
 				array('table' => 'resume',
 						'alias' => 'Resume',					
@@ -2423,11 +2428,21 @@ class PositionController extends AppController {
 				)						
 			);
 			
-			$fields = array('Resume.first_name','Resume.last_name', 'Resume.mobile');
+			*/
+			
+			$fields = array();
+			
+			$this->loadModel('Resume');
+			foreach($chk_resume_id_ar as $req_parse_id){
+				if($req_parse_id != 'multi_select'){
+					$cand_data[] = $this->Resume->findById($req_parse_id, array('fields' => 'Resume.first_name','Resume.last_name', 'Resume.mobile'));
+				}
+			}
 			
 			
-			$cand_data = $this->Position->find('all', array('fields' => $fields,'conditions' => array('Resume.id' => $chk_resume_id_ar),
-			'group' => array('Resume.id'),'joins' => $options));	
+			
+			
+			
 			
 			
 			// iterate the candidate interview table
@@ -2564,7 +2579,7 @@ class PositionController extends AppController {
 				// $int_table_form .= '[interview_mode]';
 				
 				$int_table_form .= "<td  width='180'>";				
-				$int_table_form .= "<input type='text' class='required datetimepick input-medium' name='data[Position][candidate_int_date_$key]' id='candidate_int_date_$key'/>";
+				$int_table_form .= "<input type='text' class='required datetimepick input-medium' name='data[Position][candidate_int_date_$key]' id='candidate_int_date_$key' autocomplete='off'/>";
 				//$int_table_form .= "<input type='text' style='margin-left:15px;' class='required datetimepick input-small' name='data[Position][candidate_int_time_$key]' id='candidate_int_time_$key'/>";
 				//$int_table_form .= '[interview_date]'. ', [interview_time]';
 				$int_table_form .= "</td>";
