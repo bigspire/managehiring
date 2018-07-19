@@ -384,20 +384,23 @@
 														<li><a href="#">Client Retention</a></li>
 
 													</ul>
-											</li>
+											</li-->
 											
-											
-											  <li class="dropdown">
+											{if $module['cv_rejection_analysis'] eq '1' || $module['position_rejection_analysis'] eq '1'} 
+											  <li class="{$report_menu} dropdown">
 													<a href="#">Root Cause Analysis	 <b class="caret-right"></b></a>
 													<ul class="dropdown-menu">
-														<li><a href="#">CV Rejection Analysis</a></li>
-														<li><a href="#">Position Rejection Analysis
-</a></li>
+													{if $module['cv_rejection_analysis'] eq '1'}
+														<li><a href="cv_rejection_analysis.php">CV Rejection Analysis</a></li>
+													{/if}
+													{if $module['position_rejection_analysis'] eq '1'}
+														<li><a href="position_rejection_analysis.php">Position Rejection Analysis
+												    </a></li>{/if}
 
 													</ul>
 											</li>
-											
-											  <li class="dropdown">
+											{/if}
+											  <!-- li class="dropdown">
 													<a href="#">Cash Flow Management	 <b class="caret-right"></b></a>
 													<ul class="dropdown-menu">
 														<li><a href="#">Collection Days
