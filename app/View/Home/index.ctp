@@ -491,7 +491,7 @@
 								<?php foreach($client_data as $data):?>
 									<tr>
 										<td ><a   href="<?php echo $this->webroot;?>client/view/<?php echo $data['Client']['id'];?>"><?php echo $data['Client']['client_name'];?></a></td>
-										<td ><?php echo $data['ResLocation']['location'];?></td>
+										<td ><?php echo $data['ContactBranch']['branch'];?></td>
 										<td><?php echo $data['Creator']['first_name'];?></td>
 										<td><?php echo $this->Functions->format_date($data['Client']['created_date']);?></td>
 										<td  width="100" style="text-align:center"><a   href="<?php echo $this->webroot;?>position/?client_id=<?php echo $data['Client']['id'];?>&srch_status=1"><?php echo $data[0]['req_count'];?></a></td>										
