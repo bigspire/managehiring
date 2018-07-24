@@ -386,8 +386,11 @@ if($_POST['hdnSubmit'] == 1){
 			$course_type = $fun->get_course_type($grade_typeData);
 			$gradeStr = $gradeData > 10 ? $gradeData.'%' : $gradeData;
 			// for snapshot printing
-			$snap_edu .= $collegeData.', '.$degreeStr.', '.$specStr.', '.$year_of_passData.', '.$gradeStr.'<br>';
-			
+			if($specStr == 'N/A'){
+				$snap_edu .= $collegeData.', '.$degreeStr.', '.$year_of_passData.', '.$gradeStr.'<br>';
+			}else{
+				$snap_edu .= $collegeData.', '.$degreeStr.', '.$specStr.', '.$year_of_passData.', '.$gradeStr.'<br>';
+			}
 			// query to add education details
 			$query = "CALL add_res_education('".$fun->is_white_space($mysql->real_escape_str($gradeData))."',
 				'".$mysql->real_escape_str($year_of_passData)."','".$fun->is_white_space($mysql->real_escape_str($collegeData))."',
@@ -993,8 +996,13 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			$course_type = $fun->get_course_type($grade_typeData);
 			$gradeStr = $gradeData > 10 ? $gradeData.'%' : $gradeData;
 			// for snapshot printing
-			$snap_edu .= $collegeData.', '.$degreeStr.', '.$specStr.', '.$year_of_passData.', '.$gradeStr.'<br>';
-			
+			// $snap_edu .= $collegeData.', '.$degreeStr.', '.$specStr.', '.$year_of_passData.', '.$gradeStr.'<br>';
+			// for snapshot printing
+			if($specStr == 'N/A'){
+				$snap_edu .= $collegeData.', '.$degreeStr.', '.$year_of_passData.', '.$gradeStr.'<br>';
+			}else{
+				$snap_edu .= $collegeData.', '.$degreeStr.', '.$specStr.', '.$year_of_passData.', '.$gradeStr.'<br>';
+			}
 			// query to add education details
 			$query = "CALL add_res_education('".$fun->is_white_space($mysql->real_escape_str($gradeData))."',
 				'".$mysql->real_escape_str($year_of_passData)."','".$fun->is_white_space($mysql->real_escape_str($collegeData))."',
