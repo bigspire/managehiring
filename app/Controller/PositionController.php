@@ -355,7 +355,8 @@ class PositionController extends AppController {
 		if($client_id){
 			$this->get_contact_list($client_id);
 		}
-		if ($this->request->is('post')){
+		if ($this->request->is('post')){ 		
+	
 			// validates the form
 			$this->request->data['Position']['created_by'] = $this->Session->read('USER.Login.id');
 		    $this->request->data['Position']['created_date'] = $this->Functions->get_current_date();
@@ -795,13 +796,15 @@ class PositionController extends AppController {
 		$req_no = $this->request->data['Position']['team_id'];
 		$split_req = explode(',', $req_no);
 		foreach($split_req as $req){ 
+			if($req != ','){
 			$new_split_req = explode('-', $req);
 			$no_job += $new_split_req[1];
-			if($new_split_req[0] != ''){
-				$member_id[] = $new_split_req[0];
-				$this->ReqTeam->create();
-				$data = array('created_by' => $this->Session->read('USER.Login.id'),'requirements_id' => $id, 'users_id' => $new_split_req[0], 'no_req' => $new_split_req[1], 'is_approve' => 'W');
-				$this->ReqTeam->save($data, true, $fieldList = array('requirements_id','created_by','users_id','no_req','is_approve'));
+				if($new_split_req[0] != ''){
+					$member_id[] = $new_split_req[0];
+					$this->ReqTeam->create();					
+					$data = array('created_by' => $this->Session->read('USER.Login.id'),'requirements_id' => $id, 'users_id' => $new_split_req[0], 'no_req' => $new_split_req[1], 'is_approve' => 'W');
+					$this->ReqTeam->save($data, true, $fieldList = array('requirements_id','created_by','users_id','no_req','is_approve'));
+				}
 			}
 		}
 		$this->Position->id = $id;
@@ -1038,10 +1041,13 @@ class PositionController extends AppController {
 			//'count(DISTINCT  ReqResume.id) cv_sent','req_status_id',
 			//'group_concat(ReqResume.status_title) joined',
 			'start_date', 'end_date', //"group_concat(distinct ResOwner.first_name  SEPARATOR ', ') team_member",
-			"group_concat(distinct AH.first_name  SEPARATOR ', ') ac_holder","group_concat(distinct concat(TeamMember.first_name,' ',TeamMember.last_name)) team_member2",
+			"group_concat(distinct AH.first_name  SEPARATOR ', ') ac_holder","group_concat(concat(TeamMember.first_name,' ',TeamMember.last_name)) team_member2",
 			'skills','Contact.first_name','Contact.email','Contact.mobile','Contact.phone','Contact.id','FunctionArea.function',
 			'Position.created_by','Position.is_approve','tech_skill','behav_skill','job_desc_file','hide_contact','resume_type',
-			'ReqStatus.id','Position.plain_jd','group_concat(ReqTeam.no_req) team_req','group_concat(distinct ReqTeam.users_id) team_mem_id',
+			'ReqStatus.id','Position.plain_jd',
+			'group_concat(ReqTeam.id) team_ids',
+			'group_concat(ReqTeam.no_req) team_req',
+			'group_concat(ReqTeam.users_id) team_mem_id',
 			'group_concat(distinct CAH.users_id) ac_holder_id','ctc_from_type','ctc_to_type',
 			"group_concat(CONCAT(ReqTeam.users_id, ':', ReqTeam.is_approve) SEPARATOR '|' ) mem_approve",
 			'Position.status','count(distinct ReqRevision.id) as no_revision', 'Position.remarks', 'group_concat(ReqRevision.created_date) revision_history','is_rpo',
@@ -1661,8 +1667,7 @@ class PositionController extends AppController {
 				
 				// get resume education details
 				$this->loadModel('ResEdu');
-				$edu_data = $this->ResEdu->find('all', array('conditions' => array('resume_id' => $res_id), 'fields' => array('percent_mark','year_passing','college',
-				'course_type','university','location','ResDegree.degree','ResSpec.spec'), 'order' => array('ResEdu.id' => 'desc')));
+				$edu_data = $this->ResEdu->find('all', array('conditions' => array('resume_id' => $res_id), 'fields' => array('percent_mark','year_passing','college',	'course_type','university','location','ResDegree.degree','ResSpec.spec'), 'order' => array('ResEdu.is_recent' => 'desc')));
 				// get resume experience details
 				$options = array(			
 					array('table' => 'resume',
@@ -1673,8 +1678,10 @@ class PositionController extends AppController {
 					)
 				);
 				$this->loadModel('ResExp');
-				$exp_data = $this->ResExp->find('all', array('conditions' => array('Resume.id' => $candidate_arr ? $candidate_arr : $res_id), 'fields' => array('experience','work_location','skills',
-				'company','other_info','Designation.designation','Resume.first_name','Resume.last_name'),  'joins' => $options));
+				$exp_data = $this->ResExp->find('all', array('conditions' => array('Resume.id' => $candidate_arr ? $candidate_arr : $res_id,
+				'ResExp.is_recent' => '1'), 'fields' => array('experience','work_location','skills',
+				'company','other_info','Designation.designation','Resume.first_name','Resume.last_name'), 
+				'order' => array('ResExp.is_recent' => 'desc'), 'joins' => $options));
 				// iterate the experience details
 				$exp_table .= "<table  width='90%' border='0' cellspacing='2' cellpadding='5' style='border:1px solid #ededed; font:bold 13px Arial'>";
 				$exp_table .= "<tr><td>S. No.</td><td>Candidate Name</td><td>Present Designation</td><td>Present Company</td></tr>";

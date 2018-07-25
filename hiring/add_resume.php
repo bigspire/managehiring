@@ -34,16 +34,24 @@ if($_SESSION['extraction'] == '' || $_POST['RESUME_DATA'] == ''){
 }
 // extract the mobile
 $string = preg_replace("#[^\d{12}\s]#",'',$resume_data);
-preg_match_all("#(\d{12}|\d{11}|\d{10})#", $string, $found);	
+preg_match_all("#(\d{12}|\d{11}|\d{10})#", $string, $found);
+	
 foreach($found as $key => $phone_number) {
 	  if(strlen($phone_number[$key]) >= 10){ 
 		$mobile = $phone_number[$key];
 		break;
 	  };
-	  // save for hiding contacts
-	  $phone_nos = $phone_number;
+	  
 }
-	
+
+// save for hiding contacts
+foreach($found as $key => $phone_number) {
+	  if(strlen($phone_number[$key]) >= 10){ 
+		$phone_nos[] = $phone_number[$key];
+	  }	  
+}
+
+
 // extract the email
 $string = preg_split("/[\s,]+/", $resume_data);
 foreach($string as $mail){
