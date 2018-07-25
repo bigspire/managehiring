@@ -536,13 +536,13 @@ class ResumeController extends AppController {
 		// get resume education details
 		$this->loadModel('ResEdu');
 		$data = $this->ResEdu->find('all', array('conditions' => array('resume_id' => $id), 'fields' => array('percent_mark','year_passing','college',
-		'course_type','university','location','ResDegree.degree','ResSpec.spec'), 'order' => array('ResEdu.id' => 'desc')));
+		'course_type','university','location','ResDegree.degree','ResSpec.spec'), 'order' => array('ResEdu.year_passing' => 'desc')));
 		$this->set('edu_data', $data);	
 		// get resume experience details
 		$this->loadModel('ResExp');
 		$data = $this->ResExp->find('all', array('conditions' => array('resume_id' => $id), 'fields' => array('experience','work_location','skills',
 		'company','other_info','Designation.designation','from_month','from_year','to_month','to_year','company_profile',
-		'key_achieve','key_resp','reporting'), 'order' => array('ResExp.id' => 'desc')));
+		'key_achieve','key_resp','reporting'), 'order' => array('ResExp.to_year' => 'desc','ResExp.to_month' => 'desc')));
 		$this->set('exp_data', $data);
 		// get resume experience details
 		$this->loadModel('ResTraining');

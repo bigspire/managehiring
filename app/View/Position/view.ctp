@@ -240,6 +240,8 @@
 						$team_mem_id = explode(',', $position_data[0]['team_mem_id']);			
 						$mem_apr = explode('|', $position_data[0]['mem_approve']);
 						
+						$team_ids = explode(',', $position_data[0]['team_ids']);
+						
 						$mem_count = count($mem_apr);
 						$k = 0;
 						while($k <= $mem_count){
@@ -252,14 +254,17 @@
 						}
 						
 						// print_r($mem_apr);
+						
 						foreach($team_member as $key => $member): 
+																		
+						if(!in_array($team_ids[$key], $team_user)):
 						
+						$team_user[] = $team_ids[$key];
+																		
 						$chk = $this->request->params['pass'][2] == 'pending'  ? 'W' : 'A';
-						
-					//	print_r($mem_apr);
-						//if($mem_apr[$key] == $chk):
-						
+					
 						$mem_req = $team_req[$key] ? $team_req[$key] : $no_req; ?>
+					
 					<?php 
 					if($stmemberID == $team_mem_id[$key]):
 					$style = 'font-weight:bold;';
@@ -280,8 +285,9 @@
 					
 					<span style="<?php echo $style;?>"><?php echo $approval_str;?></span>  
 					<div>
-						
-			<?php //endif;?>
+				
+				
+			<?php   endif;?>
 				
 				<?php endforeach;?>
 										
