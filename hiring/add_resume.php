@@ -366,7 +366,7 @@ if($_POST['hdnSubmit'] == 1){
 			$expStr = date('M',strtotime('2018-'.$fromMon.'-01')).' '.$from_year_expData.' to '.date('M',strtotime('2018-'.$toMon.'-01')).' '.$to_year_expData;
 			
 			
-			$locationDataCase = ucwords($locationData);
+			// $locationDataCase = ucwords($locationData);
 			// get the designation details
 			$query = "call get_designation_id('".$mysql->real_escape_str($desigData)."')";
 			if(!$result = $mysql->execute_query($query)){
@@ -1008,7 +1008,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			
 			// $expStr = $fun->display_months($from_month_expData).' '.$from_year_expData.' to '.$fun->display_months($to_month_expData).' '.$to_year_expData;
 			
-			$locationDataCase = ucwords($locationData);
+			
 			// get the designation details
 			$query = "call get_designation_id('".$mysql->real_escape_str($desigData)."')";
 			if(!$result = $mysql->execute_query($query)){
@@ -1238,7 +1238,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 				unlink($template_path);				
 			}
 			
-			
+			$locationDataCase = ucwords($_POST['present_location']);
 			// query to get resume api details
 			$query = "CALL get_resume_api()";
 			try{

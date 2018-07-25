@@ -469,7 +469,7 @@ if($_POST['hdnSubmit'] == 1){
 			$toMon = $to_month_expData < 10 ? '0'.$to_month_expData : $to_month_expData;
 			$expStr = date('M',strtotime('2018-'.$fromMon.'-01')).' '.$from_year_expData.' to '.date('M',strtotime('2018-'.$toMon.'-01')).' '.$to_year_expData;
 			
-			$locationDataCase = ucwords($locationData);
+			// $locationDataCase = ucwords($locationData);
 			
 			// get the designation details
 			$query = "call get_designation_id('".$mysql->real_escape_str($desigData)."')";
@@ -1084,7 +1084,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			// $expStr = date('M',$from_month_expData).' '.$from_year_expData.' to '.date('M',$to_month_expData).' '.$to_year_expData;
 			//$expStr = $fun->display_months($from_month_expData).' '.$from_year_expData.' to '.$fun->display_months($to_month_expData).' '.$to_year_expData;
 			
-			$locationDataCase = ucwords($locationData);
+			// $locationDataCase = ucwords($locationData);
 			
 			// get the designation details
 			$query = "call get_designation_id('".$mysql->real_escape_str($desigData)."')";
@@ -1183,7 +1183,11 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			$mysql->clear_result($result);
 			
 			// call the next result
-			$mysql->next_query();	
+			$mysql->next_query();
+
+			// get current location of work
+			$locationDataCase = ucwords($_POST['present_location']);
+			
 			$_SESSION['extraction'] = '';
 			// create snapshot pdf
 			include_once('snapshot.php');
@@ -1219,8 +1223,6 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 				echo 'Caught exception: ',  $e->getMessage(), "\n";
 			}
 			
-					
-
 			
 			// convert the resume doc. into pdf
 			require_once('vendor/ilovepdf-php-1.1.5/init.php');			
