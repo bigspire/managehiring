@@ -991,12 +991,14 @@ class PositionController extends AppController {
 				array('table' => 'client_contact',
 						'alias' => 'PositionContact',					
 						'type' => 'LEFT',
-						'conditions' => array('`PositionContact.clients_id` = `Client`.`id`')
+						'conditions' => array('`PositionContact.clients_id` = `Client`.`id`',
+						'`PositionContact.contact_id` = `Position`.`client_contact_id`')
 				),
 				array('table' => 'contact',
 						'alias' => 'Contact',					
 						'type' => 'LEFT',
-						'conditions' => array('`Contact.id` = `PositionContact`.`contact_id`')
+						'conditions' => array('`Contact.id` = `PositionContact`.`contact_id`'
+						)
 				),
 				array('table' => 'client_account_holder',
 						'alias' => 'CAH',					
@@ -1601,12 +1603,21 @@ class PositionController extends AppController {
 					'Designation.desig_type' => 'CA')
 					)	
 					,
+					
+					array('table' => 'client_contact',
+						'alias' => 'PositionContact',					
+						'type' => 'LEFT',
+						'conditions' => array('`PositionContact.clients_id` = `Client`.`id`',
+						'`PositionContact.contact_id` = `Position`.`client_contact_id`')
+				),
+				
 				array(
 					'table' => 'contact',
 					'alias' => 'Contact',					
 					'type' => 'LEFT',
-					'conditions' => array('`Contact`.`id` = `Position`.`client_contact_id`')
-					)	
+					'conditions' => array('`Contact.id` = `PositionContact`.`contact_id`')
+					)
+					
 					,
 						
 				array('table' => 'client_account_holder',
