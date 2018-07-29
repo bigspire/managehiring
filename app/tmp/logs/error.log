@@ -17507,3 +17507,12 @@ Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 =======
 >>>>>>> ba2a0458e096157a27d7b517a977e7b9bd3d37c0
 >>>>>>> 67227553cb9c6460d20f0650ec78d81a51f59d95
+2018-07-29 12:50:33 Warning: Warning (2): Missing argument 1 for ClientController::index() in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 34]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 34
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
