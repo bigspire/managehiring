@@ -271,6 +271,7 @@
 					
 					<!-- sheepIt Form -->
 <div class="tab-pane" id="box_edu">	
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Pursuing Degree or Recently Completed Degree details in the top</div>
 <div id="sheepItForm">
  
   <!-- Form template-->

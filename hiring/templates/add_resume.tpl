@@ -177,10 +177,13 @@
 									<tr>
 										<td width="125" class="tbl_column">Notice Period <span class="f_req">*</span></td>
 										<td> 
-										<select name="notice_period" tabindex="13" class="span8">										
+										<select name="notice_period" tabindex="13" class="span4">										
 										{html_options options=$n_p selected=$smarty.post.notice_period}							
 										</select>
-										<label for="reg_city" generated="true" class="error">{$notice_periodErr}</label>																		
+											<input type="checkbox" style="margin-left:5px;"> <span class="tbl_column">Presently Working?</span>
+										<label for="reg_city" generated="true" class="error">{$notice_periodErr}
+										</label>
+																										
 										</td>
 									</tr>
 									<tr class="tbl_row">
@@ -233,6 +236,7 @@
 	
 <!-- sheepIt Form -->
 <div  class="tab-pane" id="mbox_Education">
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Pursuing Degree or Recently Completed Degree details in the top</div>
 <div id="sheepItForm">
  
   <!-- Form template-->
@@ -349,6 +353,7 @@
 
 <!-- sheepIt Form -->
 <div  class="tab-pane" id="mbox_Experience">
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Present Employer or Recently Worked Employer details in the top</div>
 <div id="sheepItForm1">
   <!-- Form template-->
   <div id="sheepItForm1_template" class="" style="clear:left;">

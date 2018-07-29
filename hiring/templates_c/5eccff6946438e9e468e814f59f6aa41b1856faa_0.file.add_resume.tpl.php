@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-10 18:17:59
+/* Smarty version 3.1.29, created on 2018-07-29 11:17:04
   from "C:\xampp\htdocs\ctsvn2\managehiring\hiring\templates\add_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b44aaff1f78a3_64551736',
+  'unifunc' => 'content_5b5d54d8d44630_15318825',
   'file_dependency' => 
   array (
     '5eccff6946438e9e468e814f59f6aa41b1856faa' => 
     array (
       0 => 'C:\\xampp\\htdocs\\ctsvn2\\managehiring\\hiring\\templates\\add_resume.tpl',
-      1 => 1528097105,
+      1 => 1532843222,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b44aaff1f78a3_64551736 ($_smarty_tpl) {
+function content_5b5d54d8d44630_15318825 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -236,12 +236,15 @@ echo $_smarty_tpl->tpl_vars['email_validErr']->value;?>
 									<tr>
 										<td width="125" class="tbl_column">Notice Period <span class="f_req">*</span></td>
 										<td> 
-										<select name="notice_period" tabindex="13" class="span8">										
+										<select name="notice_period" tabindex="13" class="span4">										
 										<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['n_p']->value,'selected'=>$_POST['notice_period']),$_smarty_tpl);?>
 							
 										</select>
+											<input type="checkbox" style="margin-left:5px;"> <span class="tbl_column">Presently Working?</span>
 										<label for="reg_city" generated="true" class="error"><?php echo $_smarty_tpl->tpl_vars['notice_periodErr']->value;?>
-</label>																		
+
+										</label>
+																										
 										</td>
 									</tr>
 									<tr class="tbl_row">
@@ -309,6 +312,7 @@ echo 'checked';?>
 	
 <!-- sheepIt Form -->
 <div  class="tab-pane" id="mbox_Education">
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Pursuing Degree or Recently Completed Degree details in the top</div>
 <div id="sheepItForm">
  
   <!-- Form template-->
@@ -431,6 +435,7 @@ echo 'checked';?>
 
 <!-- sheepIt Form -->
 <div  class="tab-pane" id="mbox_Experience">
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Present Employer or Recently Worked Employer details in the top</div>
 <div id="sheepItForm1">
   <!-- Form template-->
   <div id="sheepItForm1_template" class="" style="clear:left;">

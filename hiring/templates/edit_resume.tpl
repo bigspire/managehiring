@@ -332,6 +332,7 @@
 
 <!-- sheepIt Form -->
 <div  class="tab-pane" id="mbox_Experience">
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Present Employer or Recently Worked Employer details in the top</div>
 <div id="sheepItForm1">
   <!-- Form template-->
   <div id="sheepItForm1_template" class="" style="clear:left;">
