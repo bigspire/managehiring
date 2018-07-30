@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-10 18:18:09
+/* Smarty version 3.1.29, created on 2018-07-29 11:04:53
   from "C:\xampp\htdocs\ctsvn2\managehiring\hiring\templates\edit_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b44ab09e08270_42526397',
+  'unifunc' => 'content_5b5d51fd0625e7_69622398',
   'file_dependency' => 
   array (
     '727a031f51ce9ccb945827971e8a36821b0c4b1f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\ctsvn2\\managehiring\\hiring\\templates\\edit_resume.tpl',
-      1 => 1530969795,
+      1 => 1532842475,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b44ab09e08270_42526397 ($_smarty_tpl) {
+function content_5b5d51fd0625e7_69622398 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -304,6 +304,7 @@ echo $_POST['native_location'];
 	
 <!-- sheepIt Form -->
 <div  class="tab-pane" id="mbox_Education">
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Pursuing Degree or Recently Completed Degree details in the top</div>
 <div id="sheepItForm">
  
   <!-- Form template-->
@@ -420,6 +421,7 @@ echo $_POST['native_location'];
 
 <!-- sheepIt Form -->
 <div  class="tab-pane" id="mbox_Experience">
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Present Employer or Recently Worked Employer details in the top</div>
 <div id="sheepItForm1">
   <!-- Form template-->
   <div id="sheepItForm1_template" class="" style="clear:left;">

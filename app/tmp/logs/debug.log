@@ -1,13 +1,9 @@
+<<<<<<< HEAD
 2018-07-26 14:14:48 Debug: Notice (8): Undefined index: from in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 44]
 Trace:
 ClientController::index() - APP\Controller\ClientController.php, line 44
-ReflectionMethod::invokeArgs() - [internal], line ??
-Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
-Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
-Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
-[main] - APP\webroot\index.php, line 118
-
-2018-07-26 14:14:49 Debug: Notice (8): Undefined index: to in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 44]
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined index: from in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 44]
 Trace:
 ClientController::index() - APP\Controller\ClientController.php, line 44
 ReflectionMethod::invokeArgs() - [internal], line ??
@@ -16,7 +12,16 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
-2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 54]
+2018-07-29 12:50:33 Debug: Notice (8): Undefined index: to in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 44]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 44
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: status in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 54]
 Trace:
 ClientController::index() - APP\Controller\ClientController.php, line 54
 ReflectionMethod::invokeArgs() - [internal], line ??
@@ -25,7 +30,7 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
-2018-07-26 14:14:49 Debug: Notice (8): Undefined index: apr_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 58]
+2018-07-29 12:50:33 Debug: Notice (8): Undefined index: apr_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 58]
 Trace:
 ClientController::index() - APP\Controller\ClientController.php, line 58
 ReflectionMethod::invokeArgs() - [internal], line ??
@@ -34,7 +39,7 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
-2018-07-26 14:14:49 Debug: Notice (8): Undefined index: keyword in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 66]
+2018-07-29 12:50:33 Debug: Notice (8): Undefined index: keyword in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 66]
 Trace:
 ClientController::index() - APP\Controller\ClientController.php, line 66
 ReflectionMethod::invokeArgs() - [internal], line ??
@@ -43,7 +48,231 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+2018-07-29 12:50:33 Debug: Notice (8): Undefined index: status in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 71]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 71
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined index: emp_id in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 191]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 191
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+<<<<<<< HEAD
+2018-07-26 14:14:49 Debug: Notice (8): Undefined index: to in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 44]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 44
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 253]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 253
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+<<<<<<< HEAD
+2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 54]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 54
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 261]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 261
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+<<<<<<< HEAD
+2018-07-26 14:14:49 Debug: Notice (8): Undefined index: apr_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 58]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 58
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: keyCond in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 284]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 284
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+<<<<<<< HEAD
+2018-07-26 14:14:49 Debug: Notice (8): Undefined index: keyword in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 66]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 66
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: date_cond in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 284]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 284
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ClientController.php, line 71]
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: stCond in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 284]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 284
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: teamCond in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\ClientController.php, line 285]
+Trace:
+ClientController::index() - APP\Controller\ClientController.php, line 285
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: options in [C:\xampp\htdocs\ctsvn2\managehiring\app\Controller\AppController.php, line 162]
+Trace:
+AppController::get_approve_leave_count() - APP\Controller\AppController.php, line 162
+AppController::beforeRender() - APP\Controller\AppController.php, line 49
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::render() - CORE\Cake\Controller\Controller.php, line 936
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: home_menu in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 66]
+Trace:
+include - APP\View\Elements\header.ctp, line 66
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Client\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: event_menu in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 85]
+Trace:
+include - APP\View\Elements\header.ctp, line 85
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Client\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: taskplan_menu in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 85]
+Trace:
+include - APP\View\Elements\header.ctp, line 85
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Client\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: leave_menu in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 85]
+Trace:
+include - APP\View\Elements\header.ctp, line 85
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Client\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: approve_leave in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 105]
+Trace:
+include - APP\View\Elements\header.ctp, line 105
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Client\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: create_client in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 139]
+Trace:
+include - APP\View\Elements\header.ctp, line 139
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Client\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: approve_client in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 143]
+Trace:
+include - APP\View\Elements\header.ctp, line 143
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Client\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: position_menu in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 172]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 ClientController::index() - APP\Controller\ClientController.php, line 71
 ReflectionMethod::invokeArgs() - [internal], line ??
@@ -142,7 +371,43 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: event_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 85]
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: create_position in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 179]
+Trace:
+include - APP\View\Elements\header.ctp, line 179
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Client\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: approve_position in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 183]
+Trace:
+include - APP\View\Elements\header.ctp, line 183
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Client\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: resume_menu in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 205]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Elements\header.ctp, line 85
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -158,9 +423,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: taskplan_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 85]
 Trace:
 include - APP\View\Elements\header.ctp, line 85
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: approve_billing in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 247]
+Trace:
+include - APP\View\Elements\header.ctp, line 247
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::_renderElement() - CORE\Cake\View\View.php, line 1224
@@ -174,9 +445,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: leave_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 85]
 Trace:
 include - APP\View\Elements\header.ctp, line 85
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: view_billing in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 255]
+Trace:
+include - APP\View\Elements\header.ctp, line 255
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::_renderElement() - CORE\Cake\View\View.php, line 1224
@@ -190,9 +467,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: approve_client in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 143]
 Trace:
 include - APP\View\Elements\header.ctp, line 143
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: approve_incentive in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 261]
+Trace:
+include - APP\View\Elements\header.ctp, line 261
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::_renderElement() - CORE\Cake\View\View.php, line 1224
@@ -206,9 +489,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: position_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 172]
 Trace:
 include - APP\View\Elements\header.ctp, line 172
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: client_wise_cv_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 276]
+Trace:
+include - APP\View\Elements\header.ctp, line 276
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::_renderElement() - CORE\Cake\View\View.php, line 1224
@@ -222,9 +511,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: resume_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 205]
 Trace:
 include - APP\View\Elements\header.ctp, line 205
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: month_wise_cv_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 276]
+Trace:
+include - APP\View\Elements\header.ctp, line 276
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::_renderElement() - CORE\Cake\View\View.php, line 1224
@@ -238,9 +533,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: approve_incentive in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 261]
 Trace:
 include - APP\View\Elements\header.ctp, line 261
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: productivity_report in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 277]
+Trace:
+include - APP\View\Elements\header.ctp, line 277
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::_renderElement() - CORE\Cake\View\View.php, line 1224
@@ -254,9 +555,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: client_wise_cv_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 276]
 Trace:
 include - APP\View\Elements\header.ctp, line 276
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: biz_conversion_report in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 277]
+Trace:
+include - APP\View\Elements\header.ctp, line 277
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::_renderElement() - CORE\Cake\View\View.php, line 1224
@@ -270,6 +577,7 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: month_wise_cv_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 276]
 Trace:
 include - APP\View\Elements\header.ctp, line 276
@@ -304,6 +612,10 @@ Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: biz_conversion_report in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 277]
 Trace:
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: recruiter_bill_report in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 277]
+Trace:
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 include - APP\View\Elements\header.ctp, line 277
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
@@ -318,9 +630,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: recruiter_bill_report in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 277]
 Trace:
 include - APP\View\Elements\header.ctp, line 277
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: sent_item in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 495]
+Trace:
+include - APP\View\Elements\header.ctp, line 495
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::_renderElement() - CORE\Cake\View\View.php, line 1224
@@ -334,7 +652,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: manage_grade in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 506]
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: manage_grade in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 506]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Elements\header.ctp, line 506
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -350,7 +672,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: manage_users in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 506]
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: manage_users in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 506]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Elements\header.ctp, line 506
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -366,7 +692,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: manage_roles in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 506]
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: manage_roles in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 506]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Elements\header.ctp, line 506
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -382,7 +712,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: manage_mailer_template in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 507]
+=======
+2018-07-29 12:50:33 Debug: Notice (8): Undefined variable: manage_mailer_template in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 507]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Elements\header.ctp, line 507
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -398,7 +732,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: manage_incentive in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 507]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined variable: manage_incentive in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 507]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Elements\header.ctp, line 507
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -414,7 +752,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: api_keys in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 507]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined variable: api_keys in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\header.ctp, line 507]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Elements\header.ctp, line 507
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -430,7 +772,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 18]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 18]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 18
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -441,7 +787,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 22]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 22]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 22
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -452,7 +802,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 33]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 33]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 33
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -463,10 +817,13 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined variable: str in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 450]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined variable: create_client in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 39]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
-FunctionsHelper::get_url_vars() - APP\View\Helper\FunctionsHelper.php, line 450
-include - APP\View\Client\index.ctp, line 36
+include - APP\View\Client\index.ctp, line 39
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -475,7 +832,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: keyword in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 53]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: keyword in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 53]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 53
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -486,7 +847,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: from in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 59]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: from in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 59]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 59
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -497,7 +862,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: to in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 61]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: to in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 61]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 61
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -508,7 +877,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: emp_id in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 70]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: emp_id in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 70]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 70
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -519,7 +892,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: srch_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 78]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: srch_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 78]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 78
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -530,7 +907,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 81]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 81]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 81
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -541,7 +922,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 85]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 85]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 85
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -552,7 +937,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: apr_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 92]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: apr_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 92]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 92
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -563,7 +952,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 99]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 99]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 99
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -574,7 +967,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: srch_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 102]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: srch_status in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 102]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 102
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -585,7 +982,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 113]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 113]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 113
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -596,7 +997,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 119]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 119]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 119
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -607,6 +1012,7 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
 Trace:
 include - APP\View\Client\index.ctp, line 135
@@ -652,6 +1058,9 @@ Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 135
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -662,7 +1071,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 146]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 146]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 146
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -673,7 +1086,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 164]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 164]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 164
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -684,7 +1101,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 184]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 184]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 184
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -695,7 +1116,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 135
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -706,7 +1131,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 146]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 146]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 146
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -717,7 +1146,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 164]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 164]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 164
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -728,7 +1161,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 184]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 184]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 184
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -739,7 +1176,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 135
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -750,7 +1191,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 146]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 146]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 146
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -761,7 +1206,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 164]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 164]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 164
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -772,7 +1221,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 184]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 184]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 184
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -783,7 +1236,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 135
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -794,7 +1251,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 146]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 146]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 146
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -805,7 +1266,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 164]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 164]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 164
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -816,7 +1281,11 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Client\index.ctp, line 184]
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 184]
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 Trace:
 include - APP\View\Client\index.ctp, line 184
 View::_evaluate() - CORE\Cake\View\View.php, line 971
@@ -827,6 +1296,7 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-26 14:14:49 Debug: Notice (8): Undefined index: color in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Layouts\default.ctp, line 33]
 Trace:
 include - APP\View\Layouts\default.ctp, line 33
@@ -53057,6 +53527,11 @@ Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 193
 include - APP\View\Position\view.ctp, line 1270
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 135]
+Trace:
+include - APP\View\Client\index.ctp, line 135
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -53065,10 +53540,16 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-28 12:02:06 Debug: Notice (8): Undefined variable: field in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 197]
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 197
 include - APP\View\Position\view.ctp, line 1270
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 146]
+Trace:
+include - APP\View\Client\index.ctp, line 146
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -53077,10 +53558,16 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-28 12:02:06 Debug: Notice (8): Undefined variable: field in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 205]
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 205
 include - APP\View\Position\view.ctp, line 1270
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 164]
+Trace:
+include - APP\View\Client\index.ctp, line 164
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -53089,10 +53576,16 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-28 12:02:06 Debug: Notice (8): Undefined variable: field in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 209]
 Trace:
 FunctionsHelper::get_req_tab_count() - APP\View\Helper\FunctionsHelper.php, line 209
 include - APP\View\Position\view.ctp, line 1270
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Client\index.ctp, line 184]
+Trace:
+include - APP\View\Client\index.ctp, line 184
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -53101,9 +53594,15 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-28 12:02:06 Debug: Notice (8): Undefined variable: schedule_interview in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Position\view.ctp, line 1364]
 Trace:
 include - APP\View\Position\view.ctp, line 1364
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: color in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Layouts\default.ctp, line 33]
+Trace:
+include - APP\View\Layouts\default.ctp, line 33
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
 View::_evaluate() - CORE\Cake\View\View.php, line 971
 View::_render() - CORE\Cake\View\View.php, line 933
 View::render() - CORE\Cake\View\View.php, line 473
@@ -53112,6 +53611,7 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
+<<<<<<< HEAD
 2018-07-28 12:02:06 Debug: Notice (8): Undefined index: color in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Layouts\default.ctp, line 33]
 Trace:
 include - APP\View\Layouts\default.ctp, line 33
@@ -53125,6 +53625,2013 @@ Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
 [main] - APP\webroot\index.php, line 118
 
 2018-07-28 12:02:06 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\footer.ctp, line 1]
+Trace:
+include - APP\View\Elements\footer.ctp, line 1
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+=======
+2018-07-29 12:50:34 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\ctsvn2\managehiring\app\View\Elements\footer.ctp, line 1]
+Trace:
+include - APP\View\Elements\footer.ctp, line 1
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+>>>>>>> 1d9e031c0f1f01a6c963b8358c23d9008820253f
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Layouts\default.ctp, line 91
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: from in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 46]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 46
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: to in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 46]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 46
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: keyword in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 58]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 58
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: keyword in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 62]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 62
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: min_exp in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 116]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 116
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: max_exp in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 120]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 120
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 124]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 124
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: spec in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 128]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 128
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: report_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 134]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 134
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: emp_id in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 217]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 217
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: loc in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 222]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 222
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 227]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 227
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: int_from in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 304]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 304
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: int_to in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 304]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 304
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 329]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 329
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: date_cond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 335]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 335
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: keyCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 335]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 335
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: minCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 335]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 335
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: maxCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 336]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 336
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: int_cond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 336]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 336
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: empCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 336]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 336
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: branchCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 336]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 336
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: statusCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 336]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 336
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: repStatusCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 336]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 336
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: specCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 336]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 336
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: clientCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 336]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 336
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: reportCond in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 336]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 336
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined index: keyword in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 339]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 339
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: start in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 340]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 340
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:25 Debug: Notice (8): Undefined variable: end in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\ResumeController.php, line 341]
+Trace:
+ResumeController::index() - APP\Controller\ResumeController.php, line 341
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: options in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\Controller\AppController.php, line 162]
+Trace:
+AppController::get_approve_leave_count() - APP\Controller\AppController.php, line 162
+AppController::beforeRender() - APP\Controller\AppController.php, line 49
+call_user_func - [internal], line ??
+CakeEventManager::dispatch() - CORE\Cake\Event\CakeEventManager.php, line 243
+Controller::render() - CORE\Cake\Controller\Controller.php, line 936
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: home_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 66]
+Trace:
+include - APP\View\Elements\header.ctp, line 66
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: event_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 85]
+Trace:
+include - APP\View\Elements\header.ctp, line 85
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: taskplan_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 85]
+Trace:
+include - APP\View\Elements\header.ctp, line 85
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: leave_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 85]
+Trace:
+include - APP\View\Elements\header.ctp, line 85
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: client_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 136]
+Trace:
+include - APP\View\Elements\header.ctp, line 136
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: approve_client in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 143]
+Trace:
+include - APP\View\Elements\header.ctp, line 143
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: position_menu in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 172]
+Trace:
+include - APP\View\Elements\header.ctp, line 172
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: approve_incentive in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 261]
+Trace:
+include - APP\View\Elements\header.ctp, line 261
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: client_wise_cv_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 276]
+Trace:
+include - APP\View\Elements\header.ctp, line 276
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: month_wise_cv_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 276]
+Trace:
+include - APP\View\Elements\header.ctp, line 276
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: productivity_report in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 277]
+Trace:
+include - APP\View\Elements\header.ctp, line 277
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: biz_conversion_report in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 277]
+Trace:
+include - APP\View\Elements\header.ctp, line 277
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: recruiter_bill_report in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 277]
+Trace:
+include - APP\View\Elements\header.ctp, line 277
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: manage_grade in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 506]
+Trace:
+include - APP\View\Elements\header.ctp, line 506
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: manage_users in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 506]
+Trace:
+include - APP\View\Elements\header.ctp, line 506
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: manage_roles in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 506]
+Trace:
+include - APP\View\Elements\header.ctp, line 506
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: manage_mailer_template in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 507]
+Trace:
+include - APP\View\Elements\header.ctp, line 507
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: manage_incentive in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 507]
+Trace:
+include - APP\View\Elements\header.ctp, line 507
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: api_keys in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\header.ctp, line 507]
+Trace:
+include - APP\View\Elements\header.ctp, line 507
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::_renderElement() - CORE\Cake\View\View.php, line 1224
+View::element() - CORE\Cake\View\View.php, line 418
+include - APP\View\Resume\index.ctp, line 3
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: str in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 448]
+Trace:
+FunctionsHelper::get_url_vars() - APP\View\Helper\FunctionsHelper.php, line 448
+include - APP\View\Resume\index.ctp, line 34
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 45]
+Trace:
+include - APP\View\Resume\index.ctp, line 45
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 52]
+Trace:
+include - APP\View\Resume\index.ctp, line 52
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 60]
+Trace:
+include - APP\View\Resume\index.ctp, line 60
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 67]
+Trace:
+include - APP\View\Resume\index.ctp, line 67
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 74]
+Trace:
+include - APP\View\Resume\index.ctp, line 74
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 81]
+Trace:
+include - APP\View\Resume\index.ctp, line 81
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 89]
+Trace:
+include - APP\View\Resume\index.ctp, line 89
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 97]
+Trace:
+include - APP\View\Resume\index.ctp, line 97
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: emp_id in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 128]
+Trace:
+include - APP\View\Resume\index.ctp, line 128
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: int_from in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 143]
+Trace:
+include - APP\View\Resume\index.ctp, line 143
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: int_to in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 146]
+Trace:
+include - APP\View\Resume\index.ctp, line 146
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: min_exp in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 150]
+Trace:
+include - APP\View\Resume\index.ctp, line 150
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: max_exp in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 155]
+Trace:
+include - APP\View\Resume\index.ctp, line 155
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 159]
+Trace:
+include - APP\View\Resume\index.ctp, line 159
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: srch_status in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 171]
+Trace:
+include - APP\View\Resume\index.ctp, line 171
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 213]
+Trace:
+include - APP\View\Resume\index.ctp, line 213
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 984]
+Trace:
+FunctionsHelper::show_exp_details_list() - APP\View\Helper\FunctionsHelper.php, line 984
+include - APP\View\Resume\index.ctp, line 242
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: month in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 988]
+Trace:
+FunctionsHelper::show_exp_details_list() - APP\View\Helper\FunctionsHelper.php, line 988
+include - APP\View\Resume\index.ctp, line 242
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 525]
+Trace:
+FunctionsHelper::get_status_crisp() - APP\View\Helper\FunctionsHelper.php, line 525
+include - APP\View\Resume\index.ctp, line 247
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined offset: 1 in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 525]
+Trace:
+FunctionsHelper::get_status_crisp() - APP\View\Helper\FunctionsHelper.php, line 525
+include - APP\View\Resume\index.ctp, line 247
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: target in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 228]
+Trace:
+include - APP\View\Resume\index.ctp, line 228
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 239
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined variable: format_data in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Helper\FunctionsHelper.php, line 110]
+Trace:
+FunctionsHelper::get_format_text() - APP\View\Helper\FunctionsHelper.php, line 110
+include - APP\View\Resume\index.ctp, line 240
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: iframe in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Resume\index.ctp, line 313]
+Trace:
+include - APP\View\Resume\index.ctp, line 313
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::render() - CORE\Cake\View\View.php, line 473
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: color in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Layouts\default.ctp, line 33]
+Trace:
+include - APP\View\Layouts\default.ctp, line 33
+View::_evaluate() - CORE\Cake\View\View.php, line 971
+View::_render() - CORE\Cake\View\View.php, line 933
+View::renderLayout() - CORE\Cake\View\View.php, line 546
+View::render() - CORE\Cake\View\View.php, line 481
+Controller::render() - CORE\Cake\Controller\Controller.php, line 963
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2018-07-30 10:11:26 Debug: Notice (8): Undefined index: action in [C:\xampp\htdocs\2017\ctsvn2\managehiring\app\View\Elements\footer.ctp, line 1]
 Trace:
 include - APP\View\Elements\footer.ctp, line 1
 View::_evaluate() - CORE\Cake\View\View.php, line 971
