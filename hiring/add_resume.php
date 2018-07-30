@@ -217,7 +217,7 @@ if($_POST['hdnSubmit'] == 1){
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['consultant']))."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['interview_availability']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['certification']))."','".$tech_skill."',
-			'".$behav_skill."','".$fun->is_white_space($mysql->real_escape_str($_POST['other_input']))."')";
+			'".$behav_skill."','".$fun->is_white_space($mysql->real_escape_str($_POST['other_input']))."','".$_POST['present_work']."')";
 		try{
 			if(!$result = $mysql->execute_query($query)){
 				throw new Exception('Problem in adding personal details');
@@ -859,7 +859,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['consultant']))."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['interview_availability']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['certification']))."','".$tech_skill."',
-			'".$behav_skill."','".$fun->is_white_space($mysql->real_escape_str($_POST['other_input']))."')";
+			'".$behav_skill."','".$fun->is_white_space($mysql->real_escape_str($_POST['other_input']))."','".$_POST['present_work']."')";
 		try{
 			if(!$result = $mysql->execute_query($query)){
 				throw new Exception('Problem in adding personal details');
