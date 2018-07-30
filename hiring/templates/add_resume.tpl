@@ -180,8 +180,8 @@
 										<select name="notice_period" tabindex="13" class="span4">										
 										{html_options options=$n_p selected=$smarty.post.notice_period}							
 										</select>
-											<input type="checkbox" style="margin-left:5px;"> <span class="tbl_column">Presently Working?</span>
-										<label for="reg_city" generated="true" class="error">{$notice_periodErr}
+											<input type="checkbox" name="present_work" {if $smarty.post.present_work == '1'}{'checked'}{/if} value="1" style="margin-left:5px;"> <span class="tbl_column">Presently Working?</span>
+											<label for="reg_city" generated="true" class="error">{$notice_periodErr}
 										</label>
 																										
 										</td>
