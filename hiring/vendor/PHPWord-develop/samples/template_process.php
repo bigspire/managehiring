@@ -69,7 +69,8 @@ $templateProcessor->setValue('VITALINPUTS', ucfirst(trim($_POST['vital_info_inte
 // to retain INTERVIEW AVAILABILITY field
 $templateProcessor->setValue('INTERVIEWAVAILABILITY', ucfirst(trim($_POST['interview_availability'])),  1,0); 
 // to retain ACHIVEMENTS field
-$templateProcessor->setValue('ACHIVEMENTS', ucfirst(trim($_POST['achievement'])),  1,0); 
+$achieve = str_replace('&', 'and', $_POST['achievement']);
+$templateProcessor->setValue('ACHIVEMENTS', ucfirst(trim($achieve)),  1,0); 
 // to retain CANDIDATE BRIEF field
 $templateProcessor->setValue('CANDIDATEBRIEF', ucfirst(trim($_POST['candidate_brief'])),  1,0); 
 
@@ -111,9 +112,11 @@ $templateProcessor->setValue('CANDIDATEBRIEF', ucfirst(trim($_POST['candidate_br
 // to retain technical expertise field 
 	$templateProcessor->setValue('TECHNICALEXPERTISE', ucfirst(trim($_POST['tech_expert'])),   1, 0);
 // to retain personality field 
-	$templateProcessor->setValue('PERSONALITYCANDIDATE', ucfirst(trim($_POST['personality'])),   1, 0);
+	$personality = str_replace('&', 'and', $_POST['personality']);
+	$templateProcessor->setValue('PERSONALITYCANDIDATE', ucfirst(trim($personality)),   1, 0);
 // to retain outlook on company field 	
-	$templateProcessor->setValue('OUTLOOKCOMPANY',  ucfirst(trim($_POST['about_company'])),   1, 0);
+	$about_company = str_replace('&', 'and', $_POST['about_company']);
+	$templateProcessor->setValue('OUTLOOKCOMPANY',  ucfirst(trim($about_company)),   1, 0);
 	
 	
 // to retain key achievements field 	
@@ -297,7 +300,7 @@ for($i = 0; $i < $_POST['exp_count']; $i++){
 		$key_res_data = '';
 		foreach($responsibilityData as $key_resp){
 			if(trim($key_resp) != ''){
-				$key_res_data .= '<w:p><w:pPr><w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr></w:pPr><w:rPr><w:rFonts w:ascii="Gadugi"/><w:sz w:val="30"/></w:rPr><w:r><w:t>'.ucfirst($key_resp).'</w:t></w:r></w:p>';
+				$key_res_data .= '<w:p><w:pPr><w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr></w:pPr><w:rPr><w:rFonts w:ascii="Gadugi"/><w:sz w:val="30"/></w:rPr><w:r><w:t>'.ucfirst(str_replace('&', 'and', $key_resp)).'</w:t></w:r></w:p>';
 			}
 		}
 		$key_responsibilityData_xml = HTMLtoOpenXML::getInstance()->fromHTML($key_res_data);
@@ -307,7 +310,7 @@ for($i = 0; $i < $_POST['exp_count']; $i++){
 		$key_achi_data = '';
 		foreach($achievementData as $key_achieve){
 			if(trim($key_achieve) != ''){
-				$key_achi_data .= '<w:p><w:pPr><w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr></w:pPr><w:rPr><w:rFonts w:ascii="Gadugi"/><w:sz w:val="30"/></w:rPr><w:r><w:t>'.ucfirst($key_achieve).'</w:t></w:r></w:p>';
+				$key_achi_data .= '<w:p><w:pPr><w:numPr><w:ilvl w:val="0"/><w:numId w:val="1"/></w:numPr></w:pPr><w:rPr><w:rFonts w:ascii="Gadugi"/><w:sz w:val="30"/></w:rPr><w:r><w:t>'.ucfirst(str_replace('&', 'and', $key_achieve)).'</w:t></w:r></w:p>';
 			}
 		}
 		
