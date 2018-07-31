@@ -110,7 +110,8 @@ $templateProcessor->setValue('CANDIDATEBRIEF', ucfirst(trim($_POST['candidate_br
 // to retain appraisal field 
 	$templateProcessor->setValue('CANDIDATEAPPRAISAL', ucfirst(trim($_POST['candidate_brief'])),   1, 0);
 // to retain technical expertise field 
-	$templateProcessor->setValue('TECHNICALEXPERTISE', ucfirst(trim($_POST['tech_expert'])),   1, 0);
+	$tech_expert = str_replace('&', 'and', $_POST['tech_expert']);
+	$templateProcessor->setValue('TECHNICALEXPERTISE', ucfirst(trim($tech_expert)),   1, 0);
 // to retain personality field 
 	$personality = str_replace('&', 'and', $_POST['personality']);
 	$templateProcessor->setValue('PERSONALITYCANDIDATE', ucfirst(trim($personality)),   1, 0);
