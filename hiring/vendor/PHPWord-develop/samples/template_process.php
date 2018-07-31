@@ -243,10 +243,15 @@ for($i = 0; $i < $_POST['exp_count']; $i++){
 			}catch(Exception $e){
 				echo 'Caught exception: ',  $e->getMessage(), "\n";
 			}
-	
+		
+		// validating till date
+		$todate[$i] .= date('M', mktime(0, 0, 0, $to_month_exp, 10)).' '.$to_year_exp;
+		if($i == 0 && $_POST['present_work'] == '1'){
+			$todate[$i] = 'Till Date';
+		}
 		$templateProcessor->setValue('EXPCOMPANYNAME#'.$train_flag, strtoupper($companyData),   0, 0);	
 		$templateProcessor->setValue('ESTART#'.$train_flag, date('M', mktime(0, 0, 0, $from_month_exp, 10)).' '.$from_year_exp,   0, 0);
-		$templateProcessor->setValue('EEND#'.$train_flag, date('M', mktime(0, 0, 0, $to_month_exp, 10)).' '.$to_year_exp,   0, 0);
+		$templateProcessor->setValue('EEND#'.$train_flag, $todate[$i],   0, 0);
 		$templateProcessor->setValue('EXPLOCATION#'.$train_flag, $worklocData,   0, 0);
 		$templateProcessor->setValue('EXPDESIG#'.$train_flag, $design,   0, 0);
 		$train_flag++;
@@ -288,9 +293,15 @@ for($i = 0; $i < $_POST['exp_count']; $i++){
 			}catch(Exception $e){
 				echo 'Caught exception: ',  $e->getMessage(), "\n";
 			}
-			
+		
+		// validating till date
+		$todate_display[$i] .= date('M', mktime(0, 0, 0, $to_month_exp, 10)).' '.$to_year_exp;
+		if($i == 0 && $_POST['present_work'] == '1'){
+			$todate_display[$i] = 'Till Date';
+		}		
+		
 		$templateProcessor->setValue('CARSTART#'.$train_flag, date('M', mktime(0, 0, 0, $from_month_exp, 10)).' '.$from_year_exp,   0, 0);
-		$templateProcessor->setValue('CAREND#'.$train_flag, date('M', mktime(0, 0, 0, $to_month_exp, 10)).' '.$to_year_exp,   0, 0);
+		$templateProcessor->setValue('CAREND#'.$train_flag, $todate_display[$i],   0, 0);
 		$templateProcessor->setValue('CARCOMPANYNAME#'.$train_flag, strtoupper($companyData),   0, 0);
 		$templateProcessor->setValue('CARLOCATION#'.$train_flag, $worklocData,   0, 0);
 		$templateProcessor->setValue('CARDESIG#'.$train_flag, $design,   0, 0);

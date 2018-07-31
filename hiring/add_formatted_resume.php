@@ -208,7 +208,7 @@ if($_POST['hdnSubmit'] == 1){
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['credential_shortlisting']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['relevant_exposure']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['vital_info_interview']))."',
-			'".$mysql->real_escape_str($_SESSION['resume_doc_id'])."')";
+			'".$mysql->real_escape_str($_SESSION['resume_doc_id'])."','".$_POST['present_work']."')";
 		try{
 			if(!$result = $mysql->execute_query($query)){
 				throw new Exception('Problem in updating personal details');
@@ -1037,7 +1037,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['credential_shortlisting']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['relevant_exposure']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['vital_info_interview']))."',
-			'".$mysql->real_escape_str($_SESSION['resume_doc_id'])."')";
+			'".$mysql->real_escape_str($_SESSION['resume_doc_id'])."','".$_POST['present_work']."')";
 		try{
 			if(!$result = $mysql->execute_query($query)){
 				throw new Exception('Problem in updating personal details');

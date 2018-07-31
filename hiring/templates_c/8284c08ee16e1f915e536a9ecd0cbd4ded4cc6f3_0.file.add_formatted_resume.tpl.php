@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-06-29 11:52:43
+/* Smarty version 3.1.29, created on 2018-07-31 11:22:58
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\add_formatted_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b35d033171a07_41893043',
+  'unifunc' => 'content_5b5ff93a7158c5_60790477',
   'file_dependency' => 
   array (
     '8284c08ee16e1f915e536a9ecd0cbd4ded4cc6f3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\add_formatted_resume.tpl',
-      1 => 1530078138,
+      1 => 1533014181,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b35d033171a07_41893043 ($_smarty_tpl) {
+function content_5b5ff93a7158c5_60790477 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -291,6 +291,9 @@ echo $_POST['family'];
 										<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['n_p']->value,'selected'=>$_smarty_tpl->tpl_vars['notice_period']->value),$_smarty_tpl);?>
 							
 										</select>
+										<input type="checkbox" name="present_work" <?php if ($_POST['present_work'] == '1') {
+echo 'checked';
+}?> value="1" style="margin-left:5px;"> <span class="tbl_column">Presently Working?</span>	
 										<label for="reg_city" generated="true" class="error"><?php echo $_smarty_tpl->tpl_vars['notice_periodErr']->value;?>
 </label>																				
 										</td>
@@ -381,6 +384,7 @@ echo $_POST['hobby'];
 					
 					<!-- sheepIt Form -->
 <div class="tab-pane" id="box_edu">	
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Pursuing Degree or Recently Completed Degree details in the top</div>
 <div id="sheepItForm">
  
   <!-- Form template-->
@@ -507,6 +511,7 @@ echo $_POST['hobby'];
 <!-- /sheepIt Form -->
 
 <div class="tab-pane" id="box_exp">	
+<div style="font-size:13px;color:#ffffff;margin-bottom:5px;padding:5px 3px;border-radius:3px;" class="span5 navbar-inner"><i class="icon-hand-right icon-white"></i> Add the Present Employer or Recently Worked Employer details in the top</div>
 <div id="sheepItForm1">
   <!-- Form template-->
   <div id="sheepItForm1_template" class="" style="clear:left;">

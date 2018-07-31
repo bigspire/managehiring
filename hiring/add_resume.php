@@ -361,10 +361,18 @@ if($_POST['hdnSubmit'] == 1){
 			// $expStr = date('M',$from_month_expData).' '.$from_year_expData.' to '.date('M',$to_month_expData).' '.$to_year_expData;
 			//$expStr = $fun->display_months($from_month_expData).' '.$from_year_expData.' to '.$fun->display_months($to_month_expData).' '.$to_year_expData;
 			
+			// $fromMon = $from_month_expData < 10 ? '0'.$from_month_expData : $from_month_expData;
+			// $toMon = $to_month_expData < 10 ? '0'.$to_month_expData : $to_month_expData;
+			// $expStr = date('M',strtotime('2018-'.$fromMon.'-01')).' '.$from_year_expData.' to '.date('M',strtotime('2018-'.$toMon.'-01')).' '.$to_year_expData;
 			$fromMon = $from_month_expData < 10 ? '0'.$from_month_expData : $from_month_expData;
-			$toMon = $to_month_expData < 10 ? '0'.$to_month_expData : $to_month_expData;
-			$expStr = date('M',strtotime('2018-'.$fromMon.'-01')).' '.$from_year_expData.' to '.date('M',strtotime('2018-'.$toMon.'-01')).' '.$to_year_expData;
+			$toMon_format = $to_month_expData < 10 ? '0'.$to_month_expData : $to_month_expData;
 			
+			$toMon[$i] .= date('M',strtotime('2018-'.$toMon_format.'-01')).' '.$to_year_expData;
+			if($i == 0 && $_POST['present_work'] == '1'){
+					$toMon[$i] = 'Till Date';
+			}
+					
+			$expStr = date('M',strtotime('2018-'.$fromMon.'-01')).' '.$from_year_expData.' to '.$toMon[$i];
 			
 			// $locationDataCase = ucwords($locationData);
 			// get the designation details
@@ -1001,10 +1009,18 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			// $tot_exp_years = $_POST['year_of_exp_'.$i] == 0 ? '0' : $_POST['year_of_exp_'.$i].'.'.$_POST['month_of_exp_'.$i];
 
 			// $expStr = $fun->show_exp_details($tot_exp_years);
+			// $fromMon = $from_month_expData < 10 ? '0'.$from_month_expData : $from_month_expData;
+			// $toMon = $to_month_expData < 10 ? '0'.$to_month_expData : $to_month_expData;
+			// $expStr = date('M',strtotime('2018-'.$fromMon.'-01')).' '.$from_year_expData.' to '.date('M',strtotime('2018-'.$toMon.'-01')).' '.$to_year_expData;
 			$fromMon = $from_month_expData < 10 ? '0'.$from_month_expData : $from_month_expData;
-			$toMon = $to_month_expData < 10 ? '0'.$to_month_expData : $to_month_expData;
-			$expStr = date('M',strtotime('2018-'.$fromMon.'-01')).' '.$from_year_expData.' to '.date('M',strtotime('2018-'.$toMon.'-01')).' '.$to_year_expData;
+			$toMon_format = $to_month_expData < 10 ? '0'.$to_month_expData : $to_month_expData;
 			
+			$toMon[$i] .= date('M',strtotime('2018-'.$toMon_format.'-01')).' '.$to_year_expData;
+			if($i == 0 && $_POST['present_work'] == '1'){
+					$toMon[$i] = 'Till Date';
+			}
+					
+			$expStr = date('M',strtotime('2018-'.$fromMon.'-01')).' '.$from_year_expData.' to '.$toMon[$i];
 			
 			// $expStr = $fun->display_months($from_month_expData).' '.$from_year_expData.' to '.$fun->display_months($to_month_expData).' '.$to_year_expData;
 			
