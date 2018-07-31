@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-31 11:25:49
+/* Smarty version 3.1.29, created on 2018-07-31 18:12:31
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\edit_formatted_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b5ff9e5b6f3d1_57191769',
+  'unifunc' => 'content_5b605937b2b622_07891144',
   'file_dependency' => 
   array (
     'd406682067fa43889fb3751fdca3db978ff0115f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\edit_formatted_resume.tpl',
-      1 => 1533014171,
+      1 => 1533040946,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b5ff9e5b6f3d1_57191769 ($_smarty_tpl) {
+function content_5b605937b2b622_07891144 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -292,7 +292,7 @@ echo $_POST['family'];
 										<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['n_p']->value,'selected'=>$_smarty_tpl->tpl_vars['notice_period']->value),$_smarty_tpl);?>
 							
 										</select>
-										<input type="checkbox" name="present_work" <?php if ($_smarty_tpl->tpl_vars['present_work']->value == '1') {
+										<input type="checkbox" name="present_work" <?php if ($_smarty_tpl->tpl_vars['present_work']->value == '1' || $_POST['present_work'] == '1') {
 echo 'checked';
 }?> value="1" style="margin-left:5px;"> <span class="tbl_column">Presently Working?</span>
 										<label for="reg_city" generated="true" class="error"><?php echo $_smarty_tpl->tpl_vars['notice_periodErr']->value;?>
