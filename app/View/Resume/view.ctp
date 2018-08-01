@@ -420,7 +420,20 @@
 									</tr>	
 									<tr>
 										<td class="tbl_column">Employment Period</td>
-										<td><?php echo  date('M', strtotime('2017-'.$exp['ResExp']['from_month'].'-'.'01')).', '.$exp['ResExp']['from_year'].' - '.date('M', strtotime('2017-'.$exp['ResExp']['to_month'].'-'.'01')).', '.$exp['ResExp']['to_year']; ?></td>
+										<td>
+										
+										
+										
+										<?php 
+										if($key == '0' && $resume_data['Resume']['present_work'] == '1'):
+										echo  date('M', strtotime('2017-'.$exp['ResExp']['from_month'].'-'.'01')).', '.$exp['ResExp']['from_year'].' - Till Date';
+										else:
+										echo  date('M', strtotime('2017-'.$exp['ResExp']['from_month'].'-'.'01')).', '.$exp['ResExp']['from_year'].' - '.date('M', strtotime('2017-'.$exp['ResExp']['to_month'].'-'.'01')).', '.$exp['ResExp']['to_year'];
+										endif;
+										?>
+										
+										
+										</td>
 									</tr>
 										<tr>
 										<td class="tbl_column">Location of work</td>
