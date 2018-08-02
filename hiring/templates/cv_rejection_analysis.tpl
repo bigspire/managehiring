@@ -128,60 +128,61 @@ ul.statusLegend li{width:200px;}
 							<table class="table table-hover table-bordered table-striped printAreaTable" style="margin: 15px 0px;">
 								<thead>								
 									<tr>
-										<th width="150" style="min-width: 0px; max-width: none;"><a href="#">Reasons / Client</a></th>	
+										<th width="250" style="min-width: 0px; max-width: none;"><a href="#">Reasons / Client</a></th>	
 										{foreach from=$data item=item key=key}
 										<th width="180" style="min-width: 0px; max-width: none;text-align:center"><a href="#">{$item.client_name}</a></th>
 										{/foreach}
+									
+										<th width="80" style="min-width: 0px; max-width: none;text-align:center""><a href="#">Contribution</a></th>	
 									</tr>
 								</thead>
 								<tbody>							
 																						
 								<tr>
 										<th width="">Total CVs Sent </th>
-										{foreach from=$data item=item key=key}
-										<td style="text-align:center">{$item.total_cv_sent}</td>
+										{foreach from=$data_cv_sent item=item key=key}
+										<td style="text-align:center">{$item}</td>
 										{/foreach}	
-									
+										<td style="text-align:center">{$total_cv_sent_count}</td>
 								</tr>	
 								<tr>
 										<th width="">CVs Billed </th>
-										{foreach from=$data item=item key=key}
+										{foreach from=$total_cv_billed item=item key=key}
 										<td style="text-align:center">{$item.total_billed}</td>
 									{/foreach}	
-								
+								<td style="text-align:center">{$total_cv_billed_count}</td>
 								</tr>
 								<tr>
 										<th width="">CVs Still Active </th>
-										{foreach from=$data item=item key=key}
+										{foreach from=$active_cv item=item key=key}
 										<td style="text-align:center">{$item.cv_active}</td>
 									{/foreach}	
+									<td style="text-align:center">{$active_cv_count}</td>
 								</tr>
 								<tr>
 										<th width="">CVs Rejected / Gone Inactive </th>
-										{foreach from=$data item=item key=key}
+										{foreach from=$rejected_cv item=item key=key}
 										<td style="text-align:center">{$item.cv_rejected}</td>
 									{/foreach}	
+									<td style="text-align:center">{$rejected_cv_count}</td>
 								</tr>
 								
 								<tr>
-										<th width="">Code 1 </th>
-										{foreach from=$data item=item key=key}
-										<td style="text-align:center"></td>
+									{foreach from=$rejected_code item=item key=key}
+										<th width="">{$item.code}</th>
 									{/foreach}	
+									<td style="text-align:center">%</td>
+									{foreach from=$data item=item key=key}
+										<td style="text-align:center">%</td>
+									{/foreach}
 								</tr>
-								
-								<tr>
-										<th width="">Code 2 </th>
-										{foreach from=$data item=item key=key}
-										<td style="text-align:center"></td>
-									{/foreach}	
-								</tr>
-								
+																
 								<tr>
 										<th width="">Total </th>
 										{foreach from=$data item=item key=key}
 										<td style="text-align:center"></td>
-									{/foreach}									
+									{/foreach}	
+									<td style="text-align:center"></td>									
 								</tr>
 			
 							</tbody>

@@ -212,6 +212,21 @@ class fun{
 		return $mod;
 	}
 	
+	/* function to get the req. tab counts */
+	public function cv_sent_count($data, $req_id){
+		$cv_stage = explode(',', $data);
+		$req_id_split = explode(',', $req_id);
+		$count = 0;
+		foreach($cv_stage as $key =>  $record){	
+		if($record == '1' && $record != '' && !in_array($req_id_split[$key],$req_id_data)){	
+		$count++;
+		}
+		$req_id_data[] = $req_id_split[$key];	
+		}
+
+		return $count;
+	}
+
 	/* string truncate*/
 	function string_truncate($message,$length){ 	
 		$message = strip_tags($message);
