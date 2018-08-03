@@ -1163,6 +1163,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			}
 			$row_user = $mysql->display_result($result);
 			$crm = $row_user['first_name'].' '.$row_user['last_name'];
+			$crm_location = $row_user['location'];
 			$getid = $resume_id;
 			// free the memory
 			$mysql->clear_result($result);

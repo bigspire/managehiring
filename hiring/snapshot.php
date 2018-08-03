@@ -23,7 +23,6 @@ foreach($tech_skills as $key => $skill){
 					// $tech_skill_star .=  '<a href="javascript:void(0)" >★</a>';		
 				}
 			}
-			
 		 }
 		 $tech_skill_star .=  '</div>';
 		 // $tech_skill_star .=  '<br>';
