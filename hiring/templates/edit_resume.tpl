@@ -637,9 +637,7 @@
 		<input type="hidden" id="from_year_of_expData_{$i}" name="from_year_of_expData_{$i}" value="{$from_year_of_expData[$i]}">
 		<input type="hidden" id="from_month_of_expData_{$i}" name="from_month_of_expData_{$i}" value="{$from_month_of_expData[$i]}">
 		<input type="hidden" id="to_year_of_expData_{$i}" name="to_year_of_expData_{$i}" value="{$to_year_of_expData[$i]}">
-		
-		
-		<input type="hidden" id="to_month_of_expData_{$i}" name="to_month_of_expData_{$i}" value="{}">
+		<input type="hidden" id="to_month_of_expData_{$i}" name="to_month_of_expData_{$i}" value="{$to_month_of_expData[$i]}">
 		
 		<input type="hidden" id="reporting_to_Data_{$i}" name="reporting_to_Data_{$i}" value="{$reporting_toData[$i]}">
 		<!--<input type="hidden" id="current_locData_{$i}" name="current_locData_{$i}" value="{$current_locData[$i]}">-->

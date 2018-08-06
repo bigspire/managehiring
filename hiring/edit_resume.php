@@ -1387,7 +1387,6 @@ $smarty->assign('grade_type', array('' => 'Select', 'I' => 'Individual', 'T' => 
 // smarty drop down for exp month and year
 $smarty->assign('exp_month', array('1' => 'Jan', '2' => 'Feb', '3' => 'Mar', '4' => 'Apr', '5' => 'May', '6' => 'Jun',
  '7' => 'Jul', '8' => 'Aug', '9' => 'Sep', '10' => 'Oct', '11' => 'Nov', '12' => 'Dec'));
- 
 $exp_yr = array(); 
 for($l = date('Y'); $l >= 1950; $l--){ 
 	$exp_yr[$l] = $l; 
