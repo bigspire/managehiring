@@ -158,9 +158,11 @@ try{
 	while($row = $mysql->display_result($result))
 	{	
  		$rejected_code[] = $row;
+		$rejected_code_count += $row['code_id'];
 		$smarty->assign('rejected_code',$rejected_code);
  		$i++;
 	}
+	$smarty->assign('rejected_code_count',$rejected_code_count);
 	// free the memory
 	$mysql->clear_result($result);
 	// call the next result
@@ -168,6 +170,38 @@ try{
 }catch(Exception $e){
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
+
+// query to fetch rejected code count. 
+$query = 'CALL get_rejected_reason()';
+try{
+	// calling mysql exe_query function
+	if(!$result = $mysql->execute_query($query)){
+		throw new Exception('Problem in getting rejected code count');
+	}	
+	$i = '0';
+	while($row = $mysql->display_result($result))
+	{	
+		$code_id['code_id'] = $row['total_reason'];
+		// $smarty->assign('code_id',$code_id);
+ 		$i++;
+		// calculate reason %
+		//echo $code_id['code_id']['id'];echo '<br>';
+		foreach($total_cv_sent as $key => $value){
+			$reaosn_per[$i] = round(($code_id['code_id'] / $value)*100);
+			$smarty->assign('reaosn_per',$reaosn_per);
+		}
+	}//die;
+	
+	
+	// free the memory
+	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+
 
 // query to fetch all roles details. 
 $query = 'CALL get_roles()';

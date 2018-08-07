@@ -167,16 +167,15 @@ ul.statusLegend li{width:200px;}
 									<td style="text-align:center">{$rejected_cv_count}</td>
 								</tr>
 								
-								<tr>
-									{foreach from=$rejected_code item=item key=key}
-										<th width="">{$item.code}</th>
-									{/foreach}	
-									<td style="text-align:center">%</td>
-									{foreach from=$data item=item key=key}
-										<td style="text-align:center">%</td>
+								{foreach from=$rejected_code item=item key=key}
+								<tr>						
+									<th width="">{$item.code}</th>
+									{foreach from=$reaosn_per item=item key=key}
+										<td style="text-align:center">{$item}%</td>
 									{/foreach}
+									<td style="text-align:center">{$rejected_code_count}%</td>
 								</tr>
-																
+									{/foreach}							
 								<tr>
 										<th width="">Total </th>
 										{foreach from=$data item=item key=key}
