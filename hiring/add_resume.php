@@ -1231,7 +1231,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 					
 			}
 			
-			
+			$locationDataCase = ucwords($_POST['present_location']);
 			$_SESSION['extraction'] = '';			
 			// create snapshot pdf
 			include_once('snapshot.php');
@@ -1255,7 +1255,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 				unlink($template_path);				
 			}
 			
-			$locationDataCase = ucwords($_POST['present_location']);
+			
 			// query to get resume api details
 			$query = "CALL get_resume_api()";
 			try{

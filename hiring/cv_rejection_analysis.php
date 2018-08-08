@@ -169,7 +169,7 @@ try{
 	$mysql->next_query();
 }catch(Exception $e){
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
-}
+}	
 
 // query to fetch rejected code count. 
 $query = 'CALL get_rejected_reason()';
@@ -181,13 +181,13 @@ try{
 	$i = '0';
 	while($row = $mysql->display_result($result))
 	{	
-		$code_id['code_id'] = $row['total_reason'];
+		$code_id['id'] = $row['total_reason'];
 		// $smarty->assign('code_id',$code_id);
  		$i++;
 		// calculate reason %
-		//echo $code_id['code_id']['id'];echo '<br>';
+		//echo $code_id['id']['id'];echo '<br>';
 		foreach($total_cv_sent as $key => $value){
-			$reaosn_per[$i] = round(($code_id['code_id'] / $value)*100);
+			$reaosn_per[$i] = round(($code_id['id'] / $value)*100);
 			$smarty->assign('reaosn_per',$reaosn_per);
 		}
 	}//die;
