@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-30 15:01:10
+/* Smarty version 3.1.29, created on 2018-08-09 16:51:29
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\add_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b5edadea7c9e6_96922467',
+  'unifunc' => 'content_5b6c23b9207740_43667421',
   'file_dependency' => 
   array (
     '8de1ebb38f3ebc55ac0c4a572124dfb4837ad1e2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\add_resume.tpl',
-      1 => 1532943065,
+      1 => 1533813678,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b5edadea7c9e6_96922467 ($_smarty_tpl) {
+function content_5b6c23b9207740_43667421 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -153,9 +153,9 @@ echo $_smarty_tpl->tpl_vars['email_validErr']->value;?>
 										</td>
 									</tr-->	
 									<tr>
-										<td width="120" class="tbl_column">Current Designation<span class="f_req">*</span></td>
+										<td width="120" class="tbl_column change_experience_type">Current Designation<span class="f_req">*</span></td>
 										<td>										
-										<select tabindex="6" name="designation_id" class="span8"  id="designation_id">	
+										<select tabindex="6" name="designation_id" class="span8 change_experience_type"  id="designation_id">	
 											<option value="">Select</option>
 											<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['desig_name']->value,'selected'=>$_POST['designation_id']),$_smarty_tpl);?>
 															
@@ -167,12 +167,12 @@ echo $_smarty_tpl->tpl_vars['email_validErr']->value;?>
 									<tr class="tbl_row">
 										<td width="120" class="tbl_column">Total Years of Exp<span class="f_req">*</span></td>
 										<td>
-										<select name="year_of_exp" tabindex="7" class="span4">
+										<select name="year_of_exp" tabindex="7" id="select1" class="span4">
 										<option value="">Year</option>
 										<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['tot_exp_yr']->value,'selected'=>$_POST['year_of_exp']),$_smarty_tpl);?>
 	
 										</select>
-										<select name="month_of_exp" tabindex="8" class="inline_text span4">
+										<select name="month_of_exp" tabindex="8" id="select2" class="inline_text span4">
 										<option value="">Month</option>
 										<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['tot_exp_month']->value,'selected'=>$_POST['month_of_exp']),$_smarty_tpl);?>
 	
@@ -277,10 +277,12 @@ echo 'checked';?>
 										</td>	
 									</tr>
 									<tr class="tbl_row">
-										<td width="120" class="tbl_column">Family (Dependents) <span class="f_req"></span></td>										
+										<td width="120" class="tbl_column">Family (Dependents) <span class="f_req">*</span></td>										
 										<td>
 										<textarea name="family" id="family" tabindex="19" cols="10" rows="3" class="span8 wysiwyg1"><?php echo $_POST['family'];?>
 </textarea>									
+										<label for="reg_city" generated="true" class="error"><?php echo $_smarty_tpl->tpl_vars['familyErr']->value;?>
+</label>	
 										</td>			
 									</tr>	
 									<tr>
@@ -1209,6 +1211,14 @@ $(document).ready(function(){
 			else $('#form1').submit();
 		});
 	});	
+	
+// function to change the Total Years of Exp	
+  $(".change_experience_type").change(function(){
+	if ($(this).val() == '845') {
+		document.getElementById("select1").value = "0"
+		document.getElementById("select2").value = "0"
+	} 
+	});
 });
 <?php echo '</script'; ?>
 >	

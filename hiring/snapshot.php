@@ -9,6 +9,7 @@ $notice = $fun->get_notice($_POST['notice_period']);
 $gen = $fun->check_gender($_POST['gender']);
 $dob = $fun->convert_date_to_display($fun->convert_date($_POST['dob']));
 $age = $fun->get_age($fun->convert_date($_POST['dob'])).' Yrs';
+$marital_status = $fun->marital_status($_POST['marital_status']);
 
 // parse the tech skill ratings	
 foreach($tech_skills as $key => $skill){
@@ -223,13 +224,20 @@ body {
 	
 	<tr>
       <td class="has-text-centered">13</td>
+      <td>Marital Status
+	</td>
+      <td>$marital_status</td>
+    </tr>
+	
+	<tr>
+      <td class="has-text-centered">14</td>
       <td>Family (Dependents)
 	</td>
       <td>$_POST[family]</td>
     </tr>
 	
      <tr>
-      <td class="has-text-centered">14</td>
+      <td class="has-text-centered">15</td>
       <th class="">Technical Skills</th>
     
       <td>
@@ -241,7 +249,7 @@ body {
     </tr>
 	
 	 <tr>
-      <td class="has-text-centered">15</td>
+      <td class="has-text-centered">16</td>
       <th class="">Behavioral Skills</th>
     
       <td>
@@ -253,7 +261,7 @@ body {
     </tr>
 	
     <tr>
-      <td class="has-text-centered">16</td>
+      <td class="has-text-centered">17</td>
       <td class="">Consultant Assessment</td>
     
       <td>
@@ -265,7 +273,7 @@ body {
 	
 	
 	<tr>
-      <td class="has-text-centered">17</td>
+      <td class="has-text-centered">18</td>
       <td class="">Other Inputs</td>
     
       <td>
@@ -276,7 +284,7 @@ body {
     </tr>
 	
     <tr>
-      <td class="has-text-centered">18</td>
+      <td class="has-text-centered">19</td>
       <td class="">Interview Availability</td>
     
       <td>
