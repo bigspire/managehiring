@@ -1,4 +1,4 @@
-{* Purpose : To view mailbox.
+{* Purpose : To view mailbox details.
  Created : Nikitasa
    Date : 13-07-2017 *}
    
@@ -50,6 +50,11 @@
 									<tr>
 										<td width="120" class="tbl_column">Cc </td>
 										<td>{$data.cc}</td>
+									</tr>
+
+									<tr>
+										<td width="120" class="tbl_column">BCC </td>
+										<td>{$data.bcc}</td>
 									</tr>
 									{/if}
 									<!-- tr>
