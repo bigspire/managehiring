@@ -53,7 +53,7 @@
 									</tr>
 
 									<tr>
-										<td width="120" class="tbl_column">BCC </td>
+										<td width="120" class="tbl_column">Bcc </td>
 										<td>{$data.bcc}</td>
 									</tr>
 									{/if}
