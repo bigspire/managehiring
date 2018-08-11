@@ -4,6 +4,7 @@
  *
  * This file will render views from views/pages/
  *
+ 
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
