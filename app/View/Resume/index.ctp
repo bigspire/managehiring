@@ -234,7 +234,7 @@
 										</td>
 
 										<?php // if(!empty($noHead)): $target = "target='_blank'"; endif;?>
-										<td><?php echo ucwords(strtolower($res[0]['full_name']));?></td>
+										<td><?php echo ucwords(trim(strtolower(strip_tags($res[0]['full_name']))));?></td>
 										<td>
 										<?php echo $this->Functions->get_format_text($res['Resume']['mobile']);?></td>
 										<td><?php echo $this->Functions->get_format_text($res['Resume']['email_id']);?></td>

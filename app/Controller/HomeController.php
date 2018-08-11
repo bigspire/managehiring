@@ -112,12 +112,27 @@ class HomeController  extends AppController {
 			$client_emp_cond = array('Client.created_by' => $this->Session->read('USER.Login.id'));
 		}
 		*/
+		$this->loadModel('Position');
+		$result = $this->Position->get_team($this->Session->read('USER.Login.id'), 1);
+		$team_data[] =  $this->Session->read('USER.Login.id');
+		if(!empty($result)){
+			// for drop down listing
+			$format_list = $this->Functions->format_dropdown($result, 'u','id','first_name', 'last_name');
+			foreach($result as $rec){
+				$team_data[] =  $rec['u']['id'];
+			}	
+			
+			
+		}
 		
 		/* for dashboard switching */
 		if($dash_type == 'rec_view' || $this->Session->read('USER.Login.roles_id') == '30'){ 
 			$cv_emp_cond = array('ReqResume.created_by' => $this->Session->read('USER.Login.id'));
+			$cv_emp_cond2 = array('ReqResumeStatus.created_by' => $this->Session->read('USER.Login.id'));
 			$int_emp_cond = array('ReqResume.created_by' => $this->Session->read('USER.Login.id'));
 			$pos_emp_cond = array('ReqTeam.users_id' => $this->Session->read('USER.Login.id'), 'ReqTeam.is_approve' => 'A');
+			
+			
 			$cv_sent_emp_cond = array('Resume.created_by' => $this->Session->read('USER.Login.id'));
 			$resume_options = array(			
 				array('table' => 'req_resume',
@@ -173,9 +188,9 @@ class HomeController  extends AppController {
 				array('table' => 'client_account_holder',
 						'alias' => 'ClientAH',					
 						'type' => 'LEFT',
-						'conditions' => array('`Client`.`id` = `ClientAH`.`clients_id`',
-						'ClientAH.users_id' => $this->Session->read('USER.Login.id'))
-				)
+						'conditions' => array('`Client`.`id` = `ClientAH`.`clients_id`')
+				),
+				
 			);
 			$resume_options = array(
 				array('table' => 'req_resume',
@@ -208,10 +223,28 @@ class HomeController  extends AppController {
 				array('table' => 'client_account_holder',
 						'alias' => 'ClientAH',					
 						'type' => 'LEFT',
-						'conditions' => array('`Client`.`id` = `ClientAH`.`clients_id`',
-						'ClientAH.users_id' => $this->Session->read('USER.Login.id'))
+						'conditions' => array('`Client`.`id` = `ClientAH`.`clients_id`')
 				)
 			);
+			
+			$count_options2 = array(
+				array('table' => 'requirements',
+						'alias' => 'Position',				
+						'type' => 'LEFT',
+						'conditions' => array('`Position`.`id` = `ReqResume`.`requirements_id`')
+				),
+				array('table' => 'clients',
+						'alias' => 'Client',
+						'type' => 'LEFT',
+						'conditions' => array('`Position`.`clients_id` = `Client`.`id`')
+				),					
+				array('table' => 'client_account_holder',
+						'alias' => 'ClientAH',					
+						'type' => 'LEFT',
+						'conditions' => array('`Client`.`id` = `ClientAH`.`clients_id`')
+				)
+			);
+			
 			$ac_join = array(							
 				array('table' => 'client_account_holder',
 						'alias' => 'ClientAH',					
@@ -219,12 +252,18 @@ class HomeController  extends AppController {
 						'conditions' => array('`Client`.`id` = `ClientAH`.`clients_id`')
 				)
 			);
-			$cv_emp_cond = array('ClientAH.users_id' => $this->Session->read('USER.Login.id'));
-			$int_emp_cond =  array('ClientAH.users_id' => $this->Session->read('USER.Login.id'));
-			$pos_emp_cond =  array('ClientAH.users_id' => $this->Session->read('USER.Login.id'), 'Home.status' => 'A');
-			$cv_sent_emp_cond =  array('ClientAH.users_id' => $this->Session->read('USER.Login.id'));			
-			$client_emp_cond = array('ClientAH.users_id' => $this->Session->read('USER.Login.id'));
-			$pos_emp_cond2 =  array('ClientAH.users_id' => $this->Session->read('USER.Login.id'), 'Position.status' => 'A');
+			
+		
+			
+			$cv_emp_cond = array('ReqResume.created_by' => $team_data);
+			$cv_emp_cond2 = array('ReqResume.created_by' => $team_data);
+			$int_emp_cond =  array('ReqResume.created_by' => $team_data);
+			$pos_emp_cond = array('Home.created_by' => $team_data);
+			$pos_emp_cond2 = array('Position.created_by' => $team_data);
+
+			$cv_sent_emp_cond =  array('ReqResume.created_by' => $team_data);			
+			$client_emp_cond = array('Client.created_by' => $team_data);
+			// $pos_emp_cond2 =  array('ClientAH.users_id' => $team_data, 'Position.status' => 'A');
 			$this->set('ac_dash', 'active');
 		}else if($this->Session->read('USER.Login.roles_id') == '33'  || $this->Session->read('USER.Login.roles_id') == '35'  || $this->Session->read('USER.Login.roles_id') == '39'){ // director
 			$resume_options = array(			
@@ -235,6 +274,7 @@ class HomeController  extends AppController {
 				)
 			);
 			$cv_emp_cond = '';
+			$cv_emp_cond2 = '';
 			$int_emp_cond = '';
 			$pos_emp_cond = array('Home.status' => 'A');
 			$cv_sent_emp_cond = '';
@@ -266,6 +306,7 @@ class HomeController  extends AppController {
 				)
 			);
 			$cv_emp_cond = array('ReqResume.created_by' => $branch_user);
+			$cv_emp_cond2 = array('ReqResumeStatus.created_by' => $branch_user);
 			$int_emp_cond =  array('ReqResume.created_by' => $branch_user);
 			$pos_emp_cond =  array('ReqResume.created_by' => $branch_user, 'Home.status' => 'A');
 			$cv_sent_emp_cond =  array('ReqResume.created_by' => $branch_user);			
@@ -280,11 +321,12 @@ class HomeController  extends AppController {
 						'Position.status' => 'A')
 				)
 			);
-			 $client_emp_cond = array('Client.created_by' => $branch_user);
+			// $client_emp_cond = array('Client.created_by' => $branch_user);
 		}else{ // for all roles, same as recruiter
 			$cv_emp_cond = array('ReqResume.created_by' => $this->Session->read('USER.Login.id'));
+			$cv_emp_cond2 = array('ReqResumeStatus.created_by' => $this->Session->read('USER.Login.id'));
 			$int_emp_cond = array('ReqResume.created_by' => $this->Session->read('USER.Login.id'));
-			$pos_emp_cond = array('ReqResume.created_by' => $this->Session->read('USER.Login.id'));
+			$pos_emp_cond = array('Home.created_by' => $this->Session->read('USER.Login.id'));
 			$cv_sent_emp_cond = array('Resume.created_by' => $this->Session->read('USER.Login.id'));
 			$resume_options = array(			
 				array('table' => 'req_resume',
@@ -316,7 +358,7 @@ class HomeController  extends AppController {
 						'conditions' => array('`PositionStatus`.`requirements_id` = `Position`.`id`', 'member_approve' => 'A')
 				)
 			);	
-			$pos_emp_cond2 = array('ReqResume.created_by' => $this->Session->read('USER.Login.id'));			
+			$pos_emp_cond2 = array('Position.created_by' => $this->Session->read('USER.Login.id'));			
 			
 			// $client_emp_cond = array('ReqTeam.users_id' => $this->Session->read('USER.Login.id'));
 			
@@ -326,6 +368,7 @@ class HomeController  extends AppController {
 					)
 			);
 		}
+		
 		
 		// for branch condition
 		if($this->request->query['loc'] != ''){					
@@ -469,20 +512,26 @@ class HomeController  extends AppController {
 			)
 		);
 		
-	
-
-
 		$date_cond = array('or' => array("DATE_FORMAT(Position.created_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
 		$fields = array('id','job_title','location','Client.client_name', 'Creator.first_name','created_date',
 		 'group_concat((case when ReqResume.stage_title != \'Validation - Account Holder\' and ReqResume.stage_title != \'Draft\' then 1 else \'\' end)) AS cv_stage','group_concat(ReqResume.id) req_resume_id', 
 		'ReqStatus.title', 'ReqTeam.no_req', 'ctc_from','ctc_to','ctc_from_type','ctc_to_type');	
 		// $pos_emp_cond2,
 		$conditions = array('fields' => $fields,'conditions' => array($date_cond,
-		'Position.status' => 'A'),	'order' => array('Position.created_date' => 'desc'),	'group' => array('Position.id'), 'joins' => $pos_options);
+		'Position.status' => 'A',$pos_emp_cond2),	'order' => array('Position.created_date' => 'desc'),	'group' => array('Position.id'), 'joins' => $pos_options);
 		$this->Position->unBindModel(array('belongsTo' => array('FunctionArea')));
 		$data = $this->Position->find('all', $conditions);
 		$this->set('position_data', $data);
-		$this->set('POS_TAB_COUNT', count($data));
+		// get openings handled
+		/*
+		if($this->Session->read('USER.Login.roles_id') == '40' || $this->Session->read('USER.Login.roles_id') == '37'){
+			$pos_options = '';
+		}*/
+		$conditions = array('fields' => array('sum(Position.no_job) as opening_count'),'conditions' => array($date_cond,
+		'Position.status' => 'A',$pos_emp_cond2), 'joins' => $pos_options);
+		$this->Position->unBindModel(array('hasOne' => array('ReqResume')));
+		$data = $this->Position->find('all', $conditions);
+		$this->set('POS_TAB_COUNT', $data[0][0]['opening_count']);
 		// only for MOP for recruiters and account holders
 		if($this->Session->read('USER.Login.roles_id') == '30' || $dash_type == 'rec_view'){
 			// count the vacancy
@@ -491,6 +540,11 @@ class HomeController  extends AppController {
 				$ctc_from = $record['Position']['ctc_from_type'] == 'T' ?  round($record['Position']['ctc_from']/100, 1) : $record['Position']['ctc_from'];
 				$ctc_to = $record['Position']['ctc_to_type'] == 'T' ?  round($record['Position']['ctc_to']/100, 1) : $record['Position']['ctc_to'];
 				$ctc += round(($ctc_from+$ctc_to)/2, 1) * $record['ReqTeam']['no_req'];
+			}
+			if($ctc > 100){
+				$ctc = round($ctc/100, 1).' Cr.';
+			}else{
+				$ctc = $ctc.' Lacs';
 			}
 			$this->set('VACANCY_MOP_COUNT', $no_job);
 			$this->set('BUSINESS_VALUE_MOP_COUNT', $ctc);
@@ -566,29 +620,31 @@ class HomeController  extends AppController {
 		$pos_emp_cond,$date_cond)));
 		*/
 		// get the total counts of cv sent
-		$this->loadModel('ReqResume');
-		$date_cond = array('or' => array("DATE_FORMAT(ReqResume.modified_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
-		$cv_sent_count_tab = $this->ReqResume->find('count', array('conditions' => array('ReqResume.stage_title !=' => 
-		array('Validation - Account Holder'), $cv_emp_cond,$date_cond), 'joins' => $count_options));
+		$this->loadModel('ReqResumeStatus');
+		$date_cond2 = array('or' => array("DATE_FORMAT(ReqResumeStatus.created_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
+		$cv_sent_count_tab = $this->ReqResumeStatus->find('count', array('conditions' => array('ReqResumeStatus.stage_title !=' => 
+		array('Validation - Account Holder'),  $cv_emp_cond2, $date_cond2), 'group' => array('ReqResumeStatus.req_resume_id'),'joins' => $count_options2));
 		$this->set('CV_SENT_TAB_COUNT', $cv_sent_count_tab);
 		// get the total counts of cv shortlisted
-		$cv_shortlist_count_tab = $this->ReqResume->find('count', array('conditions' => array('ReqResume.status_title' => 'Shortlisted',
-		$cv_emp_cond,$date_cond), 'joins' => $count_options));
+		$cv_shortlist_count_tab = $this->ReqResumeStatus->find('count', array('conditions' => array('ReqResumeStatus.status_title' => 'Shortlisted',
+		$cv_emp_cond2,$date_cond2),'group' => array('ReqResumeStatus.req_resume_id'), 'joins' => $count_options2));
 		$this->set('CV_SHORTLIST_TAB_COUNT', $cv_shortlist_count_tab);
 		// get the total counts of cv rejected
+		$this->loadModel('ReqResume');
+		$date_cond = array('or' => array("DATE_FORMAT(ReqResume.modified_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
+		$date_cond_bill = array('or' => array("DATE_FORMAT(ReqResume.modified_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
 		$cv_reject_count_tab = $this->ReqResume->find('count', array('conditions' => array('ReqResume.stage_title' => 'Shortlist', 'ReqResume.status_title' => 'Rejected',
 		$cv_emp_cond,$date_cond), 'joins' => $count_options));
 		$this->set('CV_REJECT_TAB_COUNT', $cv_reject_count_tab);
 		// get the total counts of cv waiting or hold
-		$validate_cond_waiting = array("OR" => array ('ReqResume.status_title' => 'YRF',
-		'ReqResume.status_title' => 'CV-Sent',	'ReqResume.status_title' => 'OnHold'));
-		$cv_waiting_count_tab = $this->ReqResume->find('count', array('conditions' => array($validate_cond_waiting,
-		$cv_emp_cond,$date_cond), 'joins' => $count_options));
-		$this->set('CV_WAITING_TAB_COUNT', $cv_waiting_count_tab);
+		$cv_waiting_count_tab = $this->ReqResume->find('count', array('conditions' => array(
+		$cv_emp_cond,$date_cond,'ReqResume.status_title' => 'CV-Sent'), 'group' => array('ReqResume.id'), 'joins' => $count_options));
+		// get the total counts of interview waiting or hold
+		$int_waiting_count_tab = $this->ReqResume->find('count', array('conditions' => array(
+		$cv_emp_cond,$date_cond,'ReqResume.status_title' => array('Scheduled','Re-Scheduled')), 'group' => array('ReqResume.id'), 'joins' => $count_options));
+		$this->set('WAITING_TAB_COUNT', $cv_waiting_count_tab + $int_waiting_count_tab);
 		// get the total counts of candidates interviewed		
-		// $date_cond = array('or' => array("DATE_FORMAT(ResInterview.int_date, '%Y-%m-%d') between ? and ?" => array($start, $end)));
-		$cv_interview_count_tab = $this->ReqResume->find('count', array('conditions' => array('ReqResume.status_title like' => '%Scheduled',
-		$cv_emp_cond,$date_cond), 'joins' => $count_options));
+		$cv_interview_count_tab = $this->ReqResumeStatus->find('count', array('conditions' => array('ReqResumeStatus.status_title like' => '%Scheduled', $cv_emp_cond2,$date_cond2), 'group' => array('ReqResumeStatus.req_resume_id'), 'joins' => $count_options2));
 		$this->set('INTERVIEW_TAB_COUNT', $cv_interview_count_tab);
 		
 		if($this->Session->read('USER.Login.roles_id') == '30' || $dash_type == 'rec_view' ){
@@ -639,8 +695,9 @@ class HomeController  extends AppController {
 		$this->set('INTERVIEW_DROP_TAB_COUNT', $cv_int_drop_count_tab);
 		*/
 		// get the total counts of candidates interview drop outs and rejected
-		$int_count_tab = $this->ReqResume->find('all', array('fields' => array('ReqResume.status_title', 'count(*) count'),'conditions' => array('ReqResume.stage_title like' => '%Interview',
-		$cv_emp_cond,$date_cond), 'group' => array('ReqResume.status_title'), 'joins' => $count_options));
+		$int_count_tab = $this->ReqResumeStatus->find('count', array('conditions' => array('ReqResumeStatus.stage_title like' => '%Interview','ReqResumeStatus.status_title' => 'Rejected',$cv_emp_cond2,$date_cond2), 'group' => array('ReqResumeStatus.req_resume_id'), 'joins' => $count_options2));
+		$this->set('INTERVIEW_REJ_TAB_COUNT',  $int_count_tab);
+		/*
 		foreach($int_count_tab as $int_data){
 			switch($int_data['ReqResume']['status_title']){
 				case 'No Show':
@@ -652,20 +709,22 @@ class HomeController  extends AppController {
 
 			}
 		}
+		*/
 		// get the candidates offered
-		$offer_cond = array('ReqResume.stage_title' => 'Offer','ReqResume.status_title !=' => array('Offer Pending','Rejected', 'Not Interested','Quit'));
-		$offer_count_tab = $this->ReqResume->find('count', array('conditions' => array($offer_cond,$cv_emp_cond,$date_cond), 'joins' => $count_options));
+		$offer_cond = array('ReqResumeStatus.stage_title' => 'Offer','ReqResumeStatus.status_title' => array('Offer Accepted'));
+		$offer_count_tab = $this->ReqResumeStatus->find('count', array('conditions' => array($offer_cond,$cv_emp_cond2,$date_cond2),
+		'group' => array('ReqResumeStatus.req_resume_id'), 'joins' => $count_options2));
 		$this->set('OFFER_TAB_COUNT', $offer_count_tab);
 		// get the total counts of candidates offer drop outs and joined
 		// $validate_cond = 		
-		$offer_reject_cond = array('ReqResume.stage_title' => 'Offer', 'ReqResume.status_title' => array('Rejected', 'Not Interested','Quit'));
-		$offer_reject_count_tab = $this->ReqResume->find('count', array('conditions' => array($offer_reject_cond,$cv_emp_cond,$date_cond), 'joins' => $count_options));
+		$offer_reject_cond = array('ReqResumeStatus.stage_title' => 'Offer', 'ReqResumeStatus.status_title' => array('Declined'));
+		$offer_reject_count_tab = $this->ReqResumeStatus->find('count', array('conditions' => array($offer_reject_cond,$cv_emp_cond2,$date_cond2),'group' => array('ReqResumeStatus.req_resume_id'), 'joins' => $count_options2));
 		$this->set('OFFER_REJ_TAB_COUNT', $offer_reject_count_tab);
-		$join_cond = array('ReqResume.stage_title' => 'Joining', 'ReqResume.status_title' => 'Joined');
-		$join_count_tab = $this->ReqResume->find('count', array('conditions' => array($join_cond,$cv_emp_cond,$date_cond), 'joins' => $count_options));
+		$join_cond = array('ReqResume.status_title' => 'Joined');
+		$join_count_tab = $this->ReqResume->find('count', array('conditions' => array($join_cond,$cv_emp_cond,$date_cond_bill), 'joins' => $count_options));
 		$this->set('JOINED_TAB_COUNT', $join_count_tab);
 		// get the billing status count
-		$billing_count_tab = $this->ReqResume->find('all', array('fields' => array('count(*) count','sum(bill_ctc) ctc'),'conditions' => array($join_cond,$cv_emp_cond,$date_cond,
+		$billing_count_tab = $this->ReqResume->find('all', array('fields' => array('count(*) count','sum(bill_ctc) ctc'),'conditions' => array($join_cond,$cv_emp_cond,$date_cond_bill,
 		'ReqResume.bill_ctc >' => '0'), 'joins' => $count_options));
 		$this->set('BILLED_TAB_COUNT', $billing_count_tab[0][0]['count']);
 		$this->set('BILLED_AMT_TAB_COUNT', $billing_count_tab[0][0]['ctc']);
