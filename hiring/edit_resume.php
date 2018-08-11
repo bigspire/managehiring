@@ -767,18 +767,18 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 	$position = $_POST['position'] ? $_POST['position'] : $row['position'];
 	
 	// array for printing correct field name in error message
-	$fieldtype = array('0', '0','0','0','1', '1','1','1','0', '0','0','1','1','1','0','0');
+	$fieldtype = array('0', '0','0','0','1', '1','1','1','0', '0','0','1','1','1','0','0','0');
 	$actualfield = array('first name', 'last name','email', 'mobile','dob',
 						'current designation', 'total years of experience','total months of experience',
 						'present CTC','expected CTC','present CTC type','expected CTC type',
-						'notice period','gender', 'present location');
+						'notice period','gender', 'present location','family (Dependents)');
    $field = array('first_name' => 'first_nameErr', 'last_name' => 'last_nameErr','email' => 'emailErr',
     'mobile' => 'mobileErr','dob' => 'dobErr',
     'designation_id' => 'positionErr','year_of_exp' => 'year_of_expErr', 'month_of_exp' => 'month_of_expErr',
     'present_ctc' => 'present_ctcErr','expected_ctc' => 'expected_ctcErr',
 	'present_ctc_type' => 'present_ctc_typeErr','expected_ctc_type' => 'expected_ctc_typeErr',
 	'notice_period' => 'notice_periodErr','gender' => 'genderErr',
-	'present_location' => 'present_locationErr');
+	'present_location' => 'present_locationErr','family' => 'familyErr');
 	$j = 0;
 	foreach ($field as $field => $er_var){ 
 		if($_POST[$field] == ''){
@@ -1194,6 +1194,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			}
 			$row_user = $mysql->display_result($result);
 			$crm = $row_user['first_name'].' '.$row_user['last_name'];
+			$crm_location = $row_user['location'];
 				// free the memory
 			$mysql->clear_result($result);
 			
@@ -1386,7 +1387,6 @@ $smarty->assign('grade_type', array('' => 'Select', 'I' => 'Individual', 'T' => 
 // smarty drop down for exp month and year
 $smarty->assign('exp_month', array('1' => 'Jan', '2' => 'Feb', '3' => 'Mar', '4' => 'Apr', '5' => 'May', '6' => 'Jun',
  '7' => 'Jul', '8' => 'Aug', '9' => 'Sep', '10' => 'Oct', '11' => 'Nov', '12' => 'Dec'));
- 
 $exp_yr = array(); 
 for($l = date('Y'); $l >= 1950; $l--){ 
 	$exp_yr[$l] = $l; 

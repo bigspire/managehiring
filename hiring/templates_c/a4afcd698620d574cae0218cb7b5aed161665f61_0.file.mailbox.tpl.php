@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-06 16:25:30
+/* Smarty version 3.1.29, created on 2018-08-10 15:11:27
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\mailbox.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b3f4aa2a967c0_90694214',
+  'unifunc' => 'content_5b6d5dc765d734_79439677',
   'file_dependency' => 
   array (
     'a4afcd698620d574cae0218cb7b5aed161665f61' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\mailbox.tpl',
-      1 => 1530874529,
+      1 => 1533882440,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b3f4aa2a967c0_90694214 ($_smarty_tpl) {
+function content_5b6d5dc765d734_79439677 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 

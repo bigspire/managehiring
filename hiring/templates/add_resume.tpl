@@ -108,9 +108,9 @@
 										</td>
 									</tr-->	
 									<tr>
-										<td width="120" class="tbl_column">Current Designation<span class="f_req">*</span></td>
+										<td width="120" class="tbl_column change_experience_type">Current Designation<span class="f_req">*</span></td>
 										<td>										
-										<select tabindex="6" name="designation_id" class="span8"  id="designation_id">	
+										<select tabindex="6" name="designation_id" class="span8 change_experience_type"  id="designation_id">	
 											<option value="">Select</option>
 											{html_options options=$desig_name selected=$smarty.post.designation_id}															
 										</select>
@@ -120,11 +120,11 @@
 									<tr class="tbl_row">
 										<td width="120" class="tbl_column">Total Years of Exp<span class="f_req">*</span></td>
 										<td>
-										<select name="year_of_exp" tabindex="7" class="span4">
+										<select name="year_of_exp" tabindex="7" id="select1" class="span4">
 										<option value="">Year</option>
 										{html_options options=$tot_exp_yr selected=$smarty.post.year_of_exp}	
 										</select>
-										<select name="month_of_exp" tabindex="8" class="inline_text span4">
+										<select name="month_of_exp" tabindex="8" id="select2" class="inline_text span4">
 										<option value="">Month</option>
 										{html_options options=$tot_exp_month selected=$smarty.post.month_of_exp}	
 										</select>
@@ -203,9 +203,10 @@
 										</td>	
 									</tr>
 									<tr class="tbl_row">
-										<td width="120" class="tbl_column">Family (Dependents) <span class="f_req"></span></td>										
+										<td width="120" class="tbl_column">Family (Dependents) <span class="f_req">*</span></td>										
 										<td>
 										<textarea name="family" id="family" tabindex="19" cols="10" rows="3" class="span8 wysiwyg1">{$smarty.post.family}</textarea>									
+										<label for="reg_city" generated="true" class="error">{$familyErr}</label>	
 										</td>			
 									</tr>	
 									<tr>
@@ -953,6 +954,14 @@ $(document).ready(function(){
 			else $('#form1').submit();
 		});
 	});	
+	
+// function to change the Total Years of Exp	
+  $(".change_experience_type").change(function(){
+	if ($(this).val() == '845') {
+		document.getElementById("select1").value = "0"
+		document.getElementById("select2").value = "0"
+	} 
+   });
 });
 </script>	
 {/literal}

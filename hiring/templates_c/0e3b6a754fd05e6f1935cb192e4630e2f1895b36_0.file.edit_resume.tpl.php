@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-31 18:12:07
+/* Smarty version 3.1.29, created on 2018-08-10 08:51:36
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\edit_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b60591fd029d0_38844271',
+  'unifunc' => 'content_5b6d04c0db4432_94820357',
   'file_dependency' => 
   array (
     '0e3b6a754fd05e6f1935cb192e4630e2f1895b36' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\edit_resume.tpl',
-      1 => 1533040919,
+      1 => 1533813646,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b60591fd029d0_38844271 ($_smarty_tpl) {
+function content_5b6d04c0db4432_94820357 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -149,9 +149,9 @@ echo $_smarty_tpl->tpl_vars['email_validErr']->value;?>
 										</td>
 									</tr-->	
 									<tr>
-										<td width="120" class="tbl_column">Current Designation<span class="f_req">*</span></td>
+										<td width="120" class="tbl_column change_experience_type">Current Designation<span class="f_req">*</span></td>
 										<td>										
-										<select tabindex="6" name="designation_id" class="span8"  id="designation_id">	
+										<select tabindex="6" name="designation_id" class="span8 change_experience_type"  id="designation_id">	
 											<option value="">Select</option>
 											<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['desig_name']->value,'selected'=>$_smarty_tpl->tpl_vars['designation_id']->value),$_smarty_tpl);?>
 															
@@ -163,12 +163,12 @@ echo $_smarty_tpl->tpl_vars['email_validErr']->value;?>
 									<tr class="tbl_row">
 										<td width="120" class="tbl_column">Total Years of Exp<span class="f_req">*</span></td>
 										<td>
-										<select name="year_of_exp" tabindex="7" class="span4">
+										<select name="year_of_exp" tabindex="7" id="select1" class="span4">
 										<option value="">Year</option>
 										<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['tot_exp_yr']->value,'selected'=>$_smarty_tpl->tpl_vars['year_of_exp']->value),$_smarty_tpl);?>
 	
 										</select>
-										<select name="month_of_exp" tabindex="8" class="inline_text span4">
+										<select name="month_of_exp" tabindex="8" id="select2" class="inline_text span4">
 										<option value="">Month</option>
 										
 										<?php echo smarty_function_html_options(array('options'=>$_smarty_tpl->tpl_vars['tot_exp_month']->value,'selected'=>$_smarty_tpl->tpl_vars['month_of_exp']->value),$_smarty_tpl);?>
@@ -269,13 +269,15 @@ echo 'checked';?>
 										</td>	
 									</tr>
 									<tr class="tbl_row">
-										<td width="120" class="tbl_column">Family (Dependents) <span class="f_req"></span></td>										
+										<td width="120" class="tbl_column">Family (Dependents) <span class="f_req">*</span></td>										
 										<td>
 										<textarea name="family" id="family" tabindex="17" cols="10" rows="3" class="span8 wysiwyg1"><?php if ($_smarty_tpl->tpl_vars['family']->value) {
 echo $_smarty_tpl->tpl_vars['family']->value;
 } else {
 echo $_POST['family'];
 }?></textarea>									
+										<label for="reg_city" generated="true" class="error"><?php echo $_smarty_tpl->tpl_vars['familyErr']->value;?>
+</label>		
 										</td>			
 									</tr>	
 									<tr>
@@ -889,11 +891,10 @@ for ($_foo=true;$_smarty_tpl->tpl_vars['i']->value < $_smarty_tpl->tpl_vars['exp
 " name="to_year_of_expData_<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 " value="<?php echo $_smarty_tpl->tpl_vars['to_year_of_expData']->value[$_smarty_tpl->tpl_vars['i']->value];?>
 ">
-		
-		
 		<input type="hidden" id="to_month_of_expData_<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 " name="to_month_of_expData_<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-" value="{}">
+" value="<?php echo $_smarty_tpl->tpl_vars['to_month_of_expData']->value[$_smarty_tpl->tpl_vars['i']->value];?>
+">
 		
 		<input type="hidden" id="reporting_to_Data_<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
 " name="reporting_to_Data_<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
@@ -1205,6 +1206,14 @@ $(document).ready(function(){
 	$('.iframeBox').click(function(){
 			load_colorBox(this, $(this).attr('val'));	
 	});	
+
+// function to change the Total Years of Exp	
+  $(".change_experience_type").change(function(){
+	if ($(this).val() == '845') {
+		document.getElementById("select1").value = "0"
+		document.getElementById("select2").value = "0"
+	} 
+	});
 });
 <?php echo '</script'; ?>
 >	

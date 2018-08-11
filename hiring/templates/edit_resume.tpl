@@ -103,9 +103,9 @@
 										</td>
 									</tr-->	
 									<tr>
-										<td width="120" class="tbl_column">Current Designation<span class="f_req">*</span></td>
+										<td width="120" class="tbl_column change_experience_type">Current Designation<span class="f_req">*</span></td>
 										<td>										
-										<select tabindex="6" name="designation_id" class="span8"  id="designation_id">	
+										<select tabindex="6" name="designation_id" class="span8 change_experience_type"  id="designation_id">	
 											<option value="">Select</option>
 											{html_options options=$desig_name selected=$designation_id}															
 										</select>
@@ -115,11 +115,11 @@
 									<tr class="tbl_row">
 										<td width="120" class="tbl_column">Total Years of Exp<span class="f_req">*</span></td>
 										<td>
-										<select name="year_of_exp" tabindex="7" class="span4">
+										<select name="year_of_exp" tabindex="7" id="select1" class="span4">
 										<option value="">Year</option>
 										{html_options options=$tot_exp_yr selected=$year_of_exp}	
 										</select>
-										<select name="month_of_exp" tabindex="8" class="inline_text span4">
+										<select name="month_of_exp" tabindex="8" id="select2" class="inline_text span4">
 										<option value="">Month</option>
 										
 										{html_options options=$tot_exp_month selected=$month_of_exp}	
@@ -194,9 +194,10 @@
 										</td>	
 									</tr>
 									<tr class="tbl_row">
-										<td width="120" class="tbl_column">Family (Dependents) <span class="f_req"></span></td>										
+										<td width="120" class="tbl_column">Family (Dependents) <span class="f_req">*</span></td>										
 										<td>
 										<textarea name="family" id="family" tabindex="17" cols="10" rows="3" class="span8 wysiwyg1">{if $family}{$family}{else}{$smarty.post.family}{/if}</textarea>									
+										<label for="reg_city" generated="true" class="error">{$familyErr}</label>		
 										</td>			
 									</tr>	
 									<tr>
@@ -637,9 +638,7 @@
 		<input type="hidden" id="from_year_of_expData_{$i}" name="from_year_of_expData_{$i}" value="{$from_year_of_expData[$i]}">
 		<input type="hidden" id="from_month_of_expData_{$i}" name="from_month_of_expData_{$i}" value="{$from_month_of_expData[$i]}">
 		<input type="hidden" id="to_year_of_expData_{$i}" name="to_year_of_expData_{$i}" value="{$to_year_of_expData[$i]}">
-		
-		
-		<input type="hidden" id="to_month_of_expData_{$i}" name="to_month_of_expData_{$i}" value="{}">
+		<input type="hidden" id="to_month_of_expData_{$i}" name="to_month_of_expData_{$i}" value="{$to_month_of_expData[$i]}">
 		
 		<input type="hidden" id="reporting_to_Data_{$i}" name="reporting_to_Data_{$i}" value="{$reporting_toData[$i]}">
 		<!--<input type="hidden" id="current_locData_{$i}" name="current_locData_{$i}" value="{$current_locData[$i]}">-->
@@ -914,6 +913,14 @@ $(document).ready(function(){
 	$('.iframeBox').click(function(){
 			load_colorBox(this, $(this).attr('val'));	
 	});	
+
+// function to change the Total Years of Exp	
+  $(".change_experience_type").change(function(){
+	if ($(this).val() == '845') {
+		document.getElementById("select1").value = "0"
+		document.getElementById("select2").value = "0"
+	} 
+	});
 });
 </script>	
 {/literal}

@@ -1,4 +1,4 @@
-{* Purpose : To list and search billing.
+{* Purpose : To list and search mail box.
    Created : Nikitasa
    Date : 06-03-2017 *}
    

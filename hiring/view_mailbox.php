@@ -1,6 +1,6 @@
 <?php
 /* 
-   Purpose : View mailboz.
+   Purpose : View mailboz details.
 	Created : Nikitasa
 	Date : 13-07-2017
 */
@@ -98,6 +98,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		$cc_new2 = array_map(array($fun, 'email_validation_cc'), $cc_new);	
 		$cc_new3 = array_filter($cc_new2);
 	}
+	
+	// bcc mail validation
+	if($obj['bcc'] != ''){
+		$replace_str = str_replace(';', ',', $obj['bcc']);
+		$bcc = explode(',', $replace_str);
+		$bcc_new = array_map('trim',$bcc);
+		$bcc_new2 = array_map(array($fun, 'email_validation_cc'), $bcc_new);	
+		$bcc_new3 = array_filter($bcc_new2);
+	}
 
 	// query to fetch admin details. 
 	$query = "CALL get_employee_by_id('".$_SESSION['user_id']."')";
@@ -166,7 +175,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		}
 
 		// query to insert mailbox. 
-		$query = "CALL add_mailbox('".$obj['subject']."','".$obj['cc']."','".$obj['message']."','".$date."','".$_SESSION['user_id']."','".$obj['mail_type']."',
+		$query = "CALL add_mailbox('".$obj['subject']."','".$obj['cc']."','".$obj['bcc']."','".$obj['message']."','".$date."','".$_SESSION['user_id']."','".$obj['mail_type']."',
 		'".$req_resume_id."','".$obj['mail_templates_id']."','".$obj['multi_resume_id']."','".$obj['attachment']."','".$_POST['mail_to_details']."','".$_GET['req_id']."')";
 		// Calling the function that makes the insert
 		try{
@@ -198,12 +207,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			if(!empty($_GET['multi_resume_id'])){				
 				// send mail to client					
 				$msg = $content->send_mail_to_client($obj,$emp_name);
-				$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$mul_res_client_name[0],$mul_res_client_email[0],$cc_new3,$resume_file,$candidate_name,$attach);
+				$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$mul_res_client_name[0],$mul_res_client_email[0],$cc_new3,$bcc_new3,$resume_file,$candidate_name,$attach);
 				$success = '1';
 			}else{	
 				// send mail to client					
 				$msg = $content->send_mail_to_client($obj,$emp_name);
-				$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$resume_file,$candidate_name,$attach);
+				$mailer->send_mail_to_client($obj['subject'],$msg,$emp_name,$emp_email_id,$obj['client_name'],$obj['email'],$cc_new3,$bcc_new3,$resume_file,$candidate_name,$attach);
 				$success = '1';			
 				
 			}

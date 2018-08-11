@@ -89,13 +89,20 @@ class phpMail{
 		}
 	} 
 	
-	function send_mail_to_client($sub,$message,$from,$from_email,$recipient, $recipient_email,$mail_cc,$resume_file,$candidate_name,$attach){
+	function send_mail_to_client($sub,$message,$from,$from_email,$recipient, $recipient_email,$mail_cc,$mail_bcc,$resume_file,$candidate_name,$attach){
 		$mail = new PHPMailer;	
 		
 		// cc mail 		
 		if($mail_cc[0] != '' && count($mail_cc) > 0){
 			foreach($mail_cc as $cc_mail){ 
 				$mail->AddCC($cc_mail, '');
+			}
+		}
+		
+		// bcc mail 		
+		if($mail_bcc[0] != '' && count($mail_bcc) > 0){
+			foreach($mail_bcc as $bcc_mail){ 
+				$mail->AddBCC($bcc_mail, '');
 			}
 		}
 

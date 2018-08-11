@@ -1319,6 +1319,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			}
 			$row_user = $mysql->display_result($result);
 			$crm = $row_user['first_name'].' '.$row_user['last_name'];
+			$crm_location = $row_user['location'];
 			// free the memory
 			$mysql->clear_result($result);
 			// call the next result
@@ -1340,7 +1341,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 				$mysql->next_query();
 			}catch(Exception $e){
 				echo 'Caught exception: ',  $e->getMessage(), "\n";
-			}
+			}			
 			
 			// query to get recruiter details
 			$query = "CALL get_user_byid('".$_SESSION['user_id']."')";
@@ -1358,6 +1359,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			}catch(Exception $e){
 				echo 'Caught exception: ',  $e->getMessage(), "\n";
 			}
+		
 			
 			// update the account holders read status
 			foreach($row_account as  $username) { 					
@@ -1374,13 +1376,14 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 					// call the next result
 					$mysql->next_query();
 					// send mail to account holder
-					$sub = "Manage Hiring -  Resume uploaded by " .$recruiter_details;
-					$msg = $content->get_create_resume_mail($_POST,$client_autoresume,$position_autoresume,$recruiter_details,$recruiter_email,$username['ah_name'],$username['ah_email']);
-					$mailer->send_mail($sub,$msg,$recruiter_details,$recruiter_email,$username['ah_name'],$username['ah_email']);
+					$sub = "Manage Hiring -  Resume uploaded by " .$recruiter;
+					$msg = $content->get_create_resume_mail($_POST,$client_autoresume,$position_autoresume,$recruiter,$recruiter_email,$username['ah_name'],$username['ah_email']);
+					$mailer->send_mail($sub,$msg,$recruiter,$recruiter_email,$username['ah_name'],$username['ah_email']);
 				}catch(Exception $e){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}	
-			}
+			}			
+			
 			
 			// for languages known
 			$getid = $resume_id;

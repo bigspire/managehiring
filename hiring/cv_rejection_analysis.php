@@ -47,6 +47,162 @@ try{
 	echo 'Caught exception: ',  $e->getMessage(), "\n";
 }
 
+// query to fetch total cv sent details. 
+$query = 'CALL get_total_cv_sent()';
+try{
+	// calling mysql exe_query function
+	if(!$result = $mysql->execute_query($query)){
+		throw new Exception('Problem in getting total cv sent details');
+	}	
+	$i = '0';
+	while($row = $mysql->display_result($result))
+	{	
+ 		$req[] = $row;
+		$total_cv_sent[] = $fun->cv_sent_count($req[$i]['cv_stage'],$req[$i]['req_resume_id']);
+		$total_cv_sent_count += $fun->cv_sent_count($req[$i]['cv_stage'],$req[$i]['req_resume_id']);
+		$smarty->assign('data_cv_sent',$total_cv_sent);
+ 		$i++;
+	}
+	$smarty->assign('total_cv_sent_count',$total_cv_sent_count);
+
+	// free the memory
+	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+
+// query to fetch total cv billed details. 
+$query = 'CALL get_total_cv_billed()';
+try{
+	// calling mysql exe_query function
+	if(!$result = $mysql->execute_query($query)){
+		throw new Exception('Problem in getting total cv billed details');
+	}	
+	$i = '0';
+	while($row = $mysql->display_result($result))
+	{	
+ 		$total_cv_billed[] = $row;
+		$total_cv_billed_count += $row['total_billed'];
+		$smarty->assign('total_cv_billed',$total_cv_billed);
+ 		$i++;
+	}
+	$smarty->assign('total_cv_billed_count',$total_cv_billed_count);
+	// free the memory
+	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+// query to fetch active cv details. 
+$query = 'CALL get_active_cv()';
+try{
+	// calling mysql exe_query function
+	if(!$result = $mysql->execute_query($query)){
+		throw new Exception('Problem in getting active cv details');
+	}	
+	$i = '0';
+	while($row = $mysql->display_result($result))
+	{	
+ 		$active_cv[] = $row;
+		$active_cv_count += $row['cv_active'];
+		$smarty->assign('active_cv',$active_cv);
+ 		$i++;
+	}
+	$smarty->assign('active_cv_count',$active_cv_count);
+	// free the memory
+	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+
+// query to fetch rejected cv details. 
+$query = 'CALL get_rejected_cv()';
+try{
+	// calling mysql exe_query function
+	if(!$result = $mysql->execute_query($query)){
+		throw new Exception('Problem in getting rejected cv details');
+	}	
+	$i = '0';
+	while($row = $mysql->display_result($result))
+	{	
+ 		$rejected_cv[] = $row;
+		$rejected_cv_count += $row['cv_rejected'];
+		$smarty->assign('rejected_cv',$rejected_cv);
+ 		$i++;
+	}
+	$smarty->assign('rejected_cv_count',$rejected_cv_count);
+	// free the memory
+	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+// query to fetch rejected code details. 
+$query = 'CALL get_rejected_code_details()';
+try{
+	// calling mysql exe_query function
+	if(!$result = $mysql->execute_query($query)){
+		throw new Exception('Problem in getting rejected code details');
+	}	
+	$i = '0';
+	while($row = $mysql->display_result($result))
+	{	
+ 		$rejected_code[] = $row;
+		$rejected_code_count += $row['code_id'];
+		$smarty->assign('rejected_code',$rejected_code);
+ 		$i++;
+	}
+	$smarty->assign('rejected_code_count',$rejected_code_count);
+	// free the memory
+	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}	
+
+// query to fetch rejected code count. 
+$query = 'CALL get_rejected_reason()';
+try{
+	// calling mysql exe_query function
+	if(!$result = $mysql->execute_query($query)){
+		throw new Exception('Problem in getting rejected code count');
+	}	
+	$i = '0';
+	while($row = $mysql->display_result($result))
+	{	
+		$code_id['id'] = $row['total_reason'];
+		// $smarty->assign('code_id',$code_id);
+ 		$i++;
+		// calculate reason %
+		//echo $code_id['id']['id'];echo '<br>';
+		foreach($total_cv_sent as $key => $value){
+			$reaosn_per[$i] = round(($code_id['id'] / $value)*100);
+			$smarty->assign('reaosn_per',$reaosn_per);
+		}
+	}//die;
+	
+	
+	// free the memory
+	$mysql->clear_result($result);
+	// call the next result
+	$mysql->next_query();
+}catch(Exception $e){
+	echo 'Caught exception: ',  $e->getMessage(), "\n";
+}
+
+
+
 // query to fetch all roles details. 
 $query = 'CALL get_roles()';
 try{
