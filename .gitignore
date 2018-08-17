@@ -1,0 +1,17 @@
+app/tmp/
+app/config/database.php
+
+hiring/templates_c/
+hiring/uploads/introduction
+hiring/uploads/introductionpdf
+hiring/uploads/offer
+hiring/uploads/resume
+hiring/uploads/resumepdf
+hiring/uploads/snapshot
+hiring/uploads/snapshotmerged
+hiring/uploads/snapshotwatermarked
+hiring/uploads/attachment
+hiring/uploads/autoresume
+hiring/uploads/autoresumeparts
+hiring/uploads/autoresumepdf
+hiring/uploads/autoresumewatermarked

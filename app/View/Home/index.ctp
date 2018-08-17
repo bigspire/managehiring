@@ -85,32 +85,32 @@
 							<h3 class="heading">Dashboard</h3>
 							<div class="row tile_count">
             <div class="span2 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Positions</span>
-              <div class="count"><?php echo $POS_TAB_COUNT;?></div>
+              <span class="count_top"><i class="fa fa-user"></i> Openings Worked</span>
+              <div class="count"><?php echo $POS_TAB_COUNT ? $POS_TAB_COUNT : 0;?></div>
               <!--span class="count_bottom"><i class="green">4% </i> From last Week</span-->
             </div>
             <div class="span2 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Total CV Sent</span>
-              <div class="count"><?php echo $CV_SENT_TAB_COUNT;?></div>
+              <span class="count_top"><i class="fa fa-clock-o"></i> CV Sent</span>
+              <div class="count"><?php echo $CV_SENT_TAB_COUNT ? $CV_SENT_TAB_COUNT : 0;?></div>
               <!--span class="count_bottom"><i class="green"><i class="green icon-circle-arrow-up"></i> 3% </i> From last Week</span-->
             </div>
             <div class="span2 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Shortlisted</span>
-              <div class="count green"><?php echo $CV_SHORTLIST_TAB_COUNT;?></div>
+              <span class="count_top"><i class="fa fa-user"></i> CV Shortlisted</span>
+              <div class="count green"><?php echo $CV_SHORTLIST_TAB_COUNT ? $CV_SHORTLIST_TAB_COUNT : 0;?></div>
               <!--span class="count_bottom"><i class="green"><i class="icon-circle-arrow-up"></i> 34% </i> From last Week</span-->
             </div>
             <div class="span2 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Interviewed</span>
-              <div class="count"><?php echo $INTERVIEW_TAB_COUNT;?></div>
+              <span class="count_top"><i class="fa fa-user"></i> CAN Interviewed</span>
+              <div class="count"><?php echo $INTERVIEW_TAB_COUNT ? $INTERVIEW_TAB_COUNT : 0;?></div>
               <!--span class="count_bottom"><i class="red"><i class="fa icon-circle-arrow-down"></i> 12% </i> From last Week</span-->
             </div>
             <div class="span2 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Joined</span>
+              <span class="count_top"><i class="fa fa-user"></i> CAN Joined</span>
               <div class="count"><?php echo $JOINED_TAB_COUNT; ?> </div>
               <!--span class="count_bottom"><i class="green"><i class="icon-circle-arrow-up"></i> 34% </i> From last Week</span-->
             </div>
             <div class="span1 tile_stats_count" style="width:160px;border:none;">
-              <span class="count_top"><i class="fa fa-user"></i> Total Billing</span>
+              <span class="count_top"><i class="fa fa-user"></i> Billing Value</span>
               <div class="count">₹<?php echo $BILLED_AMT_TAB_COUNT ? (int)$BILLED_AMT_TAB_COUNT  : 0;?></div>
               <!--span class="count_bottom"><i class="green"><i class="icon-circle-arrow-up"></i> 34% </i> From last Week</span-->
             </div>
@@ -127,8 +127,8 @@
 			
 		  <div class="row tile_count extraHome dn">
 		    <div class="span2 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Awaiting Feedback</span>
-              <div class="count"><?php echo $CV_WAITING_TAB_COUNT;?></div>
+              <span class="count_top"><i class="fa fa-user"></i> Feedback Awaited</span>
+              <div class="count"><?php echo $WAITING_TAB_COUNT;?></div>
               <!--span class="count_bottom"><i class="green"><i class="icon-circle-arrow-up"></i> 34% </i> From last Week</span-->
             </div>
 		  <div class="span2 tile_stats_count">
@@ -144,26 +144,26 @@
             </div-->
 			
             <div class="span2 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Interview Rejected</span>
+              <span class="count_top"><i class="fa fa-user"></i> CAN INT Rejected</span>
               <div class="count green"><?php echo $INTERVIEW_REJ_TAB_COUNT ? $INTERVIEW_REJ_TAB_COUNT : 0;?></div>
               <!--span class="count_bottom"><i class="green"><i class="icon-circle-arrow-up"></i> 34% </i> From last Week</span-->
             </div>
 			
             <div class="span2 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Offered</span>
-              <div class="count"><?php echo $OFFER_TAB_COUNT;?></div>
+              <span class="count_top"><i class="fa fa-user"></i> CAN Offered</span>
+              <div class="count"><?php echo $OFFER_TAB_COUNT ? $OFFER_TAB_COUNT : 0;?></div>
               <!--span class="count_bottom"><i class="red"><i class="fa icon-circle-arrow-down"></i> 12% </i> From last Week</span-->
             </div>
 			
 			<div class="span2 tile_stats_count">
               <span class="count_top"><i class="fa fa-user"></i> Offer Rejected</span>
-              <div class="count"><?php echo $OFFER_REJ_TAB_COUNT;?></div>
+              <div class="count"><?php echo $OFFER_REJ_TAB_COUNT ? $OFFER_REJ_TAB_COUNT : 0;?></div>
               <!--span class="count_bottom"><i class="red"><i class="fa icon-circle-arrow-down"></i> 12% </i> From last Week</span-->
             </div>
 			
 			
             <div class="span2 tile_stats_count"  style="width:160px;border:none;">
-              <span class="count_top"><i class="fa fa-user"></i> Candidates Billed</span>
+              <span class="count_top"><i class="fa fa-user"></i> Openings Billed</span>
               <div class="count"><?php echo $BILLED_TAB_COUNT; ?> </div>
               <!--span class="count_bottom"><i class="green"><i class="icon-circle-arrow-up"></i> 34% </i> From last Week</span-->
             </div>
@@ -280,7 +280,7 @@
 									
 									<tr>
 										<td class="optional">Business Value (₹)</td>
-										<td style="text-align:center" class="optional"><?php echo $BUSINESS_VALUE_MOP_COUNT; ?>  Lacs</td>
+										<td style="text-align:center" class="optional"><?php echo $BUSINESS_VALUE_MOP_COUNT; ?> </td>
 										<td  class="essential persist">% of Final Interview Candidates</td>
 										<td style="text-align:center" class="optional"><?php echo $INTERVIEW_MOP_PERCENT_COUNT; ?></td>
 									</tr>
@@ -483,7 +483,7 @@
 										<th class="">Client</th>
 										<th  class="optional">Location</th>
 										<th class="optional">Created By</th> 
-										<th  class="optional">Created Date</th>
+										<th  class="optional">Created</th>
 										<th  class="essential" style="text-align:center">No. Positions</th>
 									</tr>
 								</thead>
@@ -511,19 +511,19 @@
 							<table class="table table-striped table-bordered  dTableR" id="dt_z">
 								<thead class="">
 									<tr>
-										<th class="optional">Job Title</th>
-										<th  class="essential persist">Client</th>
-										<th class="optional">Status</th>
-										<th class="optional">Created Date</th>
-										<th class="essential" style="text-align:center">CV Sent</th>
+										<th class="optional" width="190">Job Title</th>
+										<th  class="essential persist" width="175">Client</th>
+										<th class="optional" width="80">Status</th>
+										<th class="optional" width="80">Created Date</th>
+										<th class="essential" style="text-align:center" width="50">CV Sent</th>
 										<!--th class="essential">Action</th-->
 									</tr>
 								</thead>
 								<tbody class="">
 								<?php foreach($position_data as $data):?>
 									<tr>
-										<td><a   href="<?php echo $this->webroot;?>position/view/<?php echo $data['Position']['id'];?>"><?php echo $data['Position']['job_title'];?></a></td>
-										<td><?php echo $data['Client']['client_name'];?></td>
+										<td><a   href="<?php echo $this->webroot;?>position/view/<?php echo $data['Position']['id'];?>"><?php echo $this->Functions->string_truncate($data['Position']['job_title'], 25);?></a></td>
+										<td><?php echo $this->Functions->string_truncate($data['Client']['client_name'], 25);?></td>
 										<td><span class="label label-<?php echo $this->Functions->get_req_status_color($data['ReqStatus']['title']);?>"><?php echo $data['ReqStatus']['title'];?></span></td>
 										<td><?php echo $this->Functions->format_date($data['Position']['created_date']);?></td>
 										<td style="text-align:center"><a   href="<?php echo $this->webroot;?>resume/?srch_status=1&spec=<?php echo $data['Position']['id'];?>">
