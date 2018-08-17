@@ -483,13 +483,22 @@
 										<td width="120" class="tbl_column">Rate Technical Skills <span class="f_req"></span></td>
 										<td>
 <ul class="ratingList">
+
 {foreach $tsData as $ts_data}
 {* if $ts_data neq 0 *}
+{if $smarty.get.copy neq '1'}
   <li><input class="span8" readonly="readonly" placeholder="" name="ts[]" value="{if $smarty.post}{$ts_data}{else}{$ts_data@key}{/if}" type="text">   
-  <input name="tsr[]" type="hidden" value="{if $smarty.post}{$tsrData[$ts_data@key]}{else}{$tsData[$ts_data@key]}{/if}"  class="rating" data-fractions="1"/> <span class="label label-info dn">{if $smarty.post.ts_data}{$tsrData[$ts_data@key]}{else}{$tsData[$ts_data@key]}{/if}</span></li>
+  <input name="tsr[]" type="hidden" value="{if $smarty.post}{$tsrData[$ts_data@key]}{else}{$tsData[$ts_data@key]}{/if}"  class="rating" data-fractions="1"/> 
+  <span class="label label-info dn">{if $smarty.post.ts_data}{$tsrData[$ts_data@key]}{else}{$tsData[$ts_data@key]}{/if}</span></li>
   {* /if *}
+  
+  {else}
+  <li>
+  <input class="span8" readonly="readonly" placeholder="" name="ts[]" value="{$ts_data}" type="text">   
+  <input name="tsr[]" type="hidden" value="{$tsrData[$ts_data@key]}"  class="rating" data-fractions="1"/>
+  <span class="label label-info dn">{$tsrData[$ts_data@key]}</span></li>
+  {/if}
 {/foreach} 
-
 
 
 </ul>
@@ -526,10 +535,16 @@
 <ul class="ratingList">
  
  {foreach $bsData as $bs_data}
+ {if $smarty.get.copy neq '1'}
 {* if $bs_data neq 0 *}
   <li><input class="span8" readonly="readonly" placeholder="" name="bs[]" value="{if $smarty.post}{$bs_data}{else}{$bs_data@key}{/if}" type="text">   
   <input name="bsr[]" type="hidden" value="{if $smarty.post}{$bsrData[$bs_data@key]}{else}{$bsData[$bs_data@key]}{/if}"  class="rating" data-fractions="1"/> <span class="label label-info dn">{if $smarty.post}{$bsrData[$bs_data@key]}{else}{$bsData[$bs_data@key]}{/if}</span> </li>
   {* /if *}
+	  {else}
+	  <li><input class="span8" readonly="readonly" placeholder="" name="bs[]" value="{$bs_data}" type="text">   
+  <input name="bsr[]" type="hidden" value="{$bsrData[$bs_data@key]}"  class="rating" data-fractions="1"/> <span class="label label-info dn">{$bsrData[$bs_data@key]}</span> </li>
+ 
+	  {/if}
 {/foreach} 
 
  

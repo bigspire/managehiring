@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-08-10 08:51:36
+/* Smarty version 3.1.29, created on 2018-08-17 12:58:33
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\edit_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b6d04c0db4432_94820357',
+  'unifunc' => 'content_5b767921dde064_94951729',
   'file_dependency' => 
   array (
     '0e3b6a754fd05e6f1935cb192e4630e2f1895b36' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\edit_resume.tpl',
-      1 => 1533813646,
+      1 => 1534490911,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b6d04c0db4432_94820357 ($_smarty_tpl) {
+function content_5b767921dde064_94951729 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -583,6 +583,7 @@ echo $_POST['certification'];
 										<td width="120" class="tbl_column">Rate Technical Skills <span class="f_req"></span></td>
 										<td>
 <ul class="ratingList">
+
 <?php
 $_from = $_smarty_tpl->tpl_vars['tsData']->value;
 if (!is_array($_from) && !is_object($_from)) {
@@ -596,6 +597,7 @@ $_smarty_tpl->tpl_vars['ts_data']->_loop = true;
 $__foreach_ts_data_0_saved_local_item = $_smarty_tpl->tpl_vars['ts_data'];
 ?>
 
+<?php if ($_GET['copy'] != '1') {?>
   <li><input class="span8" readonly="readonly" placeholder="" name="ts[]" value="<?php if ($_POST) {
 echo $_smarty_tpl->tpl_vars['ts_data']->value;
 } else {
@@ -605,20 +607,29 @@ echo $_smarty_tpl->tpl_vars['ts_data']->key;
 echo $_smarty_tpl->tpl_vars['tsrData']->value[$_smarty_tpl->tpl_vars['ts_data']->key];
 } else {
 echo $_smarty_tpl->tpl_vars['tsData']->value[$_smarty_tpl->tpl_vars['ts_data']->key];
-}?>"  class="rating" data-fractions="1"/> <span class="label label-info dn"><?php if ($_POST['ts_data']) {
+}?>"  class="rating" data-fractions="1"/> 
+  <span class="label label-info dn"><?php if ($_POST['ts_data']) {
 echo $_smarty_tpl->tpl_vars['tsrData']->value[$_smarty_tpl->tpl_vars['ts_data']->key];
 } else {
 echo $_smarty_tpl->tpl_vars['tsData']->value[$_smarty_tpl->tpl_vars['ts_data']->key];
 }?></span></li>
   
-<?php
+  
+  <?php } else { ?>
+  <li>
+  <input class="span8" readonly="readonly" placeholder="" name="ts[]" value="<?php echo $_smarty_tpl->tpl_vars['ts_data']->value;?>
+" type="text">   
+  <input name="tsr[]" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['tsrData']->value[$_smarty_tpl->tpl_vars['ts_data']->key];?>
+"  class="rating" data-fractions="1"/>
+  <span class="label label-info dn"><?php echo $_smarty_tpl->tpl_vars['tsrData']->value[$_smarty_tpl->tpl_vars['ts_data']->key];?>
+</span></li>
+  <?php }
 $_smarty_tpl->tpl_vars['ts_data'] = $__foreach_ts_data_0_saved_local_item;
 }
 if ($__foreach_ts_data_0_saved_item) {
 $_smarty_tpl->tpl_vars['ts_data'] = $__foreach_ts_data_0_saved_item;
 }
 ?> 
-
 
 
 </ul>
@@ -675,6 +686,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['bs_data']->key => $_smarty_tpl->tpl_v
 $_smarty_tpl->tpl_vars['bs_data']->_loop = true;
 $__foreach_bs_data_1_saved_local_item = $_smarty_tpl->tpl_vars['bs_data'];
 ?>
+ <?php if ($_GET['copy'] != '1') {?>
 
   <li><input class="span8" readonly="readonly" placeholder="" name="bs[]" value="<?php if ($_POST) {
 echo $_smarty_tpl->tpl_vars['bs_data']->value;
@@ -691,7 +703,14 @@ echo $_smarty_tpl->tpl_vars['bsrData']->value[$_smarty_tpl->tpl_vars['bs_data']-
 echo $_smarty_tpl->tpl_vars['bsData']->value[$_smarty_tpl->tpl_vars['bs_data']->key];
 }?></span> </li>
   
-<?php
+	  <?php } else { ?>
+	  <li><input class="span8" readonly="readonly" placeholder="" name="bs[]" value="<?php echo $_smarty_tpl->tpl_vars['bs_data']->value;?>
+" type="text">   
+  <input name="bsr[]" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['bsrData']->value[$_smarty_tpl->tpl_vars['bs_data']->key];?>
+"  class="rating" data-fractions="1"/> <span class="label label-info dn"><?php echo $_smarty_tpl->tpl_vars['bsrData']->value[$_smarty_tpl->tpl_vars['bs_data']->key];?>
+</span> </li>
+ 
+	  <?php }
 $_smarty_tpl->tpl_vars['bs_data'] = $__foreach_bs_data_1_saved_local_item;
 }
 if ($__foreach_bs_data_1_saved_item) {
