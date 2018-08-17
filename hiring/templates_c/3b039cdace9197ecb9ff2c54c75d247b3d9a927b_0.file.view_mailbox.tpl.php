@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-08-10 15:11:31
+/* Smarty version 3.1.29, created on 2018-08-10 15:59:24
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\view_mailbox.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b6d5dcb21c706_40175687',
+  'unifunc' => 'content_5b6d69042ccd03_44492769',
   'file_dependency' => 
   array (
     '3b039cdace9197ecb9ff2c54c75d247b3d9a927b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\view_mailbox.tpl',
-      1 => 1533882417,
+      1 => 1533896909,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b6d5dcb21c706_40175687 ($_smarty_tpl) {
+function content_5b6d69042ccd03_44492769 ($_smarty_tpl) {
 ?>
 
    
@@ -86,7 +86,7 @@ home"><i class="icon-home"></i></a>
 									</tr>
 
 									<tr>
-										<td width="120" class="tbl_column">BCC </td>
+										<td width="120" class="tbl_column">Bcc </td>
 										<td><?php echo $_smarty_tpl->tpl_vars['data']->value['bcc'];?>
 </td>
 									</tr>
