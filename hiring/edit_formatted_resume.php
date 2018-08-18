@@ -1165,7 +1165,12 @@ if($_POST['hdnSubmit'] == 1){
 			unset($_SESSION['position_details']);
 			unset($_SESSION['resume_docu']);
 			unset($_SESSION['clients_id']);
-			header('Location: ../resume/?action=auto_draft_modified');
+			if($_GET['copy'] == '1'){
+				header('Location: ../resume/?action=auto_copy_draft_modified');
+			}else{
+				header('Location: ../resume/?action=auto_draft_modified');
+			}
+			
 			// $smarty->assign('draft_valid',"Resume details saved as draft");
 		}
 	/* }else{
@@ -2191,7 +2196,11 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			unset($_SESSION['clients_id']);
 			// once successfully created, redirect the page
 			// header('Location: ../resume/?action=auto_modified');
-			header('Location: ../position/view/'.$req_id.'?action=auto_modified');
+			if($_GET['copy'] == '1'){
+					header('Location: ../position/view/'.$req_id.'?action=auto_copy_modified');
+			}else{
+					header('Location: ../position/view/'.$req_id.'?action=auto_modified');
+			}
 		} 
 	
 		/* }else{

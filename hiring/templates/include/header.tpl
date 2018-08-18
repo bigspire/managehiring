@@ -200,7 +200,7 @@
                                             <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i class="icon-th icon-white"></i> Resumes {* if $resume_count *}<!-- span class="label-bub label-info bubble">{$resume_count}</span-->{* /if *}<b class="caret"></b></a>
 											  <ul class="dropdown-menu">
 											  {if $module['create_resume'] eq '1'}
-                                                <li><a href="copy_resume.php?res_id=162" class="iframeBox unreadLink" val="40_55">Add Resume</a></li>
+                                                <li><a href="upload_resume.php" class="iframeBox unreadLink" val="40_55">Add Resume</a></li>
 											   {/if}
 											   {if $module['view_resume'] eq '1'}
 												<li><a href="{webroot}resume/">View Resume {* if $resume_count *}<!-- span class="label-bub label-info white">{$resume_count}</span-->{* /if *}</a></li>
