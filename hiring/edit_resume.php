@@ -87,6 +87,8 @@ if($getid !=''){
 			$_SESSION['position_for'] = $row['position_for'];
 			$_SESSION['resume_doc'] = $row['resume'];
 			$_SESSION['resume_doc_id'] = $row['resume_doc_id'];
+			$_SESSION['resume_docu'] = $_SESSION['resume_docs'] ? $_SESSION['resume_docs'] : $_SESSION['resume_doc'];
+			$_SESSION['resume_id_doc'] = $_SESSION['resume_docs_id'] ? $_SESSION['resume_docs_id'] : $_SESSION['resume_doc_id'];
 			// $_SESSION['requirement_id'] = $row['requirement_id'];
 			$smarty->assign('dob', $fun->convert_date_display($row['dob_field']));
 			$total_exp  = $row['total_exp'];
@@ -310,7 +312,7 @@ if($_POST['hdnSubmit'] == 1){
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['present_location']))."','".$fun->is_white_space($mysql->real_escape_str($_POST['native_location']))."',
  			'".$mysql->real_escape_str($_POST['notice_period'])."','".$mysql->real_escape_str($_POST['designation_id'])."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['family']))."','".$mysql->real_escape_str($total_exp)."',
- 			'".$date."','".$created_by."','N','".$mysql->real_escape_str($_SESSION['resume_docs_id'])."',
+ 			'".$date."','".$created_by."','N','".$mysql->real_escape_str($_SESSION['resume_id_doc'])."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['consultant']))."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['interview_availability']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['certification']))."','".$tech_skill."',
@@ -612,7 +614,7 @@ if($_POST['hdnSubmit'] == 1){
 					echo 'Caught exception: ',  $e->getMessage(), "\n";
 				}
 				
-				$query = "CALL edit_req_resume_position('".$modified_by."','".$date."','".$mysql->real_escape_str($_SESSION['position_for'])."','".$getid."','Draft','Draft')";
+				$query = "CALL edit_req_resume_position('".$modified_by."','".$date."','".$mysql->real_escape_str($_SESSION['position_details'])."','".$getid."','Draft','Draft')";
 					try{
 						if(!$result = $mysql->execute_query($query)){
 							throw new Exception('Problem in adding position details');
@@ -833,9 +835,9 @@ if($_POST['hdnSubmit'] == 1){
 			} */
 		}
 		if(!empty($edu_id) && !empty($exp_id) && !empty($resume_id)){
-					$req_id = $_SESSION['position_for'];
-					unset($_SESSION['position_for']);
-					unset($_SESSION['resume_doc']);
+					$req_id = $_SESSION['position_details'];
+					unset($_SESSION['position_details']);
+					unset($_SESSION['resume_docu']);
 					unset($_SESSION['clients_id']);
 					
 					if($_GET['copy'] == '1'){
@@ -911,12 +913,7 @@ if($_POST['RESUME_DATA'] == ''){
 	// fetch the resume data
 	$uploaddir = 'uploads/resume/'; 
 	// validation for copy resume
-	if($_GET['copy'] == '1' && !empty($_SESSION['resume_docs'])){
-		$resume_data = $fun->read_document($uploaddir.$_SESSION['resume_docs']);	
-	}else{
-		$resume_data = $fun->read_document($uploaddir.$_SESSION['resume_doc']);	
-	}
-		
+	$resume_data = $fun->read_document($uploaddir.$_SESSION['resume_docu']);			
 	// echo $resume_data;die;
 	$smarty->assign('RESUME_DATA', $resume_data);
 	$_SESSION['extraction'] = 'done';
@@ -1177,7 +1174,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			$created_by = $_SESSION['user_id'];
 			
 			// query to add personal details
-			echo $query = "CALL add_res_personal('".$fun->is_white_space($mysql->real_escape_str($_POST['first_name']))."',
+			$query = "CALL add_res_personal('".$fun->is_white_space($mysql->real_escape_str($_POST['first_name']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['last_name']))."',
 			'".$mysql->real_escape_str($_POST['email'])."','".$mysql->real_escape_str($_POST['mobile'])."',
 			'".$fun->is_white_space($mysql->real_escape_str($fun->convert_date($_POST['dob'])))."',
@@ -1187,11 +1184,11 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['present_location']))."','".$fun->is_white_space($mysql->real_escape_str($_POST['native_location']))."',
  			'".$mysql->real_escape_str($_POST['notice_period'])."','".$mysql->real_escape_str($_POST['designation_id'])."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['family']))."','".$mysql->real_escape_str($total_exp)."',
- 			'".$date."','".$created_by."','N','".$mysql->real_escape_str($_SESSION['resume_docs_id'])."',
+ 			'".$date."','".$created_by."','N','".$mysql->real_escape_str($_SESSION['resume_id_doc'])."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['consultant']))."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['interview_availability']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['certification']))."','".$tech_skill."',
-			'".$behav_skill."','".$fun->is_white_space($mysql->real_escape_str($_POST['other_input']))."','".$_POST['present_work']."')";die;
+			'".$behav_skill."','".$fun->is_white_space($mysql->real_escape_str($_POST['other_input']))."','".$_POST['present_work']."')";
 			try{
 				if(!$result = $mysql->execute_query($query)){
 					throw new Exception('Problem in adding personal details');
@@ -1222,7 +1219,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 
 			// query to add position for details
 			$query = "CALL add_req_resume_position('".$created_by."','".$date."',
-				'".$mysql->real_escape_str($_SESSION['position_for'])."','".$resume_id."','Validation - Account Holder','Pending')";
+				'".$mysql->real_escape_str($_SESSION['position_details'])."','".$resume_id."','Validation - Account Holder','Pending')";
 			try{
 				if(!$result = $mysql->execute_query($query)){
 					throw new Exception('Problem in adding position details');
@@ -1425,7 +1422,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			}
 			
 			// get requirement status details
-			$query = "CALL get_requirement_status('".$_SESSION['position_for']."')";
+			$query = "CALL get_requirement_status('".$_SESSION['position_details']."')";
 			try{
 				if(!$result = $mysql->execute_query($query)){
 					throw new Exception('Problem in getting requirement status details');
@@ -1440,7 +1437,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			}
 			if($row['req_status_id'] == '0'){	
 				// query to add req resume details
-				$query = "CALL edit_requirement_status('1','".$_SESSION['position_for']."')";
+				$query = "CALL edit_requirement_status('1','".$_SESSION['position_details']."')";
 				try{
 					if(!$result = $mysql->execute_query($query)){
 						throw new Exception('Problem in adding requirement status details');
@@ -1490,7 +1487,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			if(($row_status['status_title'] == 'Draft')){
 				// query to add position for details
 				$query = "CALL edit_req_resume_position('".$modified_by."','".$date."',
-					'".$mysql->real_escape_str($_SESSION['position_for'])."','".$getid."','Validation - Account Holder','Pending')";
+					'".$mysql->real_escape_str($_SESSION['position_details'])."','".$getid."','Validation - Account Holder','Pending')";
 				try{
 					if(!$result = $mysql->execute_query($query)){
 						throw new Exception('Problem in adding position details');
@@ -1798,14 +1795,14 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			include_once('snapshot.php');
 			// die;
 			//  introduction page processing
-			$resume_path = dirname(__FILE__).'/uploads/introduction/'.$_SESSION['resume_doc'];
+			$resume_path = dirname(__FILE__).'/uploads/introduction/'.$_SESSION['resume_docu'];
 			$template_path = dirname(__FILE__).'/uploads/template/introduction.docx'; 
 			include('vendor/PHPWord-develop/samples/template_process3.php');
 			// for hiding the contacts
 			if($hide_contact == '1'){
 				// generate auto resume doc file
-				$resume_path = dirname(__FILE__).'/uploads/resume/'.$_SESSION['resume_doc'];
-				$template_path = dirname(__FILE__).'/uploads/template/'.$_SESSION['resume_doc']; 
+				$resume_path = dirname(__FILE__).'/uploads/resume/'.$_SESSION['resume_docu'];
+				$template_path = dirname(__FILE__).'/uploads/template/'.$_SESSION['resume_docu']; 
 				// duplicate the file for template creation
 				$fun->upload_file($resume_path,$template_path);			
 				include('vendor/PHPWord-develop/samples/template_process2.php');	
@@ -1841,7 +1838,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 				$ilovepdf = new Ilovepdf($resume_api['public_key'],$resume_api['secret_key']);
 				$myTaskConvertOffice = $ilovepdf->newTask('officepdf');			
 				// Add files to task for upload
-				$resume_path = dirname(__FILE__).'/uploads/resume/'.$_SESSION['resume_doc'];
+				$resume_path = dirname(__FILE__).'/uploads/resume/'.$_SESSION['resume_docu'];
 				$file1 = $myTaskConvertOffice->addFile($resume_path);
 				$myTaskConvertOffice->setOutputFilename($snap_file_name);
 				// Execute the task
@@ -1872,7 +1869,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			}  
 			
 			// create introduction pdf file			
-			$resume_path2 = dirname(__FILE__).'/uploads/introduction/'.$_SESSION['resume_doc'];
+			$resume_path2 = dirname(__FILE__).'/uploads/introduction/'.$_SESSION['resume_docu'];
 			// Create a new task
 			$myTaskConvertOffice2 = $ilovepdf->newTask('officepdf');
 			// Add files to task for upload
@@ -1946,11 +1943,10 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			// Download the package files
 			$myTaskPageNumbers->download('uploads/snapshotwatermarked/');
 			*/
-			$req_id = $_SESSION['position_for'];
+			$req_id = $_SESSION['position_details'];
 			// unset the sessions
-			unset($_SESSION['position_for']);
-			unset($_SESSION['resume_doc']);
-			unset($_SESSION['resume_docs']);
+			unset($_SESSION['position_details']);
+			unset($_SESSION['resume_docu']);
 			unset($_SESSION['clients_id']);
 			// header('Location: ../resume?action=modified&download='.$snap_file_name.'_'.date('d-m-Y').'.pdf');
 			// header('Location: ../resume?action=modified');

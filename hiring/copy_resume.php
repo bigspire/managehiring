@@ -10,6 +10,7 @@ session_start();
 unset($_SESSION['position_for']);
 unset($_SESSION['resume_doc']);
 unset($_SESSION['resume_docs']);
+unset($_SESSION['resume_docs_id']);
 unset($_SESSION['clients_id']);
 unset($_SESSION['IGNORE_CV']);
 unset($_SESSION['extraction']);
@@ -180,7 +181,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		// assigning the date
 		$date =  $fun->current_date();
 		$type = 'D';
-		
 		
 		// query to fetch all clients names. 
 		$query = "CALL get_resumetype_is_exist('".$_SESSION['req_id']."')";
