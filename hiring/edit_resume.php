@@ -310,7 +310,7 @@ if($_POST['hdnSubmit'] == 1){
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['present_location']))."','".$fun->is_white_space($mysql->real_escape_str($_POST['native_location']))."',
  			'".$mysql->real_escape_str($_POST['notice_period'])."','".$mysql->real_escape_str($_POST['designation_id'])."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['family']))."','".$mysql->real_escape_str($total_exp)."',
- 			'".$date."','".$created_by."','N','".$mysql->real_escape_str($_SESSION['resume_doc_id'])."',
+ 			'".$date."','".$created_by."','N','".$mysql->real_escape_str($_SESSION['resume_docs_id'])."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['consultant']))."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['interview_availability']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['certification']))."','".$tech_skill."',
@@ -906,12 +906,17 @@ $smarty->assign('degreeData', $degree_data);
 $smarty->assign('degree', $degree);
 $smarty->assign('spec', $spec);
 
-
-
+	
 if($_POST['RESUME_DATA'] == ''){
 	// fetch the resume data
 	$uploaddir = 'uploads/resume/'; 
-	$resume_data = $fun->read_document($uploaddir.$_SESSION['resume_doc']);		
+	// validation for copy resume
+	if($_GET['copy'] == '1' && !empty($_SESSION['resume_docs'])){
+		$resume_data = $fun->read_document($uploaddir.$_SESSION['resume_docs']);	
+	}else{
+		$resume_data = $fun->read_document($uploaddir.$_SESSION['resume_doc']);	
+	}
+		
 	// echo $resume_data;die;
 	$smarty->assign('RESUME_DATA', $resume_data);
 	$_SESSION['extraction'] = 'done';
@@ -1172,7 +1177,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			$created_by = $_SESSION['user_id'];
 			
 			// query to add personal details
-			$query = "CALL add_res_personal('".$fun->is_white_space($mysql->real_escape_str($_POST['first_name']))."',
+			echo $query = "CALL add_res_personal('".$fun->is_white_space($mysql->real_escape_str($_POST['first_name']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['last_name']))."',
 			'".$mysql->real_escape_str($_POST['email'])."','".$mysql->real_escape_str($_POST['mobile'])."',
 			'".$fun->is_white_space($mysql->real_escape_str($fun->convert_date($_POST['dob'])))."',
@@ -1182,11 +1187,11 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['present_location']))."','".$fun->is_white_space($mysql->real_escape_str($_POST['native_location']))."',
  			'".$mysql->real_escape_str($_POST['notice_period'])."','".$mysql->real_escape_str($_POST['designation_id'])."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['family']))."','".$mysql->real_escape_str($total_exp)."',
- 			'".$date."','".$created_by."','N','".$mysql->real_escape_str($_SESSION['resume_doc_id'])."',
+ 			'".$date."','".$created_by."','N','".$mysql->real_escape_str($_SESSION['resume_docs_id'])."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['consultant']))."',
  			'".$fun->is_white_space($mysql->real_escape_str($_POST['interview_availability']))."',
 			'".$fun->is_white_space($mysql->real_escape_str($_POST['certification']))."','".$tech_skill."',
-			'".$behav_skill."','".$fun->is_white_space($mysql->real_escape_str($_POST['other_input']))."','".$_POST['present_work']."')";
+			'".$behav_skill."','".$fun->is_white_space($mysql->real_escape_str($_POST['other_input']))."','".$_POST['present_work']."')";die;
 			try{
 				if(!$result = $mysql->execute_query($query)){
 					throw new Exception('Problem in adding personal details');
@@ -1945,6 +1950,7 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			// unset the sessions
 			unset($_SESSION['position_for']);
 			unset($_SESSION['resume_doc']);
+			unset($_SESSION['resume_docs']);
 			unset($_SESSION['clients_id']);
 			// header('Location: ../resume?action=modified&download='.$snap_file_name.'_'.date('d-m-Y').'.pdf');
 			// header('Location: ../resume?action=modified');

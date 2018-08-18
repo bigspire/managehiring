@@ -81,7 +81,13 @@
 										<label class="error">{$position_forErr}</label>																					
 										</td>
 					</tr>
-				
+				<tr class="" >
+						<td width="120" class="tbl_column">Resume <span class="f_req"></span></td>
+						<td>
+						<input type="file" tabindex="3" name="resume" class="upload" id="resume"/>
+						<label class="error">{$attachmentuploadErr} </label>
+						</td>	
+					</tr>
 				</tbody>
 		   </table>
 							
