@@ -262,6 +262,7 @@
 										<ul class="dropdown-menu">
 										
 													<li><a href="<?php echo $this->webroot;?>resume/download_doc/<?php echo $res['ResDoc']['resume'];?>/">Candidate Resume</a></li>
+													<li><a class="iframeBox" val="40_55" href="<?php echo $this->webroot;?>hiring/copy_resume.php?res_id=<?php echo $res['Resume']['id'];?>">Copy Resume</a></li>
 
 											<?php if($res['ReqResume']['status_title'] != 'Draft'):?>		
 										<?php if($res['Position']['resume_type'] == 'S' || $res['Position']['resume_type'] == ''):?>

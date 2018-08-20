@@ -705,7 +705,7 @@
 	<input type="button" value="Cancel" class="btn">
 	</a>
 		
-	{if $resumeStatus == 'Draft'}
+	{if $resumeStatus == 'Draft' or $smarty.get.copy eq '1'}
 	<input type="hidden" name="hdnSubmit" id="hdnSubmit">
 	<input class="btn btn-success" type="submit" id="draftSave" name="draft" value="Draft"/>
 	{/if}

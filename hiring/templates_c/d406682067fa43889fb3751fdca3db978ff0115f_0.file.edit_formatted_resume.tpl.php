@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-07-31 18:12:31
+/* Smarty version 3.1.29, created on 2018-08-20 16:25:23
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\edit_formatted_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b605937b2b622_07891144',
+  'unifunc' => 'content_5b7a9e1b0f2581_56452334',
   'file_dependency' => 
   array (
     'd406682067fa43889fb3751fdca3db978ff0115f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\edit_formatted_resume.tpl',
-      1 => 1533040946,
+      1 => 1534762520,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b605937b2b622_07891144 ($_smarty_tpl) {
+function content_5b7a9e1b0f2581_56452334 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -874,7 +874,7 @@ resume" id="webroot">
 	<input type="button" value="Cancel" class="btn">
 	</a>
 		
-	<?php if ($_smarty_tpl->tpl_vars['resumeStatus']->value == 'Draft') {?>
+	<?php if ($_smarty_tpl->tpl_vars['resumeStatus']->value == 'Draft' || $_GET['copy'] == '1') {?>
 	<input type="hidden" name="hdnSubmit" id="hdnSubmit">
 	<input class="btn btn-success" type="submit" id="draftSave" name="draft" value="Draft"/>
 	<?php }?>
