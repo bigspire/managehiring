@@ -25,8 +25,8 @@ try{
 		throw new Exception('Problem in executing position');
 	}
     $position = array();
-	while($obj = $mysql->display_result($result)){
-		$position[$obj['id']] = $obj['job_title'];  	   
+	while($obj = $mysql->display_result($result)){	 
+		$position[$obj['id']] = ucwords($obj['job_title'].' - '.$obj['job_code'].' - '.$obj['location']);		
 	}
 	
 	

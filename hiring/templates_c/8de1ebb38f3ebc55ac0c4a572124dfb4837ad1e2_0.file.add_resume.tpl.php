@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-08-09 16:51:29
+/* Smarty version 3.1.29, created on 2018-08-21 18:23:10
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\add_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b6c23b9207740_43667421',
+  'unifunc' => 'content_5b7c0b3619def7_59956211',
   'file_dependency' => 
   array (
     '8de1ebb38f3ebc55ac0c4a572124dfb4837ad1e2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\add_resume.tpl',
-      1 => 1533813678,
+      1 => 1534855987,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b6c23b9207740_43667421 ($_smarty_tpl) {
+function content_5b7c0b3619def7_59956211 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -87,7 +87,7 @@ home"><i class="icon-home"></i></a>
 										<td width="120" class="tbl_column">Position For <span class="f_req">*</span></td>
 										<td>
 										<input type="text"  value="<?php echo $_smarty_tpl->tpl_vars['requirement']->value;?>
-"  class="span8" disabled>
+"  class="span12" disabled>
 										<input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['requirement']->value;?>
 " name="requirement">
 										</td>
@@ -1218,7 +1218,7 @@ $(document).ready(function(){
 		document.getElementById("select1").value = "0"
 		document.getElementById("select2").value = "0"
 	} 
-	});
+   });
 });
 <?php echo '</script'; ?>
 >	

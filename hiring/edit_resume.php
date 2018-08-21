@@ -254,7 +254,7 @@ if($getid !=''){
 		}
 		while($row = $mysql->display_result($result))
 		{
-			$position = ucwords($row['job_title']).' ( '.($row['client_name']).' )';
+			$position = ucwords($row['job_title'].' ( '.($row['client_name']).' ) - '.$row['job_code'].' - '.$row['job_loc']);
 			$client_autoresume = $row['client_name'];
 			$position_autoresume = $row['job_title'];
 			$state_autoresume = $row['state'];

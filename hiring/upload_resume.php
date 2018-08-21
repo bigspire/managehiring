@@ -60,7 +60,7 @@ $current_date = $fun->current_date_db();
 				}
 				$row = $mysql->display_result($result);
 				$smarty->assign('client',ucwords($row['client_name']));
-				$smarty->assign('position_for',ucwords($row['job_title']));
+				$smarty->assign('position_for',ucwords($row['job_title'].' - '.$row['job_code'].' - '.$row['location']));
 					
 				$url = $row['resume_type'] == 'F' ? 'add_formatted_resume.php' : 'add_resume.php';
 				// $id = '144576';
@@ -97,7 +97,8 @@ $current_date = $fun->current_date_db();
 		}catch(Exception $e){
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
 		}
-
+		
+		
 		$position = array();
 		// query to fetch position details. 
 		$query = "CALL get_position('".$_POST['client']."','".$_SESSION['user_id']."')";
@@ -108,8 +109,8 @@ $current_date = $fun->current_date_db();
 			}
 			while($row = $mysql->display_result($result))
 			{
-				$position[$row['id']] = ucwords($row['job_title']);
-			}
+				$position[$row['id']] = ucwords($row['job_title'].' - '.$row['job_code'].' - '.$row['location']);
+			}	
 			$smarty->assign('position',$position);
 			// free the memory
 			$mysql->clear_result($result);
@@ -118,7 +119,7 @@ $current_date = $fun->current_date_db();
 		}catch(Exception $e){
 			echo 'Caught exception: ',  $e->getMessage(), "\n";
 		} 
-		
+			
 		
 			
 			// query to fetch all clients names. 

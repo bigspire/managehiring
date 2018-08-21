@@ -89,6 +89,7 @@ if(empty($_POST)){
 		$row = $mysql->display_result($result);
 		$_SESSION['clients_id'] = $row['clients_id'];
 		$_SESSION['position_for'] = $row['position_for'];
+		$_SESSION['position_for'] = ucwords($row['position_for'].' - '.$row['job_code'].' - '.$row['location']);
 		$_SESSION['resume_doc'] = $row['resume'];
 		$_SESSION['resume_doc_id'] = $row['resume_doc_id'];
 		$_SESSION['requirement_id'] = $row['requirement_id'];
@@ -469,7 +470,7 @@ try{
 	}
 	while($row = $mysql->display_result($result))
 	{	
- 		$position = ucwords($row['job_title']).' ( '.($row['client_name']).' )';
+ 		$position = ucwords($row['job_title'].' ( '.($row['client_name']).' ) - '.$row['job_code'].' - '.$row['job_loc']);
 		$client_autoresume = $row['client_name'];
 		$position_autoresume = $row['job_title'];
 		$state_autoresume = $row['state'];
