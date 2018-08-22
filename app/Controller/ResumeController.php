@@ -577,7 +577,7 @@ class ResumeController extends AppController {
 		);	
 		
 		
-		$data = $this->ReqResume->find('all', array('fields' => array('Position.job_title','Client.client_name','Contact.first_name',
+		$data = $this->ReqResume->find('all', array('fields' => array('Position.job_title','Position.job_code','Position.location','Client.client_name','Contact.first_name',
 		'Contact.email','Contact.mobile','Contact.phone','Position.id'), 'conditions' => array('ReqResume.resume_id' => $id),
 		'order' => array('ReqResume.created_Date' => 'desc'), 'group' => array('ReqResume.id'),	'joins' => $options));
 		$this->set('position_data', $data);

@@ -793,7 +793,7 @@ foreach($skill_parse as $key => $skill):?>
 												
 												<?php foreach($position_data as $position):?>	
 												<tr class="allRow position">
-												<td class="allCol position"><a href="<?php echo $this->webroot;?>position/view/<?php echo $position['Position']['id'];?>"><?php echo $position['Position']['job_title'];?></a></td>
+												<td class="allCol position"><a href="<?php echo $this->webroot;?>position/view/<?php echo $position['Position']['id'];?>"><?php echo $position['Position']['job_title'].' - '.$position['Position']['job_code'].' - '.$position['Position']['location'];?></a></td>
 													<td class="allCol position"><?php echo $position['Client']['client_name'];?></td>
 													<td class="allCol position"><?php echo $position['Contact']['first_name'];?></td>
 													<td class="allCol position"><?php echo $position['Contact']['email'];?></td>

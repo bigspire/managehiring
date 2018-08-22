@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-08-20 16:25:23
+/* Smarty version 3.1.29, created on 2018-08-22 04:40:40
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\edit_formatted_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b7a9e1b0f2581_56452334',
+  'unifunc' => 'content_5b7ce948eb1b20_35833130',
   'file_dependency' => 
   array (
     'd406682067fa43889fb3751fdca3db978ff0115f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\edit_formatted_resume.tpl',
-      1 => 1534762520,
+      1 => 1534911419,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b7a9e1b0f2581_56452334 ($_smarty_tpl) {
+function content_5b7ce948eb1b20_35833130 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -83,8 +83,10 @@ resume">Resumes</a>
 									<tr class="tbl_row">
 										<td width="120" class="tbl_column">Position For <span class="f_req">*</span></td>
 										<td>
-										<input type="text" tabindex="3" name="position" value="<?php echo $_smarty_tpl->tpl_vars['position']->value;?>
-" class="span8" disabled>
+										<textarea name="position" tabindex="13" cols="10" rows="2" class="span8" disabled><?php echo $_smarty_tpl->tpl_vars['position']->value;?>
+</textarea>									
+										<!-- input type="text" tabindex="3" name="position" value="<?php echo $_smarty_tpl->tpl_vars['position']->value;?>
+" class="span8" disabled-->
 										</td>
 									</tr>
 									

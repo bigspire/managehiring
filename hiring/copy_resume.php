@@ -81,7 +81,7 @@ try{
 	}
 	while($row = $mysql->display_result($result))
 	{
-		$position[$row['id']] = ucwords($row['job_title']);
+		$position[$row['id']] = ucwords($row['job_title'].' - '.$row['job_code'].' - '.$row['location']);
 	}
 	$smarty->assign('position',$position);
 	// free the memory
@@ -102,7 +102,7 @@ try{
 	}
 	$row = $mysql->display_result($result);
 	$smarty->assign('client',ucwords($row['client_name']));
-	$smarty->assign('position_for',ucwords($row['job_title']));
+	$smarty->assign('position_for',ucwords($row['job_title'].' - '.$row['job_code'].' - '.$row['location']));
 	$url = $row['resume_type'] == 'F' ? 'edit_formatted_resume.php?id='.$_GET['res_id'].'&copy=1' : 'edit_resume.php?id='.$_GET['res_id'].'&copy=1';
 	$smarty->assign('redirect_url',$url);
 	// free the memory

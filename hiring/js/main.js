@@ -939,6 +939,7 @@ $(document).ready(function() {
 		$('.load_position').append('<option>Loading...</option>');
 		$.ajax({
 			 url: $('#webroot').val()+'get_position/?id='+id	
+			 
 		}).done(function( html ) {	
 			$('.load_position').empty();
 			$('.load_position').append(html);

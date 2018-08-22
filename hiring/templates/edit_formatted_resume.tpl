@@ -53,7 +53,8 @@
 									<tr class="tbl_row">
 										<td width="120" class="tbl_column">Position For <span class="f_req">*</span></td>
 										<td>
-										<input type="text" tabindex="3" name="position" value="{$position}" class="span8" disabled>
+										<textarea name="position" tabindex="13" cols="10" rows="2" class="span8" disabled>{$position}</textarea>									
+										<!-- input type="text" tabindex="3" name="position" value="{$position}" class="span8" disabled-->
 										</td>
 									</tr>
 									

@@ -284,7 +284,7 @@ class ExcelComponent extends Component {
 			foreach($this->data as $key => $value){
 					$this->sheet->setCellValueByColumnAndRow($j++,$i,$this->format_date($value['TaskPlan']['task_date']));
 					$this->sheet->setCellValueByColumnAndRow($j++,$i,ucwords($this->get_session($value['TaskPlan']['session'])));
-					$this->sheet->setCellValueByColumnAndRow($j++,$i,ucwords($value['Position']['job_title']));
+					$this->sheet->setCellValueByColumnAndRow($j++,$i,ucwords($value['Position']['job_title'].' - '.$value['Position']['job_code']. ' - '.$value['Position']['location']));
 					$this->sheet->setCellValueByColumnAndRow($j++,$i,ucwords($value['Client']['client_name']));
 					$this->sheet->setCellValueByColumnAndRow($j++,$i,$value['TaskPlan']['ctc']);				
 					$this->sheet->setCellValueByColumnAndRow($j++,$i,$this->format_date($value['TaskPlan']['created_date']));

@@ -255,6 +255,7 @@ if($getid !=''){
 		while($row = $mysql->display_result($result))
 		{
 			$position = ucwords($row['job_title'].' ( '.($row['client_name']).' ) - '.$row['job_code'].' - '.$row['job_loc']);
+			$position_req = ucwords($row['job_title'].' ( '.($row['client_name']).' )');
 			$client_autoresume = $row['client_name'];
 			$position_autoresume = $row['job_title'];
 			$state_autoresume = $row['state'];
@@ -262,6 +263,7 @@ if($getid !=''){
 			$hide_contact = $row['hide_contact'];
 		}
 		$smarty->assign('position',$position);
+		$smarty->assign('position_req',$position_req);
 		// free the memory
 		$mysql->clear_result($result);
 		// call the next result
@@ -1906,6 +1908,8 @@ if(!empty($_POST) && empty($_POST['hdnSubmit'])){
 			$img_path = dirname(__FILE__).'/uploads/template/ct_mail_logo4.png';
 			// for watermarking and page numbers
 			require_once('vendor/mpdf_vendor/mpdf.php');	
+			
+			
 			/*
 			// water mark the pdf
 			$myTaskWatermark = $ilovepdf->newTask('watermark');

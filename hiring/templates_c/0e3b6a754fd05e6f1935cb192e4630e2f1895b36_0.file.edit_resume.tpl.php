@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-08-20 16:26:19
+/* Smarty version 3.1.29, created on 2018-08-22 16:45:57
   from "C:\xampp\htdocs\2017\ctsvn2\managehiring\hiring\templates\edit_resume.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5b7a9e53e68c23_85612078',
+  'unifunc' => 'content_5b7d45ed84f919_52275056',
   'file_dependency' => 
   array (
     '0e3b6a754fd05e6f1935cb192e4630e2f1895b36' => 
     array (
       0 => 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\templates\\edit_resume.tpl',
-      1 => 1534762574,
+      1 => 1534936550,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:include/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5b7a9e53e68c23_85612078 ($_smarty_tpl) {
+function content_5b7d45ed84f919_52275056 ($_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\2017\\ctsvn2\\managehiring\\hiring\\vendor\\smarty-3.1.29\\libs\\plugins\\function.html_options.php';
 ?>
 
@@ -85,9 +85,11 @@ resume">Resumes</a>
 									<tr class="tbl_row">
 										<td width="120" class="tbl_column">Position For <span class="f_req">*</span></td>
 										<td>
-										<input type="text"  name="position" value="<?php echo $_smarty_tpl->tpl_vars['position']->value;?>
-" class="span8" disabled>
-										<input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['position']->value;?>
+										<!--input type="text"  name="position" value="<?php echo $_smarty_tpl->tpl_vars['position']->value;?>
+" class="span8" disabled-->
+										<textarea name="position" tabindex="13" cols="10" rows="2" class="span8" disabled><?php echo $_smarty_tpl->tpl_vars['position']->value;?>
+</textarea>	
+										<input type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['position_req']->value;?>
 " name="requirement">
 										
 										

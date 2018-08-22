@@ -40,7 +40,8 @@ class TaskplanController extends AppController {
 		$this->set('title_for_layout', 'Task Plan - Manage Hiring');
 		
 		// set the approval status
-		$fields = array('id','ctc','session','created_date', 'task_date', 'Client.client_name', 'Creator.first_name','created_date','modified_date','Position.job_title');
+		$fields = array('id','ctc','session','created_date', 'task_date', 'Client.client_name', 'Creator.first_name','created_date','modified_date','Position.job_title',
+		'Position.job_code','Position.location');
 				
 		$options = array(			
 			array('table' => 'clients',
@@ -314,16 +315,17 @@ class TaskplanController extends AppController {
 					'conditions' => array('`AH`.`clients_id` = `Client`.`id`')
 			)
 		);
-		$pos_list = $this->TaskPlan->Position->find('all', array('fields' => array('id','job_title'),
+		
+		$pos_list = $this->TaskPlan->Position->find('all', array('fields' => array('id','job_title','job_code','location'),
 		'order' => array('job_title ASC'),'conditions' => array($teamCond, 'Position.status' => 'A', 'Position.is_deleted' => 'N','Position.clients_id' => $id,'ReqTeam.users_id' => $this->Session->read('USER.Login.id'), 'Position.req_status_id' => array('0','1')), 'group' => array('Position.id'), 'joins' => $options));
 		// for retaining
-		$format_list = $this->Functions->format_dropdown($pos_list, 'Position','id','job_title');
+		$format_list = $this->Functions->format_dropdown_task($pos_list, 'Position','id','job_title','job_code','location');
 		$this->set('posList', $format_list);
 		// call when it called from ajax 
 		if(!isset($this->request->data['TaskPlan']['task_date'])){
 			$select .= "<option value=''>Choose Position</option>";
 			foreach($pos_list as $record){ 
-				$select .= "<option value='".$record['Position']['id']."'>".ucwords($record['Position']['job_title'])."</option>";
+				$select .= "<option value='".$record['Position']['id']."'>".ucwords($record['Position']['job_title'].' - '.$record['Position']['job_code'].' - '.$record['Position']['location'])."</option>";
 			}
 			echo $select;
 		}

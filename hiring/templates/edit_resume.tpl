@@ -55,8 +55,9 @@
 									<tr class="tbl_row">
 										<td width="120" class="tbl_column">Position For <span class="f_req">*</span></td>
 										<td>
-										<input type="text"  name="position" value="{$position}" class="span8" disabled>
-										<input type="hidden" value="{$position}" name="requirement">
+										<!--input type="text"  name="position" value="{$position}" class="span8" disabled-->
+										<textarea name="position" tabindex="13" cols="10" rows="2" class="span8" disabled>{$position}</textarea>	
+										<input type="hidden" value="{$position_req}" name="requirement">
 										
 										
 										</td>

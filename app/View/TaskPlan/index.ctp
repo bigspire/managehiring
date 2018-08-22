@@ -131,7 +131,7 @@
 										
 			<td width=""><?php echo $this->Functions->get_session($req['TaskPlan']['session']);?></td>
 
-			<td width=""><?php echo $req['Position']['job_title'];?></td>
+			<td width=""><?php echo ucwords($req['Position']['job_title'].' - '.$req['Position']['job_code'].' - '.$req['Position']['location']);?></td>
 										
 			<td width=""><?php echo $req['Client']['client_name'];?></td>
 										

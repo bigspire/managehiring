@@ -140,6 +140,14 @@ class FunctionsComponent extends Component {
 		return $data_list;
 	}
 	
+	/* function to format the data for drop down */	
+	function format_dropdown_task($list,$model, $id, $label1, $label2, $label3){ 
+		foreach($list as $key => $value){ 
+			$data_list[$value[$model][$id]] = ucwords($value[$model][$label1].' - '.$value[$model][$label2].' - '.$value[$model][$label3]);		
+		}	
+		return $data_list;
+	}
+	
 	/* function to read the resume */	
 	function read_document($filename){
 		$file_extension = substr($filename, strlen($filename)-4, 4);
